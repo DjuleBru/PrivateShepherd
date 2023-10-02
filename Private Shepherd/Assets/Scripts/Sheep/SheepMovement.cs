@@ -8,10 +8,18 @@ public class SheepMovement : MonoBehaviour
 {
     [SerializeField] private Sheep sheep;
     [SerializeField] private SheepSO sheepSO;
-    private List<GameObject> fleeTargetList = new List<GameObject>();
+    private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
     private Transform closestSheepTransform;
     private Vector3 moveDir;
-    private GameObject closestFleeTarget;
+
+    #region FLEE TARGET PARAMETERS
+    private FleeTarget closestFleeTarget;
+    float closestFleeTargetDistance;
+    float fleeTargetDistance;
+    float fleeTargetStopDistance;
+    float fleeTargetTriggerFleeDistance;
+    float closestFleeTargetStopDistance;
+    #endregion
 
     #region PATH COMPONENTS
 
@@ -36,9 +44,6 @@ public class SheepMovement : MonoBehaviour
     #endregion
 
     #region SHEEP PARAMETERS
-
-    private float triggerFleeDistance;
-    private float stopFleeDistance;
     private float triggerAggregateDistance;
 
     private float roamPauseMaxTime;
@@ -60,9 +65,6 @@ public class SheepMovement : MonoBehaviour
     private State state;
 
     private void Awake() {
-
-        triggerFleeDistance = sheepSO.triggerFleeDistance;
-        stopFleeDistance = sheepSO.stopFleeDistance;
         triggerAggregateDistance = sheepSO.triggerAggregateDistance;
         roamPauseMaxTime = sheepSO.roamPauseMaxTime;
         roamPauseMinTime = sheepSO.roamPauseMinTime;
@@ -96,20 +98,13 @@ public class SheepMovement : MonoBehaviour
             case State.Flee:
                 moveSpeed = fleeSpeed;
 
-                float closestFleeTargetDistance = float.MaxValue;
-                float fleeTargetDistance;
+                FindClosestFleeTargetWithinTriggerRadius();
 
-                foreach (GameObject fleeTarget in fleeTargetList) {
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
+                closestFleeTargetDistance = Vector3.Distance(closestFleeTarget.transform.position, transform.position);
+                closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance();
 
-                    if (fleeTargetDistance < closestFleeTargetDistance) {
-                        closestFleeTargetDistance = fleeTargetDistance;
-                        closestFleeTarget = fleeTarget;
-                    }
-                }
-
-                if (closestFleeTargetDistance > stopFleeDistance) {
-                    // Target is out of flee trigger radius
+                if (closestFleeTargetDistance > closestFleeTargetStopDistance) {
+                    // Closest target is out of flee trigger radius
                     state = State.Aggregate;
                     return;
 
@@ -134,10 +129,11 @@ public class SheepMovement : MonoBehaviour
                     return;
                 }
 
-                foreach (GameObject fleeTarget in fleeTargetList) {
+                foreach (FleeTarget fleeTarget in fleeTargetList) {
                     fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
+                    fleeTargetTriggerFleeDistance = fleeTarget.GetFleeTargetTriggerDistance();
 
-                    if (fleeTargetDistance <= triggerFleeDistance) {
+                    if (fleeTargetDistance <= fleeTargetTriggerFleeDistance) {
                         // Target is within flee trigger radius
                         state = State.Flee;
                         return;
@@ -162,10 +158,12 @@ public class SheepMovement : MonoBehaviour
                 moveSpeed = roamSpeed;
                 roamPauseTimer -= Time.deltaTime;
 
-                foreach (GameObject fleeTarget in fleeTargetList) {
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
+                foreach (FleeTarget fleeTarget in fleeTargetList) {
 
-                    if (fleeTargetDistance <= triggerFleeDistance) {
+                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
+                    fleeTargetTriggerFleeDistance = fleeTarget.GetFleeTargetTriggerDistance();
+
+                    if (fleeTargetDistance <= fleeTargetTriggerFleeDistance) {
                         // Target is within flee trigger radius
                         state = State.Flee;
                         return;
@@ -188,6 +186,26 @@ public class SheepMovement : MonoBehaviour
 
                 FollowPath(path);
                 break;
+        }
+    }
+
+    private void FindClosestFleeTargetWithinTriggerRadius() {
+
+        closestFleeTargetDistance = float.MaxValue;
+
+        foreach (FleeTarget fleeTarget in fleeTargetList) {
+            fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
+
+            fleeTargetTriggerFleeDistance = fleeTarget.GetFleeTargetTriggerDistance();
+            fleeTargetStopDistance = fleeTarget.GetFleeTargetStopDistance();
+
+            if (fleeTargetDistance < closestFleeTargetDistance & fleeTargetStopDistance > fleeTargetDistance) {
+                // The flee target is the closest one AND within trigger radius
+
+                closestFleeTargetDistance = fleeTargetDistance;
+                closestFleeTarget = fleeTarget;
+                closestFleeTargetStopDistance = fleeTargetStopDistance;
+            }
         }
     }
 
@@ -265,7 +283,7 @@ public class SheepMovement : MonoBehaviour
         return reachedEndOfPath;
     }
 
-    public void AddFleeTarget(GameObject fleeTarget) {
+    public void AddFleeTarget(FleeTarget fleeTarget) {
         fleeTargetList.Add(fleeTarget);
     }
 

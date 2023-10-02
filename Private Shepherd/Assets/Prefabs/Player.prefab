@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 4046661788065379811}
   - component: {fileID: 1432261358}
   - component: {fileID: 4412523605860547886}
+  - component: {fileID: 7840373000721660730}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -305,6 +306,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f0d402002408040a841758b52756d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7840373000721660730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleeTargetTriggerDistance: 1.5
+  fleeTargetStopDistance: 2
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,3 +101,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43456d0d82c01e54a8e9e49e95674702, type: 3}
+--- !u!1 &51930113610373605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 545770347527083525, guid: 43456d0d82c01e54a8e9e49e95674702,
+    type: 3}
+  m_PrefabInstance: {fileID: 516375828623216608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3832357906150982123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51930113610373605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleeTargetTriggerDistance: 3
+  fleeTargetStopDistance: 5

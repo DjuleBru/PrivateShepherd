@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SheepSO : ScriptableObject
 {
-    public float triggerFleeDistance;
-    public float stopFleeDistance;
     public float triggerAggregateDistance;
 
     public float roamPauseMaxTime;
