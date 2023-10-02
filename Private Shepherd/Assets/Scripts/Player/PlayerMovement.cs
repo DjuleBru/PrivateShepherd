@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
 
     float animatorX;
     float animatorY;
-    [SerializeField] float moveSpeed = 4f;
+    [SerializeField] float moveSpeed;
     [SerializeField] Animator animator;
 
     void Update() {

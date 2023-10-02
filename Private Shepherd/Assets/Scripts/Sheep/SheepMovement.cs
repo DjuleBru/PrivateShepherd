@@ -8,10 +8,10 @@ public class SheepMovement : MonoBehaviour
 {
     [SerializeField] private Sheep sheep;
     [SerializeField] private SheepSO sheepSO;
-    private List<Transform> fleeTargetList = new List<Transform>();
+    private List<GameObject> fleeTargetList = new List<GameObject>();
     private Transform closestSheepTransform;
     private Vector3 moveDir;
-    private Transform closestFleeTarget;
+    private GameObject closestFleeTarget;
 
     #region PATH COMPONENTS
 
@@ -99,8 +99,8 @@ public class SheepMovement : MonoBehaviour
                 float closestFleeTargetDistance = float.MaxValue;
                 float fleeTargetDistance;
 
-                foreach (Transform fleeTarget in fleeTargetList) {
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.position, transform.position);
+                foreach (GameObject fleeTarget in fleeTargetList) {
+                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
 
                     if (fleeTargetDistance < closestFleeTargetDistance) {
                         closestFleeTargetDistance = fleeTargetDistance;
@@ -116,7 +116,7 @@ public class SheepMovement : MonoBehaviour
                 } else {
                     // Target is within flee trigger radius
                     if (pathCalculationTimer <= 0f) {
-                        CalculateFleePath(closestFleeTarget.position);
+                        CalculateFleePath(closestFleeTarget.transform.position);
                         pathCalculationTimer = pathCalculationRate;
                     }
                 }
@@ -134,8 +134,8 @@ public class SheepMovement : MonoBehaviour
                     return;
                 }
 
-                foreach (Transform fleeTarget in fleeTargetList) {
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.position, transform.position);
+                foreach (GameObject fleeTarget in fleeTargetList) {
+                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
 
                     if (fleeTargetDistance <= triggerFleeDistance) {
                         // Target is within flee trigger radius
@@ -162,8 +162,8 @@ public class SheepMovement : MonoBehaviour
                 moveSpeed = roamSpeed;
                 roamPauseTimer -= Time.deltaTime;
 
-                foreach (Transform fleeTarget in fleeTargetList) {
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.position, transform.position);
+                foreach (GameObject fleeTarget in fleeTargetList) {
+                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
 
                     if (fleeTargetDistance <= triggerFleeDistance) {
                         // Target is within flee trigger radius
@@ -265,7 +265,7 @@ public class SheepMovement : MonoBehaviour
         return reachedEndOfPath;
     }
 
-    public void AddFleeTarget(Transform fleeTarget) {
+    public void AddFleeTarget(GameObject fleeTarget) {
         fleeTargetList.Add(fleeTarget);
     }
 

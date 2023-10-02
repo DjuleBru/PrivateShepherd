@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1414573223989182991
 Transform:
   m_ObjectHideFlags: 0
@@ -305,8 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f0d402002408040a841758b52756d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogBarkPS: {fileID: 3196114788393806564}
-  barkAOEVisual: {fileID: 3481176052775031631}
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,12 +671,6 @@ PrefabInstance:
 --- !u!4 &855898113807819915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4818852313147752082, guid: c02a408fca0b8824396d373d19254fe6,
-    type: 3}
-  m_PrefabInstance: {fileID: 5260418121051445785}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &3196114788393806564 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7303188359048425725, guid: c02a408fca0b8824396d373d19254fe6,
     type: 3}
   m_PrefabInstance: {fileID: 5260418121051445785}
   m_PrefabAsset: {fileID: 0}

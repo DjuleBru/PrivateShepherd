@@ -5,12 +5,13 @@ using UnityEngine;
 public class WhiteSheep : Sheep
 {
     [SerializeField] private SheepMovement sheepMovement;
-    [SerializeField] private Transform[] fleeTargetArray;
+    [SerializeField] private GameObject[] fleeTargetArray;
+    [SerializeField] private GameObject player;
 
     private void Start() {
 
-        sheepMovement.AddFleeTarget(Player.Instance.transform);
-        foreach (Transform fleeTarget in fleeTargetArray) {
+        sheepMovement.AddFleeTarget(player);
+        foreach (GameObject fleeTarget in fleeTargetArray) {
             sheepMovement.AddFleeTarget(fleeTarget);
         }
     }
