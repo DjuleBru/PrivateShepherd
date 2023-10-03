@@ -8,13 +8,50 @@ public class PlayerBark : MonoBehaviour
 {
     public static PlayerBark Instance { get; private set; }
     public event EventHandler OnPlayerBark;
+    [SerializeField] private FleeTarget playerFleeTarget;
 
-    private bool barkUnlocked = true;
-    private float barkCoolDownTimer = 5f;
-    private float barkCoolDown = .5f;
+    [SerializeField] private float barkCoolDownTimer;
+    [SerializeField] private float barkCoolDown = 1;
+    [SerializeField] private float barkFleeTargetSpeedMultiplier = 2f;
+    [SerializeField] private float barkFleeTargetStopDistance = 4f;
+    [SerializeField] private float barkFleeTargetTriggerDistance = 4f;
+
+    float playerFleeTargetSpeedMultiplier;
+    float playerFleeTargetTriggerDistance;
 
     private void Awake() {
         Instance = this;
+        barkCoolDownTimer = barkCoolDown;
     }
 
+    private void Start() {
+        playerFleeTargetSpeedMultiplier = playerFleeTarget.GetFleeTargetSpeedMultiplier();
+        playerFleeTargetTriggerDistance = playerFleeTarget.GetFleeTargetTriggerDistance();
+    }
+
+    private void Update() {
+        barkCoolDownTimer -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space) & barkCoolDownTimer < 0) {
+            Bark();
+        }
+    }
+
+    private void Bark() {
+        OnPlayerBark?.Invoke(this, EventArgs.Empty);
+        barkCoolDownTimer = barkCoolDown;
+        StartCoroutine(ModifyPlayerFleeTargetParameters());
+    }
+
+
+    private IEnumerator ModifyPlayerFleeTargetParameters() {
+
+        playerFleeTarget.SetFleeTargetTriggerDistance(barkFleeTargetTriggerDistance);
+        playerFleeTarget.SetFleeTargetStopDistance(barkFleeTargetStopDistance);
+
+        yield return new WaitForSeconds(barkCoolDown);
+
+        playerFleeTarget.SetFleeTargetTriggerDistance(playerFleeTargetTriggerDistance);
+
+    }
 }

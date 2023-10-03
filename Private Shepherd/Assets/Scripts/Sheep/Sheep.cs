@@ -1,6 +1,8 @@
 using Pathfinding;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 [RequireComponent(typeof(SetAIAnimatorParameters))]
@@ -9,6 +11,11 @@ public class Sheep : MonoBehaviour
 {
 
     private Sheep[] sheepArray;
+    public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
+
+    public class OnSheepEnterScoreZoneEventArgs : EventArgs {
+        public Transform[] scoreZoneAggregatePointArray;
+    }
 
     protected virtual void Awake() {
         sheepArray = SheepObjectPool.Instance.GetSheepArray();
@@ -35,5 +42,17 @@ public class Sheep : MonoBehaviour
             }
         }
         return closestSheep;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        GameObject collisionGameObject = collision.gameObject;
+
+        if (collisionGameObject.TryGetComponent<ScoreZone>(out ScoreZone scoreZone)) {
+
+            Transform[] aggregatePointArray = scoreZone.GetAggregatePointArray();
+            OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
+                scoreZoneAggregatePointArray = aggregatePointArray
+            });
+        }
     }
 }

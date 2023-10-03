@@ -3,21 +3,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Sheep;
 
 public class SheepMovement : MonoBehaviour
 {
     [SerializeField] private Sheep sheep;
     [SerializeField] private SheepSO sheepSO;
-    private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
     private Transform closestSheepTransform;
+    private Transform targetScoreAggregatePoint; 
     private Vector3 moveDir;
 
+    public event EventHandler OnSheepFlee;
+
     #region FLEE TARGET PARAMETERS
+    private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
     private FleeTarget closestFleeTarget;
-    float closestFleeTargetDistance;
-    float fleeTargetDistance;
-    float fleeTargetStopDistance;
-    float fleeTargetTriggerFleeDistance;
+    float closestFleeTargetDistance = float.MaxValue;
+    float closestFleeTargetTriggerFleeDistance;
     float closestFleeTargetStopDistance;
     #endregion
 
@@ -54,12 +56,15 @@ public class SheepMovement : MonoBehaviour
     private float fleeSpeed;
     private float aggregateSpeed;
     private float roamSpeed;
+
+    private bool penned;
     #endregion
 
     public enum State {
         Flee,
         Aggregate,
         Roam,
+        InScoreZone,
     }
 
     private State state;
@@ -80,6 +85,7 @@ public class SheepMovement : MonoBehaviour
     private void Start() {
         seeker = GetComponent<Seeker>();
         PlayerBark.Instance.OnPlayerBark += PlayerBark_OnPlayerBark;
+        sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
 
         //Initialise path
         CalculatePath(transform.position);
@@ -93,23 +99,20 @@ public class SheepMovement : MonoBehaviour
             return;
         }
 
+        closestFleeTarget = FindClosestFleeTarget();
+        UpdateClosestFleeTargetParameters();
 
         switch (state) {
             case State.Flee:
-                moveSpeed = fleeSpeed;
-
-                FindClosestFleeTargetWithinTriggerRadius();
-
-                closestFleeTargetDistance = Vector3.Distance(closestFleeTarget.transform.position, transform.position);
-                closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance();
+                moveSpeed = fleeSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
 
                 if (closestFleeTargetDistance > closestFleeTargetStopDistance) {
-                    // Closest target is out of flee trigger radius
+                    // Closest target is out of flee stop radius
                     state = State.Aggregate;
                     return;
 
                 } else {
-                    // Target is within flee trigger radius
+                    // Target is within flee stop radius
                     if (pathCalculationTimer <= 0f) {
                         CalculateFleePath(closestFleeTarget.transform.position);
                         pathCalculationTimer = pathCalculationRate;
@@ -129,15 +132,11 @@ public class SheepMovement : MonoBehaviour
                     return;
                 }
 
-                foreach (FleeTarget fleeTarget in fleeTargetList) {
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
-                    fleeTargetTriggerFleeDistance = fleeTarget.GetFleeTargetTriggerDistance();
-
-                    if (fleeTargetDistance <= fleeTargetTriggerFleeDistance) {
-                        // Target is within flee trigger radius
-                        state = State.Flee;
-                        return;
-                    }
+                if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance) {
+                    // Target is within flee trigger radius
+                    state = State.Flee;
+                    OnSheepFlee?.Invoke(this, EventArgs.Empty);
+                    return;
                 }
 
                 if (Vector3.Distance(closestSheepTransform.position, transform.position) < triggerAggregateDistance) {
@@ -158,16 +157,11 @@ public class SheepMovement : MonoBehaviour
                 moveSpeed = roamSpeed;
                 roamPauseTimer -= Time.deltaTime;
 
-                foreach (FleeTarget fleeTarget in fleeTargetList) {
-
-                    fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
-                    fleeTargetTriggerFleeDistance = fleeTarget.GetFleeTargetTriggerDistance();
-
-                    if (fleeTargetDistance <= fleeTargetTriggerFleeDistance) {
-                        // Target is within flee trigger radius
-                        state = State.Flee;
-                        return;
-                    }
+                if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance) {
+                    // Target is within flee trigger radius
+                    state = State.Flee;
+                    OnSheepFlee?.Invoke(this, EventArgs.Empty);
+                    return;
                 }
 
                 closestSheepTransform = sheep.GetClosestSheep();
@@ -186,31 +180,67 @@ public class SheepMovement : MonoBehaviour
 
                 FollowPath(path);
                 break;
+
+            case State.InScoreZone:
+                moveSpeed = roamSpeed;
+                roamPauseTimer -= Time.deltaTime;
+
+                float pennedDistanceTreshold = 1f;
+                if (Vector3.Distance(targetScoreAggregatePoint.position, transform.position) < pennedDistanceTreshold) {
+                    // Check if sheep is close enough to aggregatePoint
+                    penned = true;
+                }
+
+                if(!penned) {
+                    CalculatePath(targetScoreAggregatePoint.position);
+                } else {
+                    if (roamPauseTimer <= 0) {
+                        Vector3 roamDestination = PickRandomPoint();
+                        CalculatePath(roamDestination);
+                        roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
+                    }
+                }
+
+                FollowPath(path);
+                break;
         }
     }
 
-    private void FindClosestFleeTargetWithinTriggerRadius() {
+    private FleeTarget FindClosestFleeTarget() {
 
-        closestFleeTargetDistance = float.MaxValue;
+        float fleeTargetDistance;
 
         foreach (FleeTarget fleeTarget in fleeTargetList) {
             fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
 
-            fleeTargetTriggerFleeDistance = fleeTarget.GetFleeTargetTriggerDistance();
-            fleeTargetStopDistance = fleeTarget.GetFleeTargetStopDistance();
-
-            if (fleeTargetDistance < closestFleeTargetDistance & fleeTargetStopDistance > fleeTargetDistance) {
-                // The flee target is the closest one AND within trigger radius
+            if (fleeTargetDistance < closestFleeTargetDistance) {
+                // The flee target is the closest one
 
                 closestFleeTargetDistance = fleeTargetDistance;
                 closestFleeTarget = fleeTarget;
-                closestFleeTargetStopDistance = fleeTargetStopDistance;
             }
         }
+
+        return closestFleeTarget;
     }
+
+    private void UpdateClosestFleeTargetParameters() {
+        closestFleeTargetDistance = Vector3.Distance(closestFleeTarget.transform.position, transform.position);
+        closestFleeTargetTriggerFleeDistance = closestFleeTarget.GetFleeTargetTriggerDistance();
+        closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance();
+    }
+
 
     private void PlayerBark_OnPlayerBark(object sender, System.EventArgs e) {
         StartCoroutine(SetFleeSpeed(sheepSO.barkFleeSpeed));
+    }
+
+    private void Sheep_OnSheepEnterScoreZone(object sender, OnSheepEnterScoreZoneEventArgs e) {
+        state = State.InScoreZone;
+        Transform[] scoreZoneAggregatePointArray = e.scoreZoneAggregatePointArray;
+
+        // pick a random aggregate point in scorezone
+        targetScoreAggregatePoint = scoreZoneAggregatePointArray[UnityEngine.Random.Range(0, scoreZoneAggregatePointArray.Length)];
     }
 
     private void FollowPath(Path path) {
