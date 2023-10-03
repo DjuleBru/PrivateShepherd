@@ -10,5 +10,4 @@ public class ScoreZone : MonoBehaviour
     public Transform[] GetAggregatePointArray() { 
         return aggregatePointArray; 
     }
-
 }

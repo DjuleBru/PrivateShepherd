@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    [SerializeField] private Sheep[] sheepArray;
+    private int sheepNumber;
+    private int levelScore = 0;
+
+    private void Start() {
+        sheepArray = FindObjectsOfType<Sheep>();
+        sheepNumber = sheepArray.Length;
+
+        foreach(Sheep sheep in sheepArray) {
+            sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Sheep_OnSheepEnterScoreZone(object sender, Sheep.OnSheepEnterScoreZoneEventArgs e) {
+        levelScore++;
+        Debug.Log(levelScore.ToString());
+
     }
 }

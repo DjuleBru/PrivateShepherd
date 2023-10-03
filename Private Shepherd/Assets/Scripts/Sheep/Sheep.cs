@@ -12,6 +12,7 @@ public class Sheep : MonoBehaviour
 
     private Sheep[] sheepArray;
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
+    private bool hasEnteredScoreZone;
 
     public class OnSheepEnterScoreZoneEventArgs : EventArgs {
         public Transform[] scoreZoneAggregatePointArray;
@@ -49,10 +50,14 @@ public class Sheep : MonoBehaviour
 
         if (collisionGameObject.TryGetComponent<ScoreZone>(out ScoreZone scoreZone)) {
 
-            Transform[] aggregatePointArray = scoreZone.GetAggregatePointArray();
-            OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
-                scoreZoneAggregatePointArray = aggregatePointArray
-            });
+            if (!hasEnteredScoreZone) {
+                Transform[] aggregatePointArray = scoreZone.GetAggregatePointArray();
+                OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
+                    scoreZoneAggregatePointArray = aggregatePointArray
+                });
+            }
+
+            hasEnteredScoreZone = true;
         }
     }
 }
