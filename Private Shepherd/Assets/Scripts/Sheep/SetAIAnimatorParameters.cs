@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class SetAIAnimatorParameters : MonoBehaviour {
     [SerializeField] private Animator animator;
-    [SerializeField] private SheepMovement sheepMovement;
+    [SerializeField] private AIMovement AIMovement;
 
     Vector2 moveDir;
 
     private void FixedUpdate() {
 
-        if (sheepMovement.GetReachedEndOfPath()) {
+        if (AIMovement.GetReachedEndOfPath()) {
             animator.SetBool("isMoving", false);
         } else {
-            moveDir = sheepMovement.GetMoveDir();
+            moveDir = AIMovement.GetMoveDir();
             animator.SetBool("isMoving", true);
             animator.SetFloat("moveX", moveDir.x);
             animator.SetFloat("moveY", moveDir.y);

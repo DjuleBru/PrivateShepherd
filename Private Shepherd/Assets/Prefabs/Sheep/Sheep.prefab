@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4100688585976792736}
-  sheepMovement: {fileID: 2206886019954502718}
+  AIMovement: {fileID: 2206886019954502718}
 --- !u!114 &6276905617284876724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  sheepMinimumNumber: 3
+  sphereRadius: 3
 --- !u!114 &4846186786135874560
 MonoBehaviour:
   m_ObjectHideFlags: 0

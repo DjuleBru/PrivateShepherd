@@ -5,13 +5,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Sheep;
 
-public class SheepMovement : MonoBehaviour
+public class SheepMovement : AIMovement
 {
     [SerializeField] private Sheep sheep;
     [SerializeField] private SheepSO sheepSO;
     private Transform closestSheepTransform;
     private Transform targetScoreAggregatePoint; 
-    private Vector3 moveDir;
 
     public event EventHandler OnSheepFlee;
 
@@ -23,28 +22,6 @@ public class SheepMovement : MonoBehaviour
     float closestFleeTargetStopDistance;
     #endregion
 
-    #region PATH COMPONENTS
-
-    private Seeker seeker;
-    private Path path;
-
-    #endregion
-
-    #region PATH PARAMETERS
-
-    // Length of the path
-    private int theGScoreToStopAt = 6000;
-
-    private float nextWaypointDistance = 1.5f;
-    private float roamPointRadius = 4f;
-
-    private int currentWaypoint = 0;
-    private bool reachedEndOfPath;
-
-    private float pathCalculationRate = .2f;
-    private float pathCalculationTimer;
-    #endregion
-
     #region SHEEP PARAMETERS
     private float triggerAggregateDistance;
 
@@ -52,7 +29,6 @@ public class SheepMovement : MonoBehaviour
     private float roamPauseMinTime;
     private float roamPauseTimer;
 
-    private float moveSpeed;
     private float fleeSpeed;
     private float aggregateSpeed;
     private float roamSpeed;
@@ -82,7 +58,7 @@ public class SheepMovement : MonoBehaviour
         pathCalculationTimer = pathCalculationRate;
     }
 
-    private void Start() {
+    protected override void Start() {
         seeker = GetComponent<Seeker>();
         PlayerBark.Instance.OnPlayerBark += PlayerBark_OnPlayerBark;
         sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
@@ -230,7 +206,6 @@ public class SheepMovement : MonoBehaviour
         closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance();
     }
 
-
     private void PlayerBark_OnPlayerBark(object sender, System.EventArgs e) {
         StartCoroutine(SetFleeSpeed(sheepSO.barkFleeSpeed));
     }
@@ -241,76 +216,6 @@ public class SheepMovement : MonoBehaviour
 
         // pick a random aggregate point in scorezone
         targetScoreAggregatePoint = scoreZoneAggregatePointArray[UnityEngine.Random.Range(0, scoreZoneAggregatePointArray.Length)];
-    }
-
-    private void FollowPath(Path path) {
-        reachedEndOfPath = false;
-        float distanceToWaypoint;
-        while (true) {
-            distanceToWaypoint = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
-
-            if (distanceToWaypoint < nextWaypointDistance) {
-
-                if (currentWaypoint + 1 < path.vectorPath.Count) {
-                    currentWaypoint++;
-                } else {
-                    reachedEndOfPath = true;
-                    break;
-                }
-            } else {
-                break;
-            }
-        }
-        var speedFactor = reachedEndOfPath ? Mathf.Sqrt(distanceToWaypoint / nextWaypointDistance) : 1f;
-
-        moveDir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        Vector3 velocity = moveDir * moveSpeed * speedFactor;
-
-        if (!reachedEndOfPath) {
-            transform.position += velocity * Time.deltaTime;
-        }
-    }
-
-    private void CalculatePath(Vector3 destinationPoint) {
-        seeker.StartPath(transform.position, destinationPoint, PathComplete);
-    }
-
-    private void CalculateFleePath(Vector3 fleePosition) {
-        // Create a path object
-        FleePath path = FleePath.Construct(transform.position, fleePosition, theGScoreToStopAt);
-
-        // This is how strongly it will try to flee, if you set it to 0 it will behave like a RandomPath
-        path.aimStrength = 1f;
-
-        // Determines the variation in path length that is allowed
-        path.spread = 1000;
-
-        seeker.StartPath(path, FleePathComplete);
-    }
-
-    private void FleePathComplete(Path p) {
-        path = p;
-        currentWaypoint = 0;
-    }
-
-    private void PathComplete(Path p) {
-        path = p;
-        currentWaypoint = 0;
-    }
-
-    private Vector3 PickRandomPoint(Vector3 initialPoint) {
-        var point = UnityEngine.Random.insideUnitSphere * roamPointRadius;
-
-        point.z = 0;
-        point += initialPoint;
-        return point;
-    }
-    public Vector3 GetMoveDir() {
-        return moveDir;
-    }
-
-    public bool GetReachedEndOfPath() {
-        return reachedEndOfPath;
     }
 
     public void AddFleeTarget(FleeTarget fleeTarget) {

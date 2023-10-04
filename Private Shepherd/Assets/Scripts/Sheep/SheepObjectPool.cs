@@ -5,16 +5,27 @@ using UnityEngine;
 public class SheepObjectPool : MonoBehaviour
 {
     // Put this script first in script execution order (edit > project settings)
-    public static SheepObjectPool Instance { get; private set; }
 
-    private Sheep[] sheepArray;
+    private Sheep[] initialSheepArray;
+    private List<Sheep> sheepsInObjectPoolList;
 
     private void Awake() {
-        Instance = this;
-        sheepArray = GetComponentsInChildren<Sheep>();
+        initialSheepArray = GetComponentsInChildren<Sheep>();
+
+        //Initialise sheep List
+        sheepsInObjectPoolList = new List<Sheep>();
+
+        foreach (Sheep sheep in initialSheepArray) {
+            sheepsInObjectPoolList.Add(sheep);
+        }
+
     }
 
     public Sheep[] GetSheepArray() { 
-        return sheepArray; 
+        return initialSheepArray; 
+    }
+
+    public List<Sheep> GetSheepsInObjectPoolList() {
+        return sheepsInObjectPoolList;
     }
 }

@@ -7,7 +7,10 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
-    [SerializeField] private Sheep[] sheepArray;
+    [SerializeField] private SheepObjectPool levelSheepObjectPool;
+
+    private Sheep[] initialSheepsInLevel;
+
     private int initialSheepNumber;
     private int pennedSheepNumber = 0;
 
@@ -29,16 +32,17 @@ public class LevelManager : MonoBehaviour
 
     private void Awake() {
         Instance = this;
-        sheepArray = FindObjectsOfType<Sheep>();
-        initialSheepNumber = sheepArray.Length;
+
+        initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
+        initialSheepNumber = initialSheepsInLevel.Length;
+
+        foreach (Sheep sheep in initialSheepsInLevel) {
+            sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
+        }
+
         levelTimer = levelTimeLimit;
     }
 
-    private void Start() {
-        foreach(Sheep sheep in sheepArray) {
-            sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
-        }
-    }
 
     private void Update() {
         levelTimer -= Time.deltaTime;

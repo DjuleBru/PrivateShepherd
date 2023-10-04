@@ -11,7 +11,9 @@ using UnityEngine;
 public class Sheep : MonoBehaviour
 {
 
-    private Sheep[] sheepArray;
+    private Sheep[] sheepAggregateArray;
+    [SerializeField] private SheepObjectPool subSheepObjectPool;
+
     [SerializeField] LayerMask sheepLayerMask;
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
     private bool hasEnteredScoreZone;
@@ -23,7 +25,7 @@ public class Sheep : MonoBehaviour
     }
 
     protected virtual void Awake() {
-        sheepArray = SheepObjectPool.Instance.GetSheepArray();
+        sheepAggregateArray = subSheepObjectPool.GetSheepArray();
     }
 
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
@@ -32,11 +34,11 @@ public class Sheep : MonoBehaviour
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
 
-        if (sheepArray.Length == 1) {
+        if (sheepAggregateArray.Length == 1) {
             return null;
         }
 
-        foreach (Sheep potentialSheep in sheepArray) {
+        foreach (Sheep potentialSheep in sheepAggregateArray) {
 
             // Distance to sheep
             Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
