@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(SetAIAnimatorParameters))]
@@ -11,9 +12,12 @@ public class Sheep : MonoBehaviour
 {
 
     private Sheep[] sheepArray;
+    [SerializeField] LayerMask sheepLayerMask;
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
     private bool hasEnteredScoreZone;
 
+    [SerializeField] int sheepMinimumNumber = 3;
+    [SerializeField] float sphereRadius = 3f;
     public class OnSheepEnterScoreZoneEventArgs : EventArgs {
         public Transform[] scoreZoneAggregatePointArray;
     }
@@ -22,9 +26,9 @@ public class Sheep : MonoBehaviour
         sheepArray = SheepObjectPool.Instance.GetSheepArray();
     }
 
-    public Transform GetClosestSheep() {
+    public Transform GetClosestSheepWithEnoughSheepSurrounding() {
 
-        Transform closestSheep = null;
+        Transform closestSheepWithEnoughSheepSurrounding = null;
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
 
@@ -34,15 +38,20 @@ public class Sheep : MonoBehaviour
 
         foreach (Sheep potentialSheep in sheepArray) {
 
+            // Distance to sheep
             Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
             float dSqrToSheep = directionToSheep.sqrMagnitude;
 
-            if (dSqrToSheep < closestDistanceSqr && dSqrToSheep != 0) {
+            // Sheep surroundings
+            int sheepNumberWithinTargetSheepRadius = Physics2D.OverlapCircleAll(potentialSheep.transform.position, sphereRadius, sheepLayerMask).Length;
+            Debug.DrawLine(potentialSheep.transform.position, potentialSheep.transform.position + new Vector3(sphereRadius, 0));
+
+            if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
                 closestDistanceSqr = dSqrToSheep;
-                closestSheep = potentialSheep.transform;
+                closestSheepWithEnoughSheepSurrounding = potentialSheep.transform;
             }
         }
-        return closestSheep;
+        return closestSheepWithEnoughSheepSurrounding;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -51,6 +60,8 @@ public class Sheep : MonoBehaviour
         if (collisionGameObject.TryGetComponent<ScoreZone>(out ScoreZone scoreZone)) {
 
             if (!hasEnteredScoreZone) {
+
+                // Select random aggregate point in score zone and pass it in event
                 Transform[] aggregatePointArray = scoreZone.GetAggregatePointArray();
                 OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
                     scoreZoneAggregatePointArray = aggregatePointArray

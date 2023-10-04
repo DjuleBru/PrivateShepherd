@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4846186786135874560}
   - component: {fileID: 2206886019954502718}
   - component: {fileID: 5689397843276955821}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,6 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a37eb9dbf82f746a15bd547cb95d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sheepLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &4846186786135874560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4100688585696642628}
   - component: {fileID: 4100688585696642635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +362,7 @@ GameObject:
   - component: {fileID: 4100688585976792737}
   - component: {fileID: 4100688585976792743}
   - component: {fileID: 4100688585976792736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +469,7 @@ GameObject:
   - component: {fileID: 1614368882690873251}
   - component: {fileID: 1735949625897109381}
   - component: {fileID: 1113203148564738994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MMFeedbacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

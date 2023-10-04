@@ -124,7 +124,7 @@ public class SheepMovement : MonoBehaviour
             break;
             case State.Aggregate:
                 moveSpeed = aggregateSpeed;
-                closestSheepTransform = sheep.GetClosestSheep();
+                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
 
                 if (closestSheepTransform == null) {
                     // There is no other sheep to aggregate to
@@ -164,7 +164,7 @@ public class SheepMovement : MonoBehaviour
                     return;
                 }
 
-                closestSheepTransform = sheep.GetClosestSheep();
+                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
                 if (closestSheepTransform != null) {
                     // There is another sheep to aggregate
                     if (Vector3.Distance(closestSheepTransform.position, transform.position) > triggerAggregateDistance) {
@@ -173,7 +173,7 @@ public class SheepMovement : MonoBehaviour
                 }
                 
                 if (roamPauseTimer <= 0) {
-                    Vector3 roamDestination = PickRandomPoint();
+                    Vector3 roamDestination = PickRandomPoint(transform.position);
                     CalculatePath(roamDestination);
                     roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
                 }
@@ -195,7 +195,7 @@ public class SheepMovement : MonoBehaviour
                     CalculatePath(targetScoreAggregatePoint.position);
                 } else {
                     if (roamPauseTimer <= 0) {
-                        Vector3 roamDestination = PickRandomPoint();
+                        Vector3 roamDestination = PickRandomPoint(targetScoreAggregatePoint.position);
                         CalculatePath(roamDestination);
                         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
                     }
@@ -298,11 +298,11 @@ public class SheepMovement : MonoBehaviour
         currentWaypoint = 0;
     }
 
-    private Vector3 PickRandomPoint() {
+    private Vector3 PickRandomPoint(Vector3 initialPoint) {
         var point = UnityEngine.Random.insideUnitSphere * roamPointRadius;
 
         point.z = 0;
-        point += transform.position;
+        point += initialPoint;
         return point;
     }
     public Vector3 GetMoveDir() {

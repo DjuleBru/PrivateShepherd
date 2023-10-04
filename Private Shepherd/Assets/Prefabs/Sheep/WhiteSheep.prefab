@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2206886019954502718, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheep
+      value: 
+      objectReference: {fileID: 2577545150818084182}
     - target: {fileID: 4100688584939994465, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: m_RootOrder
@@ -67,7 +72,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteSheep
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6276905617284876724, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
 --- !u!114 &1989995459645448347 stripped
 MonoBehaviour:
@@ -99,4 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72f39a2650cf834b9210bd15f9eff9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sheepLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  sheepMinimumNumber: 5
+  sphereRadius: 3
   sheepMovement: {fileID: 1989995459645448347}
+  fleeTargetArray: []

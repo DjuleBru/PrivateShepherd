@@ -8,7 +8,6 @@ public class WhiteSheep : Sheep
     [SerializeField] private FleeTarget[] fleeTargetArray;
 
     private void Start() {
-
         foreach (FleeTarget fleeTarget in fleeTargetArray) {
             sheepMovement.AddFleeTarget(fleeTarget);
         }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66b4ec7218c080145b9d8b8b254b8730
+guid: 386ca8802932ff040ac97b5c13689c0b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_0
+      name: Minifantasy_GuiBarsShadows_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
+        x: 19
+        y: 631
+        width: 10
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cd8f89c16202714da6c2ba03db301c1
-      internalID: -917775253
+      spriteID: d00571159f916d149a251851c53cfc4d
+      internalID: 797052473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_1
+      name: Minifantasy_GuiBarsShadows_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 36
+        y: 631
+        width: 7
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e46e568e13ba01408c43bcffbc99ff5
-      internalID: 404873556
+      spriteID: 614fab852b161ec4c9bb9041524545db
+      internalID: 94061445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_2
+      name: Minifantasy_GuiBarsShadows_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
+        x: 53
+        y: 632
+        width: 6
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 088cab5ec2765ea4e96ef6485965867e
-      internalID: 1977757487
+      spriteID: c956768ae2228b143afb86b44b1e2246
+      internalID: 1064133393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_3
+      name: Minifantasy_GuiBarsShadows_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
+        x: 69
+        y: 632
+        width: 5
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c66fa421e02ae24d9d4355184baf34b
-      internalID: 1958717585
+      spriteID: 4cc46d31909f72c4bb04f09c7820e558
+      internalID: -2129474819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_4
+      name: Minifantasy_GuiBarsShadows_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
+        x: 87
+        y: 659
+        width: 34
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d87ed2fd7f273b943be183048ab352e8
-      internalID: -338172711
+      spriteID: 167bd6e1e8e3e2a49937e1214c79ce7b
+      internalID: 1957634754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_5
+      name: Minifantasy_GuiBarsShadows_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
+        x: 131
+        y: 631
+        width: 10
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fa6966b9de22f8429f436bdd1a561ca
-      internalID: 1465281477
+      spriteID: cc7bc355483d08240bba44c6df663f06
+      internalID: 369963605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_6
+      name: Minifantasy_GuiBarsShadows_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
+        x: 148
+        y: 631
+        width: 7
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,19 +245,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ce5f91b6aff96b409d4b65a61c917f7
-      internalID: -13374600
+      spriteID: b5fe4b174a10c394ca786962a05c0f43
+      internalID: 373227709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_7
+      name: Minifantasy_GuiBarsShadows_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
-        width: 32
+        x: 165
+        y: 632
+        width: 6
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -278,19 +266,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f03dc081c14cd4089048e083cf24de
-      internalID: -805014604
+      spriteID: 750802333221ddc44b410d48937475c7
+      internalID: 2079654101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_8
+      name: Minifantasy_GuiBarsShadows_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 96
-        width: 32
+        x: 181
+        y: 632
+        width: 5
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ad1e00a29838dc48934c4ec19dd9cae
-      internalID: -1649442239
+      spriteID: 0524deb890be163479bf82ca38d173a7
+      internalID: 1388506793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_9
+      name: Minifantasy_GuiBarsShadows_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 96
-        width: 32
-        height: 32
+        x: 199
+        y: 659
+        width: 34
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70fbbfa5f1a60d841b97f3cfe5bc8bc6
-      internalID: 1420638559
+      spriteID: 98dbc816a1902284ba10ed205523fec9
+      internalID: -1268798019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_10
+      name: Minifantasy_GuiBarsShadows_10
       rect:
         serializedVersion: 2
-        x: 320
-        y: 96
-        width: 32
-        height: 32
+        x: 87
+        y: 645
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baa1baa552d1ff546a25217d2f75d129
-      internalID: 783248678
+      spriteID: c21b9b7698f2bbb4a9129ab79aae58d4
+      internalID: 81227526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_11
+      name: Minifantasy_GuiBarsShadows_11
       rect:
         serializedVersion: 2
-        x: 352
-        y: 96
-        width: 32
-        height: 32
+        x: 199
+        y: 645
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec883e08451ba054480b8d6c8cd2b849
-      internalID: 601520110
+      spriteID: 2f5e2ebbb8a6b134aa6da8424d852dca
+      internalID: 1518826991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_12
+      name: Minifantasy_GuiBarsShadows_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 88
+        y: 629
         width: 32
-        height: 32
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420f6da4554b50f4dac3b664f272c308
-      internalID: 1091074063
+      spriteID: 1be9adb3c3c0e95488c088d811c6acac
+      internalID: -1845095664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_13
+      name: Minifantasy_GuiBarsShadows_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 200
+        y: 629
         width: 32
-        height: 32
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,20 +392,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0204c54d04f8d254e8d7f60c95a2eae9
-      internalID: 1529763663
+      spriteID: c2f8c4baa67946242ae1c24f9de01ca0
+      internalID: -437232875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_14
+      name: Minifantasy_GuiBarsShadows_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 88
+        y: 614
         width: 32
-        height: 32
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,20 +413,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e22d144ea99dec47aea4c9354d4d1e1
-      internalID: 992001533
+      spriteID: 4f0318a2cc3913b48aa45539d481c528
+      internalID: 436740333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_15
+      name: Minifantasy_GuiBarsShadows_15
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 200
+        y: 614
         width: 32
-        height: 32
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,20 +434,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc8c838ae81283e44955e59988e1b37f
-      internalID: -1904013683
+      spriteID: 6c2f2eecd377c634b8a90c893913503c
+      internalID: -1698467457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_16
+      name: Minifantasy_GuiBarsShadows_16
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
+        x: 18
+        y: 566
+        width: 12
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,20 +455,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2faf5351b3343ae4493861fbae132ab9
-      internalID: -450805249
+      spriteID: 5216188c321ee33439b817843a0a53f2
+      internalID: -308602602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_17
+      name: Minifantasy_GuiBarsShadows_17
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
+        x: 35
+        y: 566
+        width: 9
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,20 +476,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 951a223c5217c8541a1b5c4001b40f43
-      internalID: -187499363
+      spriteID: 5299cad1ae8ec50489da354ef849dd4c
+      internalID: 488214308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_18
+      name: Minifantasy_GuiBarsShadows_18
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
+        x: 52
+        y: 567
+        width: 8
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,20 +497,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47d0e185e4f6e0c40bcf59b5eecf57e1
-      internalID: 279898372
+      spriteID: 2f1de2fe58e7a8045b0cc45da3bed6dc
+      internalID: -1345336828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_19
+      name: Minifantasy_GuiBarsShadows_19
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
+        x: 68
+        y: 567
+        width: 7
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,20 +518,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abdd8288727ab524b83eec4a6eeacbdc
-      internalID: 852075380
+      spriteID: ace578c8bbd44db43b04ee66cabb2e41
+      internalID: -2027684046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_20
+      name: Minifantasy_GuiBarsShadows_20
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
-        width: 32
-        height: 32
+        x: 86
+        y: 594
+        width: 36
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,20 +539,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e2a7cec6f246d1438839c98b44a0313
-      internalID: -1485269651
+      spriteID: d72ad3a1f0926f6478fa680353b77e03
+      internalID: -2021824720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_21
+      name: Minifantasy_GuiBarsShadows_21
       rect:
         serializedVersion: 2
-        x: 288
-        y: 64
-        width: 32
-        height: 32
+        x: 131
+        y: 567
+        width: 10
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,20 +560,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c564af72c7f99042b2f6824aab225b1
-      internalID: 780681146
+      spriteID: ba0d0bcd38a255541bf6574591a5643a
+      internalID: 1819988016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_22
+      name: Minifantasy_GuiBarsShadows_22
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
-        width: 32
-        height: 32
+        x: 148
+        y: 567
+        width: 7
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,19 +581,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a81a4e860cacc24e9353bfd089e19fd
-      internalID: -499957526
+      spriteID: e852d3565dd1bf846a09fb9821240d42
+      internalID: 1766067135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_23
+      name: Minifantasy_GuiBarsShadows_23
       rect:
         serializedVersion: 2
-        x: 352
-        y: 64
-        width: 32
+        x: 165
+        y: 568
+        width: 6
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -614,19 +602,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b62f7c0d4d41b7c46abe3d46f06f7027
-      internalID: -584942710
+      spriteID: 997d54a7466113e4e862f5193ac38e1e
+      internalID: 1097859940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_24
+      name: Minifantasy_GuiBarsShadows_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
+        x: 181
+        y: 568
+        width: 5
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -635,20 +623,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e31e488320888fa40af22d441016ed23
-      internalID: 267436005
+      spriteID: fda6d5eca138cc745b165a6ce0d12582
+      internalID: 1639418638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_25
+      name: Minifantasy_GuiBarsShadows_25
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 199
+        y: 595
+        width: 34
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,20 +644,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48a38be3e537cf24da1c425a005e472e
-      internalID: -1219821181
+      spriteID: 05cb71c4687aae040b309aadaf9e6d9b
+      internalID: -693041492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_26
+      name: Minifantasy_GuiBarsShadows_26
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 86
+        y: 580
+        width: 36
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,20 +665,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46003039504e70c4cafdabd25cab0d9c
-      internalID: 1665836408
+      spriteID: e4bc53d93a6adb94c9656d8a2749617b
+      internalID: -673058533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_27
+      name: Minifantasy_GuiBarsShadows_27
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
+        x: 199
+        y: 581
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -698,20 +686,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e88dfb0675cd0694ba2c5a107539087e
-      internalID: 774220889
+      spriteID: 9b38bb901442a9345879d1fd4ee14c36
+      internalID: 1507397369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_28
+      name: Minifantasy_GuiBarsShadows_28
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
+        x: 87
+        y: 564
+        width: 34
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,20 +707,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c69be95a63832e349bb78431ee43c6fd
-      internalID: -129076399
+      spriteID: 4094e444e1cf92c47bd0f62126f98e78
+      internalID: 447650675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_29
+      name: Minifantasy_GuiBarsShadows_29
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 200
+        y: 565
         width: 32
-        height: 32
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -740,20 +728,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eede59ba9c896a1439a7ca091949ef2a
-      internalID: -1905693487
+      spriteID: 4f5ab79c6ae5333448854dd5174b0814
+      internalID: 1504245431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_30
+      name: Minifantasy_GuiBarsShadows_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
+        x: 87
+        y: 549
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -761,20 +749,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e885904021259a74d86f7c0f678ba941
-      internalID: -388802189
+      spriteID: a4b77db58e4d2ca48bd515c62461a72a
+      internalID: 133085072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_31
+      name: Minifantasy_GuiBarsShadows_31
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
+        x: 200
+        y: 550
         width: 32
-        height: 32
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -782,20 +770,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7831b74728079e547a586ee9f5a49a9d
-      internalID: 1677146085
+      spriteID: 8685c9e369a7772489c7b10f4bea0850
+      internalID: -1260277262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_32
+      name: Minifantasy_GuiBarsShadows_32
       rect:
         serializedVersion: 2
-        x: 256
-        y: 32
-        width: 32
-        height: 32
+        x: 18
+        y: 502
+        width: 12
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -803,20 +791,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cb7464b036eb544890085e8c68b51df
-      internalID: 1859128414
+      spriteID: e2be18472be9a754e9afd24346612d3b
+      internalID: 1616974054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_33
+      name: Minifantasy_GuiBarsShadows_33
       rect:
         serializedVersion: 2
-        x: 288
-        y: 32
-        width: 32
-        height: 32
+        x: 35
+        y: 502
+        width: 9
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,20 +812,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7028d92908374e9479d7218bc2b5522f
-      internalID: 1707165892
+      spriteID: d084635c10099e84dbee0ca08f65e8a6
+      internalID: 586205769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_34
+      name: Minifantasy_GuiBarsShadows_34
       rect:
         serializedVersion: 2
-        x: 320
-        y: 32
-        width: 32
-        height: 32
+        x: 52
+        y: 503
+        width: 8
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -845,20 +833,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 977d2bd4a1a08bf4fbe9eaeb330a1cfc
-      internalID: 257043247
+      spriteID: 4d590f02e32dae747b54b45fcb3142ef
+      internalID: 1927995773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_35
+      name: Minifantasy_GuiBarsShadows_35
       rect:
         serializedVersion: 2
-        x: 352
-        y: 32
-        width: 32
-        height: 32
+        x: 68
+        y: 503
+        width: 7
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -866,20 +854,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0464983cf8ae80b4ba71ff052616ebed
-      internalID: 620179178
+      spriteID: 218166aaa40aad04f964a7e0a64ceb63
+      internalID: -1276683943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_36
+      name: Minifantasy_GuiBarsShadows_36
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 86
+        y: 530
+        width: 36
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,20 +875,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2890fdc81ec97243a78bf9d1bbda14d
-      internalID: 509453049
+      spriteID: 8b3e65ec7d45bf94a95a9d37f2c91a2e
+      internalID: 802950698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_37
+      name: Minifantasy_GuiBarsShadows_37
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 130
+        y: 502
+        width: 12
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -908,20 +896,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b57909f078fd0748ac525a1c8703591
-      internalID: 2022913147
+      spriteID: 2e0f9119dc610a1469e84cf0d8a6d679
+      internalID: -1364221004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_38
+      name: Minifantasy_GuiBarsShadows_38
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 147
+        y: 502
+        width: 9
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -929,20 +917,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f3027d0a9d13b64e818bd908d829169
-      internalID: 720661386
+      spriteID: e748ed11895b073449a000813e5e8ebe
+      internalID: -71540695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_39
+      name: Minifantasy_GuiBarsShadows_39
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 164
+        y: 503
+        width: 8
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -950,20 +938,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6cc3f67cfed63e4c81e893a5ee7e0cd
-      internalID: 514104538
+      spriteID: 82d964b9d1b9f304e98f079844c72779
+      internalID: 698488583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_40
+      name: Minifantasy_GuiBarsShadows_40
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 180
+        y: 503
+        width: 7
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -971,20 +959,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5544476f9c0b56743a44190cc764de15
-      internalID: -659594717
+      spriteID: d41db6c9e0f3adc439079bcde075994b
+      internalID: -520572154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_41
+      name: Minifantasy_GuiBarsShadows_41
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
+        x: 198
+        y: 530
+        width: 36
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -992,20 +980,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97fae17d2704454496b8e93a60462ef
-      internalID: -1172335700
+      spriteID: 9670ec9d7dddc9a44b6b6efa7385663c
+      internalID: 1140147937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_42
+      name: Minifantasy_GuiBarsShadows_42
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
+        x: 86
+        y: 516
+        width: 36
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1013,20 +1001,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33b4734cc5d4dbd44a54b06622b71418
-      internalID: -359270067
+      spriteID: 77d9a0569daf61f40b8fa6324bcefea4
+      internalID: 1236779110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_43
+      name: Minifantasy_GuiBarsShadows_43
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
+        x: 198
+        y: 516
+        width: 36
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1034,20 +1022,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c0e182f735651c4ea0ec6f0b966ff0b
-      internalID: -1758899395
+      spriteID: 84f165ffd90c9884bb2e807df5e9eb42
+      internalID: -1995419043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_44
+      name: Minifantasy_GuiBarsShadows_44
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
+        x: 87
+        y: 500
+        width: 34
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1055,20 +1043,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a7e52a1c1e7e6e4a9b37265ffa350d5
-      internalID: 1756230552
+      spriteID: 5cde6aa6e97bfa144b226c8f8485d1c2
+      internalID: -1627940429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_45
+      name: Minifantasy_GuiBarsShadows_45
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
+        x: 199
+        y: 500
+        width: 34
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1076,20 +1064,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa59c97c26370514db0bc9e53ce60931
-      internalID: -1677402957
+      spriteID: 3de5ff2d7199fc545b0117eb38c7eb0e
+      internalID: -1965982446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_46
+      name: Minifantasy_GuiBarsShadows_46
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 32
-        height: 32
+        x: 87
+        y: 485
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1097,20 +1085,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11f51f47175eac44ebedd032c86cc8fe
-      internalID: -1953704682
+      spriteID: 574c25ccc0e925f43bce768ab3037948
+      internalID: 74855513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_CreaturesWolfIdle_47
+      name: Minifantasy_GuiBarsShadows_47
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
-        width: 32
-        height: 32
+        x: 199
+        y: 485
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1118,8 +1106,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1aa674bb6bc04354b80b267034b05aef
-      internalID: -388571897
+      spriteID: 980bd2381bc4d1f4ab2f51c72c5b19aa
+      internalID: 520367156
       vertices: []
       indices: 
       edges: []
@@ -1135,54 +1123,54 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Minifantasy_CreaturesWolfIdle_0: -917775253
-      Minifantasy_CreaturesWolfIdle_1: 404873556
-      Minifantasy_CreaturesWolfIdle_10: 783248678
-      Minifantasy_CreaturesWolfIdle_11: 601520110
-      Minifantasy_CreaturesWolfIdle_12: 1091074063
-      Minifantasy_CreaturesWolfIdle_13: 1529763663
-      Minifantasy_CreaturesWolfIdle_14: 992001533
-      Minifantasy_CreaturesWolfIdle_15: -1904013683
-      Minifantasy_CreaturesWolfIdle_16: -450805249
-      Minifantasy_CreaturesWolfIdle_17: -187499363
-      Minifantasy_CreaturesWolfIdle_18: 279898372
-      Minifantasy_CreaturesWolfIdle_19: 852075380
-      Minifantasy_CreaturesWolfIdle_2: 1977757487
-      Minifantasy_CreaturesWolfIdle_20: -1485269651
-      Minifantasy_CreaturesWolfIdle_21: 780681146
-      Minifantasy_CreaturesWolfIdle_22: -499957526
-      Minifantasy_CreaturesWolfIdle_23: -584942710
-      Minifantasy_CreaturesWolfIdle_24: 267436005
-      Minifantasy_CreaturesWolfIdle_25: -1219821181
-      Minifantasy_CreaturesWolfIdle_26: 1665836408
-      Minifantasy_CreaturesWolfIdle_27: 774220889
-      Minifantasy_CreaturesWolfIdle_28: -129076399
-      Minifantasy_CreaturesWolfIdle_29: -1905693487
-      Minifantasy_CreaturesWolfIdle_3: 1958717585
-      Minifantasy_CreaturesWolfIdle_30: -388802189
-      Minifantasy_CreaturesWolfIdle_31: 1677146085
-      Minifantasy_CreaturesWolfIdle_32: 1859128414
-      Minifantasy_CreaturesWolfIdle_33: 1707165892
-      Minifantasy_CreaturesWolfIdle_34: 257043247
-      Minifantasy_CreaturesWolfIdle_35: 620179178
-      Minifantasy_CreaturesWolfIdle_36: 509453049
-      Minifantasy_CreaturesWolfIdle_37: 2022913147
-      Minifantasy_CreaturesWolfIdle_38: 720661386
-      Minifantasy_CreaturesWolfIdle_39: 514104538
-      Minifantasy_CreaturesWolfIdle_4: -338172711
-      Minifantasy_CreaturesWolfIdle_40: -659594717
-      Minifantasy_CreaturesWolfIdle_41: -1172335700
-      Minifantasy_CreaturesWolfIdle_42: -359270067
-      Minifantasy_CreaturesWolfIdle_43: -1758899395
-      Minifantasy_CreaturesWolfIdle_44: 1756230552
-      Minifantasy_CreaturesWolfIdle_45: -1677402957
-      Minifantasy_CreaturesWolfIdle_46: -1953704682
-      Minifantasy_CreaturesWolfIdle_47: -388571897
-      Minifantasy_CreaturesWolfIdle_5: 1465281477
-      Minifantasy_CreaturesWolfIdle_6: -13374600
-      Minifantasy_CreaturesWolfIdle_7: -805014604
-      Minifantasy_CreaturesWolfIdle_8: -1649442239
-      Minifantasy_CreaturesWolfIdle_9: 1420638559
+      Minifantasy_GuiBarsShadows_0: 797052473
+      Minifantasy_GuiBarsShadows_1: 94061445
+      Minifantasy_GuiBarsShadows_10: 81227526
+      Minifantasy_GuiBarsShadows_11: 1518826991
+      Minifantasy_GuiBarsShadows_12: -1845095664
+      Minifantasy_GuiBarsShadows_13: -437232875
+      Minifantasy_GuiBarsShadows_14: 436740333
+      Minifantasy_GuiBarsShadows_15: -1698467457
+      Minifantasy_GuiBarsShadows_16: -308602602
+      Minifantasy_GuiBarsShadows_17: 488214308
+      Minifantasy_GuiBarsShadows_18: -1345336828
+      Minifantasy_GuiBarsShadows_19: -2027684046
+      Minifantasy_GuiBarsShadows_2: 1064133393
+      Minifantasy_GuiBarsShadows_20: -2021824720
+      Minifantasy_GuiBarsShadows_21: 1819988016
+      Minifantasy_GuiBarsShadows_22: 1766067135
+      Minifantasy_GuiBarsShadows_23: 1097859940
+      Minifantasy_GuiBarsShadows_24: 1639418638
+      Minifantasy_GuiBarsShadows_25: -693041492
+      Minifantasy_GuiBarsShadows_26: -673058533
+      Minifantasy_GuiBarsShadows_27: 1507397369
+      Minifantasy_GuiBarsShadows_28: 447650675
+      Minifantasy_GuiBarsShadows_29: 1504245431
+      Minifantasy_GuiBarsShadows_3: -2129474819
+      Minifantasy_GuiBarsShadows_30: 133085072
+      Minifantasy_GuiBarsShadows_31: -1260277262
+      Minifantasy_GuiBarsShadows_32: 1616974054
+      Minifantasy_GuiBarsShadows_33: 586205769
+      Minifantasy_GuiBarsShadows_34: 1927995773
+      Minifantasy_GuiBarsShadows_35: -1276683943
+      Minifantasy_GuiBarsShadows_36: 802950698
+      Minifantasy_GuiBarsShadows_37: -1364221004
+      Minifantasy_GuiBarsShadows_38: -71540695
+      Minifantasy_GuiBarsShadows_39: 698488583
+      Minifantasy_GuiBarsShadows_4: 1957634754
+      Minifantasy_GuiBarsShadows_40: -520572154
+      Minifantasy_GuiBarsShadows_41: 1140147937
+      Minifantasy_GuiBarsShadows_42: 1236779110
+      Minifantasy_GuiBarsShadows_43: -1995419043
+      Minifantasy_GuiBarsShadows_44: -1627940429
+      Minifantasy_GuiBarsShadows_45: -1965982446
+      Minifantasy_GuiBarsShadows_46: 74855513
+      Minifantasy_GuiBarsShadows_47: 520367156
+      Minifantasy_GuiBarsShadows_5: 369963605
+      Minifantasy_GuiBarsShadows_6: 373227709
+      Minifantasy_GuiBarsShadows_7: 2079654101
+      Minifantasy_GuiBarsShadows_8: 1388506793
+      Minifantasy_GuiBarsShadows_9: -1268798019
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
