@@ -55,7 +55,6 @@ public class SheepMovement : AIMovement
         roamSpeed = sheepSO.roamSpeed;
 
         state = State.Aggregate;
-        pathCalculationTimer = pathCalculationRate;
     }
 
     protected override void Start() {
@@ -69,7 +68,6 @@ public class SheepMovement : AIMovement
     }
 
     private void Update() {
-        pathCalculationTimer -= Time.deltaTime;
 
         if (path == null) {
             return;
@@ -89,10 +87,7 @@ public class SheepMovement : AIMovement
 
                 } else {
                     // Target is within flee stop radius
-                    if (pathCalculationTimer <= 0f) {
-                        CalculateFleePath(closestFleeTarget.transform.position);
-                        pathCalculationTimer = pathCalculationRate;
-                    }
+                    CalculateFleePath(closestFleeTarget.transform.position);
                 }
 
                 FollowPath(path);
@@ -121,10 +116,7 @@ public class SheepMovement : AIMovement
                     roamPauseTimer = 0;
                 }
 
-                if (pathCalculationTimer <= 0f) {
-                    CalculatePath(closestSheepTransform.position);
-                    pathCalculationTimer = pathCalculationRate;
-                }
+                CalculatePath(closestSheepTransform.position);
 
                 FollowPath(path);
 

@@ -115,7 +115,6 @@ public class WolfMovement : AIMovement {
     }
 
     private void Update() {
-        pathCalculationTimer -= Time.deltaTime;
 
         if (path == null) {
             return;
@@ -137,10 +136,7 @@ public class WolfMovement : AIMovement {
                 }
                 else {
                     // Target is within flee stop radius
-                    if (pathCalculationTimer <= 0f) {
-                        CalculateFleePath(closestFleeTarget.transform.position);
-                        pathCalculationTimer = pathCalculationRate;
-                    }
+                    CalculateFleePath(closestFleeTarget.transform.position);
                 }
 
                 FollowPath(path);

@@ -25,7 +25,7 @@ public class AIMovement : MonoBehaviour
     protected bool reachedEndOfPath;
 
     protected float pathCalculationRate = .2f;
-    protected float pathCalculationTimer;
+    protected float pathCalculationTimer = 0;
     #endregion
 
     protected Vector3 moveDirNormalized;
@@ -36,6 +36,12 @@ public class AIMovement : MonoBehaviour
         seeker = GetComponent<Seeker>();
         //Initialise path
         CalculatePath(transform.position);
+
+        pathCalculationTimer = pathCalculationRate;
+    }
+
+    protected void LateUpdate() {
+        pathCalculationTimer -= Time.deltaTime;
     }
 
     protected void FollowPath(Path path) {
@@ -70,20 +76,29 @@ public class AIMovement : MonoBehaviour
     }
 
     protected void CalculatePath(Vector3 destinationPoint) {
-        seeker.StartPath(transform.position, destinationPoint, PathComplete);
+        if (pathCalculationTimer <= 0) {
+            Debug.Log("Path Calculated");
+            seeker.StartPath(transform.position, destinationPoint, PathComplete);
+            pathCalculationTimer = pathCalculationRate;
+        }
     }
 
     protected void CalculateFleePath(Vector3 fleePosition) {
-        // Create a path object
-        FleePath path = FleePath.Construct(transform.position, fleePosition, theGScoreToStopAt);
+        if (pathCalculationTimer <= 0) {
+            Debug.Log("Path Calculated");
+            // Create a path object
+            FleePath path = FleePath.Construct(transform.position, fleePosition, theGScoreToStopAt);
 
-        // This is how strongly it will try to flee, if you set it to 0 it will behave like a RandomPath
-        path.aimStrength = 1f;
+            // This is how strongly it will try to flee, if you set it to 0 it will behave like a RandomPath
+            path.aimStrength = 1f;
 
-        // Determines the variation in path length that is allowed
-        path.spread = 1000;
+            // Determines the variation in path length that is allowed
+            path.spread = 1000;
 
-        seeker.StartPath(path, FleePathComplete);
+            seeker.StartPath(path, FleePathComplete);
+
+            pathCalculationTimer = pathCalculationRate;
+        }
     }
 
     protected void FleePathComplete(Path p) {
