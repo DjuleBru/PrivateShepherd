@@ -72,6 +72,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteSheep
       objectReference: {fileID: 0}
+    - target: {fileID: 6177011059552053393, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177011059552053393, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.53
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6276905617284876724, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
@@ -105,10 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72f39a2650cf834b9210bd15f9eff9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sheepMovement: {fileID: 1989995459645448347}
+  subSheepObjectPool: {fileID: 0}
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  sheepCollider: {fileID: 0}
   sheepMinimumNumber: 5
-  sphereRadius: 3
-  sheepMovement: {fileID: 1989995459645448347}
+  herdRadius: 5
+  herdNumberText: {fileID: 0}
   fleeTargetArray: []

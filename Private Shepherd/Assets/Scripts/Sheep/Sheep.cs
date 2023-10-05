@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(SetAIAnimatorParameters))]
@@ -11,21 +12,45 @@ using UnityEngine;
 public class Sheep : MonoBehaviour
 {
 
+    private Transform sheepParent;
+    private Transform initialSheepParent;
+
     private Sheep[] sheepAggregateArray;
+    [SerializeField] protected SheepMovement sheepMovement;
     [SerializeField] private SheepObjectPool subSheepObjectPool;
 
     [SerializeField] LayerMask sheepLayerMask;
+    [SerializeField] Collider2D sheepCollider;
+
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
     private bool hasEnteredScoreZone;
 
     [SerializeField] int sheepMinimumNumber = 3;
-    [SerializeField] float sphereRadius = 3f;
+    [SerializeField] float herdRadius = 5f;
+    private int herdNumber;
+
+    [SerializeField] TextMeshPro herdNumberText;
+
     public class OnSheepEnterScoreZoneEventArgs : EventArgs {
         public Transform[] scoreZoneAggregatePointArray;
     }
 
     protected virtual void Awake() {
         sheepAggregateArray = subSheepObjectPool.GetSheepArray();
+        initialSheepParent = this.transform.parent;
+    }
+
+    private void Update() {
+        CalculateHerdNumber();
+    }
+
+    private void CalculateHerdNumber() {
+        herdNumber = Physics2D.OverlapCircleAll(transform.position, herdRadius, sheepLayerMask).Length;
+        herdNumberText.text = herdNumber.ToString();
+    }
+
+    public int GetHerdNumber() {
+        return herdNumber;
     }
 
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
@@ -45,8 +70,7 @@ public class Sheep : MonoBehaviour
             float dSqrToSheep = directionToSheep.sqrMagnitude;
 
             // Sheep surroundings
-            int sheepNumberWithinTargetSheepRadius = Physics2D.OverlapCircleAll(potentialSheep.transform.position, sphereRadius, sheepLayerMask).Length;
-            Debug.DrawLine(potentialSheep.transform.position, potentialSheep.transform.position + new Vector3(sphereRadius, 0));
+            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
 
             if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
                 closestDistanceSqr = dSqrToSheep;
@@ -73,4 +97,17 @@ public class Sheep : MonoBehaviour
             hasEnteredScoreZone = true;
         }
     }
+
+    public void SetSheepParent(Transform newParent) {
+        sheepParent = newParent;
+        this.transform.parent = newParent;
+        this.transform.position = newParent.position;
+        this.transform.rotation = newParent.rotation;
+    }
+
+    public void BiteSheep() {
+        sheepMovement.enabled = false;
+        sheepCollider.enabled = false;
+    }
+
 }

@@ -6,26 +6,26 @@ public class SheepObjectPool : MonoBehaviour
 {
     // Put this script first in script execution order (edit > project settings)
 
-    private Sheep[] initialSheepArray;
-    private List<Sheep> sheepsInObjectPoolList;
+    private Sheep[] initialSheepsInLevel;
+    private List<Sheep> sheepsInObjectPool;
 
     private void Awake() {
-        initialSheepArray = GetComponentsInChildren<Sheep>();
+        initialSheepsInLevel = GetComponentsInChildren<Sheep>();
 
         //Initialise sheep List
-        sheepsInObjectPoolList = new List<Sheep>();
+        sheepsInObjectPool = new List<Sheep>();
 
-        foreach (Sheep sheep in initialSheepArray) {
-            sheepsInObjectPoolList.Add(sheep);
+        foreach (Sheep sheep in initialSheepsInLevel) {
+            sheepsInObjectPool.Add(sheep);
         }
 
     }
 
     public Sheep[] GetSheepArray() { 
-        return initialSheepArray; 
+        return initialSheepsInLevel; 
     }
 
     public List<Sheep> GetSheepsInObjectPoolList() {
-        return sheepsInObjectPoolList;
+        return sheepsInObjectPool;
     }
 }

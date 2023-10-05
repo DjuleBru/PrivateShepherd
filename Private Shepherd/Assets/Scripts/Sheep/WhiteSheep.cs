@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WhiteSheep : Sheep
 {
-    [SerializeField] private SheepMovement sheepMovement;
     [SerializeField] private FleeTarget[] fleeTargetArray;
 
     private void Start() {

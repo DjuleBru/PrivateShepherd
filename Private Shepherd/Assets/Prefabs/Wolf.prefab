@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: -917775253, guid: 66b4ec7218c080145b9d8b8b254b8730, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: -1273429032, guid: b0a9d55270e48aa4aaafb8c01906abc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 6046420889960773571}
   - component: {fileID: 3357059825090780641}
   - component: {fileID: 7153476942104567868}
+  - component: {fileID: 4019309773532719661}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -226,6 +227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4618234880274760103}
+  - {fileID: 1783569714279586805}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -242,6 +244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wolfSO: {fileID: 11400000, guid: 6cb409379b9948f4da332fc7ea171626, type: 2}
+  levelSheepObjectPool: {fileID: 0}
+  sheepHoldPoint: {fileID: 1783569714279586805}
+  sheepLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!58 &1832652745241470502
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -343,3 +350,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4618234880274760102}
   AIMovement: {fileID: 151823768}
+--- !u!114 &4019309773532719661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618234881417425293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ed7a6b84d5aa14ea746e61d6238621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleeTargetArray: []
+  wolfMovement: {fileID: 151823768}
+--- !u!1 &5411438828940977333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1783569714279586805}
+  m_Layer: 0
+  m_Name: SheepHoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783569714279586805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5411438828940977333}
+  m_LocalRotation: {x: -0, y: -0, z: 0.3408953, w: 0.94010127}
+  m_LocalPosition: {x: 0.182, y: -0.159, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4618234881417425292}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.863}

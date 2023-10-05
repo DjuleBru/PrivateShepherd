@@ -156,7 +156,6 @@ public class SheepMovement : AIMovement
 
                 FollowPath(path);
                 break;
-
             case State.InScoreZone:
                 moveSpeed = roamSpeed;
                 roamPauseTimer -= Time.deltaTime;

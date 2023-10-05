@@ -28,7 +28,8 @@ public class AIMovement : MonoBehaviour
     protected float pathCalculationTimer;
     #endregion
 
-    protected Vector3 moveDir;
+    protected Vector3 moveDirNormalized;
+    protected Vector2 moveDir2DNormalized;
     protected float moveSpeed;
 
     protected virtual void Start() {
@@ -59,8 +60,9 @@ public class AIMovement : MonoBehaviour
         }
         var speedFactor = reachedEndOfPath ? Mathf.Sqrt(distanceToWaypoint / nextWaypointDistance) : 1f;
 
-        moveDir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        Vector3 velocity = moveDir * moveSpeed * speedFactor;
+        moveDirNormalized = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+        moveDir2DNormalized = new Vector2 (moveDirNormalized.x, moveDirNormalized.y);
+        Vector3 velocity = moveDir2DNormalized * moveSpeed * speedFactor;
 
         if (!reachedEndOfPath) {
             transform.position += velocity * Time.deltaTime;
@@ -103,7 +105,7 @@ public class AIMovement : MonoBehaviour
     }
 
     public Vector3 GetMoveDir() {
-        return moveDir;
+        return moveDirNormalized;
     }
 
     public bool GetReachedEndOfPath() {

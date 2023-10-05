@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roamPauseMaxTime: 8
   roamPauseMinTime: 2
+  agressiveFleeTime: 1
+  roamToAgressiveTime: 5
+  agressiveTargetSheepTimeInterval: 3
+  maxSheepInHerdToAttack: 2
+  agressiveSpeed: 4.5
   fleeSpeed: 6
   roamSpeed: 3
   attackSpeed: 6
+  agressiveMinDistanceToSheep: 5
+  closestFleeTargetTriggerFleeDistance: 2
+  closestFleeTargetStopDistance: 6
+  closestFleeTargetDistanceToEatSheep: 6
