@@ -10,7 +10,7 @@ public class WolfSO : ScriptableObject
 
     public float agressiveFleeTime;
     public float roamToAgressiveTime;
-    public float agressiveTargetSheepTimeInterval;
+    public float agressiveTargetSheepRate;
 
     public int maxSheepInHerdToAttack;
 
@@ -20,7 +20,9 @@ public class WolfSO : ScriptableObject
     public float attackSpeed;
 
     public float agressiveMinDistanceToSheep;
+    public float agressiveMaxDistanceToSheep;
 
+    public float wolfTriggerFleeDistanceMultiplier;
     public float closestFleeTargetTriggerFleeDistance;
     public float closestFleeTargetStopDistance;
     public float closestFleeTargetDistanceToEatSheep;

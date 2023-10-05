@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheepMovement: {fileID: 2206886019954502718}
+  levelSheepObjectPool: {fileID: 0}
   subSheepObjectPool: {fileID: 0}
   sheepLayerMask:
     serializedVersion: 2
@@ -497,7 +498,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -515,8 +516,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 747232469
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -257505448, guid: 4db20a0192013af42b047152d9f21b79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -584,7 +585,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -602,8 +603,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 747232469
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1792865613, guid: 62407c6efc567f442bab918649d0d1fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

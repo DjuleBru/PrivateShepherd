@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class SheepObjectPool : MonoBehaviour
     private Sheep[] initialSheepsInLevel;
     private List<Sheep> sheepsInObjectPool;
 
+    public event EventHandler OnSheepRemoved;
+
     private void Awake() {
         initialSheepsInLevel = GetComponentsInChildren<Sheep>();
 
@@ -18,7 +21,6 @@ public class SheepObjectPool : MonoBehaviour
         foreach (Sheep sheep in initialSheepsInLevel) {
             sheepsInObjectPool.Add(sheep);
         }
-
     }
 
     public Sheep[] GetSheepArray() { 
@@ -27,5 +29,10 @@ public class SheepObjectPool : MonoBehaviour
 
     public List<Sheep> GetSheepsInObjectPoolList() {
         return sheepsInObjectPool;
+    }
+
+    public void RemoveSheepFromObjectPool(Sheep sheep) {
+        sheepsInObjectPool.Remove(sheep);
+        OnSheepRemoved?.Invoke(this, EventArgs.Empty);
     }
 }

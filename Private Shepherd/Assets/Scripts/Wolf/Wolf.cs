@@ -5,11 +5,11 @@ using UnityEngine;
 public class Wolf : MonoBehaviour
 {
     [SerializeField] FleeTarget[] fleeTargetArray;
-    [SerializeField] WolfMovement wolfMovement;
+    [SerializeField] WolfAI wolfAI;
 
     private void Start() {
         foreach(FleeTarget fleeTarget in fleeTargetArray) {
-            wolfMovement.AddFleeTarget(fleeTarget);
+            wolfAI.AddFleeTarget(fleeTarget);
         }
     }
 }

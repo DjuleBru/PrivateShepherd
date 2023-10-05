@@ -6,11 +6,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class WolfMovement : AIMovement {
+public class WolfAI : AIMovement {
 
     [SerializeField] private WolfSO wolfSO;
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
     [SerializeField] private Transform sheepHoldPoint;
+
+    public event EventHandler OnSheepBite;
+    public event EventHandler OnSheepEaten;
 
     private bool inverseDirection;
 
@@ -21,7 +24,7 @@ public class WolfMovement : AIMovement {
         Agressive,
         AgressiveFlee,
         Attack,
-        EatSheepFlee,
+        FleeWithSheep,
     }
 
     #region TARGET SHEEP PARAMETERS
@@ -31,15 +34,15 @@ public class WolfMovement : AIMovement {
     private Sheep closestSheep;
 
     private Sheep closestAttackTargetSheep;
-    private Sheep attackTargetSheep;
+    private Sheep childTargetSheep;
 
     private Sheep agressiveTargetSheep;
-    private float agressiveTargetSheepTimer;
     private Vector3 vectorToClosestSheep;
     private float distanceToClosestSheep;
 
     float fleeClosestSheepDestinationMultiplier = 3f;
     float agressivePathDestinationMultiplier = 10f;
+    private int randomDirSelectorCount;
     #endregion
 
     #region FLEE TARGET PARAMETERS
@@ -57,22 +60,27 @@ public class WolfMovement : AIMovement {
 
     private float agressiveFleeTime;
     private float roamToAgressiveTime;
-    private float agressiveTargetSheepTimeInterval;
+    private float agressiveTargetSheepRate;
 
     private float agressiveSpeed;
     private float fleeSpeed;
     private float roamSpeed;
     private float attackSpeed;
     private float agressiveMinDistanceToSheep;
+    private float agressiveMaxDistanceToSheep;
 
+    private float wolfTriggerFleeDistanceMultiplier;
     private float closestFleeTargetTriggerFleeDistance;
     private float closestFleeTargetStopDistance;
     private float closestFleeTargetDistanceToEatSheep;
 
-    private float attackRange = 1.5f;
+    private float attackRange = 1.75f;
     private bool hasBitSheep;
+    private bool isCarryingSheep;
 
     private int maxSheepInHerdToAttack;
+
+    private float attackAnimationHalfDuration = .2f;
     #endregion
 
     private void Awake() {
@@ -83,7 +91,7 @@ public class WolfMovement : AIMovement {
         roamToAgressiveTime = wolfSO.roamToAgressiveTime;
         agressiveFleeTime = wolfSO.agressiveFleeTime;
 
-        agressiveTargetSheepTimeInterval = wolfSO.agressiveTargetSheepTimeInterval;
+        agressiveTargetSheepRate = wolfSO.agressiveTargetSheepRate;
         agressiveSpeed = wolfSO.agressiveSpeed;
         fleeSpeed = wolfSO.fleeSpeed;
         roamSpeed = wolfSO.roamSpeed;
@@ -92,14 +100,18 @@ public class WolfMovement : AIMovement {
         maxSheepInHerdToAttack = wolfSO.maxSheepInHerdToAttack;
 
         agressiveMinDistanceToSheep = wolfSO.agressiveMinDistanceToSheep;
+        agressiveMaxDistanceToSheep = wolfSO.agressiveMaxDistanceToSheep;
 
         closestFleeTargetTriggerFleeDistance = wolfSO.closestFleeTargetTriggerFleeDistance;
         closestFleeTargetStopDistance = wolfSO.closestFleeTargetStopDistance;
         closestFleeTargetDistanceToEatSheep = wolfSO.closestFleeTargetDistanceToEatSheep;
+        wolfTriggerFleeDistanceMultiplier = wolfSO.wolfTriggerFleeDistanceMultiplier;
     }
 
     protected override void Start() {
         seeker = GetComponent<Seeker>();
+
+        levelSheepObjectPool.OnSheepRemoved += LevelSheepObjectPool_OnSheepRemoved;
 
         // Initialise sheep lists and arrays
         initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
@@ -114,19 +126,32 @@ public class WolfMovement : AIMovement {
         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
     }
 
+
     private void Update() {
 
         if (path == null) {
             return;
         }
 
+        FollowPath(path);
+
         closestFleeTarget = FindClosestFleeTarget();
-        UpdateClosestFleeTargetParameters();
+        UpdateClosestFleeParameters();
+
+        if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance) {
+            // Target is within flee trigger radius
+            state = State.Flee;
+        }
+
+        closestAttackTargetSheep = PickClosestAttackTargetSheep();
 
         switch (state) {
             case State.Flee:
                 moveSpeed = fleeSpeed;
 
+                if (isCarryingSheep) {
+                    DropSheep();
+                }
 
                 if (closestFleeTargetDistance > closestFleeTargetStopDistance) {
                     // Closest target is out of flee stop radius
@@ -139,8 +164,6 @@ public class WolfMovement : AIMovement {
                     CalculateFleePath(closestFleeTarget.transform.position);
                 }
 
-                FollowPath(path);
-
                 break;
 
             case State.Roam:
@@ -148,15 +171,8 @@ public class WolfMovement : AIMovement {
                 roamPauseTimer -= Time.deltaTime;
                 roamToAgressiveTimer -= Time.deltaTime;
 
-                if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance) {
-                    // Target is within flee trigger radius
-                    state = State.Flee;
-                    return;
-                }
-
-                if (roamToAgressiveTimer < roamToAgressiveTime) {
+                if (roamToAgressiveTimer < 0) {
                     state = State.Agressive;
-                    roamToAgressiveTimer = roamToAgressiveTime;
                     return;
                 }
 
@@ -166,29 +182,17 @@ public class WolfMovement : AIMovement {
                     roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
                 }
 
-                FollowPath(path);
                 break;
 
             case State.Agressive:
                 moveSpeed = agressiveSpeed;
-                agressiveTargetSheepTimer -= Time.deltaTime;
 
-                if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance) {
-                    // Target is within flee trigger radius
-                    state = State.Flee;
-                    return;
-                }
-
-                closestAttackTargetSheep = PickClosestAttackTargetSheep();
                 if (closestAttackTargetSheep != null) {
                     state = State.Attack;
                     return;
                 }
 
-                if (agressiveTargetSheepTimer <= 0) {
-                    PickAgressiveTargetSheep();
-                }
-
+                PickAgressiveTargetSheep();
                 FindClosestSheep();
 
                 if (distanceToClosestSheep < agressiveMinDistanceToSheep) {
@@ -198,6 +202,13 @@ public class WolfMovement : AIMovement {
                     agressiveFleeTimer = agressiveFleeTime;
                     return;
                 }
+
+                if (distanceToClosestSheep > agressiveMaxDistanceToSheep) {
+                    // Wolf is too far from sheep
+                    CalculatePath(closestSheep.transform.position);
+                    return;
+                }
+
                 else {
                     // Calculate path to a point perpendicular to the sheep
                     Vector3 dirToSheepNormalized = (agressiveTargetSheep.transform.position - transform.position).normalized;
@@ -211,7 +222,6 @@ public class WolfMovement : AIMovement {
                         CalculatePath(transform.position + perpendicularInverseDirToSheepNormalized * agressivePathDestinationMultiplier);
                     }
                 }
-                FollowPath(path);
 
                 break;
 
@@ -229,49 +239,82 @@ public class WolfMovement : AIMovement {
             case State.Attack:
                 moveSpeed = attackSpeed;
 
+                if (closestAttackTargetSheep == null) {
+                    state = State.Agressive;
+                    return;
+                }
+
                 if (!hasBitSheep) {
                     // Wolf has not bit sheep yet
                     CalculatePath(closestAttackTargetSheep.transform.position);
 
                     // Check if sheep is in range
                     float distanceToClosestAttackTargetSheep = Vector3.Distance(transform.position, closestAttackTargetSheep.transform.position);
-                    if (distanceToClosestAttackTargetSheep < attackRange) {
-                        AttackSheep(closestAttackTargetSheep);
-                        hasBitSheep = true;
+                    if (distanceToClosestAttackTargetSheep < attackRange & !closestAttackTargetSheep.GetHasBeenBit()) {
+                        StartCoroutine(BiteSheep(closestAttackTargetSheep));
                     }
                 }
                 else {
-                    // Wolf has bit sheep
-                    state = State.EatSheepFlee;
-                    return;
+                    // Wolf attack animation playing
+                    if (!isCarryingSheep) {
+                        return;
+                    }
+                    else {
+                        // Wolf has finished attack animation and is carrying sheep
+                        state = State.FleeWithSheep;
+                        hasBitSheep = false;
+                        return;
+                    }
                 }
-                FollowPath(path);
+
                 break;
 
-            case State.EatSheepFlee:
+            case State.FleeWithSheep:
                 moveSpeed = fleeSpeed;
                 // Maintain sheep in mouth
-                attackTargetSheep.transform.position = sheepHoldPoint.transform.position;
+                childTargetSheep.transform.position = sheepHoldPoint.transform.position;
 
                 CalculateFleePath(closestFleeTarget.transform.position);
 
                 if (closestFleeTargetDistance > closestFleeTargetDistanceToEatSheep) {
-                    EatSheep(attackTargetSheep);
+                    StartCoroutine(EatSheep(childTargetSheep));
+
+                    state = State.Roam;
+                    roamToAgressiveTimer = roamToAgressiveTime;
+                    return;
                 }
 
-                FollowPath(path);
                 break;
         }
     }
 
-    private void AttackSheep(Sheep sheep) {
-        attackTargetSheep = sheep;
-        attackTargetSheep.BiteSheep();
-        attackTargetSheep.SetSheepParent(sheepHoldPoint);
+    private IEnumerator BiteSheep(Sheep sheep) {
+        hasBitSheep = true;
+        OnSheepBite?.Invoke(this, EventArgs.Empty);
+
+        childTargetSheep = sheep;
+        childTargetSheep.BiteSheep();
+
+        yield return new WaitForSeconds(attackAnimationHalfDuration);
+
+        childTargetSheep.SetSheepParent(sheepHoldPoint);
+
+        isCarryingSheep = true;
     }
 
-    private void EatSheep(Sheep sheep) {
-        Debug.Log("Sheep Eaten");
+    private IEnumerator EatSheep(Sheep sheep) {
+        OnSheepEaten?.Invoke(this, EventArgs.Empty);
+
+        yield return new WaitForSeconds(attackAnimationHalfDuration);
+
+        sheep.EatSheep();
+        isCarryingSheep = false;
+    }
+
+    private void DropSheep() {
+        childTargetSheep.DropSheep();
+        childTargetSheep = null;
+        isCarryingSheep = false;
     }
 
     private Sheep PickRandomSheep() {
@@ -304,10 +347,15 @@ public class WolfMovement : AIMovement {
     private void PickAgressiveTargetSheep() {
         // Pick a new target Sheep (closest)
         agressiveTargetSheep = FindClosestSheep();
-        agressiveTargetSheepTimer = agressiveTargetSheepTimeInterval;
+
+        randomDirSelectorCount++;
 
         // Pick a random direction between + and -
-        inverseDirection = UnityEngine.Random.value >= 0.5;
+        int randomDirSelectorMaxCount = 40;
+        if (randomDirSelectorCount > randomDirSelectorMaxCount) {
+            inverseDirection = UnityEngine.Random.value >= 0.5;
+            randomDirSelectorCount = 0;
+        }
     }
 
     private Sheep FindClosestSheep() {
@@ -350,14 +398,16 @@ public class WolfMovement : AIMovement {
         return closestFleeTarget;
     }
 
-    private void UpdateClosestFleeTargetParameters() {
+    private void UpdateClosestFleeParameters() {
         closestFleeTargetDistance = Vector3.Distance(closestFleeTarget.transform.position, transform.position);
-        closestFleeTargetTriggerFleeDistance = closestFleeTarget.GetFleeTargetTriggerDistance();
-        closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance();
+        closestFleeTargetTriggerFleeDistance = closestFleeTarget.GetFleeTargetTriggerDistance() * wolfTriggerFleeDistanceMultiplier;
     }
 
     public void AddFleeTarget(FleeTarget fleeTarget) {
         fleeTargetList.Add(fleeTarget);
     }
 
+    private void LevelSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
+         sheepsinLevel = levelSheepObjectPool.GetSheepsInObjectPoolList();
+    }
 }

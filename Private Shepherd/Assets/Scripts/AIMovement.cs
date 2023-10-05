@@ -77,7 +77,6 @@ public class AIMovement : MonoBehaviour
 
     protected void CalculatePath(Vector3 destinationPoint) {
         if (pathCalculationTimer <= 0) {
-            Debug.Log("Path Calculated");
             seeker.StartPath(transform.position, destinationPoint, PathComplete);
             pathCalculationTimer = pathCalculationRate;
         }
@@ -85,7 +84,6 @@ public class AIMovement : MonoBehaviour
 
     protected void CalculateFleePath(Vector3 fleePosition) {
         if (pathCalculationTimer <= 0) {
-            Debug.Log("Path Calculated");
             // Create a path object
             FleePath path = FleePath.Construct(transform.position, fleePosition, theGScoreToStopAt);
 

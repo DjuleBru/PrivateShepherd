@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     private Sheep[] initialSheepsInLevel;
 
     private int initialSheepNumber;
+    private int realTimeSheepNumber;
     private int pennedSheepNumber = 0;
 
     [SerializeField] private float levelTimeLimit;
@@ -21,7 +22,7 @@ public class LevelManager : MonoBehaviour
     public event EventHandler<OnLevelFinishedEventArgs> OnLevelFinished;
 
     public class OnScoreUpdateEventArgs : EventArgs {
-        public int initialSheepNumber;
+        public int realTimeSheepNumber;
         public int pennedSheepNumber;
     }
 
@@ -33,8 +34,11 @@ public class LevelManager : MonoBehaviour
     private void Awake() {
         Instance = this;
 
+        levelSheepObjectPool.OnSheepRemoved += LevelSheepObjectPool_OnSheepRemoved;
+
         initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
         initialSheepNumber = initialSheepsInLevel.Length;
+        realTimeSheepNumber = initialSheepNumber;
 
         foreach (Sheep sheep in initialSheepsInLevel) {
             sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
@@ -42,7 +46,6 @@ public class LevelManager : MonoBehaviour
 
         levelTimer = levelTimeLimit;
     }
-
 
     private void Update() {
         levelTimer -= Time.deltaTime;
@@ -58,7 +61,7 @@ public class LevelManager : MonoBehaviour
     private void Sheep_OnSheepEnterScoreZone(object sender, Sheep.OnSheepEnterScoreZoneEventArgs e) {
         pennedSheepNumber++;
         OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
-            initialSheepNumber = initialSheepNumber,
+            realTimeSheepNumber = initialSheepNumber,
             pennedSheepNumber = pennedSheepNumber
         });
 
@@ -68,6 +71,13 @@ public class LevelManager : MonoBehaviour
                 pennedSheepNumber = pennedSheepNumber
             });
         }
+    }
+    private void LevelSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
+        realTimeSheepNumber --;
+        OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
+            realTimeSheepNumber = realTimeSheepNumber,
+            pennedSheepNumber = pennedSheepNumber
+        });
     }
 
     public int GetPennedSheepNumber() {

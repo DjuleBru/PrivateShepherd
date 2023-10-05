@@ -76,6 +76,8 @@ public class SheepMovement : AIMovement
         closestFleeTarget = FindClosestFleeTarget();
         UpdateClosestFleeTargetParameters();
 
+        FollowPath(path);
+
         switch (state) {
             case State.Flee:
                 moveSpeed = fleeSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
@@ -89,8 +91,6 @@ public class SheepMovement : AIMovement
                     // Target is within flee stop radius
                     CalculateFleePath(closestFleeTarget.transform.position);
                 }
-
-                FollowPath(path);
 
             break;
             case State.Aggregate:
@@ -118,8 +118,6 @@ public class SheepMovement : AIMovement
 
                 CalculatePath(closestSheepTransform.position);
 
-                FollowPath(path);
-
             break;
             case State.Roam:
                 moveSpeed = roamSpeed;
@@ -146,7 +144,6 @@ public class SheepMovement : AIMovement
                     roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
                 }
 
-                FollowPath(path);
                 break;
             case State.InScoreZone:
                 moveSpeed = roamSpeed;
@@ -168,7 +165,6 @@ public class SheepMovement : AIMovement
                     }
                 }
 
-                FollowPath(path);
                 break;
         }
     }
@@ -215,10 +211,13 @@ public class SheepMovement : AIMovement
 
     public IEnumerator SetFleeSpeed(float newFleeSpeed) {
         fleeSpeed = newFleeSpeed;
-
         yield return new WaitForSeconds(1f);
-
         fleeSpeed = sheepSO.fleeSpeed;
+    }
+
+    public void UnSubscribeFromEvents() {
+        PlayerBark.Instance.OnPlayerBark -= PlayerBark_OnPlayerBark;
+        sheep.OnSheepEnterScoreZone -= Sheep_OnSheepEnterScoreZone;
     }
 
 }

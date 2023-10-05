@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(SetAIAnimatorParameters))]
 
@@ -15,8 +16,9 @@ public class Sheep : MonoBehaviour
     private Transform sheepParent;
     private Transform initialSheepParent;
 
-    private Sheep[] sheepAggregateArray;
+    private List<Sheep> sheepsInObjectPool;
     [SerializeField] protected SheepMovement sheepMovement;
+    [SerializeField] private SheepObjectPool levelSheepObjectPool;
     [SerializeField] private SheepObjectPool subSheepObjectPool;
 
     [SerializeField] LayerMask sheepLayerMask;
@@ -24,6 +26,7 @@ public class Sheep : MonoBehaviour
 
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
     private bool hasEnteredScoreZone;
+    private bool hasBeenBit;
 
     [SerializeField] int sheepMinimumNumber = 3;
     [SerializeField] float herdRadius = 5f;
@@ -36,9 +39,12 @@ public class Sheep : MonoBehaviour
     }
 
     protected virtual void Awake() {
-        sheepAggregateArray = subSheepObjectPool.GetSheepArray();
+        sheepsInObjectPool = subSheepObjectPool.GetSheepsInObjectPoolList();
         initialSheepParent = this.transform.parent;
+
+        subSheepObjectPool.OnSheepRemoved += subSheepObjectPool_OnSheepRemoved;
     }
+
 
     private void Update() {
         CalculateHerdNumber();
@@ -59,11 +65,11 @@ public class Sheep : MonoBehaviour
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
 
-        if (sheepAggregateArray.Length == 1) {
+        if (sheepsInObjectPool.Count == 1) {
             return null;
         }
 
-        foreach (Sheep potentialSheep in sheepAggregateArray) {
+        foreach (Sheep potentialSheep in sheepsInObjectPool) {
 
             // Distance to sheep
             Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
@@ -106,8 +112,32 @@ public class Sheep : MonoBehaviour
     }
 
     public void BiteSheep() {
+        hasBeenBit = true;
         sheepMovement.enabled = false;
         sheepCollider.enabled = false;
+    }
+
+    public void DropSheep() {
+        hasBeenBit = false;
+        sheepMovement.enabled = true;
+        sheepCollider.enabled = true;
+        this.transform.parent = null;
+        this.transform.rotation = Quaternion.identity;
+    }
+
+    public void EatSheep() {
+        levelSheepObjectPool.RemoveSheepFromObjectPool(this);
+        subSheepObjectPool.RemoveSheepFromObjectPool(this);
+        sheepMovement.UnSubscribeFromEvents();
+        Destroy(gameObject);
+    }
+
+    private void subSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
+        sheepsInObjectPool = subSheepObjectPool.GetSheepsInObjectPoolList();
+    }
+
+    public bool GetHasBeenBit() {
+        return hasBeenBit;
     }
 
 }
