@@ -7,8 +7,12 @@ using UnityEngine.UI;
 
 public class SheepProgressionBarUI : MonoBehaviour
 {
-    [SerializeField] private Sprite[] sheepProgressionBarArray;
-    [SerializeField] private Image sheepProgressionBar;
+    [SerializeField] private Sprite[] sheepPennedProgressionBarArray;
+    [SerializeField] private Image sheepPennedProgressionBar;
+
+    [SerializeField] private Sprite[] sheepDeadProgressionBarArray;
+    [SerializeField] private Image sheepDeadProgressionBar;
+
     [SerializeField] private TextMeshProUGUI pennedAndTotalSheepNumber;
 
     private int initialSheepNumber;
@@ -20,15 +24,20 @@ public class SheepProgressionBarUI : MonoBehaviour
      }
 
     private void LevelManager_OnScoreUpdate(object sender, LevelManager.OnScoreUpdateEventArgs e) {
+        int deadSheepNumber = initialSheepNumber - e.realTimeSheepNumber;
+        float deadSheepProportion = (float)deadSheepNumber / (float)initialSheepNumber;
         float pennedSheepPropotion = (float)e.pennedSheepNumber / (float)initialSheepNumber;
-        UpdateSheepProgressionBarUI(pennedSheepPropotion);
+
+        UpdateSheepProgressionBarUI(pennedSheepPropotion, deadSheepProportion);
         UpdateSheepTextUI(e.pennedSheepNumber, e.realTimeSheepNumber);
     }
 
-    private void UpdateSheepProgressionBarUI(float pennedSheepProportion) {
-        int progressionBarUINumber = (int)Math.Floor(pennedSheepProportion * 10);
+    private void UpdateSheepProgressionBarUI(float pennedSheepProportion, float deadSheepProportion) {
+        int progressionBarUIPennedNumber = (int)Math.Floor(pennedSheepProportion * 10);
+        int progressionBarUIDeadNumber = (int)Math.Ceiling(deadSheepProportion * 10);
 
-        sheepProgressionBar.sprite = sheepProgressionBarArray[progressionBarUINumber];
+        sheepPennedProgressionBar.sprite = sheepPennedProgressionBarArray[progressionBarUIPennedNumber];
+        sheepDeadProgressionBar.sprite = sheepDeadProgressionBarArray[progressionBarUIDeadNumber];
     }
 
     private void UpdateSheepTextUI(int pennedSheepNumber, int realTimeSheepNumber) {

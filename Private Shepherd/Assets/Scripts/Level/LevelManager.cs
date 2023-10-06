@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
     private void Sheep_OnSheepEnterScoreZone(object sender, Sheep.OnSheepEnterScoreZoneEventArgs e) {
         pennedSheepNumber++;
         OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
-            realTimeSheepNumber = initialSheepNumber,
+            realTimeSheepNumber = realTimeSheepNumber,
             pennedSheepNumber = pennedSheepNumber
         });
 

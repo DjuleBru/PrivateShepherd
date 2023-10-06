@@ -27,16 +27,19 @@ public class PlayerBark : MonoBehaviour
     private void Start() {
         playerFleeTargetSpeedMultiplier = playerFleeTarget.GetFleeTargetSpeedMultiplier();
         playerFleeTargetTriggerDistance = playerFleeTarget.GetFleeTargetTriggerDistance();
+        GameInput.Instance.OnBarkPerformed += Instance_OnBarkPerformed;
     }
+
 
     private void Update() {
         barkCoolDownTimer -= Time.deltaTime;
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) & barkCoolDownTimer < 0) {
+    private void Instance_OnBarkPerformed(object sender, EventArgs e) {
+        if (barkCoolDownTimer < 0) {
             Bark();
         }
     }
-
     private void Bark() {
         OnPlayerBark?.Invoke(this, EventArgs.Empty);
         barkCoolDownTimer = barkCoolDown;

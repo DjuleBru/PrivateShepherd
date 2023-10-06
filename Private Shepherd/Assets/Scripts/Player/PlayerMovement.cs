@@ -21,20 +21,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void HandleMovement() {
-        moveInput = Vector2.zero;
-
-        if (Input.GetKey(KeyCode.Z)) {
-            moveInput.y = +1;
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            moveInput.y = -1;
-        }
-        if (Input.GetKey(KeyCode.Q)) {
-            moveInput.x = -1;
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            moveInput.x = +1;
-        }
+        moveInput = GameInput.Instance.GetMovementVector();
 
         if (moveInput == Vector2.zero) {
             isMoving = false;

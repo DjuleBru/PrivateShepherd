@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 909820459
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -917775253, guid: 66b4ec7218c080145b9d8b8b254b8730, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,7 +123,7 @@ MonoBehaviour:
   wolfAI: {fileID: 151823768}
   wolfBitePS: {fileID: 8393149313799935872, guid: 5ec1f63f07eea2f46b509bbada10beaa,
     type: 3}
-  wolfEatPS: {fileID: 8393149313799935872, guid: 072d3c97ee84b4e47af62b43925c7932,
+  wolfEatPS: {fileID: 8393149313799935872, guid: 9adb1333e8a2028479f68b1664d2be92,
     type: 3}
   wolfAnimator: {fileID: 4618234880274760102}
 --- !u!1 &4618234881141710281
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 909820459
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1273429032, guid: b0a9d55270e48aa4aaafb8c01906abc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -381,7 +381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ed7a6b84d5aa14ea746e61d6238621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleeTargetArray: []
+  fleeTargetArray:
+  - {fileID: 0}
   wolfAI: {fileID: 151823768}
 --- !u!1 &5411438828940977333
 GameObject:
