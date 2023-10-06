@@ -104,6 +104,8 @@ public class Sheep : MonoBehaviour
         }
     }
 
+  
+
     public void SetSheepParent(Transform newParent) {
         sheepParent = newParent;
         this.transform.parent = newParent;
@@ -126,10 +128,13 @@ public class Sheep : MonoBehaviour
     }
 
     public void EatSheep() {
-        levelSheepObjectPool.RemoveSheepFromObjectPool(this);
-        subSheepObjectPool.RemoveSheepFromObjectPool(this);
+        RemoveSheepFromObjectPool();
         sheepMovement.UnSubscribeFromEvents();
         Destroy(gameObject);
+    }
+    public void RemoveSheepFromObjectPool() {
+        levelSheepObjectPool.RemoveSheepFromObjectPool(this);
+        subSheepObjectPool.RemoveSheepFromObjectPool(this);
     }
 
     private void subSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {

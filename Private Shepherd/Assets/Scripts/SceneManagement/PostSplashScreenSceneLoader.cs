@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class LevelLoader : MonoBehaviour
+public class PostSplashScreenSceneLoader : MonoBehaviour
 {
-    public static LevelLoader Instance;
+    public static PostSplashScreenSceneLoader Instance;
 
     [SerializeField] private Animator transition;
     [SerializeField] private float transitionTime = 1f;

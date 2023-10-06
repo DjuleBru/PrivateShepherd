@@ -199,6 +199,7 @@ public class SheepMovement : AIMovement
 
     private void Sheep_OnSheepEnterScoreZone(object sender, OnSheepEnterScoreZoneEventArgs e) {
         state = State.InScoreZone;
+
         Transform[] scoreZoneAggregatePointArray = e.scoreZoneAggregatePointArray;
 
         // pick a random aggregate point in scorezone
@@ -218,6 +219,10 @@ public class SheepMovement : AIMovement
     public void UnSubscribeFromEvents() {
         PlayerBark.Instance.OnPlayerBark -= PlayerBark_OnPlayerBark;
         sheep.OnSheepEnterScoreZone -= Sheep_OnSheepEnterScoreZone;
+    }
+
+    public State GetState() { 
+        return state; 
     }
 
 }

@@ -39,7 +39,7 @@ public class SplashScreenManager : MonoBehaviour
 
     private void Update() {
         if (Input.anyKeyDown && SplashScreen.isFinished) {
-            LevelLoader.Instance.LoadNextScene(0f);
+            PostSplashScreenSceneLoader.Instance.LoadNextScene(0f);
         }
 
         if (hasPlayedImpact == false && logoAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.748) {

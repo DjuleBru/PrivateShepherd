@@ -19,14 +19,15 @@ public class LevelManager : MonoBehaviour
     private float levelTimer;
 
     public event EventHandler<OnScoreUpdateEventArgs> OnScoreUpdate;
-    public event EventHandler<OnLevelFinishedEventArgs> OnLevelFinished;
+    public event EventHandler<OnLevelSucceededEventArgs> OnLevelSucceeded;
+    public event EventHandler OnLevelFailed;
 
     public class OnScoreUpdateEventArgs : EventArgs {
         public int realTimeSheepNumber;
         public int pennedSheepNumber;
     }
 
-    public class OnLevelFinishedEventArgs : EventArgs {
+    public class OnLevelSucceededEventArgs : EventArgs {
         public int initialSheepNumber;
         public int pennedSheepNumber;
     }
@@ -51,22 +52,20 @@ public class LevelManager : MonoBehaviour
         levelTimer -= Time.deltaTime;
 
         if (levelTimer < 0) {
-            OnLevelFinished?.Invoke(this, new OnLevelFinishedEventArgs {
-                initialSheepNumber = initialSheepNumber,
-                pennedSheepNumber = pennedSheepNumber
-            });
+            OnLevelFailed?.Invoke(this, EventArgs.Empty);
         }
     }
 
     private void Sheep_OnSheepEnterScoreZone(object sender, Sheep.OnSheepEnterScoreZoneEventArgs e) {
         pennedSheepNumber++;
+
         OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
             realTimeSheepNumber = realTimeSheepNumber,
             pennedSheepNumber = pennedSheepNumber
         });
 
-        if (initialSheepNumber == pennedSheepNumber) {
-            OnLevelFinished?.Invoke(this, new OnLevelFinishedEventArgs {
+        if (pennedSheepNumber == realTimeSheepNumber) {
+            OnLevelSucceeded?.Invoke(this, new OnLevelSucceededEventArgs {
                 initialSheepNumber = initialSheepNumber,
                 pennedSheepNumber = pennedSheepNumber
             });
@@ -74,10 +73,22 @@ public class LevelManager : MonoBehaviour
     }
     private void LevelSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
         realTimeSheepNumber --;
+
         OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
             realTimeSheepNumber = realTimeSheepNumber,
             pennedSheepNumber = pennedSheepNumber
         });
+
+        if (realTimeSheepNumber == 0) {
+            OnLevelFailed?.Invoke(this, EventArgs.Empty);
+        } 
+        else if (pennedSheepNumber == realTimeSheepNumber) {
+            OnLevelSucceeded?.Invoke(this, new OnLevelSucceededEventArgs {
+                initialSheepNumber = initialSheepNumber,
+                pennedSheepNumber = pennedSheepNumber
+            });
+        }
+
     }
 
     public int GetPennedSheepNumber() {

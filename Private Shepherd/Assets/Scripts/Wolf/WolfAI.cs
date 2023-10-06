@@ -133,6 +133,11 @@ public class WolfAI : AIMovement {
             return;
         }
 
+        if (sheepsinLevel.Count == 0) {
+            // All sheep are dead
+            return;
+        }
+
         FollowPath(path);
 
         closestFleeTarget = FindClosestFleeTarget();
@@ -336,9 +341,14 @@ public class WolfAI : AIMovement {
             // Sheep surroundings
             int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
 
-            if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius <= maxSheepInHerdToAttack) {
-                closestDistanceSqr = dSqrToSheep;
-                closestAttackTargetSheep = potentialSheep;
+
+            if (potentialSheep.GetComponent<SheepMovement>().GetState() != SheepMovement.State.InScoreZone) {
+                // Sheep is not in ScoreZone
+
+                if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius <= maxSheepInHerdToAttack) {
+                    closestDistanceSqr = dSqrToSheep;
+                    closestAttackTargetSheep = potentialSheep;
+                }
             }
         }
         return closestAttackTargetSheep;

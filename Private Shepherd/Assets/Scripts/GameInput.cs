@@ -29,4 +29,16 @@ public class GameInput : MonoBehaviour
 
         return moveInput;
     }
+
+    private void OnEnable() {
+        playerInputActions.Player.Enable();
+    }
+
+    private void OnDisable() {
+        playerInputActions.Player.Disable();
+    }
+
+    private void OnDestroy() {
+        playerInputActions.Player.Bark.performed -= Bark_performed;
+    }
 }
