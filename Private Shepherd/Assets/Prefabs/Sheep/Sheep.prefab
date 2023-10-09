@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a37eb9dbf82f746a15bd547cb95d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepAI: {fileID: 7748370823872585026}
+  sheepMovement: {fileID: 7748370823872585026}
   levelSheepObjectPool: {fileID: 0}
   subSheepObjectPool: {fileID: 0}
   sheepLayerMask:
@@ -860,5 +860,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867ac4fbbb028bd448ee1d871cb9fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepAI: {fileID: 0}
+  sheepAI: {fileID: 7748370823872585026}
   mmfPlayer: {fileID: 1735949625897109381}
