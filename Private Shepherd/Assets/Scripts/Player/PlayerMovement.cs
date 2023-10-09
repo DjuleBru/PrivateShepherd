@@ -81,4 +81,12 @@ public class PlayerMovement : MonoBehaviour {
         return moveDir;
     }
 
+    public void SetMoveSpeed(float moveSpeed) {
+        this.moveSpeed = moveSpeed;
+    }
+
+    public float GetMoveSpeed() {
+        return moveSpeed;
+    }
+
 }

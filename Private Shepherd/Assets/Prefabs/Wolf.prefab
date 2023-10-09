@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 3357059825090780641}
   - component: {fileID: 7153476942104567868}
   - component: {fileID: 4019309773532719661}
+  - component: {fileID: 4603752419028736571}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  randomDirSelectorTime: 5
 --- !u!58 &1832652745241470502
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -384,6 +386,21 @@ MonoBehaviour:
   fleeTargetArray:
   - {fileID: 0}
   wolfAI: {fileID: 151823768}
+--- !u!114 &4603752419028736571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618234881417425293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleeTargetTriggerDistance: 10
+  fleeTargetStopDistance: 15
+  fleeTargetSpeedMultiplier: 1.5
 --- !u!1 &5411438828940977333
 GameObject:
   m_ObjectHideFlags: 0

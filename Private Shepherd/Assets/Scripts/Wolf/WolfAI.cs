@@ -30,7 +30,7 @@ public class WolfAI : AIMovement {
     #region TARGET SHEEP PARAMETERS
     [Header("TARGET SHEEP PARAMETERS")]
     [SerializeField] LayerMask sheepLayerMask;
-    private List<Sheep> sheepsinLevel;
+    private List<Sheep> targetableSheepsinLevel;
     private Sheep[] initialSheepsInLevel;
     private Sheep closestSheep;
 
@@ -41,7 +41,7 @@ public class WolfAI : AIMovement {
     private Vector3 vectorToClosestSheep;
     private float distanceToClosestSheep;
 
-    private float fleeClosestSheepDestinationMultiplier = 3f;
+    private float fleeClosestSheepDestinationMultiplier = 5f;
     private float agressivePathDestinationMultiplier = 10f;
     private float randomDirSelectorTimer;
     [SerializeField] private float randomDirSelectorTime = 5;
@@ -113,14 +113,15 @@ public class WolfAI : AIMovement {
     protected override void Start() {
         seeker = GetComponent<Seeker>();
 
-        levelSheepObjectPool.OnSheepRemoved += LevelSheepObjectPool_OnSheepRemoved;
+        levelSheepObjectPool.OnSheepDied += LevelSheepObjectPool_OnSheepDied;
+        levelSheepObjectPool.OnSheepPenned += LevelSheepObjectPool_OnSheepPenned;
 
         // Initialise sheep lists and arrays
         initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
 
-        sheepsinLevel = new List<Sheep>();
+        targetableSheepsinLevel = new List<Sheep>();
         foreach (Sheep sheep in initialSheepsInLevel) {
-            sheepsinLevel.Add(sheep);
+            targetableSheepsinLevel.Add(sheep);
         }
 
         //Initialise path
@@ -137,7 +138,7 @@ public class WolfAI : AIMovement {
             return;
         }
 
-        if (sheepsinLevel.Count == 0) {
+        if (targetableSheepsinLevel.Count == 0) {
             // All sheep are dead
             return;
         }
@@ -326,17 +327,12 @@ public class WolfAI : AIMovement {
         isCarryingSheep = false;
     }
 
-    private Sheep PickRandomSheep() {
-        int targetSheepindex = UnityEngine.Random.Range(0, sheepsinLevel.Count);
-        return sheepsinLevel[targetSheepindex];
-    }
-
     private Sheep PickClosestAttackTargetSheep() {
         closestAttackTargetSheep = null;
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
 
-        foreach (Sheep potentialSheep in sheepsinLevel) {
+        foreach (Sheep potentialSheep in targetableSheepsinLevel) {
 
             // Distance to sheep
             Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
@@ -376,7 +372,7 @@ public class WolfAI : AIMovement {
 
         float closestDistanceSqr = Mathf.Infinity;
 
-        foreach (Sheep potentialSheep in sheepsinLevel) {
+        foreach (Sheep potentialSheep in targetableSheepsinLevel) {
 
             // Distance to sheep
             Vector3 directionToSheep = potentialSheep.transform.position - transform.position;
@@ -421,7 +417,11 @@ public class WolfAI : AIMovement {
         fleeTargetList.Add(fleeTarget);
     }
 
-    private void LevelSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
-         sheepsinLevel = levelSheepObjectPool.GetSheepsInObjectPoolList();
+    private void LevelSheepObjectPool_OnSheepDied(object sender, EventArgs e) {
+         targetableSheepsinLevel = levelSheepObjectPool.GetSheepsInUnPennedObjectPoolList();
+    }
+
+    private void LevelSheepObjectPool_OnSheepPenned(object sender, EventArgs e) {
+        targetableSheepsinLevel = levelSheepObjectPool.GetSheepsInUnPennedObjectPoolList();
     }
 }

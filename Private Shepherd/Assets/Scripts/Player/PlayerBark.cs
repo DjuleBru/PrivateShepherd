@@ -11,13 +11,17 @@ public class PlayerBark : MonoBehaviour
     [SerializeField] private FleeTarget playerFleeTarget;
 
     [SerializeField] private float barkCoolDownTimer;
-    [SerializeField] private float barkCoolDown = 1;
-    [SerializeField] private float barkFleeTargetSpeedMultiplier = 2f;
-    [SerializeField] private float barkFleeTargetStopDistance = 4f;
-    [SerializeField] private float barkFleeTargetTriggerDistance = 4f;
+    [SerializeField] private float barkCoolDown = .5f;
 
-    float playerFleeTargetSpeedMultiplier;
-    float playerFleeTargetTriggerDistance;
+    [SerializeField] private float barkFleeTargetSpeedMultiplier;
+    [SerializeField] private float barkFleeTargetStopDistance;
+    [SerializeField] private float barkFleeTargetTriggerDistance;
+
+    private float playerFleeTargetSpeedMultiplier;
+    private float playerFleeTargetTriggerDistance;
+    private float playerFleeTargetStopDistance;
+
+    private bool growled;
 
     private void Awake() {
         Instance = this;
@@ -27,34 +31,43 @@ public class PlayerBark : MonoBehaviour
     private void Start() {
         playerFleeTargetSpeedMultiplier = playerFleeTarget.GetFleeTargetSpeedMultiplier();
         playerFleeTargetTriggerDistance = playerFleeTarget.GetFleeTargetTriggerDistance();
-        GameInput.Instance.OnBarkPerformed += Instance_OnBarkPerformed;
-    }
+        playerFleeTargetStopDistance = playerFleeTarget.GetFleeTargetStopDistance();
 
+        GameInput.Instance.OnBarkPerformed += GameInput_OnBarkPerformed;
+    }
 
     private void Update() {
         barkCoolDownTimer -= Time.deltaTime;
     }
 
-    private void Instance_OnBarkPerformed(object sender, EventArgs e) {
+    private void GameInput_OnBarkPerformed(object sender, EventArgs e) {
         if (barkCoolDownTimer < 0) {
             Bark();
         }
     }
+
     private void Bark() {
-        OnPlayerBark?.Invoke(this, EventArgs.Empty);
         barkCoolDownTimer = barkCoolDown;
-        StartCoroutine(ModifyPlayerFleeTargetParameters());
+        OnPlayerBark?.Invoke(this, EventArgs.Empty);
+        StartCoroutine(ModifyPlayerFleeTargetParametersForLimitedTime(barkCoolDown, barkFleeTargetTriggerDistance, barkFleeTargetStopDistance));
+        growled = false;
     }
 
-
-    private IEnumerator ModifyPlayerFleeTargetParameters() {
-
-        playerFleeTarget.SetFleeTargetTriggerDistance(barkFleeTargetTriggerDistance);
-        playerFleeTarget.SetFleeTargetStopDistance(barkFleeTargetStopDistance);
-
-        yield return new WaitForSeconds(barkCoolDown);
-
+    private void ResetFleeTargetParameters() {
         playerFleeTarget.SetFleeTargetTriggerDistance(playerFleeTargetTriggerDistance);
+        playerFleeTarget.SetFleeTargetStopDistance(playerFleeTargetStopDistance);
+    }
 
+    private IEnumerator ModifyPlayerFleeTargetParametersForLimitedTime(float time, float fleeTargetTriggerDistance, float fleeTargetStopDistance) {
+
+        playerFleeTarget.SetFleeTargetTriggerDistance(fleeTargetTriggerDistance);
+        playerFleeTarget.SetFleeTargetStopDistance(fleeTargetStopDistance);
+
+        yield return new WaitForSeconds(time);
+        ResetFleeTargetParameters();
+    }
+
+    public float GetBarkTriggerDistance() {
+        return barkFleeTargetTriggerDistance;
     }
 }

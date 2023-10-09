@@ -44,6 +44,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Growl"",
+                    ""type"": ""Button"",
+                    ""id"": ""c43d3799-ca09-45fd-b1d2-286f45ce603c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -200,6 +209,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Bark"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f1641ce7-1398-45f1-9232-5b1ce7f55c1d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Growl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24838f6b-9662-4541-a0f6-03138b2cd893"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Growl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ad3fa24-ab82-4bfe-b6d6-b6a013236d6e"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Growl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -238,6 +280,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Bark = m_Player.FindAction("Bark", throwIfNotFound: true);
+        m_Player_Growl = m_Player.FindAction("Growl", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -301,12 +344,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Bark;
+    private readonly InputAction m_Player_Growl;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Bark => m_Wrapper.m_Player_Bark;
+        public InputAction @Growl => m_Wrapper.m_Player_Growl;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -322,6 +367,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Bark.started += instance.OnBark;
             @Bark.performed += instance.OnBark;
             @Bark.canceled += instance.OnBark;
+            @Growl.started += instance.OnGrowl;
+            @Growl.performed += instance.OnGrowl;
+            @Growl.canceled += instance.OnGrowl;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -332,6 +380,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Bark.started -= instance.OnBark;
             @Bark.performed -= instance.OnBark;
             @Bark.canceled -= instance.OnBark;
+            @Growl.started -= instance.OnGrowl;
+            @Growl.performed -= instance.OnGrowl;
+            @Growl.canceled -= instance.OnGrowl;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -380,5 +431,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnBark(InputAction.CallbackContext context);
+        void OnGrowl(InputAction.CallbackContext context);
     }
 }

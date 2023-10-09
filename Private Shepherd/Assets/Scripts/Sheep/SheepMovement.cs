@@ -95,7 +95,7 @@ public class SheepMovement : AIMovement
             break;
             case State.Aggregate:
                 moveSpeed = aggregateSpeed;
-                closestSheepTransform = sheep.GetClosestSheepWithEnougSheepSurrounding();
+                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
                 if (closestSheepTransform == null) {
                     closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
                 }
@@ -133,7 +133,7 @@ public class SheepMovement : AIMovement
                     return;
                 }
 
-                closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
+                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
                 if (closestSheepTransform != null) {
                     // There is another sheep to aggregate
                     if (Vector3.Distance(closestSheepTransform.position, transform.position) > triggerAggregateDistance) {

@@ -42,7 +42,7 @@ public class Sheep : MonoBehaviour
         sheepsInObjectPool = subSheepObjectPool.GetSheepsInObjectPoolList();
         initialSheepParent = this.transform.parent;
 
-        subSheepObjectPool.OnSheepRemoved += subSheepObjectPool_OnSheepRemoved;
+        subSheepObjectPool.OnSheepDied += subSheepObjectPool_OnSheepDied;
     }
 
     private void Start() {
@@ -62,7 +62,7 @@ public class Sheep : MonoBehaviour
         return herdNumber;
     }
 
-    public Transform GetClosestSheepWithEnougSheepSurrounding() {
+    public Transform GetClosestSheepWithEnoughSheepSurrounding() {
 
         Transform closestSheepWithEnoughSheepSurrounding = null;
         float closestDistanceSqr = Mathf.Infinity;
@@ -72,20 +72,20 @@ public class Sheep : MonoBehaviour
             return null;
         }
 
-            foreach (Sheep potentialSheep in sheepsInObjectPool) {
+        foreach (Sheep potentialSheep in sheepsInObjectPool) {
 
-                // Distance to sheep
-                Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
-                float dSqrToSheep = directionToSheep.sqrMagnitude;
+            // Distance to sheep
+            Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
+            float dSqrToSheep = directionToSheep.sqrMagnitude;
 
-                // Sheep surroundings
-                int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
+            // Sheep surroundings
+            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
 
-                if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
-                    closestDistanceSqr = dSqrToSheep;
-                    closestSheepWithEnoughSheepSurrounding = potentialSheep.transform;
-                }
+            if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
+                closestDistanceSqr = dSqrToSheep;
+                closestSheepWithEnoughSheepSurrounding = potentialSheep.transform;
             }
+        }
 
         return closestSheepWithEnoughSheepSurrounding;
     }
@@ -113,7 +113,6 @@ public class Sheep : MonoBehaviour
                     sheepWithMaxSheepSurrounding = potentialSheep.transform;
                     maxSheepNumberSurroundings = sheepNumberWithinTargetSheepRadius;
                 }
-                sheepWithMaxSheepSurrounding = potentialSheep.transform; ;
             }
         }
 
@@ -136,6 +135,7 @@ public class Sheep : MonoBehaviour
             }
 
             hasEnteredScoreZone = true;
+            RemovePennedSheepFromObjectPool();
         }
     }
 
@@ -163,16 +163,21 @@ public class Sheep : MonoBehaviour
     }
 
     public void EatSheep() {
-        RemoveSheepFromObjectPool();
+        RemoveDeadSheepFromObjectPool();
         sheepMovement.UnSubscribeFromEvents();
         Destroy(gameObject);
     }
-    public void RemoveSheepFromObjectPool() {
-        levelSheepObjectPool.RemoveSheepFromObjectPool(this);
-        subSheepObjectPool.RemoveSheepFromObjectPool(this);
+    public void RemoveDeadSheepFromObjectPool() {
+        levelSheepObjectPool.RemoveDeadSheepFromObjectPool(this);
+        subSheepObjectPool.RemoveDeadSheepFromObjectPool(this);
     }
 
-    private void subSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
+    public void RemovePennedSheepFromObjectPool() {
+        subSheepObjectPool.RemovePennedSheepFromObjectPool(this);
+        levelSheepObjectPool.RemovePennedSheepFromObjectPool(this);
+    }
+
+    private void subSheepObjectPool_OnSheepDied(object sender, EventArgs e) {
         sheepsInObjectPool = subSheepObjectPool.GetSheepsInObjectPoolList();
     }
 

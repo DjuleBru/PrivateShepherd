@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
     private void Awake() {
         Instance = this;
 
-        levelSheepObjectPool.OnSheepRemoved += LevelSheepObjectPool_OnSheepRemoved;
+        levelSheepObjectPool.OnSheepDied += LevelSheepObjectPool_OnSheepDied;
 
         // Initialise sheeps
         initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
@@ -99,7 +99,7 @@ public class LevelManager : MonoBehaviour
             EndLevelSuccess();
         }
     }
-    private void LevelSheepObjectPool_OnSheepRemoved(object sender, EventArgs e) {
+    private void LevelSheepObjectPool_OnSheepDied(object sender, EventArgs e) {
         realTimeSheepNumber --;
 
         OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
