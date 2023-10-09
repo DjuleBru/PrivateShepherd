@@ -28,6 +28,7 @@ public class WolfAI : AIMovement {
     }
 
     #region TARGET SHEEP PARAMETERS
+    [Header("TARGET SHEEP PARAMETERS")]
     [SerializeField] LayerMask sheepLayerMask;
     private List<Sheep> sheepsinLevel;
     private Sheep[] initialSheepsInLevel;
@@ -40,18 +41,21 @@ public class WolfAI : AIMovement {
     private Vector3 vectorToClosestSheep;
     private float distanceToClosestSheep;
 
-    float fleeClosestSheepDestinationMultiplier = 3f;
-    float agressivePathDestinationMultiplier = 10f;
-    private int randomDirSelectorCount;
+    private float fleeClosestSheepDestinationMultiplier = 3f;
+    private float agressivePathDestinationMultiplier = 10f;
+    private float randomDirSelectorTimer;
+    [SerializeField] private float randomDirSelectorTime = 5;
     #endregion
 
     #region FLEE TARGET PARAMETERS
+    [Header("FLEE TARGET PARAMETERS")]
     private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
     private FleeTarget closestFleeTarget;
     private float closestFleeTargetDistance = float.MaxValue;
     #endregion
 
     #region WOLF PARAMETERS
+    [Header("WOLF PARAMETERS")]
     private float roamPauseMaxTime;
     private float roamPauseMinTime;
     private float roamPauseTimer;
@@ -60,7 +64,6 @@ public class WolfAI : AIMovement {
 
     private float agressiveFleeTime;
     private float roamToAgressiveTime;
-    private float agressiveTargetSheepRate;
 
     private float agressiveSpeed;
     private float fleeSpeed;
@@ -74,7 +77,7 @@ public class WolfAI : AIMovement {
     private float closestFleeTargetStopDistance;
     private float closestFleeTargetDistanceToEatSheep;
 
-    private float attackRange = 1.75f;
+    private float attackRange = 2f;
     private bool hasBitSheep;
     private bool isCarryingSheep;
 
@@ -91,7 +94,6 @@ public class WolfAI : AIMovement {
         roamToAgressiveTime = wolfSO.roamToAgressiveTime;
         agressiveFleeTime = wolfSO.agressiveFleeTime;
 
-        agressiveTargetSheepRate = wolfSO.agressiveTargetSheepRate;
         agressiveSpeed = wolfSO.agressiveSpeed;
         fleeSpeed = wolfSO.fleeSpeed;
         roamSpeed = wolfSO.roamSpeed;
@@ -124,6 +126,8 @@ public class WolfAI : AIMovement {
         //Initialise path
         CalculatePath(transform.position);
         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
+        randomDirSelectorTimer = randomDirSelectorTime;
+        nextWaypointDistance = 0.5f;
     }
 
 
@@ -355,16 +359,16 @@ public class WolfAI : AIMovement {
     }
 
     private void PickAgressiveTargetSheep() {
-        // Pick a new target Sheep (closest)
-        agressiveTargetSheep = FindClosestSheep();
 
-        randomDirSelectorCount++;
+        randomDirSelectorTimer -= Time.deltaTime;
 
-        // Pick a random direction between + and -
-        int randomDirSelectorMaxCount = 40;
-        if (randomDirSelectorCount > randomDirSelectorMaxCount) {
+        // Pick a random sheep and direction between + and -
+        if (randomDirSelectorTimer >= 0) {
+            // Pick a new target Sheep (closest)
+            agressiveTargetSheep = FindClosestSheep();
+
             inverseDirection = UnityEngine.Random.value >= 0.5;
-            randomDirSelectorCount = 0;
+            randomDirSelectorTimer = 0;
         }
     }
 

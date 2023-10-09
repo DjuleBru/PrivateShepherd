@@ -95,7 +95,10 @@ public class SheepMovement : AIMovement
             break;
             case State.Aggregate:
                 moveSpeed = aggregateSpeed;
-                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
+                closestSheepTransform = sheep.GetClosestSheepWithEnougSheepSurrounding();
+                if (closestSheepTransform == null) {
+                    closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
+                }
 
                 if (closestSheepTransform == null) {
                     // There is no other sheep to aggregate to
@@ -130,7 +133,7 @@ public class SheepMovement : AIMovement
                     return;
                 }
 
-                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
+                closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
                 if (closestSheepTransform != null) {
                     // There is another sheep to aggregate
                     if (Vector3.Distance(closestSheepTransform.position, transform.position) > triggerAggregateDistance) {
@@ -146,7 +149,6 @@ public class SheepMovement : AIMovement
 
                 break;
             case State.InScoreZone:
-                moveSpeed = roamSpeed;
                 roamPauseTimer -= Time.deltaTime;
 
                 float pennedDistanceTreshold = 1f;
@@ -156,9 +158,11 @@ public class SheepMovement : AIMovement
                 }
 
                 if(!penned) {
+                    moveSpeed = aggregateSpeed;
                     CalculatePath(targetScoreAggregatePoint.position);
                 } else {
                     if (roamPauseTimer <= 0) {
+                        moveSpeed = roamSpeed;
                         Vector3 roamDestination = PickRandomPoint(targetScoreAggregatePoint.position);
                         CalculatePath(roamDestination);
                         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);

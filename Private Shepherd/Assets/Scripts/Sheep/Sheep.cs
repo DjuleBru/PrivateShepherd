@@ -45,6 +45,9 @@ public class Sheep : MonoBehaviour
         subSheepObjectPool.OnSheepRemoved += subSheepObjectPool_OnSheepRemoved;
     }
 
+    private void Start() {
+    }
+
 
     private void Update() {
         CalculateHerdNumber();
@@ -59,7 +62,7 @@ public class Sheep : MonoBehaviour
         return herdNumber;
     }
 
-    public Transform GetClosestSheepWithEnoughSheepSurrounding() {
+    public Transform GetClosestSheepWithEnougSheepSurrounding() {
 
         Transform closestSheepWithEnoughSheepSurrounding = null;
         float closestDistanceSqr = Mathf.Infinity;
@@ -69,21 +72,53 @@ public class Sheep : MonoBehaviour
             return null;
         }
 
-        foreach (Sheep potentialSheep in sheepsInObjectPool) {
+            foreach (Sheep potentialSheep in sheepsInObjectPool) {
 
-            // Distance to sheep
-            Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
-            float dSqrToSheep = directionToSheep.sqrMagnitude;
+                // Distance to sheep
+                Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
+                float dSqrToSheep = directionToSheep.sqrMagnitude;
 
-            // Sheep surroundings
-            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
+                // Sheep surroundings
+                int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
 
-            if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
-                closestDistanceSqr = dSqrToSheep;
-                closestSheepWithEnoughSheepSurrounding = potentialSheep.transform;
+                if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
+                    closestDistanceSqr = dSqrToSheep;
+                    closestSheepWithEnoughSheepSurrounding = potentialSheep.transform;
+                }
+            }
+
+        return closestSheepWithEnoughSheepSurrounding;
+    }
+
+    public Transform GetSheepWithMaxSheepSurrounding() {
+
+        Transform sheepWithMaxSheepSurrounding = null;
+        Vector3 currentPosition = transform.position;
+        int maxSheepNumberSurroundings = 0;
+
+        if (sheepsInObjectPool.Count == 1) {
+            return null;
+        }
+
+        while (sheepWithMaxSheepSurrounding == null) {
+            foreach (Sheep potentialSheep in sheepsInObjectPool) {
+
+                // Distance to sheep
+                Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
+
+                // Sheep surroundings
+                int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
+
+                if (sheepNumberWithinTargetSheepRadius >= maxSheepNumberSurroundings) {
+                    sheepWithMaxSheepSurrounding = potentialSheep.transform;
+                    maxSheepNumberSurroundings = sheepNumberWithinTargetSheepRadius;
+                }
+                sheepWithMaxSheepSurrounding = potentialSheep.transform; ;
             }
         }
-        return closestSheepWithEnoughSheepSurrounding;
+
+
+        return sheepWithMaxSheepSurrounding;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

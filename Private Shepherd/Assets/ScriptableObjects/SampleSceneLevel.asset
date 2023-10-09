@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193e0177b1205bf4f90ae6a7925f48d2, type: 3}
-  m_Name: WhiteSheep
+  m_Script: {fileID: 11500000, guid: 5cc361534fe3ee94c99a158cef46c613, type: 3}
+  m_Name: SampleSceneLevel
   m_EditorClassIdentifier: 
-  triggerAggregateDistance: 2.5
-  roamPauseMaxTime: 8
-  roamPauseMinTime: 2
-  moveSpeed: 2
-  fleeSpeed: 3
-  barkFleeSpeed: 6
-  aggregateSpeed: 2
-  roamSpeed: 1.5
-  sheepScore: 5
+  levelTimeLimit: 100
+  bronzeScoreTreshold: 100
+  silverScoreTreshold: 120
+  goldScoreTreshold: 140
+  platScoreTreshold: 160

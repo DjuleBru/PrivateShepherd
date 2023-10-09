@@ -309,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleeTargetTriggerDistance: 1.5
-  fleeTargetStopDistance: 1.5
+  fleeTargetTriggerDistance: 5
+  fleeTargetStopDistance: 10
   fleeTargetSpeedMultiplier: 1
 --- !u!114 &8668020691478968858
 MonoBehaviour:
@@ -341,8 +341,8 @@ MonoBehaviour:
   barkCoolDownTimer: 5
   barkCoolDown: 0.5
   barkFleeTargetSpeedMultiplier: 2
-  barkFleeTargetStopDistance: 6
-  barkFleeTargetTriggerDistance: 8
+  barkFleeTargetStopDistance: 15
+  barkFleeTargetTriggerDistance: 10
 --- !u!82 &359076444
 AudioSource:
   m_ObjectHideFlags: 0

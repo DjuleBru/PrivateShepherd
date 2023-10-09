@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SheepFeedBacks : MonoBehaviour
 {
-    [SerializeField] private SheepMovement sheepMovement;
+    [SerializeField] private SheepMovement sheepAI;
     [SerializeField] private MMF_Player mmfPlayer;
 
     private void Start() {
-        sheepMovement.OnSheepFlee += SheepMovement_OnSheepFlee;
+        sheepAI.OnSheepFlee += SheepMovement_OnSheepFlee;
     }
 
     private void SheepMovement_OnSheepFlee(object sender, System.EventArgs e) {

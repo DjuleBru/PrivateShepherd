@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1113203148564738994, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepAI
+      value: 
+      objectReference: {fileID: 7978746048183685607}
     - target: {fileID: 2206886019954502718, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: sheep
@@ -82,21 +87,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -5.53
       objectReference: {fileID: 0}
+    - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 3af23f20c7e26654586acbf9b5eb704e,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 6276905617284876724, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
---- !u!114 &1989995459645448347 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2206886019954502718, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
-    type: 3}
-  m_PrefabInstance: {fileID: 377613489296329893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4455502579522056647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 723fde56740704a46912fdc491020c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4455502579522056647 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4100688584939994466, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
@@ -115,13 +114,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72f39a2650cf834b9210bd15f9eff9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepMovement: {fileID: 1989995459645448347}
+  sheepMovement: {fileID: 7978746048183685607}
+  levelSheepObjectPool: {fileID: 0}
   subSheepObjectPool: {fileID: 0}
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  sheepCollider: {fileID: 0}
+  sheepCollider: {fileID: 5872753180390008719}
   sheepMinimumNumber: 5
   herdRadius: 5
-  herdNumberText: {fileID: 0}
+  herdNumberText: {fileID: 7269218252091336502}
   fleeTargetArray: []
+--- !u!58 &5872753180390008719 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6106239601642728234, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+    type: 3}
+  m_PrefabInstance: {fileID: 377613489296329893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7269218252091336502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7051790442930105235, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+    type: 3}
+  m_PrefabInstance: {fileID: 377613489296329893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7978746048183685607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+    type: 3}
+  m_PrefabInstance: {fileID: 377613489296329893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455502579522056647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3197f195f5ae00143904bc9ae737dddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

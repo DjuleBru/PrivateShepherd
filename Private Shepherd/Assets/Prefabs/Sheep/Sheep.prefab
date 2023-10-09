@@ -187,8 +187,8 @@ GameObject:
   - component: {fileID: 4100688584939994475}
   - component: {fileID: 6276905617284876724}
   - component: {fileID: 4846186786135874560}
-  - component: {fileID: 2206886019954502718}
   - component: {fileID: 5689397843276955821}
+  - component: {fileID: 7748370823872585026}
   m_Layer: 7
   m_Name: Sheep
   m_TagString: Untagged
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4100688585976792736}
-  AIMovement: {fileID: 2206886019954502718}
+  AIMovement: {fileID: 7748370823872585026}
 --- !u!114 &6276905617284876724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,14 +304,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a37eb9dbf82f746a15bd547cb95d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepMovement: {fileID: 2206886019954502718}
+  sheepAI: {fileID: 7748370823872585026}
   levelSheepObjectPool: {fileID: 0}
   subSheepObjectPool: {fileID: 0}
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
   sheepCollider: {fileID: 6106239601642728234}
-  sheepMinimumNumber: 3
+  sheepMinimumNumber: 6
   herdRadius: 5
   herdNumberText: {fileID: 7051790442930105235}
 --- !u!114 &4846186786135874560
@@ -336,20 +336,6 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
---- !u!114 &2206886019954502718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100688584939994466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 723fde56740704a46912fdc491020c3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sheep: {fileID: 6276905617284876724}
-  sheepSO: {fileID: 11400000, guid: 3af23f20c7e26654586acbf9b5eb704e, type: 2}
 --- !u!82 &5689397843276955821
 AudioSource:
   m_ObjectHideFlags: 0
@@ -446,6 +432,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7748370823872585026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100688584939994466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3197f195f5ae00143904bc9ae737dddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheep: {fileID: 6276905617284876724}
+  sheepSO: {fileID: 0}
 --- !u!1 &4100688585696642629
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -257505448, guid: 4db20a0192013af42b047152d9f21b79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -604,7 +604,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1792865613, guid: 62407c6efc567f442bab918649d0d1fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -860,5 +860,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867ac4fbbb028bd448ee1d871cb9fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheepMovement: {fileID: 2206886019954502718}
+  sheepAI: {fileID: 0}
   mmfPlayer: {fileID: 1735949625897109381}

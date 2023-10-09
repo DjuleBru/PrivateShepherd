@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 386ca8802932ff040ac97b5c13689c0b
+guid: 8fdfcda32e2f6fa4f8fb44a2454db9f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,600 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_0
+      name: MinigameAndGamblingIcons_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 631
-        width: 10
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d00571159f916d149a251851c53cfc4d
-      internalID: 797052473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 631
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 614fab852b161ec4c9bb9041524545db
-      internalID: 94061445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_2
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 632
-        width: 6
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c956768ae2228b143afb86b44b1e2246
-      internalID: 1064133393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 632
-        width: 5
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cc46d31909f72c4bb04f09c7820e558
-      internalID: -2129474819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_4
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 659
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 167bd6e1e8e3e2a49937e1214c79ce7b
-      internalID: 1957634754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_5
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 631
-        width: 10
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc7bc355483d08240bba44c6df663f06
-      internalID: 369963605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_6
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 631
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5fe4b174a10c394ca786962a05c0f43
-      internalID: 373227709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_7
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 632
-        width: 6
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 750802333221ddc44b410d48937475c7
-      internalID: 2079654101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_8
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 632
-        width: 5
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0524deb890be163479bf82ca38d173a7
-      internalID: 1388506793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_9
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 659
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98dbc816a1902284ba10ed205523fec9
-      internalID: -1268798019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_10
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 645
-        width: 34
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c21b9b7698f2bbb4a9129ab79aae58d4
-      internalID: 81227526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_11
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 645
-        width: 34
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f5e2ebbb8a6b134aa6da8424d852dca
-      internalID: 1518826991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_12
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 629
-        width: 32
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1be9adb3c3c0e95488c088d811c6acac
-      internalID: -1845095664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_13
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 629
-        width: 32
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2f8c4baa67946242ae1c24f9de01ca0
-      internalID: -437232875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_14
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 614
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f0318a2cc3913b48aa45539d481c528
-      internalID: 436740333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_15
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 614
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c2f2eecd377c634b8a90c893913503c
-      internalID: -1698467457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_16
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 566
-        width: 12
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5216188c321ee33439b817843a0a53f2
-      internalID: -308602602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_17
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 566
-        width: 9
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5299cad1ae8ec50489da354ef849dd4c
-      internalID: 488214308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_18
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 567
+        x: 8
+        y: 64
         width: 8
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f1de2fe58e7a8045b0cc45da3bed6dc
-      internalID: -1345336828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_19
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 567
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ace578c8bbd44db43b04ee66cabb2e41
-      internalID: -2027684046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_20
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 594
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d72ad3a1f0926f6478fa680353b77e03
-      internalID: -2021824720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_21
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 567
-        width: 10
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba0d0bcd38a255541bf6574591a5643a
-      internalID: 1819988016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_22
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 567
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e852d3565dd1bf846a09fb9821240d42
-      internalID: 1766067135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_23
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 568
-        width: 6
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997d54a7466113e4e862f5193ac38e1e
-      internalID: 1097859940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_24
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 568
-        width: 5
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fda6d5eca138cc745b165a6ce0d12582
-      internalID: 1639418638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_25
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 595
-        width: 34
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05cb71c4687aae040b309aadaf9e6d9b
-      internalID: -693041492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_26
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 580
-        width: 36
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4bc53d93a6adb94c9656d8a2749617b
-      internalID: -673058533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_27
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 581
-        width: 34
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b38bb901442a9345879d1fd4ee14c36
-      internalID: 1507397369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_28
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 564
-        width: 34
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -719,334 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4094e444e1cf92c47bd0f62126f98e78
-      internalID: 447650675
+      spriteID: ad199cfea09f78e4b8aa877b3edaf0b5
+      internalID: -753629324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_29
+      name: MinigameAndGamblingIcons_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 565
-        width: 32
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f5ab79c6ae5333448854dd5174b0814
-      internalID: 1504245431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_30
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 549
-        width: 34
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4b77db58e4d2ca48bd515c62461a72a
-      internalID: 133085072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_31
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 550
-        width: 32
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8685c9e369a7772489c7b10f4bea0850
-      internalID: -1260277262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_32
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 502
-        width: 12
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2be18472be9a754e9afd24346612d3b
-      internalID: 1616974054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_33
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 502
-        width: 9
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d084635c10099e84dbee0ca08f65e8a6
-      internalID: 586205769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_34
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 503
+        x: 16
+        y: 64
         width: 8
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d590f02e32dae747b54b45fcb3142ef
-      internalID: 1927995773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_35
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 503
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 218166aaa40aad04f964a7e0a64ceb63
-      internalID: -1276683943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_36
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 530
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b3e65ec7d45bf94a95a9d37f2c91a2e
-      internalID: 802950698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_37
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 502
-        width: 12
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e0f9119dc610a1469e84cf0d8a6d679
-      internalID: -1364221004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_38
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 502
-        width: 9
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e748ed11895b073449a000813e5e8ebe
-      internalID: -71540695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_39
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 503
-        width: 8
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82d964b9d1b9f304e98f079844c72779
-      internalID: 698488583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_40
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 503
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d41db6c9e0f3adc439079bcde075994b
-      internalID: -520572154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_41
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 530
-        width: 36
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9670ec9d7dddc9a44b6b6efa7385663c
-      internalID: 1140147937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_42
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 516
-        width: 36
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77d9a0569daf61f40b8fa6324bcefea4
-      internalID: 1236779110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_43
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 516
-        width: 36
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84f165ffd90c9884bb2e807df5e9eb42
-      internalID: -1995419043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_44
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 500
-        width: 34
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1055,19 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cde6aa6e97bfa144b226c8f8485d1c2
-      internalID: -1627940429
+      spriteID: de536cdc51e6c8a47a5cbd2a25c315db
+      internalID: 632590877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_45
+      name: MinigameAndGamblingIcons_2
       rect:
         serializedVersion: 2
-        x: 199
-        y: 500
-        width: 34
+        x: 24
+        y: 64
+        width: 8
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1076,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3de5ff2d7199fc545b0117eb38c7eb0e
-      internalID: -1965982446
+      spriteID: 4b36b931586fd52429263ace1d5cdbd8
+      internalID: -1766167198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_46
+      name: MinigameAndGamblingIcons_3
       rect:
         serializedVersion: 2
-        x: 87
-        y: 485
-        width: 34
-        height: 7
+        x: 32
+        y: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1097,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 574c25ccc0e925f43bce768ab3037948
-      internalID: 74855513
+      spriteID: ac1b1f6f918348544aaf769a51d2167c
+      internalID: 1142270954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minifantasy_GuiBarsShadows_47
+      name: MinigameAndGamblingIcons_4
       rect:
         serializedVersion: 2
-        x: 199
-        y: 485
-        width: 34
-        height: 7
+        x: 56
+        y: 64
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1118,8 +215,932 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980bd2381bc4d1f4ab2f51c72c5b19aa
-      internalID: 520367156
+      spriteID: ff0595aef2cf8bf45aec559b9aa9d50b
+      internalID: -583929252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab762149457e8e44bcb947514ff7305
+      internalID: -36885404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a54bf1088480ee4c8675b046a009de2
+      internalID: -1897974382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23c079ee5736f34e978d6905bbd4aae
+      internalID: -1688185596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07027dd6559bb64fba2830a68a2cd3a
+      internalID: -1869509798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd87b82b56515741bffbec3d66ea6ba
+      internalID: 1610397555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006e3929e194d18468a878d6073a31d8
+      internalID: -1717263248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a95e14389d57114b8b55e40152182c6
+      internalID: -1145132565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_12
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9469b90f758f73428759dbe78ea9257
+      internalID: -905468099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603eb583011054749a03db28b2454426
+      internalID: -1231968760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfd654be5b1b6d48bee995418bdb7ba
+      internalID: 1015746290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287d5dc10f5abf84cba57023d962cc0b
+      internalID: 877842907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c478e21abea666245847c1a2a6cb2611
+      internalID: -642684388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e40416bedbf1e342872e052664ebffb
+      internalID: 863283901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_18
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0917cb522203c41b09e359b1e822f6
+      internalID: 2101723735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3c4b1385c6ae84aa7aa7b766ead2f4
+      internalID: -1567099829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5873b8abbc4fe2429975a984c3c9a7a
+      internalID: 2023795231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_22
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d58d7d38efc8b4fbd49f36664d52ab
+      internalID: 1424621620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb52404fd81da949a95303cb08396ef
+      internalID: 344689227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_24
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23ce7a40c847d74090f34698c70dcd7
+      internalID: -903068546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40b50c4cba82214eb3ab32a0801d882
+      internalID: 2014512454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_26
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d486b4a1f45bfeb42a56161922c37cd0
+      internalID: 485541630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f74fc1e5ad15444ad8c8116ee46e26
+      internalID: -1313762251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_28
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e553be923b3d3d24b89afd7c2ae1720a
+      internalID: -418210800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd92f3c2ecef70746880ebbb6735f453
+      internalID: -1817398689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_30
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453b2b1f10f63404c9f0ce5e78c5367d
+      internalID: -466977282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a01023099e41ef45be6d482b4ed1f0e
+      internalID: -507379966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e136ca706b510c4e910e687bdce45a2
+      internalID: 1143283128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d69e8bc4fa3d14a890782c5434d462
+      internalID: -331452791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_34
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc08e20f57ea9b419583c3ec40dd1ce
+      internalID: 639209755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a902794e93b0d8e438b2957260ccd1ab
+      internalID: 872609786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_36
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cae4912ec4387549932b82718094719
+      internalID: 1990925935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8b0e12c834c3c4aaa7d96860b3286a
+      internalID: -1436400093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_38
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79102fddcc382104aa8b05bfb1246781
+      internalID: 1803086022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_39
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829612f9ee8c36c42b0b65bfeae889c8
+      internalID: -1541452606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb1d43de38fb3548937b6520423c608
+      internalID: 1360277408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c3f18b69346484382e49604c78ff91
+      internalID: 2061929173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7005dbf7c345a49aa10dfd3c72c91b
+      internalID: 1106755859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5759fab5e5156e49bb729c73726f828
+      internalID: -1666647768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_44
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e803d5194ed4f5648bc16ac96e64dfee
+      internalID: -51914996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329248028b5faf3418131f73ac69c3fa
+      internalID: -1090625152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d457da9ba3b02b44b32679c3138c565
+      internalID: -1266979978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6e3ce5b618d5242ada4bdfea99d6cf
+      internalID: -625545495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_48
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fa93bf961eb3c4a8b4a5be534ad7be
+      internalID: -332974285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameAndGamblingIcons_49
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d945f86938ef7ed4f9ab3a5506fb1d27
+      internalID: -686071639
       vertices: []
       indices: 
       edges: []
@@ -1135,54 +1156,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Minifantasy_GuiBarsShadows_0: 797052473
-      Minifantasy_GuiBarsShadows_1: 94061445
-      Minifantasy_GuiBarsShadows_10: 81227526
-      Minifantasy_GuiBarsShadows_11: 1518826991
-      Minifantasy_GuiBarsShadows_12: -1845095664
-      Minifantasy_GuiBarsShadows_13: -437232875
-      Minifantasy_GuiBarsShadows_14: 436740333
-      Minifantasy_GuiBarsShadows_15: -1698467457
-      Minifantasy_GuiBarsShadows_16: -308602602
-      Minifantasy_GuiBarsShadows_17: 488214308
-      Minifantasy_GuiBarsShadows_18: -1345336828
-      Minifantasy_GuiBarsShadows_19: -2027684046
-      Minifantasy_GuiBarsShadows_2: 1064133393
-      Minifantasy_GuiBarsShadows_20: -2021824720
-      Minifantasy_GuiBarsShadows_21: 1819988016
-      Minifantasy_GuiBarsShadows_22: 1766067135
-      Minifantasy_GuiBarsShadows_23: 1097859940
-      Minifantasy_GuiBarsShadows_24: 1639418638
-      Minifantasy_GuiBarsShadows_25: -693041492
-      Minifantasy_GuiBarsShadows_26: -673058533
-      Minifantasy_GuiBarsShadows_27: 1507397369
-      Minifantasy_GuiBarsShadows_28: 447650675
-      Minifantasy_GuiBarsShadows_29: 1504245431
-      Minifantasy_GuiBarsShadows_3: -2129474819
-      Minifantasy_GuiBarsShadows_30: 133085072
-      Minifantasy_GuiBarsShadows_31: -1260277262
-      Minifantasy_GuiBarsShadows_32: 1616974054
-      Minifantasy_GuiBarsShadows_33: 586205769
-      Minifantasy_GuiBarsShadows_34: 1927995773
-      Minifantasy_GuiBarsShadows_35: -1276683943
-      Minifantasy_GuiBarsShadows_36: 802950698
-      Minifantasy_GuiBarsShadows_37: -1364221004
-      Minifantasy_GuiBarsShadows_38: -71540695
-      Minifantasy_GuiBarsShadows_39: 698488583
-      Minifantasy_GuiBarsShadows_4: 1957634754
-      Minifantasy_GuiBarsShadows_40: -520572154
-      Minifantasy_GuiBarsShadows_41: 1140147937
-      Minifantasy_GuiBarsShadows_42: 1236779110
-      Minifantasy_GuiBarsShadows_43: -1995419043
-      Minifantasy_GuiBarsShadows_44: -1627940429
-      Minifantasy_GuiBarsShadows_45: -1965982446
-      Minifantasy_GuiBarsShadows_46: 74855513
-      Minifantasy_GuiBarsShadows_47: 520367156
-      Minifantasy_GuiBarsShadows_5: 369963605
-      Minifantasy_GuiBarsShadows_6: 373227709
-      Minifantasy_GuiBarsShadows_7: 2079654101
-      Minifantasy_GuiBarsShadows_8: 1388506793
-      Minifantasy_GuiBarsShadows_9: -1268798019
+      MinigameAndGamblingIcons_0: -753629324
+      MinigameAndGamblingIcons_1: 632590877
+      MinigameAndGamblingIcons_10: -1717263248
+      MinigameAndGamblingIcons_11: -1145132565
+      MinigameAndGamblingIcons_12: -905468099
+      MinigameAndGamblingIcons_13: -1231968760
+      MinigameAndGamblingIcons_14: 1015746290
+      MinigameAndGamblingIcons_15: 877842907
+      MinigameAndGamblingIcons_16: -642684388
+      MinigameAndGamblingIcons_17: 863283901
+      MinigameAndGamblingIcons_18: 2101723735
+      MinigameAndGamblingIcons_19: -1567099829
+      MinigameAndGamblingIcons_2: -1766167198
+      MinigameAndGamblingIcons_20: 2023795231
+      MinigameAndGamblingIcons_21: -1830558665
+      MinigameAndGamblingIcons_22: 1424621620
+      MinigameAndGamblingIcons_23: 344689227
+      MinigameAndGamblingIcons_24: -903068546
+      MinigameAndGamblingIcons_25: 2014512454
+      MinigameAndGamblingIcons_26: 485541630
+      MinigameAndGamblingIcons_27: -1313762251
+      MinigameAndGamblingIcons_28: -418210800
+      MinigameAndGamblingIcons_29: -1817398689
+      MinigameAndGamblingIcons_3: 1142270954
+      MinigameAndGamblingIcons_30: -466977282
+      MinigameAndGamblingIcons_31: -507379966
+      MinigameAndGamblingIcons_32: 1143283128
+      MinigameAndGamblingIcons_33: -331452791
+      MinigameAndGamblingIcons_34: 639209755
+      MinigameAndGamblingIcons_35: 872609786
+      MinigameAndGamblingIcons_36: 1990925935
+      MinigameAndGamblingIcons_37: -1436400093
+      MinigameAndGamblingIcons_38: 1803086022
+      MinigameAndGamblingIcons_39: -1541452606
+      MinigameAndGamblingIcons_4: -583929252
+      MinigameAndGamblingIcons_40: 1360277408
+      MinigameAndGamblingIcons_41: 2061929173
+      MinigameAndGamblingIcons_42: 1106755859
+      MinigameAndGamblingIcons_43: -1666647768
+      MinigameAndGamblingIcons_44: -51914996
+      MinigameAndGamblingIcons_45: -1090625152
+      MinigameAndGamblingIcons_46: -1266979978
+      MinigameAndGamblingIcons_47: -625545495
+      MinigameAndGamblingIcons_48: -332974285
+      MinigameAndGamblingIcons_49: -686071639
+      MinigameAndGamblingIcons_5: -36885404
+      MinigameAndGamblingIcons_6: -1897974382
+      MinigameAndGamblingIcons_7: -1688185596
+      MinigameAndGamblingIcons_8: -1869509798
+      MinigameAndGamblingIcons_9: 1610397555
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
