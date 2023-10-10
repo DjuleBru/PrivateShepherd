@@ -13,11 +13,10 @@ public class PlayerRunVisual : MonoBehaviour
     private bool playingTiredPS;
     private bool playingExtremelyTiredPS;
 
-    private void Start() {
-        PlayerRun.Instance.onPlayerRun += PlayerRun_onPlayerRun;
-        PlayerRun.Instance.onPlayerStopRun += PlayerRun_onPlayerStopRun;
+    private Color runColor = new Color(121f / 255f, 157f / 255f, 0f / 255f, 255f / 255f);
+    private Color tiredColor = new Color(215f / 255f, 156f / 255f, 0f / 255f, 255f / 255f);
+    private Color extremeColor = new Color(142f / 255f, 62f / 255f, 05f / 255f, 255f / 255f);
 
-    }
 
     private void Update() {
 
@@ -28,10 +27,10 @@ public class PlayerRunVisual : MonoBehaviour
                 tiredPS.Play();
                 playingTiredPS = true;
             }
-            runProgressionBar.color = Color.yellow;
+            runProgressionBar.color = tiredColor;
         }
         else {
-            runProgressionBar.color = Color.green;
+            runProgressionBar.color = runColor;
             if (playingTiredPS) {
                 tiredPS.Stop();
                 playingTiredPS = false;
@@ -43,7 +42,7 @@ public class PlayerRunVisual : MonoBehaviour
                 extremelyTiredPS.Play();
                 playingExtremelyTiredPS = true;
             }
-            runProgressionBar.color = Color.red;
+            runProgressionBar.color = extremeColor;
         } else {
             extremelyTiredPS.Stop();
             playingExtremelyTiredPS = false;
@@ -52,11 +51,4 @@ public class PlayerRunVisual : MonoBehaviour
         
     }
 
-    private void PlayerRun_onPlayerStopRun(object sender, System.EventArgs e) {
-        
-    }
-
-    private void PlayerRun_onPlayerRun(object sender, System.EventArgs e) {
-       
-    }
 }

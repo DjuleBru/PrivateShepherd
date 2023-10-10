@@ -9,17 +9,18 @@ public class PlayerRun : MonoBehaviour
 
     [SerializeField] float runSpeedMultiplier;
     [SerializeField] float runMaxTime;
-    [SerializeField] float runTiredTime;
-    [SerializeField] float runExtremelyTiredTime;
+    [SerializeField] float runTiredTimeFraction;
+    [SerializeField] float runExtremelyTiredTimeFraction;
+
     [SerializeField] int runCoolDownTime;
 
-    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] float tiredRunSpeedMultiplier;
 
-    public event EventHandler onPlayerRun;
-    public event EventHandler onPlayerStopRun;
     public event EventHandler onPlayerTired;
     public event EventHandler onPlayerRecovered;
 
+    float runTiredTime;
+    float runExtremelyTiredTime;
     private float recoverFactor = .5f;
     private float playerMoveSpeed;
 
@@ -37,8 +38,10 @@ public class PlayerRun : MonoBehaviour
         GameInput.Instance.OnRunPerformed += GameInput_OnRunPerformed;
         GameInput.Instance.OnRunReleased += GameInput_OnRunReleased;
 
-        playerMoveSpeed = playerMovement.GetMoveSpeed();
+        playerMoveSpeed = PlayerMovement.Instance.GetMoveSpeed();
 
+        runTiredTime = runMaxTime * runTiredTimeFraction;
+        runExtremelyTiredTime = runMaxTime * runExtremelyTiredTimeFraction;
         runTimer = 0;
     }
     private void Update() {
@@ -63,8 +66,12 @@ public class PlayerRun : MonoBehaviour
 
         if (runTimer >= runExtremelyTiredTime) {
             extremelyTired = true;
+            if (!running) {
+                PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed * tiredRunSpeedMultiplier);
+            }
         } else if (runTimer <= 0) {
             extremelyTired = false;
+            PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed);
         }
 
     }
@@ -83,15 +90,14 @@ public class PlayerRun : MonoBehaviour
     private void Run() {
         running = true;
 
-        playerMovement.SetMoveSpeed(playerMoveSpeed * runSpeedMultiplier);
-        onPlayerRun?.Invoke(this, EventArgs.Empty);
+        PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed * runSpeedMultiplier);
     }
 
     private void StopRunning() {
         running = false;
-
-        playerMovement.SetMoveSpeed(playerMoveSpeed);
-        onPlayerStopRun?.Invoke(this, EventArgs.Empty);
+        if (!extremelyTired) {
+            PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed);
+        }
     }
 
     public bool GetTired() {

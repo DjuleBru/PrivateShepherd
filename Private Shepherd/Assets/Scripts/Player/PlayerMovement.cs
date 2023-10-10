@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public static PlayerMovement Instance { get; private set; }
+
     private Vector3 lastMoveDir;
     Vector2 moveInput;
     Vector3 moveDir = new Vector3(0, 1, 0);
@@ -15,6 +17,10 @@ public class PlayerMovement : MonoBehaviour {
     float animatorY;
     [SerializeField] float moveSpeed;
     [SerializeField] Animator animator;
+
+    private void Awake() {
+        Instance = this;
+    }
 
     void Update() {
         HandleMovement();
