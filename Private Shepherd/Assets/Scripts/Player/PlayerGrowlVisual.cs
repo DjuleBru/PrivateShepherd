@@ -3,16 +3,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerGrowlVisual : MonoBehaviour
 {
 
     [SerializeField] private MMF_Player growlMMFPlayer;
     [SerializeField] private WolfSO levelWolfSO;
-
+    [SerializeField] private PlayerGrowl playerGrowl;
 
     [SerializeField] private SpriteRenderer growlAOE;
     [SerializeField] private SpriteRenderer growlWolfAOE;
+    [SerializeField] private Image growlTimeUIImage;
 
     private float growlTriggerDistance;
     private float growlWolfTriggerDistance;
@@ -30,6 +32,15 @@ public class PlayerGrowlVisual : MonoBehaviour
 
         growlAOE.enabled = false;
         growlWolfAOE.enabled = false;
+    }
+
+    private void Update() {
+        if (playerGrowl.GetGrowling()) {
+            growlTimeUIImage.fillAmount = playerGrowl.GetGrowlTimerNormalized();
+        }
+        else {
+            growlTimeUIImage.fillAmount = 0;
+        }
     }
 
     private void PlayerGrowl_OnPlayerGrowlReleased(object sender, EventArgs e) {

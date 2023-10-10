@@ -13,7 +13,10 @@ public class PlayerBarkVisual : MonoBehaviour
     [SerializeField] private SpriteRenderer barkWolfAOE;
 
     [SerializeField] private WolfSO levelWolfSO;
- 
+
+    [SerializeField] private float initialBarkVisualAlpha;
+
+
     private float barkTriggerDistance;
     private float barkWolfTriggerDistance;
 
@@ -42,7 +45,7 @@ public class PlayerBarkVisual : MonoBehaviour
         Color barkColortmp = barkAOE.color;
         Color barkWolfColortmp = barkWolfAOE.color;
 
-        float alpha = 1.0f;
+        float alpha = initialBarkVisualAlpha;
         
         while (alpha >= 0) {
             barkColortmp.a = alpha;

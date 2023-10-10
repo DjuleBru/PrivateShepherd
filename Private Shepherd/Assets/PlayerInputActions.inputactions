@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "dae039b6-5cef-4a51-ba36-c16e06d04d39",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -218,6 +227,28 @@
                     "processors": "",
                     "groups": "Touch",
                     "action": "Growl",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77bd41ae-87f3-445a-bf68-920e95e4014c",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "872f98ff-1131-42c1-9a5d-6f7a1d67de1e",
+                    "path": "<Gamepad>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

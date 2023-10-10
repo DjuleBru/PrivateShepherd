@@ -13,7 +13,7 @@ public class PlayerGrowl : MonoBehaviour
     [SerializeField] private FleeTarget playerFleeTarget;
 
     [SerializeField] private float growlTime;
-    [SerializeField] private float growlCoolDown;
+    [SerializeField] private float growlCoolDownTime;
 
     private float playerFleeTargetSpeedMultiplier;
     private float playerFleeTargetTriggerDistance;
@@ -34,6 +34,7 @@ public class PlayerGrowl : MonoBehaviour
     private void Awake() {
         Instance = this;
         growlTimer = growlTime;
+        growlCoolDownTimer = 0;
     }
 
     private void Start() {
@@ -70,7 +71,7 @@ public class PlayerGrowl : MonoBehaviour
 
     private void StartGrowl() {
         OnPlayerGrowl?.Invoke(this, EventArgs.Empty);
-        ModifyFleeTargetParameters(growlFleeTargetTriggerDistance, growlFleeTargetStopDistance);
+        ModifyFleeTargetParameters(growlFleeTargetTriggerDistance, growlFleeTargetStopDistance, growlFleeTargetSpeedMultiplier);
         playerMovement.SetMoveSpeed(initialPlayerMoveSpeed * growlPlayerMoveSpeedMultiplier);
         growlTimer = growlTime;
         growling = true;
@@ -81,22 +82,36 @@ public class PlayerGrowl : MonoBehaviour
         ResetFleeTargetParameters();
         playerMovement.SetMoveSpeed(initialPlayerMoveSpeed);
 
-        growlCoolDownTimer = growlCoolDown;
+        growlCoolDownTimer = growlCoolDownTime;
         growling = false;
     }
 
-    private void ModifyFleeTargetParameters(float fleeTargetTriggerDistance, float fleeTargetStopDistance) {
+    private void ModifyFleeTargetParameters(float fleeTargetTriggerDistance, float fleeTargetStopDistance, float fleeTargetSpeedMultiplier) {
         playerFleeTarget.SetFleeTargetTriggerDistance(fleeTargetTriggerDistance);
         playerFleeTarget.SetFleeTargetStopDistance(fleeTargetStopDistance);
+        playerFleeTarget.SetFleeTargetSpeedMultiplier(fleeTargetSpeedMultiplier);
     }
 
     private void ResetFleeTargetParameters() {
         playerFleeTarget.SetFleeTargetTriggerDistance(playerFleeTargetTriggerDistance);
         playerFleeTarget.SetFleeTargetStopDistance(playerFleeTargetStopDistance);
+        playerFleeTarget.SetFleeTargetSpeedMultiplier(playerFleeTargetSpeedMultiplier);
     }
 
     public float GetGrowlTriggerDistance() {
         return growlFleeTargetTriggerDistance;
+    }
+
+    public float GetGrowlCoolDownTimerNormalized() {
+        return (1 - (growlCoolDownTimer/growlCoolDownTime));
+    }
+
+    public float GetGrowlTimerNormalized() {
+        return (growlTimer / growlTime);
+    }
+
+    public bool GetGrowling() {
+        return growling;
     }
 
 }

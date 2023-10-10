@@ -53,6 +53,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""dae039b6-5cef-4a51-ba36-c16e06d04d39"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -242,6 +251,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Growl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77bd41ae-87f3-445a-bf68-920e95e4014c"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""872f98ff-1131-42c1-9a5d-6f7a1d67de1e"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -281,6 +312,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Bark = m_Player.FindAction("Bark", throwIfNotFound: true);
         m_Player_Growl = m_Player.FindAction("Growl", throwIfNotFound: true);
+        m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -345,6 +377,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Bark;
     private readonly InputAction m_Player_Growl;
+    private readonly InputAction m_Player_Run;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -352,6 +385,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Bark => m_Wrapper.m_Player_Bark;
         public InputAction @Growl => m_Wrapper.m_Player_Growl;
+        public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -370,6 +404,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Growl.started += instance.OnGrowl;
             @Growl.performed += instance.OnGrowl;
             @Growl.canceled += instance.OnGrowl;
+            @Run.started += instance.OnRun;
+            @Run.performed += instance.OnRun;
+            @Run.canceled += instance.OnRun;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -383,6 +420,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Growl.started -= instance.OnGrowl;
             @Growl.performed -= instance.OnGrowl;
             @Growl.canceled -= instance.OnGrowl;
+            @Run.started -= instance.OnRun;
+            @Run.performed -= instance.OnRun;
+            @Run.canceled -= instance.OnRun;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -432,5 +472,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnBark(InputAction.CallbackContext context);
         void OnGrowl(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
     }
 }

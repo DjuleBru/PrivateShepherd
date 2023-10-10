@@ -35,7 +35,7 @@ public class FleeTarget : MonoBehaviour
     }
 
     public void SetFleeTargetSpeedMultiplier(float fleeTargetSpeedMultiplier) {
-        this.fleeTargetSpeedMultiplier *= fleeTargetSpeedMultiplier;
+        this.fleeTargetSpeedMultiplier = fleeTargetSpeedMultiplier;
     }
 
 }

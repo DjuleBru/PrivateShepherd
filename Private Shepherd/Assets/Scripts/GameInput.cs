@@ -10,6 +10,8 @@ public class GameInput : MonoBehaviour
     public event EventHandler OnBarkReleased;
     public event EventHandler OnGrowlPerformed;
     public event EventHandler OnGrowlReleased;
+    public event EventHandler OnRunPerformed;
+    public event EventHandler OnRunReleased;
 
     public static GameInput Instance { get; private set; }
     private PlayerInputActions playerInputActions;
@@ -25,6 +27,17 @@ public class GameInput : MonoBehaviour
 
         playerInputActions.Player.Growl.performed += Growl_performed;
         playerInputActions.Player.Growl.canceled += Growl_canceled;
+
+        playerInputActions.Player.Run.performed += Run_performed;
+        playerInputActions.Player.Run.canceled += Run_canceled;
+    }
+
+    private void Run_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        OnRunReleased?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void Run_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        OnRunPerformed?.Invoke(this, EventArgs.Empty);
     }
 
     private void Growl_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {

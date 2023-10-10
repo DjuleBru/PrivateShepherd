@@ -32,6 +32,7 @@ public class SheepMovement : AIMovement
     private float fleeSpeed;
     private float aggregateSpeed;
     private float roamSpeed;
+    private float originalMoveSpeed;
 
     private bool penned;
     #endregion
@@ -49,8 +50,7 @@ public class SheepMovement : AIMovement
         triggerAggregateDistance = sheepSO.triggerAggregateDistance;
         roamPauseMaxTime = sheepSO.roamPauseMaxTime;
         roamPauseMinTime = sheepSO.roamPauseMinTime;
-        moveSpeed = sheepSO.moveSpeed;
-        fleeSpeed = sheepSO.fleeSpeed;
+        originalMoveSpeed = sheepSO.moveSpeed;
         aggregateSpeed = sheepSO.aggregateSpeed;
         roamSpeed = sheepSO.roamSpeed;
 
@@ -80,7 +80,7 @@ public class SheepMovement : AIMovement
 
         switch (state) {
             case State.Flee:
-                moveSpeed = fleeSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
+                moveSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
 
                 if (closestFleeTargetDistance > closestFleeTargetStopDistance) {
                     // Closest target is out of flee stop radius
