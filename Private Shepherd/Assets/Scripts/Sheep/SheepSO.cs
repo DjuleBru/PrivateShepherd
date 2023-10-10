@@ -15,6 +15,7 @@ public class SheepSO : ScriptableObject
     public float barkFleeSpeed;
     public float aggregateSpeed;
     public float roamSpeed;
+    public float injuredSpeedFactor;
 
     public int sheepScore;
 }

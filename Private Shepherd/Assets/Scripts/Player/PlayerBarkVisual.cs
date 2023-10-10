@@ -16,6 +16,7 @@ public class PlayerBarkVisual : MonoBehaviour
 
     [SerializeField] private float initialBarkVisualAlpha;
 
+    private float barkCircleRadius = 9.25f;
 
     private float barkTriggerDistance;
     private float barkWolfTriggerDistance;
@@ -24,8 +25,8 @@ public class PlayerBarkVisual : MonoBehaviour
         PlayerBark.Instance.OnPlayerBark += PlayerBark_OnPlayerBark;
         barkTriggerDistance = PlayerBark.Instance.GetBarkTriggerDistance();
 
-        float barkAOEScaleMultiplier = barkTriggerDistance / 3.5f;
-        float barkWolfAOEScaleMultiplier = levelWolfSO.wolfTriggerFleeDistanceMultiplier * barkTriggerDistance / 3.5f;
+        float barkAOEScaleMultiplier = barkTriggerDistance / barkCircleRadius;
+        float barkWolfAOEScaleMultiplier = levelWolfSO.wolfTriggerFleeDistanceMultiplier * barkTriggerDistance / barkCircleRadius;
 
         barkAOE.transform.localScale = Vector3.one * barkAOEScaleMultiplier;
         barkWolfAOE.transform.localScale = Vector3.one * barkWolfAOEScaleMultiplier;

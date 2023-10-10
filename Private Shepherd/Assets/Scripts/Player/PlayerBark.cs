@@ -10,9 +10,9 @@ public class PlayerBark : MonoBehaviour
     public event EventHandler OnPlayerBark;
     [SerializeField] private FleeTarget playerFleeTarget;
 
-    [SerializeField] private float barkCoolDownTimer;
-    [SerializeField] private float barkCoolDownTime = .5f;
-    [SerializeField] private float barkEffetDuration = .5f;
+    [SerializeField] private float barkCoolDownTime;
+    [SerializeField] private float barkEffetDuration;
+    private float barkCoolDownTimer;
 
     [SerializeField] private float barkFleeTargetSpeedMultiplier;
     [SerializeField] private float barkFleeTargetStopDistance;

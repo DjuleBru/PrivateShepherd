@@ -24,7 +24,6 @@ public class PlayerGrowl : MonoBehaviour
     [SerializeField] private float growlFleeTargetStopDistance;
 
     [SerializeField] private float growlPlayerMoveSpeedMultiplier;
-    [SerializeField] private PlayerMovement playerMovement;
     private float initialPlayerMoveSpeed;
 
     private float growlCoolDownTimer;
@@ -45,7 +44,7 @@ public class PlayerGrowl : MonoBehaviour
         GameInput.Instance.OnGrowlPerformed += GameInput_OnGrowlPerformed;
         GameInput.Instance.OnGrowlReleased += GameInput_OnGrowlReleased;
 
-        initialPlayerMoveSpeed = playerMovement.GetMoveSpeed();
+        initialPlayerMoveSpeed = PlayerMovement.Instance.GetMoveSpeed();
     }
 
     private void Update() {
@@ -72,7 +71,7 @@ public class PlayerGrowl : MonoBehaviour
     private void StartGrowl() {
         OnPlayerGrowl?.Invoke(this, EventArgs.Empty);
         ModifyFleeTargetParameters(growlFleeTargetTriggerDistance, growlFleeTargetStopDistance, growlFleeTargetSpeedMultiplier);
-        playerMovement.SetMoveSpeed(initialPlayerMoveSpeed * growlPlayerMoveSpeedMultiplier);
+        PlayerMovement.Instance.SetMoveSpeed(initialPlayerMoveSpeed * growlPlayerMoveSpeedMultiplier);
         growlTimer = growlTime;
         growling = true;
     }
@@ -80,7 +79,7 @@ public class PlayerGrowl : MonoBehaviour
     private void EndGrowl() {
         OnPlayerGrowlReleased?.Invoke(this, EventArgs.Empty);
         ResetFleeTargetParameters();
-        playerMovement.SetMoveSpeed(initialPlayerMoveSpeed);
+        PlayerMovement.Instance.SetMoveSpeed(initialPlayerMoveSpeed);
 
         growlCoolDownTimer = growlCoolDownTime;
         growling = false;

@@ -10,11 +10,12 @@ public class PlayerGrowlVisual : MonoBehaviour
 
     [SerializeField] private MMF_Player growlMMFPlayer;
     [SerializeField] private WolfSO levelWolfSO;
-    [SerializeField] private PlayerGrowl playerGrowl;
 
     [SerializeField] private SpriteRenderer growlAOE;
     [SerializeField] private SpriteRenderer growlWolfAOE;
     [SerializeField] private Image growlTimeUIImage;
+
+    private float barkCircleRadius = 9.25f;
 
     private float growlTriggerDistance;
     private float growlWolfTriggerDistance;
@@ -24,19 +25,20 @@ public class PlayerGrowlVisual : MonoBehaviour
         PlayerGrowl.Instance.OnPlayerGrowlReleased += PlayerGrowl_OnPlayerGrowlReleased;
         growlTriggerDistance = PlayerGrowl.Instance.GetGrowlTriggerDistance();
 
-        float growlAOEScaleMultiplier = growlTriggerDistance / 3.5f;
-        float growlWolfAOEScaleMultiplier = levelWolfSO.wolfTriggerFleeDistanceMultiplier * growlTriggerDistance / 3.5f;
+        float growlAOEScaleMultiplier = growlTriggerDistance / barkCircleRadius;
+        float growlWolfAOEScaleMultiplier = levelWolfSO.wolfTriggerFleeDistanceMultiplier * growlTriggerDistance / barkCircleRadius;
 
         growlAOE.transform.localScale = Vector3.one * growlAOEScaleMultiplier;
         growlWolfAOE.transform.localScale = Vector3.one * growlWolfAOEScaleMultiplier;
+        growlTimeUIImage.transform.localScale = Vector3.one * growlWolfAOEScaleMultiplier;
 
         growlAOE.enabled = false;
         growlWolfAOE.enabled = false;
     }
 
     private void Update() {
-        if (playerGrowl.GetGrowling()) {
-            growlTimeUIImage.fillAmount = playerGrowl.GetGrowlTimerNormalized();
+        if (PlayerGrowl.Instance.GetGrowling()) {
+            growlTimeUIImage.fillAmount = PlayerGrowl.Instance.GetGrowlTimerNormalized();
         }
         else {
             growlTimeUIImage.fillAmount = 0;

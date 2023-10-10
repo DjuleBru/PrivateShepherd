@@ -13,6 +13,7 @@ public class SheepMovement : AIMovement
     private Transform targetScoreAggregatePoint; 
 
     public event EventHandler OnSheepFlee;
+    public event EventHandler OnSheepInjured;
 
     #region FLEE TARGET PARAMETERS
     private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
@@ -33,14 +34,17 @@ public class SheepMovement : AIMovement
     private float aggregateSpeed;
     private float roamSpeed;
     private float originalMoveSpeed;
+    private float injuredSpeedFactor;
 
     private bool penned;
+    private bool injured;
     #endregion
 
     public enum State {
         Flee,
         Aggregate,
         Roam,
+        ExtremeAggregate,
         InScoreZone,
     }
 
@@ -53,6 +57,7 @@ public class SheepMovement : AIMovement
         originalMoveSpeed = sheepSO.moveSpeed;
         aggregateSpeed = sheepSO.aggregateSpeed;
         roamSpeed = sheepSO.roamSpeed;
+        injuredSpeedFactor = sheepSO.injuredSpeedFactor;
 
         state = State.Aggregate;
     }
@@ -148,6 +153,29 @@ public class SheepMovement : AIMovement
                 }
 
                 break;
+
+            case State.ExtremeAggregate:
+                moveSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier(); ;
+                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
+                if (closestSheepTransform == null) {
+                    closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
+                }
+
+                if (closestSheepTransform == null) {
+                    // There is no other sheep to aggregate to
+                    state = State.Roam;
+                    return;
+                }
+
+                if (Vector3.Distance(closestSheepTransform.position, transform.position) < triggerAggregateDistance) {
+                    reachedEndOfPath = true;
+                    state = State.Roam;
+                    roamPauseTimer = 0;
+                }
+
+                CalculatePath(closestSheepTransform.position);
+                break;
+
             case State.InScoreZone:
                 roamPauseTimer -= Time.deltaTime;
 
@@ -228,5 +256,18 @@ public class SheepMovement : AIMovement
     public State GetState() { 
         return state; 
     }
+
+    public void SetState(State state) {
+        this.state = state;
+    }
+
+    public void SetInjured(bool injured) {
+        if (!this.injured) {
+            OnSheepInjured?.Invoke(this, EventArgs.Empty);
+            originalMoveSpeed = originalMoveSpeed * injuredSpeedFactor;
+        }
+        this.injured = injured;
+    }
+
 
 }

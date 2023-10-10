@@ -196,13 +196,17 @@ public class WolfAI : AIMovement {
 
             case State.Agressive:
                 moveSpeed = agressiveSpeed;
+                randomDirSelectorTimer -= Time.deltaTime;
 
                 if (closestAttackTargetSheep != null) {
                     state = State.Attack;
                     return;
                 }
 
-                PickAgressiveTargetSheep();
+                if (randomDirSelectorTimer >= 0) {
+                    PickAgressiveTargetSheep();
+                }
+
                 FindClosestSheep();
 
                 if (distanceToClosestSheep < agressiveMinDistanceToSheep) {
@@ -355,17 +359,12 @@ public class WolfAI : AIMovement {
     }
 
     private void PickAgressiveTargetSheep() {
-
-        randomDirSelectorTimer -= Time.deltaTime;
+        // Pick a new target Sheep (closest)
+        agressiveTargetSheep = FindClosestSheep();
 
         // Pick a random sheep and direction between + and -
-        if (randomDirSelectorTimer >= 0) {
-            // Pick a new target Sheep (closest)
-            agressiveTargetSheep = FindClosestSheep();
-
-            inverseDirection = UnityEngine.Random.value >= 0.5;
-            randomDirSelectorTimer = 0;
-        }
+        inverseDirection = UnityEngine.Random.value >= 0.5;
+        randomDirSelectorTimer = 0;
     }
 
     private Sheep FindClosestSheep() {
@@ -419,9 +418,15 @@ public class WolfAI : AIMovement {
 
     private void LevelSheepObjectPool_OnSheepDied(object sender, EventArgs e) {
          targetableSheepsinLevel = levelSheepObjectPool.GetSheepsInUnPennedObjectPoolList();
+         PickAgressiveTargetSheep();
     }
 
     private void LevelSheepObjectPool_OnSheepPenned(object sender, EventArgs e) {
         targetableSheepsinLevel = levelSheepObjectPool.GetSheepsInUnPennedObjectPoolList();
+        PickAgressiveTargetSheep();
+    }
+
+    public State GetState() {
+        return state;
     }
 }

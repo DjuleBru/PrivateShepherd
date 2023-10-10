@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1544975359}
   - component: {fileID: 1544975358}
   m_Layer: 0
-  m_Name: PlayerUI
+  m_Name: GrowlTimeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 9.2, y: 9.2}
+  m_SizeDelta: {x: 18.5, y: 18.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1544975360
 Canvas:
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1975715388}
   - component: {fileID: 1975715387}
   m_Layer: 0
-  m_Name: GrowlTimeUI
+  m_Name: GrowlTimeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,14 +160,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6886792, g: 0, b: 0, a: 0.6745098}
+  m_Color: {r: 0.4245283, g: 0.010012458, b: 0.010012458, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f4ac60a8f481b874e8d88c8f67a5ccf6, type: 3}
+  m_Sprite: {fileID: -1952767926, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -567,6 +567,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 565442526818665105}
+  - {fileID: 565442526371170908}
   m_Father: {fileID: 4046661787543505784}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -643,12 +644,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4ac60a8f481b874e8d88c8f67a5ccf6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34117648}
+  m_Sprite: {fileID: -537629932, guid: 6d4930cdbf575e043b080b3e163cab2d, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 18.75, y: 18.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -665,6 +666,9 @@ GameObject:
   - component: {fileID: 4046661787543505784}
   - component: {fileID: 4046661787543505786}
   - component: {fileID: 4046661787543505787}
+  - component: {fileID: 1822888343159591805}
+  - component: {fileID: 3353521763941091231}
+  - component: {fileID: 1256264655113467317}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -765,6 +769,55 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1822888343159591805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661787543505785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611feb24c5850034b9a02232104f17fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiredPS: {fileID: 2333701612705008894}
+  extremelyTiredPS: {fileID: 2333701613419758643}
+  runProgressionBar: {fileID: 0}
+--- !u!114 &3353521763941091231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661787543505785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aedf878d5b4e5f4d8c33481b15c01e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barkMMFPlayer: {fileID: 1439949436517517918}
+  barkAOE: {fileID: 8096843490656910318}
+  barkWolfAOE: {fileID: 2472414916379305311}
+  levelWolfSO: {fileID: 0}
+  initialBarkVisualAlpha: 0.5
+--- !u!114 &1256264655113467317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661787543505785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84974ff1734995e46954b5fcd84ad606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growlMMFPlayer: {fileID: 4492823284749436189}
+  levelWolfSO: {fileID: 0}
+  growlAOE: {fileID: 5044440172657509248}
+  growlWolfAOE: {fileID: 5546857458767385448}
+  growlTimeUIImage: {fileID: 1975715387}
 --- !u!1 &4046661788065379812
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,16 +829,13 @@ GameObject:
   - component: {fileID: 4046661788065379815}
   - component: {fileID: 4046661788065379808}
   - component: {fileID: 4046661788065379809}
+  - component: {fileID: 359076444}
   - component: {fileID: 4046661788065379811}
   - component: {fileID: 1432261358}
   - component: {fileID: 7840373000721660730}
-  - component: {fileID: 8668020691478968858}
   - component: {fileID: 1627481217353169861}
-  - component: {fileID: 359076444}
   - component: {fileID: 1265921825893619867}
-  - component: {fileID: 7988277704931615927}
   - component: {fileID: 4316471942775922365}
-  - component: {fileID: 1030655791}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -848,83 +898,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.115301855, y: -0.051246125}
   m_Size: {x: 1.4355873, y: 0.8975148}
   m_Direction: 1
---- !u!114 &4046661788065379811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86804dee9ea0cb3429c3621bb9184ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  animator: {fileID: 4046661787543505787}
---- !u!114 &1432261358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24cedd3ce6e01e2469fb9f6741db1216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7840373000721660730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fleeTargetTriggerDistance: 5
-  fleeTargetStopDistance: 10
-  fleeTargetSpeedMultiplier: 1.5
---- !u!114 &8668020691478968858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aedf878d5b4e5f4d8c33481b15c01e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barkMMFPlayer: {fileID: 1439949436517517918}
-  barkAOE: {fileID: 8096843490656910318}
-  barkWolfAOE: {fileID: 2472414916379305311}
-  levelWolfSO: {fileID: 11400000, guid: 6cb409379b9948f4da332fc7ea171626, type: 2}
-  initialBarkVisualAlpha: 0.5
---- !u!114 &1627481217353169861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f0d402002408040a841758b52756d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerFleeTarget: {fileID: 7840373000721660730}
-  barkCoolDownTimer: 5
-  barkCoolDownTime: 2
-  barkEffetDuration: 2
-  barkFleeTargetSpeedMultiplier: 2.5
-  barkFleeTargetStopDistance: 15
-  barkFleeTargetTriggerDistance: 10
 --- !u!82 &359076444
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1021,6 +994,65 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4046661788065379811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86804dee9ea0cb3429c3621bb9184ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  animator: {fileID: 4046661787543505787}
+--- !u!114 &1432261358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24cedd3ce6e01e2469fb9f6741db1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7840373000721660730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleeTargetTriggerDistance: 5
+  fleeTargetStopDistance: 10
+  fleeTargetSpeedMultiplier: 1.5
+--- !u!114 &1627481217353169861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f0d402002408040a841758b52756d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFleeTarget: {fileID: 7840373000721660730}
+  barkCoolDownTime: 4
+  barkEffetDuration: 2
+  barkFleeTargetSpeedMultiplier: 2.5
+  barkFleeTargetStopDistance: 15
+  barkFleeTargetTriggerDistance: 10
 --- !u!114 &1265921825893619867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,30 +1067,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFleeTarget: {fileID: 7840373000721660730}
   growlTime: 2.7
-  growlCoolDownTime: 3
+  growlCoolDownTime: 6
   growlFleeTargetSpeedMultiplier: 1.5
   growlFleeTargetTriggerDistance: 8
   growlFleeTargetStopDistance: 8
   growlPlayerMoveSpeedMultiplier: 0.5
-  playerMovement: {fileID: 4046661788065379811}
---- !u!114 &7988277704931615927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84974ff1734995e46954b5fcd84ad606, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growlMMFPlayer: {fileID: 4492823284749436189}
-  levelWolfSO: {fileID: 11400000, guid: 6cb409379b9948f4da332fc7ea171626, type: 2}
-  playerGrowl: {fileID: 1265921825893619867}
-  growlAOE: {fileID: 5044440172657509248}
-  growlWolfAOE: {fileID: 5546857458767385448}
-  growlTimeUIImage: {fileID: 1975715387}
 --- !u!114 &4316471942775922365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,27 +1084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011630d2da307804eb70ae3f82e6385a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeedMultiplier: 1.3
+  runSpeedMultiplier: 1.5
   runMaxTime: 4
-  runTiredTime: 2
-  runExtremelyTiredTime: 0
-  runCoolDownTime: 8
-  playerMovement: {fileID: 4046661788065379811}
---- !u!114 &1030655791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046661788065379812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611feb24c5850034b9a02232104f17fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiredPS: {fileID: 0}
-  extremelyTiredPS: {fileID: 0}
-  runProgressionBar: {fileID: 0}
+  runTiredTimeFraction: 0.5
+  runExtremelyTiredTimeFraction: 0.85
+  tiredRunSpeedMultiplier: 0.5
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,12 +1246,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4ac60a8f481b874e8d88c8f67a5ccf6, type: 3}
-  m_Color: {r: 0.28235295, g: 0, b: 0, a: 0.48235294}
+  m_Sprite: {fileID: 1095781360, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
+  m_Color: {r: 0.41509432, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 18.75, y: 18.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1285,7 +1282,7 @@ Transform:
   m_GameObject: {fileID: 4646804608731171756}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.81, y: 1.81, z: 1.81}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4524143640285814539}
@@ -1319,7 +1316,7 @@ Transform:
   m_GameObject: {fileID: 5138017392645715462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.81, y: 1.81, z: 1.81}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1414573223989182991}
@@ -1763,12 +1760,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4ac60a8f481b874e8d88c8f67a5ccf6, type: 3}
-  m_Color: {r: 0.2830189, g: 0, b: 0, a: 0.48235294}
+  m_Sprite: {fileID: 1095781360, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
+  m_Color: {r: 0.41568628, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 18.75, y: 18.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1847,17 +1844,103 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4ac60a8f481b874e8d88c8f67a5ccf6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34117648}
+  m_Sprite: {fileID: -537629932, guid: 6d4930cdbf575e043b080b3e163cab2d, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 18.75, y: 18.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1302899031
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1852497203127853978}
+    m_Modifications:
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333701614265478500, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951029098961588276, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_Name
+      value: DogExtremelyTiredPS
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 632883ce67df2b1428a9c8adb40008b6, type: 3}
+--- !u!4 &565442526371170908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302899031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2333701613419758643 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2333701614265478500, guid: 632883ce67df2b1428a9c8adb40008b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302899031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1728405914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1928,13 +2011,19 @@ PrefabInstance:
     - target: {fileID: 6951029098961588276, guid: 632883ce67df2b1428a9c8adb40008b6,
         type: 3}
       propertyPath: m_Name
-      value: DogRunPS
+      value: DogTiredPS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632883ce67df2b1428a9c8adb40008b6, type: 3}
 --- !u!4 &565442526818665105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 565442525090308875, guid: 632883ce67df2b1428a9c8adb40008b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1728405914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2333701612705008894 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2333701614265478500, guid: 632883ce67df2b1428a9c8adb40008b6,
     type: 3}
   m_PrefabInstance: {fileID: 1728405914}
   m_PrefabAsset: {fileID: 0}

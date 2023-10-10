@@ -150,6 +150,7 @@ public class Sheep : MonoBehaviour
 
     public void BiteSheep() {
         hasBeenBit = true;
+        sheepMovement.SetInjured(true);
         sheepMovement.enabled = false;
         sheepCollider.enabled = false;
     }
@@ -160,6 +161,8 @@ public class Sheep : MonoBehaviour
         sheepCollider.enabled = true;
         this.transform.parent = null;
         this.transform.rotation = Quaternion.identity;
+
+        sheepMovement.SetState(SheepMovement.State.ExtremeAggregate);
     }
 
     public void EatSheep() {

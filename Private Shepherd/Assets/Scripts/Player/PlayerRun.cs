@@ -12,8 +12,6 @@ public class PlayerRun : MonoBehaviour
     [SerializeField] float runTiredTimeFraction;
     [SerializeField] float runExtremelyTiredTimeFraction;
 
-    [SerializeField] int runCoolDownTime;
-
     [SerializeField] float tiredRunSpeedMultiplier;
 
     public event EventHandler onPlayerTired;
