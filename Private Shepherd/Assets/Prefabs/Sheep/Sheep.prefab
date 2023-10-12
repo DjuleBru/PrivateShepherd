@@ -77,8 +77,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1068414019
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6514707561405829255
@@ -442,9 +442,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.14843181}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3515682
 --- !u!114 &4100688584939994468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   sheepCollider: {fileID: 6106239601642728234}
-  sheepMinimumNumber: 6
+  sheepMinimumNumber: 8
   herdRadius: 5
   herdNumberText: {fileID: 7051790442930105235}
 --- !u!114 &4846186786135874560
@@ -525,7 +525,7 @@ MonoBehaviour:
   smoothType: 0
   subdivisions: 2
   iterations: 2
-  strength: 0.5
+  strength: 0
   uniformLength: 1
   maxSegmentLength: 2
   bezierTangentLength: 0.4
@@ -712,7 +712,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -257505448, guid: 4db20a0192013af42b047152d9f21b79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -802,7 +802,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1792865613, guid: 62407c6efc567f442bab918649d0d1fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1052,10 +1052,15 @@ MonoBehaviour:
         TargetAudioSource: {fileID: 5689397843276955821}
         Mode: 0
         RandomSfx:
-        - {fileID: 8300000, guid: 264358e8b6da22e41ab5d53d5b0cf0f7, type: 3}
-        - {fileID: 8300000, guid: 9f2ab0734ce896a4f80fdeb6105e408b, type: 3}
-        - {fileID: 8300000, guid: 9013a7b4c00e16049b6a7b169ee34b3c, type: 3}
-        - {fileID: 8300000, guid: 2f7375e99f73aff43b0a3ea49816051a, type: 3}
+        - {fileID: 8300000, guid: ab5c1c14d47a09d42b759343a4b5fee2, type: 3}
+        - {fileID: 8300000, guid: dd39fe1837c0ed340a53fd28bb601436, type: 3}
+        - {fileID: 8300000, guid: bf1b13f7b9ef7094abc746217b1f195a, type: 3}
+        - {fileID: 8300000, guid: dbe93f0ebd914cd4ca7b3286032da8b2, type: 3}
+        - {fileID: 8300000, guid: 33f1cfb8340fac44dbf995cde13d9c5b, type: 3}
+        - {fileID: 8300000, guid: 1ccf0f61706acbe4cac5121a097bade3, type: 3}
+        - {fileID: 8300000, guid: d68f40017852410438071799bc29798e, type: 3}
+        - {fileID: 8300000, guid: a3a8945738cc7694a883eaef9d47d0ac, type: 3}
+        - {fileID: 8300000, guid: a0e89f96205d55748a49aec851ca63b9, type: 3}
         MinVolume: 0.5
         MaxVolume: 0.5
         MinPitch: 0.8

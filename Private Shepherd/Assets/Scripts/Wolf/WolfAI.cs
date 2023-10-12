@@ -14,6 +14,8 @@ public class WolfAI : AIMovement {
 
     public event EventHandler OnSheepBite;
     public event EventHandler OnSheepEaten;
+    public event EventHandler OnWolfFlee;
+    public event EventHandler OnWolfAgressive;
 
     private bool inverseDirection;
 
@@ -148,9 +150,10 @@ public class WolfAI : AIMovement {
         closestFleeTarget = FindClosestFleeTarget();
         UpdateClosestFleeParameters();
 
-        if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance) {
+        if (closestFleeTargetDistance <= closestFleeTargetTriggerFleeDistance & state != State.Flee) {
             // Target is within flee trigger radius
             state = State.Flee;
+            OnWolfFlee?.Invoke(this, EventArgs.Empty);
         }
 
         closestAttackTargetSheep = PickClosestAttackTargetSheep();

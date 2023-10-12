@@ -59,6 +59,8 @@ public class SheepMovement : AIMovement
         roamSpeed = sheepSO.roamSpeed;
         injuredSpeedFactor = sheepSO.injuredSpeedFactor;
 
+        nextWaypointDistance = 1f;
+
         state = State.Aggregate;
     }
 

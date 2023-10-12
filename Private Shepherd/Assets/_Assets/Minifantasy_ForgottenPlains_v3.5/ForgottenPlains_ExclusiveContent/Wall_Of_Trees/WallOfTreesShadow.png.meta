@@ -1,0 +1,5921 @@
+fileFormatVersion: 2
+guid: 2a85185ec026def4b93d4019f59e3f93
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallOfTreesShadow_0
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1680
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14378afa1bd4bae47a08c3c27d1a1090
+      internalID: 1709355960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_1
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1680
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82843c49bb46fdf419050a5ba0ee0914
+      internalID: -1710321084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da21747d5620d214a9b7b0d19d021af2
+      internalID: 776083639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_3
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466bba23269f0b04792ea379940eda6a
+      internalID: 1636640412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079b986bd38196349afa9d97089e6c79
+      internalID: 1240907392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_5
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd43eecc9a6a834dbfbbd4ea6410764
+      internalID: -1672477208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_6
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1600
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba7d774c7d17b046af5d6566e8d3eb2
+      internalID: -900080283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cf7539626714241a6a3bd6f63cb93b
+      internalID: 1213957964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_8
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6319265104a63a240b4894a96b32a6a3
+      internalID: -1080476696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b88b9834f9fdfa49b80eaa7c06ec746
+      internalID: -1974466774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba2bb8a9dd792446b33b1aea16c64a1
+      internalID: 1550748412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea327890ceaaf09438b48c91673356f0
+      internalID: -404316085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_12
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f703095de329541858dc22c325af5f
+      internalID: -522493296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_13
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03268f1106e592142972e1e78d26f2a0
+      internalID: 509717890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_14
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f4d894480ba904390e9281469eda1b
+      internalID: 1291716854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_15
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4127c890cf755647ba00c36402c6167
+      internalID: -1391685868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_16
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49490d1e3e0372340976a1d8c3d84352
+      internalID: -218946413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_17
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9332a5c84f2e394bb2a44daccde713b
+      internalID: -438746855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_18
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93a7f435964511409bc8465ae07e81e
+      internalID: -1616739946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_19
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a824fe284ea10fd43991f816dd3a8e0a
+      internalID: 1499288132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_20
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91709fd3a726e1343ae856c130d9ac4b
+      internalID: 445616467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_21
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce2c52908e47f6459c8b071193d8c10
+      internalID: 140219508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_22
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66d3a9293022294796e40c276f6e155
+      internalID: 187449948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_23
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52779243d1aacf49a94051f7e0847e8
+      internalID: 327428339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_24
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a04cbf8645ab0d45a2ecf314ddf1dca
+      internalID: 1344700829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_25
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f632edcc9c33f478b43157375e2f25
+      internalID: 1497222729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_26
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cb9299b85f06447b154d9a37045fd4
+      internalID: 455437494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_27
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc67d6a7f33aecb48b6da5117f3ea47d
+      internalID: -1645867815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_28
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691a12fe741d2a64a91bfb8b3cb099f3
+      internalID: -1457476912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_29
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed79b6527751ed14eb76bc6fe008e5bf
+      internalID: 773397993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_30
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1520
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f9b97375a03284fb7eebc56edd6faa
+      internalID: 878973547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868b65a16d2aeec4981ae403c8636a38
+      internalID: -409946033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_32
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec7068e31bc957478b0419a62dfb293
+      internalID: -61580311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_33
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b4fc53ea3e0f447b1f0bf89c5dadfc
+      internalID: -1403297237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_34
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7c47c0b1dbb4e44830a241b40e6fcb
+      internalID: -2060263225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_35
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f4a19c6e6d9d7428595def55de0501
+      internalID: 60195046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_36
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1fcba4b10b1764d836a2ecafdb0a8c
+      internalID: -1464599660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b797075b098f76d4abfd4ccf146744ba
+      internalID: -1669475260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_38
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efba1f30ace328b42be7b41bc003d1d6
+      internalID: 1785161786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_39
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860ce02aecdeb884597aeb2039afcc5c
+      internalID: 649630604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_40
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f4c3a1594c90f49afd20a87e0cc125
+      internalID: 1479579005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_41
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc34e9db47f3dd4ea55a93bd55924cd
+      internalID: -1170163901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_42
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2927f8a09f0a34ea72253604acaab2
+      internalID: -725994564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_43
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b0f3f858f598447878a8026fcb502d
+      internalID: -532960270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_44
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8876d579bf5ee484a886975e1907d2b5
+      internalID: -1209286200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_45
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ce81e510623d1409a6e6d52e44a445
+      internalID: -1220557805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_46
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a47eef96608dd48807cd6981dff08b
+      internalID: -1387410921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_47
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9514156b164981744b1839955e54f7ee
+      internalID: -137798971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_48
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bbbf47b21d7204ea2fdb7636293800
+      internalID: 763083574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_49
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02283023ae4ba7a48adc436c7829309c
+      internalID: 1465892581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_50
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985fa6b5ae785da4c8ac4d58bd4922f5
+      internalID: -1995729208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_51
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2205d51bbddeb254eaf6a171c57698a2
+      internalID: -1295628997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_52
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc4925933e496d48b15df722d37def0
+      internalID: 1043381441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_53
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856afed3d610bcf4ba73f472baa1f7e1
+      internalID: 416014169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_54
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6a81ed68adde749bf7478e1fb0b977
+      internalID: -1922023652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_55
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a418b989a40f7e45a1ee9bd895a05cc
+      internalID: -137392784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_56
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a84e9065c74f34e931998cf862b669
+      internalID: -260854341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_57
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d415921d378cd44687f0fa7d4bc9f92
+      internalID: 1523766283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_58
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dabfec12bdb8ce49b82fc97d6d0a393
+      internalID: 1867335890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_59
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5449a1078b06c4645a9ef89256cd59ba
+      internalID: 1902319397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_60
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1440
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36f9f6a3b458444badcbb9334244c9b
+      internalID: -1042535882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_61
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1cc81a127839143bb6fd32c77b8659
+      internalID: 270880040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_62
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33668786bc4f98b478e63a2374206081
+      internalID: 1017667432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_63
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3039dee00ac0f48b73dcc6463b460f
+      internalID: -739012448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_64
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f47f4344580e5f4f8fdeb05a282cc35
+      internalID: -1416107677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_65
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff324e80aa23c0e48a4642220c4b5c58
+      internalID: -683295479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_66
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6057283f1b093f47a7807ea17c5b4a2
+      internalID: 1811354004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_67
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1196a9f71c10894789474f7755531d0
+      internalID: 570951988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_68
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3f25bf8ca94de4298c38fa0c66426d
+      internalID: 1555048948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_69
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bc20e77a8e16348b7c735b08163f7e
+      internalID: -1468915624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_70
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405ae7be92f171d43b80877ac7245f66
+      internalID: -416052034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_71
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7b7159bb51ab544b7e7be9dbdf446d
+      internalID: 1312576386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_72
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1360
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c4ab6ad10575b40969258d445b0ffb
+      internalID: 523752582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_73
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505a76e16c00efa4ebe453019381aec2
+      internalID: -589131624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_74
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdcb8ecd9acc224481c31fa02c8795a
+      internalID: 57863049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_75
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d618cf0cc2277148bf4cc264cdf9603
+      internalID: -810712541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_76
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f016e131ab91296408201c7fc0e887cb
+      internalID: 327854829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_77
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269b83e5a53e6cd48b846252f093bd06
+      internalID: -1962775625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_78
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec2118e8db2c0e46adb32949ab3d2bf
+      internalID: -1262772010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_79
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64bcd5c7cdd41742aaa88aef10d160d
+      internalID: -1177259738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_80
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff514aeb4cf243f48a374ed10bc021cd
+      internalID: 2101963319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_81
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6456e3054392a71488b580d29518ec5a
+      internalID: -1150326805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_82
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766970ae74eaf56418a4b057b947624f
+      internalID: -1073826062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_83
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 1200
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bada94af0d0a84f8d9095ce5b0a943
+      internalID: 1750107762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_84
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee266a7dc304c4448d27170ec8c3b88
+      internalID: -767940669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_85
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8836351bc2de62b4e974c84763546368
+      internalID: 1228205396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_86
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceed27001590bc0438fa1ed3ac285705
+      internalID: -2133273464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_87
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee55c21d7c259243ad3d1308fb4f448
+      internalID: 1622087373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_88
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1674e5e9977070343923551dc918aecd
+      internalID: 489393335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_89
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5279ea68ecf53df458681e7e245739bf
+      internalID: -553338388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_90
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ca32dbd3ec0ba48bcc85aa597c53a5
+      internalID: 1412331214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_91
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad31d67303e7ab4599009d66663c594
+      internalID: -237873144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_92
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9b2015b05bdea4eaeda0905b72d5c3
+      internalID: 2076609241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_93
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66768695898bb764385573d4cd9b8d22
+      internalID: 581105349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_94
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25173ce3d3100b4f80c94444a4d55ac
+      internalID: 1706144727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_95
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be2a70fb0c5d5c4ba08f35813ad6842
+      internalID: -694667297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_96
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a3ba4378151774983e4d9e982c6ce0
+      internalID: 954425108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_97
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe550e5f618502488cac016eb481d04
+      internalID: 958106158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_98
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5827a529c0ef9e4bb64a6c646d37a9e
+      internalID: -874679355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_99
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92027899d0e4a348a3b4413f5415a00
+      internalID: 1997972250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_100
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a2f9edb4866be46a3533db5dd2e79c
+      internalID: -2100438528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_101
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1313ccfea1e702543bd60af39df3aea7
+      internalID: -1090439119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_102
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75655f465e2021c46a95a8cd399d0cfc
+      internalID: -1275579581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_103
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1120
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c926947a3c6bb478a9b88d46ad7c03
+      internalID: -666172794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_104
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3999c02b27c5124c8c8d1271a00a254
+      internalID: 615879252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_105
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77fd68469e4f80a4bae45c4b65a1d2b7
+      internalID: 1568500683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_106
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c7f48b0639f2944a97c080e8b059af
+      internalID: 204000653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_107
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec0f32c470388140a117cb83773bba2
+      internalID: -2102811776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_108
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3c2f849c805fd409686e9dcdd12d6a
+      internalID: 151190923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_109
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f698ce987ec684abfc9a751bd489d6
+      internalID: -594037169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_110
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32f0becbb96bf8449319a5a03248812
+      internalID: 334816953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_111
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f60eb6fbeed52747bb413bce90dc591
+      internalID: 2088203130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_112
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc82a53575f96d2449c1a9731c8f272d
+      internalID: 1143920971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_113
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d9e25f5557e5246b1df4728e1ea19d
+      internalID: -1932595804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_114
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4031b0b9cf14847959c5dabd37d93b
+      internalID: -1798260134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_115
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057aef64882e3544091210a80fd6c562
+      internalID: -2104321288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_116
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179027eaa3344034d92853f824873ab9
+      internalID: -409763892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_117
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1040
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c383b611eeba884cbb5ebe450e39c97
+      internalID: -685810787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_118
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 960
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0a39effa33e4b4ebe0db3a0f991c90
+      internalID: 1614928255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_119
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 960
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4fdff77ab2ef64490f5e2c14818823
+      internalID: -1763021685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_120
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 880
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3436505bd5016b7408e59e1dfdf02702
+      internalID: 2137907349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_121
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 880
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7422925d4af824f8f4bd7d382bf693
+      internalID: 200953377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_122
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 880
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb1a7fe109b17b408fc43bd1a9071ee
+      internalID: 163108420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_123
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 880
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61067e37032a4fe47911ead5853d5428
+      internalID: 1089993237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_124
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350f9316434528445b8f475bff4fc9ae
+      internalID: 526920085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_125
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fdc28f91c12bc4eacb5763d4ca9011
+      internalID: -2100790750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_126
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de1cf09c368fb7439cc1631046ae55b
+      internalID: 82941630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_127
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c152db38509898d4292174614e6a1cdf
+      internalID: 667815423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_128
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02fadad35e4da3478e2b8045363d135
+      internalID: 1248387550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_129
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28126a633977c3f4dbd89d5756ee8efc
+      internalID: 1179284685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_130
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d08981c66edf748808979e34fe26fc
+      internalID: 1940055971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_131
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f817f43a624eb4ca3746b5704c3616
+      internalID: -2025448516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_132
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1413b2c6bf43fda4ca18aa7174e9bf85
+      internalID: 1605526189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_133
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a27e56eaad84554fb31231aae4957b8
+      internalID: -1198055980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_134
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2854d1f5627c8f5418b2f835ba1ca87c
+      internalID: -1151398270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_135
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb64adeeefa74843a5427535d6fd6fd
+      internalID: 453036022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_136
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 800
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48852e6a40279f946a466b3f0624ffe6
+      internalID: -1912117954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_137
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee5a013260fde84f893d72bc37a77d1
+      internalID: 1142977803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_138
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ae3bec40f4bbf43a5a475237c79423
+      internalID: -1861378353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_139
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c953da7d8ab1643a3ae8069d61dd82
+      internalID: 1064500654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_140
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484f5fbf06316ba4d879043e2831cf25
+      internalID: 2011609783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_141
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc976c4d2e56894ea4b124b627eeeb9
+      internalID: 615657529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_142
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c022d0fe97087b4cbb48327be4adb28
+      internalID: 1436136584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_143
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91745d01b3e98b4796a8df6a94620df
+      internalID: -687294646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_144
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba0d697ac6914f429de00ab98b1b714
+      internalID: -508426828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_145
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7f71cf42a258d4188baef09b02e7bd
+      internalID: -189687924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_146
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d2f1ff2316ffb45a1534dba5d86c2f
+      internalID: 721733024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_147
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 720
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2a6e482fb5c6e4daa28828c0b89c8b
+      internalID: 605017113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_148
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a023a8749f294c34bb772d58b6011b32
+      internalID: -430217121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_149
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404115f95b0469f4093f97970c87ab21
+      internalID: -452796231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_150
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febedffc1c1bd5542bef0135ea74a1c4
+      internalID: -180145402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_151
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a747a1f81f604ac4cae4639be22d5e46
+      internalID: -1964169247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_152
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a773c0f2890a88c468d7977a8648b641
+      internalID: -1174010436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_153
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ebe18070d4e784e805e12a03504e8b
+      internalID: -1401430872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_154
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78361977d59ce248b3646102b368ec2
+      internalID: 1767179059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_155
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680867edf6ee90c4f833ad52a65edb8d
+      internalID: -1245798192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_156
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 640
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616ad61c85393534683890ce5dc965ee
+      internalID: -1311719235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_157
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25b539f8f24bee4fb24870dd7bda4ab
+      internalID: 149935924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_158
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a84329b1f824f447bc8be1eaf321a1c
+      internalID: 497240484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_159
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e8e2e44e689ee4eae029c992099400
+      internalID: -250050541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_160
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f21f156c4457da4fac92cc5cc8d8fa2
+      internalID: -393366530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_161
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2133c0fdb99164c902f7d726034bb2
+      internalID: -1725212246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_162
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115fa88037a4bae46baff99346fcff11
+      internalID: -151470588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_163
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff862f8a327ae6d498669f3d2b5fde24
+      internalID: -1271345417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_164
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738d19540b4ac3e47bf022b52b284684
+      internalID: -1226333862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_165
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4752b5798b619e345bf5ca6d9c17fa5f
+      internalID: 746405900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_166
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebd985341f6f6b48810971f2c637478
+      internalID: -1198333395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_167
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8786370d4b7a93d4e9b2f3c340a56d80
+      internalID: 558542526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_168
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858195c94406c4642ab1d51298a19319
+      internalID: -2073616033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_169
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75e340544323b147b0db323dddc9431
+      internalID: 1762345643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_170
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c634b9e277af944cbf9318408fcd95b
+      internalID: 2110400190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_171
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a61e2663912a848be6c9e58bb7bf20
+      internalID: -1086864067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_172
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa2c7cd577863a4782870c1b598b337
+      internalID: 1922182711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_173
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef430eae07ab804289faebc1b3d7ec6
+      internalID: 1585352373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_174
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 560
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8c218591f3e814a8c38a49b9c55bd9
+      internalID: 192089776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_175
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfaf2a35c50156468e081acc4e79c65
+      internalID: -1266998724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_176
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa6b2fad111ee4469a6620c2777617c
+      internalID: -1075307662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_177
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10101f6d217beab41ab9b24313ef4ae1
+      internalID: -1142885445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_178
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e6146e231cd444a9944deb6313aff4
+      internalID: -718763750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_179
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad8fadb77a12544696d4bfcf9eb44c3
+      internalID: -1153747070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_180
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb629d30fd1d00841852e18c84a15fd2
+      internalID: 860524689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_181
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70705979587303428a9898e95ab5ad7
+      internalID: 1321437763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_182
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6ca966cf4dec74690baef8cc1270f6
+      internalID: 296203892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_183
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7a6c7238c0ceb49bc3de865cee3dce
+      internalID: -1683596394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_184
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaff03d66f5b4264bbfd7ee7ee1a918d
+      internalID: -260578511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_185
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43dbebf0cefbad42ac62f44cbb6708b
+      internalID: 732003536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_186
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843531d33ae2c604f9ee25c5aae0965c
+      internalID: 632030458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_187
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553c3c5517410934da7c450c618c7f49
+      internalID: 885872575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_188
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58364a0446d73c468476a4bd6c89b84
+      internalID: 268263844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_189
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ce70e3bf9da8e4488cde1496feb24f
+      internalID: 923821474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_190
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8f3851b3304ed42953845fb131936b
+      internalID: -119714447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_191
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffa6a1165040b14f83f20ae7e1d9a70
+      internalID: -737011833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_192
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c018a99381d6e84c89881fa665c269e
+      internalID: -1818734782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_193
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fb549e33fe69a42865f2340ec8a5aa
+      internalID: 632811436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_194
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafff4b4b81df884ead8bfb2d4d42f0a
+      internalID: -1890516372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_195
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d052186f8b65e1b4da154989be933455
+      internalID: -1535798693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_196
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5349c832f2b53246878ce01bdb975e3
+      internalID: -747689100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_197
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9954f0450be0845abba831813910ae
+      internalID: -834718244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_198
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cfab8eca37ece40a24ef5258ca1468
+      internalID: -278864814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_199
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89542cb164c28b94d94ca582b0516c6f
+      internalID: 1709666996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_200
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f2118637efd614b87c1e49993f63c4
+      internalID: 115509412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_201
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9be5bd768a56c944b42b84811cada2e
+      internalID: -1413425995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_202
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef789dd59273a54b92efd99a0abddc6
+      internalID: 1267593492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_203
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821ed2b9faada3c419abb5d325ae9c01
+      internalID: 623152944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_204
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8d6d49471988f459ff6ded72456eae
+      internalID: 782972088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_205
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 480
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d98fbf93c1b60c4db776ed238113d81
+      internalID: -796140652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_206
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23d4e79a10d641479ce6b90104e4c86
+      internalID: 985959246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_207
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb71674418e5914c91c09a026826c34
+      internalID: 1853072935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_208
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70b0b3ac96f2404cafc02f5a6da7d82
+      internalID: -684397533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_209
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916774caf54cf2546a2fef01e6c53303
+      internalID: 826303370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_210
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98049e5ea13aa9f47957550a946e491f
+      internalID: 2052511597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_211
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b5242f0aab30243bbd77bd7e1810af
+      internalID: 2124911845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_212
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a275ed58a3fc544b8cb1db0d8627389
+      internalID: -978626811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_213
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626d640b838b5934c8de777f3eb0b9b3
+      internalID: -1270593847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_214
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dfc107adc81fb438fbf8b3cce6a1c3
+      internalID: -1746121105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_215
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd1adf0d3f5d5045883499ba958d6ce
+      internalID: -742635064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_216
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d5a217865026747864d6ee61786c64
+      internalID: -2068060962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_217
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a5b4cb42cc73a4288b8ab996a57db6
+      internalID: -2061481766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_218
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffce2599cb589d4409203e19e5aa90da
+      internalID: 1569473193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_219
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47c712527299f54bb4b6890cf76f958
+      internalID: 1214741170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_220
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0163c10f987866f4fb53df447a5a1349
+      internalID: 1932701653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_221
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621cc99a4a0c7674f81db1617d1d3fbb
+      internalID: 950268606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_222
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c31fc85481fdd4da0a0c5fd94cb2c4
+      internalID: 1319072804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_223
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef73510bc7147ec4a9fb76264df4a8d4
+      internalID: 1902764156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_224
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d77cf07599bd043bf13907ac533092
+      internalID: -1587531278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_225
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2470ebde68d56f94681152b6c62221e7
+      internalID: 1513076174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_226
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565c2dec6ebf6794c91d35e65dc9551a
+      internalID: -1495849330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_227
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 400
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dade0018d71d946aea8cb66c3c7033
+      internalID: 732878125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_228
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0be38f7cea37642ab10eb59866d855
+      internalID: 700476633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_229
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb54a04e47119f142818b0b93f78f299
+      internalID: 1274503163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_230
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7decf67700d433743b39e8799a85d396
+      internalID: 1498902021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_231
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff95a8d0eaf1204eb2a645a52629c53
+      internalID: 1749576779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_232
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54915c6ab3fd3d04c9d02b2012eb4d56
+      internalID: -867575369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_233
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf7f9d79d846b843b86bf2c5ffa546b
+      internalID: 166097093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_234
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8bae48de5aa81248ad00c3a668078fb
+      internalID: 1112426967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_235
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688272d913535bc4181d749771b21cf7
+      internalID: -1886908323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_236
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb48fdaaa6abe014f905a7e572e1c768
+      internalID: -1351812390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_237
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c31e142a6713643be1ec3a4f2995ce
+      internalID: -156204027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_238
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9facd5716c8148a44927a04d6595579f
+      internalID: -1341353823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_239
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e91bf2dccc67d4b8fe64cc0d4b6bc9
+      internalID: 1600026931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_240
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5c679598f27aa42989f28631b7a598
+      internalID: -1926285386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_241
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae6ad00cec761c46a3b0a0ca38758ce
+      internalID: -1901216208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_242
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27379fa40f5f69042bcf2153744b9d91
+      internalID: 1029636615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_243
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4fade27062bad47af4a23786fb65f1
+      internalID: 664427199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_244
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408ed2b6eae63ca4eb4d5bdd706c0171
+      internalID: -1025278085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_245
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71acab44ca472424c984b1782fc4d28d
+      internalID: -1291837975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_246
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ab137237a78af4bab856c1c0416008
+      internalID: -1316402388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_247
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1526cd2bb53c8284590c927b50b7ccde
+      internalID: 1162371162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_248
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f579a30b5f790345b5a872f821beca2
+      internalID: -1960413472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_249
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a1b508377089449b67be37e0d660af
+      internalID: -1951950823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_250
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468fe5b5bd140ef43b1829a033aad098
+      internalID: 1233631427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_251
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51aaeb220c625343b413f77bf71b3e0
+      internalID: 121880800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_252
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6559a39fb0df3f4489a285a00fce1dcc
+      internalID: -318175803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_253
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbe7fd8417e1ef408830329046a155e
+      internalID: -602084796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_254
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475854b6bfb056f48a3884cf5500815e
+      internalID: 801882538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_255
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41174db66c77a4a418acdb1a82c5df1c
+      internalID: -2041137609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_256
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754862a4f5a91294191d8e2a8fe6da0e
+      internalID: 1409394761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_257
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a8a1e10f305a24c81779b8ff2dae74
+      internalID: 970616747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_258
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af72bc83cf14354bae1880477c6f0ac
+      internalID: -857371350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_259
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbee622f95577246b682c9b89a9130d
+      internalID: 931361635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_260
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba34f487e6dd5c4ea028dd4a8cf5d94
+      internalID: -8021063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_261
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c984ff8f1f8acd4a9eb29dc9d12d88a
+      internalID: 107084012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallOfTreesShadow_262
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd4f4d2dced0d848a8f740bafe81842
+      internalID: 73812358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WallOfTreesShadow_0: 1709355960
+      WallOfTreesShadow_1: -1710321084
+      WallOfTreesShadow_10: 1550748412
+      WallOfTreesShadow_100: -2100438528
+      WallOfTreesShadow_101: -1090439119
+      WallOfTreesShadow_102: -1275579581
+      WallOfTreesShadow_103: -666172794
+      WallOfTreesShadow_104: 615879252
+      WallOfTreesShadow_105: 1568500683
+      WallOfTreesShadow_106: 204000653
+      WallOfTreesShadow_107: -2102811776
+      WallOfTreesShadow_108: 151190923
+      WallOfTreesShadow_109: -594037169
+      WallOfTreesShadow_11: -404316085
+      WallOfTreesShadow_110: 334816953
+      WallOfTreesShadow_111: 2088203130
+      WallOfTreesShadow_112: 1143920971
+      WallOfTreesShadow_113: -1932595804
+      WallOfTreesShadow_114: -1798260134
+      WallOfTreesShadow_115: -2104321288
+      WallOfTreesShadow_116: -409763892
+      WallOfTreesShadow_117: -685810787
+      WallOfTreesShadow_118: 1614928255
+      WallOfTreesShadow_119: -1763021685
+      WallOfTreesShadow_12: -522493296
+      WallOfTreesShadow_120: 2137907349
+      WallOfTreesShadow_121: 200953377
+      WallOfTreesShadow_122: 163108420
+      WallOfTreesShadow_123: 1089993237
+      WallOfTreesShadow_124: 526920085
+      WallOfTreesShadow_125: -2100790750
+      WallOfTreesShadow_126: 82941630
+      WallOfTreesShadow_127: 667815423
+      WallOfTreesShadow_128: 1248387550
+      WallOfTreesShadow_129: 1179284685
+      WallOfTreesShadow_13: 509717890
+      WallOfTreesShadow_130: 1940055971
+      WallOfTreesShadow_131: -2025448516
+      WallOfTreesShadow_132: 1605526189
+      WallOfTreesShadow_133: -1198055980
+      WallOfTreesShadow_134: -1151398270
+      WallOfTreesShadow_135: 453036022
+      WallOfTreesShadow_136: -1912117954
+      WallOfTreesShadow_137: 1142977803
+      WallOfTreesShadow_138: -1861378353
+      WallOfTreesShadow_139: 1064500654
+      WallOfTreesShadow_14: 1291716854
+      WallOfTreesShadow_140: 2011609783
+      WallOfTreesShadow_141: 615657529
+      WallOfTreesShadow_142: 1436136584
+      WallOfTreesShadow_143: -687294646
+      WallOfTreesShadow_144: -508426828
+      WallOfTreesShadow_145: -189687924
+      WallOfTreesShadow_146: 721733024
+      WallOfTreesShadow_147: 605017113
+      WallOfTreesShadow_148: -430217121
+      WallOfTreesShadow_149: -452796231
+      WallOfTreesShadow_15: -1391685868
+      WallOfTreesShadow_150: -180145402
+      WallOfTreesShadow_151: -1964169247
+      WallOfTreesShadow_152: -1174010436
+      WallOfTreesShadow_153: -1401430872
+      WallOfTreesShadow_154: 1767179059
+      WallOfTreesShadow_155: -1245798192
+      WallOfTreesShadow_156: -1311719235
+      WallOfTreesShadow_157: 149935924
+      WallOfTreesShadow_158: 497240484
+      WallOfTreesShadow_159: -250050541
+      WallOfTreesShadow_16: -218946413
+      WallOfTreesShadow_160: -393366530
+      WallOfTreesShadow_161: -1725212246
+      WallOfTreesShadow_162: -151470588
+      WallOfTreesShadow_163: -1271345417
+      WallOfTreesShadow_164: -1226333862
+      WallOfTreesShadow_165: 746405900
+      WallOfTreesShadow_166: -1198333395
+      WallOfTreesShadow_167: 558542526
+      WallOfTreesShadow_168: -2073616033
+      WallOfTreesShadow_169: 1762345643
+      WallOfTreesShadow_17: -438746855
+      WallOfTreesShadow_170: 2110400190
+      WallOfTreesShadow_171: -1086864067
+      WallOfTreesShadow_172: 1922182711
+      WallOfTreesShadow_173: 1585352373
+      WallOfTreesShadow_174: 192089776
+      WallOfTreesShadow_175: -1266998724
+      WallOfTreesShadow_176: -1075307662
+      WallOfTreesShadow_177: -1142885445
+      WallOfTreesShadow_178: -718763750
+      WallOfTreesShadow_179: -1153747070
+      WallOfTreesShadow_18: -1616739946
+      WallOfTreesShadow_180: 860524689
+      WallOfTreesShadow_181: 1321437763
+      WallOfTreesShadow_182: 296203892
+      WallOfTreesShadow_183: -1683596394
+      WallOfTreesShadow_184: -260578511
+      WallOfTreesShadow_185: 732003536
+      WallOfTreesShadow_186: 632030458
+      WallOfTreesShadow_187: 885872575
+      WallOfTreesShadow_188: 268263844
+      WallOfTreesShadow_189: 923821474
+      WallOfTreesShadow_19: 1499288132
+      WallOfTreesShadow_190: -119714447
+      WallOfTreesShadow_191: -737011833
+      WallOfTreesShadow_192: -1818734782
+      WallOfTreesShadow_193: 632811436
+      WallOfTreesShadow_194: -1890516372
+      WallOfTreesShadow_195: -1535798693
+      WallOfTreesShadow_196: -747689100
+      WallOfTreesShadow_197: -834718244
+      WallOfTreesShadow_198: -278864814
+      WallOfTreesShadow_199: 1709666996
+      WallOfTreesShadow_2: 776083639
+      WallOfTreesShadow_20: 445616467
+      WallOfTreesShadow_200: 115509412
+      WallOfTreesShadow_201: -1413425995
+      WallOfTreesShadow_202: 1267593492
+      WallOfTreesShadow_203: 623152944
+      WallOfTreesShadow_204: 782972088
+      WallOfTreesShadow_205: -796140652
+      WallOfTreesShadow_206: 985959246
+      WallOfTreesShadow_207: 1853072935
+      WallOfTreesShadow_208: -684397533
+      WallOfTreesShadow_209: 826303370
+      WallOfTreesShadow_21: 140219508
+      WallOfTreesShadow_210: 2052511597
+      WallOfTreesShadow_211: 2124911845
+      WallOfTreesShadow_212: -978626811
+      WallOfTreesShadow_213: -1270593847
+      WallOfTreesShadow_214: -1746121105
+      WallOfTreesShadow_215: -742635064
+      WallOfTreesShadow_216: -2068060962
+      WallOfTreesShadow_217: -2061481766
+      WallOfTreesShadow_218: 1569473193
+      WallOfTreesShadow_219: 1214741170
+      WallOfTreesShadow_22: 187449948
+      WallOfTreesShadow_220: 1932701653
+      WallOfTreesShadow_221: 950268606
+      WallOfTreesShadow_222: 1319072804
+      WallOfTreesShadow_223: 1902764156
+      WallOfTreesShadow_224: -1587531278
+      WallOfTreesShadow_225: 1513076174
+      WallOfTreesShadow_226: -1495849330
+      WallOfTreesShadow_227: 732878125
+      WallOfTreesShadow_228: 700476633
+      WallOfTreesShadow_229: 1274503163
+      WallOfTreesShadow_23: 327428339
+      WallOfTreesShadow_230: 1498902021
+      WallOfTreesShadow_231: 1749576779
+      WallOfTreesShadow_232: -867575369
+      WallOfTreesShadow_233: 166097093
+      WallOfTreesShadow_234: 1112426967
+      WallOfTreesShadow_235: -1886908323
+      WallOfTreesShadow_236: -1351812390
+      WallOfTreesShadow_237: -156204027
+      WallOfTreesShadow_238: -1341353823
+      WallOfTreesShadow_239: 1600026931
+      WallOfTreesShadow_24: 1344700829
+      WallOfTreesShadow_240: -1926285386
+      WallOfTreesShadow_241: -1901216208
+      WallOfTreesShadow_242: 1029636615
+      WallOfTreesShadow_243: 664427199
+      WallOfTreesShadow_244: -1025278085
+      WallOfTreesShadow_245: -1291837975
+      WallOfTreesShadow_246: -1316402388
+      WallOfTreesShadow_247: 1162371162
+      WallOfTreesShadow_248: -1960413472
+      WallOfTreesShadow_249: -1951950823
+      WallOfTreesShadow_25: 1497222729
+      WallOfTreesShadow_250: 1233631427
+      WallOfTreesShadow_251: 121880800
+      WallOfTreesShadow_252: -318175803
+      WallOfTreesShadow_253: -602084796
+      WallOfTreesShadow_254: 801882538
+      WallOfTreesShadow_255: -2041137609
+      WallOfTreesShadow_256: 1409394761
+      WallOfTreesShadow_257: 970616747
+      WallOfTreesShadow_258: -857371350
+      WallOfTreesShadow_259: 931361635
+      WallOfTreesShadow_26: 455437494
+      WallOfTreesShadow_260: -8021063
+      WallOfTreesShadow_261: 107084012
+      WallOfTreesShadow_262: 73812358
+      WallOfTreesShadow_27: -1645867815
+      WallOfTreesShadow_28: -1457476912
+      WallOfTreesShadow_29: 773397993
+      WallOfTreesShadow_3: 1636640412
+      WallOfTreesShadow_30: 878973547
+      WallOfTreesShadow_31: -409946033
+      WallOfTreesShadow_32: -61580311
+      WallOfTreesShadow_33: -1403297237
+      WallOfTreesShadow_34: -2060263225
+      WallOfTreesShadow_35: 60195046
+      WallOfTreesShadow_36: -1464599660
+      WallOfTreesShadow_37: -1669475260
+      WallOfTreesShadow_38: 1785161786
+      WallOfTreesShadow_39: 649630604
+      WallOfTreesShadow_4: 1240907392
+      WallOfTreesShadow_40: 1479579005
+      WallOfTreesShadow_41: -1170163901
+      WallOfTreesShadow_42: -725994564
+      WallOfTreesShadow_43: -532960270
+      WallOfTreesShadow_44: -1209286200
+      WallOfTreesShadow_45: -1220557805
+      WallOfTreesShadow_46: -1387410921
+      WallOfTreesShadow_47: -137798971
+      WallOfTreesShadow_48: 763083574
+      WallOfTreesShadow_49: 1465892581
+      WallOfTreesShadow_5: -1672477208
+      WallOfTreesShadow_50: -1995729208
+      WallOfTreesShadow_51: -1295628997
+      WallOfTreesShadow_52: 1043381441
+      WallOfTreesShadow_53: 416014169
+      WallOfTreesShadow_54: -1922023652
+      WallOfTreesShadow_55: -137392784
+      WallOfTreesShadow_56: -260854341
+      WallOfTreesShadow_57: 1523766283
+      WallOfTreesShadow_58: 1867335890
+      WallOfTreesShadow_59: 1902319397
+      WallOfTreesShadow_6: -900080283
+      WallOfTreesShadow_60: -1042535882
+      WallOfTreesShadow_61: 270880040
+      WallOfTreesShadow_62: 1017667432
+      WallOfTreesShadow_63: -739012448
+      WallOfTreesShadow_64: -1416107677
+      WallOfTreesShadow_65: -683295479
+      WallOfTreesShadow_66: 1811354004
+      WallOfTreesShadow_67: 570951988
+      WallOfTreesShadow_68: 1555048948
+      WallOfTreesShadow_69: -1468915624
+      WallOfTreesShadow_7: 1213957964
+      WallOfTreesShadow_70: -416052034
+      WallOfTreesShadow_71: 1312576386
+      WallOfTreesShadow_72: 523752582
+      WallOfTreesShadow_73: -589131624
+      WallOfTreesShadow_74: 57863049
+      WallOfTreesShadow_75: -810712541
+      WallOfTreesShadow_76: 327854829
+      WallOfTreesShadow_77: -1962775625
+      WallOfTreesShadow_78: -1262772010
+      WallOfTreesShadow_79: -1177259738
+      WallOfTreesShadow_8: -1080476696
+      WallOfTreesShadow_80: 2101963319
+      WallOfTreesShadow_81: -1150326805
+      WallOfTreesShadow_82: -1073826062
+      WallOfTreesShadow_83: 1750107762
+      WallOfTreesShadow_84: -767940669
+      WallOfTreesShadow_85: 1228205396
+      WallOfTreesShadow_86: -2133273464
+      WallOfTreesShadow_87: 1622087373
+      WallOfTreesShadow_88: 489393335
+      WallOfTreesShadow_89: -553338388
+      WallOfTreesShadow_9: -1974466774
+      WallOfTreesShadow_90: 1412331214
+      WallOfTreesShadow_91: -237873144
+      WallOfTreesShadow_92: 2076609241
+      WallOfTreesShadow_93: 581105349
+      WallOfTreesShadow_94: 1706144727
+      WallOfTreesShadow_95: -694667297
+      WallOfTreesShadow_96: 954425108
+      WallOfTreesShadow_97: 958106158
+      WallOfTreesShadow_98: -874679355
+      WallOfTreesShadow_99: 1997972250
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

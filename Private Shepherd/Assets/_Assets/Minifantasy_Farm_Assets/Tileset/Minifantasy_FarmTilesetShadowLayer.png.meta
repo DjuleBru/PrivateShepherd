@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,9 +113,2016 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_0
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10b0b0f20f8118448d051c18e9dad5a
+      internalID: -7845992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_1
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806c112e66d008f4cb4ca4338183dc1d
+      internalID: 841382810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19094404c7a256a49a0c48184372b424
+      internalID: -2024099328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_3
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66065f5e49d25a842bc756f52021bfed
+      internalID: -609727806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_4
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 144
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5ae630735f3dc4fb80aa85e3689620
+      internalID: -1757558050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 144
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ab2319f8cb2de448e8dd7dd487381d
+      internalID: -1608238836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_6
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7901eb24e1f444e940919c40d63dfe
+      internalID: 772206050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_7
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0554ccb40c1339048955aa1b52db83fc
+      internalID: -1242962355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123cac4f98625634aa2be80a8863ae9d
+      internalID: 1413306222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_9
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5e3891310a4ed4baf65550896ebbc4
+      internalID: 668459720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_10
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8395158807b5ea45a43a2eb1d222974
+      internalID: 1885416828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21e129d1a712ca42a43bb0ceaf29f5f
+      internalID: -811037782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_12
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3f3893fcf19f9438b1cc722060aa04
+      internalID: 939474646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee364a6a53555234f96dcaacc78a34f7
+      internalID: 47303556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_14
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9936add188524640ae21b146e8af64b
+      internalID: -1471435047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_15
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe044c44fcdd35489adc65364747e49
+      internalID: -951332895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5473de249313f4b9f9a27d2aef9a8a
+      internalID: -1774014141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52f4a036b1367f408fcda6342d939ed
+      internalID: -1545458848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fd27249dd448240bf47dd5d08090a7
+      internalID: -1987249244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e5a0f5709fb0e44b1bf6e8db1a43e5
+      internalID: -1258935518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_20
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732b0341084c9914ebeb07f494f95448
+      internalID: 793425268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1a751b490c622448ce4aebe0ef5882
+      internalID: 1547969638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_22
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97123763a4bec4a43a6b761884c5856a
+      internalID: -1589756088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_23
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be6e8d9b6e9b144483b7addf3139d43
+      internalID: 865702551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_24
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44faabb6fbf87cd4b83bb2fe79f2c177
+      internalID: 1863515363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1d55d61be7ac845b841745f4c70d81
+      internalID: -1617616595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_26
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b083ca6c1e3bb4a84f4bc984d3eeb0
+      internalID: -133290614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_27
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13069883b0d4144d908474f337fe90c
+      internalID: 2007611589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f96961805b6f9a4cab884bdaa8551b1
+      internalID: -319801406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_29
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee9fe46e0d574243b02acdfb5af4898
+      internalID: -777214800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_30
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50f2fe006968d7409ab0591e4223ee3
+      internalID: 2066350537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_31
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa3f26211c661f4f818d23b7ef8696a
+      internalID: 1644651497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_32
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e108b16bdbbff4a9448593d801a462
+      internalID: 2093045394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59846d45538778743a30889e4e124a37
+      internalID: -11164561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_34
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4c5cf1b8b5e034aa8d01d36176ddff
+      internalID: 721265997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_35
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829be24f931692143b97e277434a3292
+      internalID: -1472069438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_36
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc59c06a33845774fadd350ac3ea5684
+      internalID: 2026530592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cf8043a63b11d4097692c1bc49f964
+      internalID: -533308151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_38
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0879f2d150d9cac4f82192b168b78ffe
+      internalID: 1416482032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_39
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1316b501f5293184ab158a84468809b9
+      internalID: -1405211932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_40
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f153052722ac34f9bd0f6abd01f7ff
+      internalID: 1419577761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_41
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08434ea855b8fea4daeceba4d969ec12
+      internalID: 394739025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_42
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219b9a1e6509d5b43aa619388267074d
+      internalID: -594838581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_43
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df4a01410f86544da0bd01132c61ed1
+      internalID: 1631587653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_44
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb733488d80cdae4cbe81df1afe4e282
+      internalID: 1451761159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_45
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad915505309ac344a204604bd1b7113
+      internalID: 19062638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f189f72c9ff605498b8a2554afb83c1
+      internalID: 1016153002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_47
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8a400ebaa93134ebe2bff2e3c26403
+      internalID: 1523648992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_48
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf6b015b25ba5041adbec668c072edd
+      internalID: -1770256016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_49
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00ae9d941e133f4d84aef53dde4b429
+      internalID: -1718903018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_50
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf15e82e6e60ef4fa5f51677f552922
+      internalID: 699959606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_51
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1958a7a79a918c04e9f59d5241aa8057
+      internalID: 26356518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_52
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3753fc237a8254e9fcb7fe5cbf59cf
+      internalID: -1956548404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_53
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfb995d5194df4449bc00492d0f8503
+      internalID: 1634741624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_54
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb27cc83c6b917b449dd48f55a490d8f
+      internalID: -942102405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_55
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ea7d8aa26da094db9d658900e4012c
+      internalID: 7518592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_56
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46ff7084b33ad748a5c947a025c21c3
+      internalID: 1259714686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_57
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ec3b99be1858c4981f869e608b13d6
+      internalID: 2008819978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_58
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab58f5cd850e7484c9410d39544ec6cc
+      internalID: -249733917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_59
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2868165b9bfb76946af20f97ae20b2c4
+      internalID: -762266873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_60
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf21501b335216448959a930fc03ec29
+      internalID: 909971872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_61
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9797f9615fe25c54d9e12ba5f5f021ec
+      internalID: 172972534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_62
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd570182a18a6a4190d28e095a47216
+      internalID: -1150813669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_63
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82645f94c30412478bff9dca811bdac
+      internalID: -610843293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_64
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4577278d8504bc74bb8ab01c9884efbd
+      internalID: -509865502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_65
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90313ebcb81cb245a20da01c1762b21
+      internalID: -1968706697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_66
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00384a6ca25f62049bee0db8a2efcd1f
+      internalID: 65425269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_67
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea40a76b5cdb034183fbe6be4da741c
+      internalID: -1502930598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_68
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73ae519ac5ce1341a25ecb06291809a
+      internalID: -1745845550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_69
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b2307ce13745f40a6250de765e8868
+      internalID: 1990733754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_70
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805a70c9927c1e341b89d7885991d9e6
+      internalID: 1591042009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_71
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38ed09c4839cae4180eb436abb8558c
+      internalID: -189638289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_72
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809a43966e08b1d4f97c7fc860322f9c
+      internalID: 889970451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_73
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f78463c7be7564cac29d8b6756cc02
+      internalID: 2095965590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_74
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263907f41ef28064d8fe10aae9e636d6
+      internalID: -1584428364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_75
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9b5e6157210e24faf40fae2a1d9edf
+      internalID: 1193420015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_76
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4c7c84023161041810e7e3b811b0e9
+      internalID: -528328861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_77
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6330db92683ea04994acd3174594c94
+      internalID: 911507714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_78
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beca1c558d6745f41a0b28e46947be8b
+      internalID: -804768268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_79
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c98b5f0561a26243b9142444c1891d6
+      internalID: -1875719659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_80
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3f63353aec6e5409b6c5f2af0713ce
+      internalID: 19427817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_81
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138f142284a7bdd44abe53d826c69c18
+      internalID: -1825164557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_82
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44a40d1a4810f349bbc250b529a29c4
+      internalID: 874913208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_83
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f08be5c20ff5d44b793e5105b63238
+      internalID: -644274924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_84
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d072a8b12a70c0d4981a3a3aa9561b36
+      internalID: -391779628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_85
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f98c3a9a107e79459eba0f7d04c9ff5
+      internalID: 933246918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_86
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db54954db08ef654dadd47485d990fd8
+      internalID: 151245774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_87
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0deef2979bfa004987a493ea181ebaa
+      internalID: 123942356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_88
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c9d9b83e238284ebd99a3dd285db8b
+      internalID: -1193728289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f705ab6500299b47afbb7b6e96ae322
+      internalID: 1714763740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_90
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e8a2fc4a5080945bcffaab8a827f26
+      internalID: -1165748518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_91
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc8cb9c4783fa64394d258817a7eea3
+      internalID: 932988974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_92
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58894e39eb08a3f46a8a2010fd280c7a
+      internalID: -791280242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_93
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65e5da609faf2d4d86df9d338eeb100
+      internalID: 1877977317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_FarmTilesetShadowLayer_94
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f4b70176e418549b1d00049c1765ad
+      internalID: 1632332064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +2133,102 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Minifantasy_FarmTilesetShadowLayer_0: -7845992
+      Minifantasy_FarmTilesetShadowLayer_1: 841382810
+      Minifantasy_FarmTilesetShadowLayer_10: 1885416828
+      Minifantasy_FarmTilesetShadowLayer_11: -811037782
+      Minifantasy_FarmTilesetShadowLayer_12: 939474646
+      Minifantasy_FarmTilesetShadowLayer_13: 47303556
+      Minifantasy_FarmTilesetShadowLayer_14: -1471435047
+      Minifantasy_FarmTilesetShadowLayer_15: -951332895
+      Minifantasy_FarmTilesetShadowLayer_16: -1774014141
+      Minifantasy_FarmTilesetShadowLayer_17: -1545458848
+      Minifantasy_FarmTilesetShadowLayer_18: -1987249244
+      Minifantasy_FarmTilesetShadowLayer_19: -1258935518
+      Minifantasy_FarmTilesetShadowLayer_2: -2024099328
+      Minifantasy_FarmTilesetShadowLayer_20: 793425268
+      Minifantasy_FarmTilesetShadowLayer_21: 1547969638
+      Minifantasy_FarmTilesetShadowLayer_22: -1589756088
+      Minifantasy_FarmTilesetShadowLayer_23: 865702551
+      Minifantasy_FarmTilesetShadowLayer_24: 1863515363
+      Minifantasy_FarmTilesetShadowLayer_25: -1617616595
+      Minifantasy_FarmTilesetShadowLayer_26: -133290614
+      Minifantasy_FarmTilesetShadowLayer_27: 2007611589
+      Minifantasy_FarmTilesetShadowLayer_28: -319801406
+      Minifantasy_FarmTilesetShadowLayer_29: -777214800
+      Minifantasy_FarmTilesetShadowLayer_3: -609727806
+      Minifantasy_FarmTilesetShadowLayer_30: 2066350537
+      Minifantasy_FarmTilesetShadowLayer_31: 1644651497
+      Minifantasy_FarmTilesetShadowLayer_32: 2093045394
+      Minifantasy_FarmTilesetShadowLayer_33: -11164561
+      Minifantasy_FarmTilesetShadowLayer_34: 721265997
+      Minifantasy_FarmTilesetShadowLayer_35: -1472069438
+      Minifantasy_FarmTilesetShadowLayer_36: 2026530592
+      Minifantasy_FarmTilesetShadowLayer_37: -533308151
+      Minifantasy_FarmTilesetShadowLayer_38: 1416482032
+      Minifantasy_FarmTilesetShadowLayer_39: -1405211932
+      Minifantasy_FarmTilesetShadowLayer_4: -1757558050
+      Minifantasy_FarmTilesetShadowLayer_40: 1419577761
+      Minifantasy_FarmTilesetShadowLayer_41: 394739025
+      Minifantasy_FarmTilesetShadowLayer_42: -594838581
+      Minifantasy_FarmTilesetShadowLayer_43: 1631587653
+      Minifantasy_FarmTilesetShadowLayer_44: 1451761159
+      Minifantasy_FarmTilesetShadowLayer_45: 19062638
+      Minifantasy_FarmTilesetShadowLayer_46: 1016153002
+      Minifantasy_FarmTilesetShadowLayer_47: 1523648992
+      Minifantasy_FarmTilesetShadowLayer_48: -1770256016
+      Minifantasy_FarmTilesetShadowLayer_49: -1718903018
+      Minifantasy_FarmTilesetShadowLayer_5: -1608238836
+      Minifantasy_FarmTilesetShadowLayer_50: 699959606
+      Minifantasy_FarmTilesetShadowLayer_51: 26356518
+      Minifantasy_FarmTilesetShadowLayer_52: -1956548404
+      Minifantasy_FarmTilesetShadowLayer_53: 1634741624
+      Minifantasy_FarmTilesetShadowLayer_54: -942102405
+      Minifantasy_FarmTilesetShadowLayer_55: 7518592
+      Minifantasy_FarmTilesetShadowLayer_56: 1259714686
+      Minifantasy_FarmTilesetShadowLayer_57: 2008819978
+      Minifantasy_FarmTilesetShadowLayer_58: -249733917
+      Minifantasy_FarmTilesetShadowLayer_59: -762266873
+      Minifantasy_FarmTilesetShadowLayer_6: 772206050
+      Minifantasy_FarmTilesetShadowLayer_60: 909971872
+      Minifantasy_FarmTilesetShadowLayer_61: 172972534
+      Minifantasy_FarmTilesetShadowLayer_62: -1150813669
+      Minifantasy_FarmTilesetShadowLayer_63: -610843293
+      Minifantasy_FarmTilesetShadowLayer_64: -509865502
+      Minifantasy_FarmTilesetShadowLayer_65: -1968706697
+      Minifantasy_FarmTilesetShadowLayer_66: 65425269
+      Minifantasy_FarmTilesetShadowLayer_67: -1502930598
+      Minifantasy_FarmTilesetShadowLayer_68: -1745845550
+      Minifantasy_FarmTilesetShadowLayer_69: 1990733754
+      Minifantasy_FarmTilesetShadowLayer_7: -1242962355
+      Minifantasy_FarmTilesetShadowLayer_70: 1591042009
+      Minifantasy_FarmTilesetShadowLayer_71: -189638289
+      Minifantasy_FarmTilesetShadowLayer_72: 889970451
+      Minifantasy_FarmTilesetShadowLayer_73: 2095965590
+      Minifantasy_FarmTilesetShadowLayer_74: -1584428364
+      Minifantasy_FarmTilesetShadowLayer_75: 1193420015
+      Minifantasy_FarmTilesetShadowLayer_76: -528328861
+      Minifantasy_FarmTilesetShadowLayer_77: 911507714
+      Minifantasy_FarmTilesetShadowLayer_78: -804768268
+      Minifantasy_FarmTilesetShadowLayer_79: -1875719659
+      Minifantasy_FarmTilesetShadowLayer_8: 1413306222
+      Minifantasy_FarmTilesetShadowLayer_80: 19427817
+      Minifantasy_FarmTilesetShadowLayer_81: -1825164557
+      Minifantasy_FarmTilesetShadowLayer_82: 874913208
+      Minifantasy_FarmTilesetShadowLayer_83: -644274924
+      Minifantasy_FarmTilesetShadowLayer_84: -391779628
+      Minifantasy_FarmTilesetShadowLayer_85: 933246918
+      Minifantasy_FarmTilesetShadowLayer_86: 151245774
+      Minifantasy_FarmTilesetShadowLayer_87: 123942356
+      Minifantasy_FarmTilesetShadowLayer_88: -1193728289
+      Minifantasy_FarmTilesetShadowLayer_89: 1714763740
+      Minifantasy_FarmTilesetShadowLayer_9: 668459720
+      Minifantasy_FarmTilesetShadowLayer_90: -1165748518
+      Minifantasy_FarmTilesetShadowLayer_91: 932988974
+      Minifantasy_FarmTilesetShadowLayer_92: -791280242
+      Minifantasy_FarmTilesetShadowLayer_93: 1877977317
+      Minifantasy_FarmTilesetShadowLayer_94: 1632332064
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
