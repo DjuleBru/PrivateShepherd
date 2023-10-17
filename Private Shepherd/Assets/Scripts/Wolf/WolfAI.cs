@@ -346,7 +346,7 @@ public class WolfAI : AIMovement {
             float dSqrToSheep = directionToSheep.sqrMagnitude;
 
             // Sheep surroundings
-            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
+            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetComponentInChildren<SheepHerd>().GetHerdNumber();
 
 
             if (potentialSheep.GetComponent<SheepMovement>().GetState() != SheepMovement.State.InScoreZone) {

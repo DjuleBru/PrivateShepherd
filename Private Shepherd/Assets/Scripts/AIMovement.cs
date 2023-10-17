@@ -117,7 +117,7 @@ public class AIMovement : MonoBehaviour
         return point;
     }
 
-    public Vector3 GetMoveDir() {
+    public Vector3 GetMoveDirNormalized() {
         return moveDirNormalized;
     }
 

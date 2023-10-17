@@ -13,7 +13,7 @@ public class SetAIAnimatorParameters : MonoBehaviour {
         if (AIMovement.GetReachedEndOfPath()) {
             animator.SetBool("isMoving", false);
         } else {
-            moveDir = AIMovement.GetMoveDir();
+            moveDir = AIMovement.GetMoveDirNormalized();
             animator.SetBool("isMoving", true);
             animator.SetFloat("moveX", moveDir.x);
             animator.SetFloat("moveY", moveDir.y);

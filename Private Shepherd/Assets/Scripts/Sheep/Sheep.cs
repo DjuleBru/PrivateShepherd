@@ -7,6 +7,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Cinemachine;
 
 [RequireComponent(typeof(SetAIAnimatorParameters))]
 
@@ -21,18 +22,16 @@ public class Sheep : MonoBehaviour
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
     [SerializeField] private SheepObjectPool subSheepObjectPool;
 
-    [SerializeField] LayerMask sheepLayerMask;
+    [SerializeField] private OutOfScreenTargetIndicator outOfScreenTargetIndicator;
+
     [SerializeField] Collider2D sheepCollider;
 
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
     private bool hasEnteredScoreZone;
     private bool hasBeenBit;
 
-    [SerializeField] int sheepMinimumNumber = 3;
-    [SerializeField] float herdRadius = 5f;
-    private int herdNumber;
-
-    [SerializeField] TextMeshPro herdNumberText;
+    [SerializeField] int sheepHerdMinimumNumber = 3;
+    
 
     public class OnSheepEnterScoreZoneEventArgs : EventArgs {
         public Transform[] scoreZoneAggregatePointArray;
@@ -45,22 +44,7 @@ public class Sheep : MonoBehaviour
         subSheepObjectPool.OnSheepDied += subSheepObjectPool_OnSheepDied;
     }
 
-    private void Start() {
-    }
-
-
-    private void Update() {
-        CalculateHerdNumber();
-    }
-
-    private void CalculateHerdNumber() {
-        herdNumber = Physics2D.OverlapCircleAll(transform.position, herdRadius, sheepLayerMask).Length;
-        herdNumberText.text = herdNumber.ToString();
-    }
-
-    public int GetHerdNumber() {
-        return herdNumber;
-    }
+    
 
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
 
@@ -79,9 +63,9 @@ public class Sheep : MonoBehaviour
             float dSqrToSheep = directionToSheep.sqrMagnitude;
 
             // Sheep surroundings
-            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
+            int sheepNumberWithinTargetSheepRadius = potentialSheep.GetComponentInChildren<SheepHerd>().GetHerdNumber();
 
-            if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepMinimumNumber) {
+            if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0 & sheepNumberWithinTargetSheepRadius >= sheepHerdMinimumNumber) {
                 closestDistanceSqr = dSqrToSheep;
                 closestSheepWithEnoughSheepSurrounding = potentialSheep.transform;
             }
@@ -107,7 +91,7 @@ public class Sheep : MonoBehaviour
                 Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
 
                 // Sheep surroundings
-                int sheepNumberWithinTargetSheepRadius = potentialSheep.GetHerdNumber();
+                int sheepNumberWithinTargetSheepRadius = potentialSheep.GetComponentInChildren<SheepHerd>().GetHerdNumber();
 
                 if (sheepNumberWithinTargetSheepRadius >= maxSheepNumberSurroundings) {
                     sheepWithMaxSheepSurrounding = potentialSheep.transform;
@@ -139,8 +123,6 @@ public class Sheep : MonoBehaviour
         }
     }
 
-  
-
     public void SetSheepParent(Transform newParent) {
         sheepParent = newParent;
         this.transform.parent = newParent;
@@ -168,6 +150,7 @@ public class Sheep : MonoBehaviour
     public void EatSheep() {
         RemoveDeadSheepFromObjectPool();
         sheepMovement.UnSubscribeFromEvents();
+        outOfScreenTargetIndicator.OnHolderDestroyed();
         Destroy(gameObject);
     }
     public void RemoveDeadSheepFromObjectPool() {

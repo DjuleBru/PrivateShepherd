@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 4618234880274760102}
   - component: {fileID: 9201663347077605661}
   - component: {fileID: 2426882547728088804}
+  - component: {fileID: 5868051971188759739}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -477,7 +478,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: -917775253, guid: 66b4ec7218c080145b9d8b8b254b8730, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -546,6 +547,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wolfAI: {fileID: 151823768}
   wolfFleeIndicator: {fileID: 3115474944494753624}
+--- !u!114 &5868051971188759739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618234880274760096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d758bd67545b3245ad2f33d1506645d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outOfScreenGameObject: {fileID: 8293569823048159755, guid: 11ad45dba0176a64fb94731dcaae3186,
+    type: 3}
 --- !u!1 &4618234881141710281
 GameObject:
   m_ObjectHideFlags: 0

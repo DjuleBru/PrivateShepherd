@@ -18,7 +18,7 @@ public class SheepVisual : MonoBehaviour
     }
 
     private void Update() {
-        if(sheepMovement.GetState() == SheepMovement.State.Flee) {
+        if(sheepMovement.GetState() == SheepMovement.State.Flee | sheepMovement.GetState() == SheepMovement.State.FleeAggregate) {
             sheepFleeIndicator.SetActive(true);
         } else {
             sheepFleeIndicator.SetActive(false);
