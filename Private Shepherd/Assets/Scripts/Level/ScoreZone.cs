@@ -10,4 +10,14 @@ public class ScoreZone : MonoBehaviour
     public Transform[] GetAggregatePointArray() { 
         return aggregatePointArray; 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        GameObject collisionGameObject = collision.gameObject;
+
+        if (collisionGameObject.TryGetComponent<Sheep>(out Sheep sheep)) {
+            sheep.SheepEnteredScoreZone(this);
+        }
+    }
+
 }

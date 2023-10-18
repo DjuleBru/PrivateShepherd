@@ -61,12 +61,11 @@ public class SheepMovement : AIMovement
 
         nextWaypointDistance = 1.5f;
 
-        state = State.Aggregate;
+        state = State.Roam ;
     }
 
     protected override void Start() {
         seeker = GetComponent<Seeker>();
-        PlayerBark.Instance.OnPlayerBark += PlayerBark_OnPlayerBark;
         sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
 
         //Initialise path
@@ -82,6 +81,11 @@ public class SheepMovement : AIMovement
 
         closestFleeTarget = FindClosestFleeTarget();
         UpdateClosestFleeTargetParameters();
+
+        closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
+        if (closestSheepTransform == null) {
+            closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
+        }
 
         sheepInHerdFleeing = sheepHerd.GetSheepInHerdFleeing();
 
@@ -141,10 +145,6 @@ public class SheepMovement : AIMovement
             case State.Aggregate:
                 fleeLeader = false;
                 moveSpeed = aggregateSpeed;
-                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
-                if (closestSheepTransform == null) {
-                    closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
-                }
 
                 if (closestSheepTransform == null) {
                     // There is no other sheep to aggregate to
@@ -180,7 +180,6 @@ public class SheepMovement : AIMovement
                     return;
                 }
 
-                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
                 if (closestSheepTransform != null) {
                     // There is another sheep to aggregate
                     if (Vector3.Distance(closestSheepTransform.position, transform.position) > triggerAggregateDistance) {
@@ -198,11 +197,7 @@ public class SheepMovement : AIMovement
 
             case State.ExtremeAggregate:
                 fleeLeader = false;
-                moveSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier(); ;
-                closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
-                if (closestSheepTransform == null) {
-                    closestSheepTransform = sheep.GetSheepWithMaxSheepSurrounding();
-                }
+                moveSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
 
                 if (closestSheepTransform == null) {
                     // There is no other sheep to aggregate to
@@ -278,10 +273,6 @@ public class SheepMovement : AIMovement
         closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance();
     }
 
-    private void PlayerBark_OnPlayerBark(object sender, System.EventArgs e) {
-        StartCoroutine(SetFleeSpeed(sheepSO.barkFleeSpeed));
-    }
-
     private void Sheep_OnSheepEnterScoreZone(object sender, OnSheepEnterScoreZoneEventArgs e) {
         state = State.InScoreZone;
 
@@ -295,14 +286,7 @@ public class SheepMovement : AIMovement
         fleeTargetList.Add(fleeTarget);
     }
 
-    public IEnumerator SetFleeSpeed(float newFleeSpeed) {
-        fleeSpeed = newFleeSpeed;
-        yield return new WaitForSeconds(1f);
-        fleeSpeed = sheepSO.fleeSpeed;
-    }
-
     public void UnSubscribeFromEvents() {
-        PlayerBark.Instance.OnPlayerBark -= PlayerBark_OnPlayerBark;
         sheep.OnSheepEnterScoreZone -= Sheep_OnSheepEnterScoreZone;
     }
 

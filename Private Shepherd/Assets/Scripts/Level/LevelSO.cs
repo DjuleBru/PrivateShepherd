@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class LevelSO : ScriptableObject
 {
+    public string levelName;
     public int levelTimeLimit;
     public int bronzeScoreTreshold;
     public int silverScoreTreshold;

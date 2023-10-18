@@ -44,8 +44,6 @@ public class Sheep : MonoBehaviour
         subSheepObjectPool.OnSheepDied += subSheepObjectPool_OnSheepDied;
     }
 
-    
-
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
 
         Transform closestSheepWithEnoughSheepSurrounding = null;
@@ -104,23 +102,19 @@ public class Sheep : MonoBehaviour
         return sheepWithMaxSheepSurrounding;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        GameObject collisionGameObject = collision.gameObject;
+    public void SheepEnteredScoreZone(ScoreZone scoreZone) {
+        if (!hasEnteredScoreZone) {
 
-        if (collisionGameObject.TryGetComponent<ScoreZone>(out ScoreZone scoreZone)) {
-
-            if (!hasEnteredScoreZone) {
-
-                // Select random aggregate point in score zone and pass it in event
-                Transform[] aggregatePointArray = scoreZone.GetAggregatePointArray();
-                OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
-                    scoreZoneAggregatePointArray = aggregatePointArray
-                });
-            }
-
-            hasEnteredScoreZone = true;
-            RemovePennedSheepFromObjectPool();
+            // Select random aggregate point in score zone and pass it in event
+            Transform[] aggregatePointArray = scoreZone.GetAggregatePointArray();
+            OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
+                scoreZoneAggregatePointArray = aggregatePointArray
+            });
         }
+
+        hasEnteredScoreZone = true;
+        RemovePennedSheepFromObjectPool();
+        outOfScreenTargetIndicator.DeActivateIndicator();
     }
 
     public void SetSheepParent(Transform newParent) {
@@ -150,7 +144,7 @@ public class Sheep : MonoBehaviour
     public void EatSheep() {
         RemoveDeadSheepFromObjectPool();
         sheepMovement.UnSubscribeFromEvents();
-        outOfScreenTargetIndicator.OnHolderDestroyed();
+        outOfScreenTargetIndicator.DestroyIndicator();
         Destroy(gameObject);
     }
     public void RemoveDeadSheepFromObjectPool() {

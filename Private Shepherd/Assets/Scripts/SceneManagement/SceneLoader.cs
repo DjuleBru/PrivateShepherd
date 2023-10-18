@@ -19,18 +19,22 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadScene(string sceneName) {
-        StartCoroutine(LoadSceneCoroutine(sceneName));
+        StartCoroutine(LoadSceneByStringCoroutine(sceneName));
+    }
+
+    public void LoadCurrentScene() {
+        StartCoroutine(LoadSceneByIndexCoroutine(SceneManager.GetActiveScene().buildIndex));
     }
 
     public void LoadMainMenu() {
-        StartCoroutine(LoadSceneCoroutine("MainMenu"));
+        StartCoroutine(LoadSceneByStringCoroutine("MainMenu"));
     }
 
     public void LoadWorldMap() {
-        StartCoroutine(LoadSceneCoroutine("WorldMap"));
+        StartCoroutine(LoadSceneByStringCoroutine("WorldMap"));
     }
 
-    public IEnumerator LoadSceneCoroutine(string sceneName) {
+    public IEnumerator LoadSceneByStringCoroutine(string sceneName) {
 
         yield return new WaitForSeconds(loadSceneDelay);
 
@@ -41,5 +45,18 @@ public class SceneLoader : MonoBehaviour
 
         // Load Scene
         SceneManager.LoadScene(sceneName);
+    }
+
+    public IEnumerator LoadSceneByIndexCoroutine(int sceneIndex) {
+
+        yield return new WaitForSeconds(loadSceneDelay);
+
+        // PLay Animation
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        // Load Scene
+        SceneManager.LoadScene(sceneIndex);
     }
 }

@@ -20,7 +20,7 @@ public class PlayerRunVisual : MonoBehaviour
 
     private void Update() {
 
-        runProgressionBar.fillAmount = PlayerRun.Instance.GetRunProgression();
+        runProgressionBar.fillAmount = 1 - PlayerRun.Instance.GetRunProgression();
 
         if (PlayerRun.Instance.GetTired() & !PlayerRun.Instance.GetExtremelyTired()) {
             if(!playingTiredPS) {

@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteSheep
       objectReference: {fileID: 0}
+    - target: {fileID: 6058607247327990226, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheep
+      value: 
+      objectReference: {fileID: 8100727088534029377}
     - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: sheep
@@ -133,8 +138,9 @@ MonoBehaviour:
   sheepMovement: {fileID: 6550491623979413840}
   levelSheepObjectPool: {fileID: 0}
   subSheepObjectPool: {fileID: 0}
+  outOfScreenTargetIndicator: {fileID: 0}
   sheepCollider: {fileID: 7336930917628086072}
-  sheepHerdMinimumNumber: 8
+  sheepHerdMinimumNumber: 4
   fleeTargetArray: []
 --- !u!58 &2628754709287641266 stripped
 CircleCollider2D:

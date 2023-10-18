@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 4846186786135874560}
   - component: {fileID: 5689397843276955821}
   - component: {fileID: 7748370823872585026}
+  - component: {fileID: 6058607247327990226}
   m_Layer: 7
   m_Name: Sheep
   m_TagString: Untagged
@@ -503,7 +504,7 @@ MonoBehaviour:
   sheepMovement: {fileID: 7748370823872585026}
   levelSheepObjectPool: {fileID: 0}
   subSheepObjectPool: {fileID: 0}
-  outOfScreenTargetIndicator: {fileID: 7936880292303649049}
+  outOfScreenTargetIndicator: {fileID: 0}
   sheepCollider: {fileID: 6106239601642728234}
   sheepHerdMinimumNumber: 3
 --- !u!114 &4846186786135874560
@@ -639,6 +640,24 @@ MonoBehaviour:
   sheep: {fileID: 6276905617284876724}
   sheepSO: {fileID: 0}
   sheepHerd: {fileID: 0}
+--- !u!114 &6058607247327990226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100688584939994466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04167c36d1ea081499a850920fb5ba2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outOfScreenGameObject: {fileID: 8293569823048159755, guid: 4dfe3d1648bafa1458700051e827af56,
+    type: 3}
+  sheep: {fileID: 6276905617284876724}
+  sheepLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &4100688585696642629
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +754,6 @@ GameObject:
   - component: {fileID: 4100688585976792743}
   - component: {fileID: 4100688585976792736}
   - component: {fileID: 547882991902387154}
-  - component: {fileID: 7936880292303649049}
   m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
@@ -850,20 +868,6 @@ MonoBehaviour:
   sheepMovement: {fileID: 7748370823872585026}
   sheepFleeIndicator: {fileID: 2332378577877569346}
   sheepInjuredPS: {fileID: 5646282926164206801}
---- !u!114 &7936880292303649049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100688585976792738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d758bd67545b3245ad2f33d1506645d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outOfScreenGameObject: {fileID: 9142959553708457586, guid: 197e0ec8ae1c8e246823008feb6e4623,
-    type: 3}
 --- !u!1 &4788996654697443916
 GameObject:
   m_ObjectHideFlags: 0

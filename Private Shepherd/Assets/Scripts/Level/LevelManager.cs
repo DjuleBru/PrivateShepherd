@@ -26,7 +26,11 @@ public class LevelManager : MonoBehaviour
     private float levelRemainingTime;
 
     private int playerScore;
+    private int defaultHighScore = 0;
+    private int highScore;
     private int playerTrophies;
+    private int highTrophies;
+    private int defaultHighTrophies;
 
     private int whiteSheepScore;
 
@@ -75,6 +79,11 @@ public class LevelManager : MonoBehaviour
 
         playerTrophies = 0;
         playerScore = 0;
+    }
+
+    private void Start() {
+        highScore = ES3.Load((levelSO.levelName + "highScore"), defaultHighScore);
+        highTrophies = ES3.Load((levelSO.levelName + "highTrophies"), defaultHighTrophies);
     }
 
     private void Update() {
@@ -137,6 +146,18 @@ public class LevelManager : MonoBehaviour
         }
         if (playerScore < silverScoreTreshold) {
             playerTrophies = 1;
+        }
+
+        if (playerScore > highScore) {
+            // Calculate how many new bones are added
+            int newTrophies = playerTrophies - highTrophies;
+
+            // Add bones to player
+            Player.Instance.GivePlayerBones(newTrophies);
+
+            // Save high Score & Trophies
+            ES3.Save((levelSO.levelName + "highScore"), playerScore);
+            ES3.Save((levelSO.levelName + "highTrophies"), playerTrophies);
         }
 
         OnLevelSucceeded?.Invoke(this, new OnLevelSucceededEventArgs {

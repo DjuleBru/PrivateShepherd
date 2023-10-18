@@ -21,7 +21,8 @@ public class SheepHerd : MonoBehaviour
     }
 
     private void Update() {
-        herdNumberText.text = GetHerdNumber().ToString();
+        herdNumber = GetHerdNumber();
+        herdNumberText.text = herdNumber.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
@@ -48,6 +49,10 @@ public class SheepHerd : MonoBehaviour
 
     public int GetHerdNumber() {
         return herd.Count;
+    }
+
+    public List<Sheep> GetHerd() {
+        return herd;
     }
 
 }
