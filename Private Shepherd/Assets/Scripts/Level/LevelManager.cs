@@ -82,8 +82,7 @@ public class LevelManager : MonoBehaviour
     }
 
     private void Start() {
-        highScore = ES3.Load((levelSO.levelName + "highScore"), defaultHighScore);
-        highTrophies = ES3.Load((levelSO.levelName + "highTrophies"), defaultHighTrophies);
+        LoadPlayerScores();
     }
 
     private void Update() {
@@ -133,19 +132,19 @@ public class LevelManager : MonoBehaviour
         playerScore = CalculatePlayerScore(pennedSheepNumber, initialSheepNumber, levelRemainingTime);
 
         if (playerScore >= platScoreTreshold) {
-            playerTrophies = 5;
-        }
-        if (playerScore >= goldScoreTreshold & playerScore < platScoreTreshold) {
             playerTrophies = 4;
         }
-        if (playerScore >= silverScoreTreshold & playerScore < goldScoreTreshold) {
+        if (playerScore >= goldScoreTreshold & playerScore < platScoreTreshold) {
             playerTrophies = 3;
         }
-        if (playerScore >= bronzeScoreTreshold & playerScore < silverScoreTreshold) {
+        if (playerScore >= silverScoreTreshold & playerScore < goldScoreTreshold) {
             playerTrophies = 2;
         }
-        if (playerScore < silverScoreTreshold) {
+        if (playerScore >= bronzeScoreTreshold & playerScore < silverScoreTreshold) {
             playerTrophies = 1;
+        }
+        if (playerScore < bronzeScoreTreshold) {
+            playerTrophies = 0;
         }
 
         if (playerScore > highScore) {
@@ -156,8 +155,7 @@ public class LevelManager : MonoBehaviour
             Player.Instance.GivePlayerBones(newTrophies);
 
             // Save high Score & Trophies
-            ES3.Save((levelSO.levelName + "highScore"), playerScore);
-            ES3.Save((levelSO.levelName + "highTrophies"), playerTrophies);
+            SavePlayerScores();
         }
 
         OnLevelSucceeded?.Invoke(this, new OnLevelSucceededEventArgs {
@@ -191,11 +189,16 @@ public class LevelManager : MonoBehaviour
         return levelTimer;
     }
 
-    public int GetTwoStarScore() {
-        return silverScoreTreshold;
+    private void LoadPlayerScores() {
+        highScore = ES3.Load((levelSO.levelName + "_highScore"), defaultHighScore);
+        highTrophies = ES3.Load((levelSO.levelName + "_highTrophies"), defaultHighTrophies);
     }
 
-    public int GetThreeStarScore() {
-        return goldScoreTreshold;
+    private void SavePlayerScores() {
+        ES3.Save((levelSO.levelName + "_highScore"), playerScore);
+        ES3.Save((levelSO.levelName + "_highTrophies"), playerTrophies);
+        ES3.Save((levelSO.levelName + "_completed"), true);
+        ES3.Save((levelSO.levelName + "_pennedSheep"), pennedSheepNumber);
+        ES3.Save((levelSO.levelName + "_bestTime"), levelRemainingTime);
     }
 }

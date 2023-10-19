@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private int bones;
     private int defaultBones = 0;
 
+    public event EventHandler OnBonesChanged;
+
     private void Awake() {
         Instance = this; 
     }
@@ -25,12 +27,18 @@ public class Player : MonoBehaviour
 
     public void SpendPlayerBones(int bonePrice) {
         bones -= bonePrice;
+        OnBonesChanged?.Invoke(this, EventArgs.Empty);
         ES3.Save("playerBones", bones);
     }
 
     public void GivePlayerBones(int boneReward) {
         bones += boneReward;
+        OnBonesChanged?.Invoke(this, EventArgs.Empty);
         ES3.Save("playerBones", bones);
+    }
+
+    public void SetPlayerPosition(Vector3 position) {
+        transform.position = position;
     }
 
 }

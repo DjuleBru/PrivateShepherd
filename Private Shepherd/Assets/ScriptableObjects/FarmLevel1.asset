@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc361534fe3ee94c99a158cef46c613, type: 3}
+  m_Name: FarmLevel1
+  m_EditorClassIdentifier: 
+  levelName: Farm - 1
+  levelBoneUnlockCost: 1
+  levelTimeLimit: 200
+  bronzeScoreTreshold: 100
+  silverScoreTreshold: 120
+  goldScoreTreshold: 140
+  platScoreTreshold: 160
+  sheepNumber: 18

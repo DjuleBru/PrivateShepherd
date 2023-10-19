@@ -6,10 +6,12 @@ using UnityEngine;
 public class LevelSO : ScriptableObject
 {
     public string levelName;
+    public int levelBoneUnlockCost;
     public int levelTimeLimit;
     public int bronzeScoreTreshold;
     public int silverScoreTreshold;
     public int goldScoreTreshold;
     public int platScoreTreshold;
 
+    public int sheepNumber;
 }
