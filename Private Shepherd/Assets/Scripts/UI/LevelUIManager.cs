@@ -207,7 +207,7 @@ public class LevelUIManager : MonoBehaviour
         StartCoroutine(DisplayFloatTextOverTime(levelRemainingTimeText, levelRemainingTime, 0f, scoreDisplayIncrement, refreshRate, false, " s"));
         StartCoroutine(DisplayFloatTextOverTime(playerDynamicScoreText, 0, levelRemainingTime, scoreDisplayIncrement, refreshRate, true, ""));
 
-        while (float.Parse(playerDynamicScoreText.text) <= Mathf.Floor(levelRemainingTime)) {
+        while (float.Parse(playerDynamicScoreText.text) < Mathf.Floor(levelRemainingTime)) {
             yield return null;
         }
         playerDynamicScoreText.text = Mathf.Ceil(levelRemainingTime).ToString();

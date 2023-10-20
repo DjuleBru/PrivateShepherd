@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public static PlayerMovement Instance { get; private set; }
 
+    private Rigidbody2D rb;
     private Vector3 lastMoveDir;
     Vector2 moveInput;
     Vector3 moveDir = new Vector3(0, 1, 0);
@@ -20,13 +21,18 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Awake() {
         Instance = this;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update() {
+        HandleMovementInput();
+    }
+
+    private void FixedUpdate() {
         HandleMovement();
     }
 
-    private void HandleMovement() {
+    private void HandleMovementInput() {
         moveInput = GameInput.Instance.GetMovementVector();
 
         if (moveInput == Vector2.zero) {
@@ -35,6 +41,9 @@ public class PlayerMovement : MonoBehaviour {
             isMoving = true;
         }
 
+    }
+
+    private void HandleMovement() {
         SetLastMoveDir();
         SetAnimatorParameters();
         Move();
@@ -76,7 +85,7 @@ public class PlayerMovement : MonoBehaviour {
         moveDir = new Vector3(moveInput.x, moveInput.y, 0);
         Vector3 moveDirNormalized = moveDir.normalized;
 
-        transform.position += moveDirNormalized * Time.deltaTime * moveSpeed;
+        rb.velocity = moveDirNormalized * moveSpeed * Time.fixedDeltaTime;
     }
 
     private bool GetIsMoving() {

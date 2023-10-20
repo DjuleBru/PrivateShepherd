@@ -8,14 +8,15 @@ using UnityEngine.UI;
 public class WorldMapLevelDisplay : MonoBehaviour
 {
     [SerializeField] private Collider2D collider;
-    [SerializeField] private LevelSO levelSO;
     [SerializeField] private GameObject levelDisplayUI;
     [SerializeField] private GameObject levelUnlockUI;
+    [SerializeField] private QuestGiver questGiver;
 
     #region LEVEL PARAMETERS
 
     private int levelSOCount = 0;
 
+    private LevelSO levelSO;
     [SerializeField] private TextMeshProUGUI levelNameLocked;
     [SerializeField] private TextMeshProUGUI levelNameUnlocked;
     [SerializeField] private TextMeshProUGUI highScore;
@@ -36,23 +37,25 @@ public class WorldMapLevelDisplay : MonoBehaviour
     [SerializeField] private GameObject platTrophyIcon;
     #endregion
 
-    private bool levelUnlocked;
-    private bool levelCompleted;
-
     private void Awake() {
         levelDisplayUI.SetActive(false);
         levelUnlockUI.SetActive(false);
-
     }
 
     private void Start() {
-        LoadLevelParameters();
+        levelSO = questGiver.GetLevelSO();
         DisplayLevelParameters();
+
+        questGiver.OnLevelBoneFeePaid += QuestGiver_OnLevelBoneFeePaid;
+    }
+
+    private void QuestGiver_OnLevelBoneFeePaid(object sender, System.EventArgs e) {
+        UnlockLevelUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.TryGetComponent<Player>(out Player player)) {
-            if (levelUnlocked) {
+            if (questGiver.GetQuestBoneFeePaid()) {
                 levelDisplayUI.SetActive(true);
             } else {
                 levelUnlockUI.SetActive(true);
@@ -67,16 +70,10 @@ public class WorldMapLevelDisplay : MonoBehaviour
         }
     }
 
-    public void UnlockLevel() {
+    public void UnlockLevelUI() {
         if (Player.Instance.GetPlayerBones() >= levelSO.levelBoneUnlockCost) {
-
-            Player.Instance.SpendPlayerBones(levelSO.levelBoneUnlockCost);
-
             levelUnlockUI.SetActive(false);
             levelDisplayUI.SetActive(true);
-
-            levelUnlocked = true;
-            ES3.Save(levelSO.levelName + "_unlocked", levelUnlocked);
         }
     }
 
@@ -96,7 +93,7 @@ public class WorldMapLevelDisplay : MonoBehaviour
         goldTrophyIcon.SetActive(false);
         platTrophyIcon.SetActive(false);
 
-        if (levelCompleted) {
+        if (questGiver.GetQuestCompleted()) {
             highScore.text = ES3.Load(levelSO.levelName + "_highScore", 0).ToString();
 
             playerTrophies = ES3.Load(levelSO.levelName + "_highTrophies", 0);
@@ -116,11 +113,6 @@ public class WorldMapLevelDisplay : MonoBehaviour
             highScore.text = "-";
         }
 
-    }
-
-    private void LoadLevelParameters() {
-        levelCompleted = ES3.Load(levelSO.levelName + "_completed", false);
-        levelUnlocked = ES3.Load(levelSO.levelName + "_unlocked", false);
     }
 
 }
