@@ -66,6 +66,7 @@ public class WorldMapLevelDisplay : MonoBehaviour
     private void GameInput_OnExitPerformed(object sender, System.EventArgs e) {
         if (playerIsInTriggerZone) {
             levelDisplayUI.SetActive(false);
+            levelUnlockUI.SetActive(false);
         }
         Player.Instance.GetComponent<PlayerMovement>().SetCanMove(true);
     }

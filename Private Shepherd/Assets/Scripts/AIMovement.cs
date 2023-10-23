@@ -10,6 +10,8 @@ public class AIMovement : MonoBehaviour
 
     protected Seeker seeker;
     protected Path path;
+    protected Vector3 velocity;
+    [SerializeField] protected Rigidbody2D rb;
 
     #endregion
 
@@ -40,8 +42,9 @@ public class AIMovement : MonoBehaviour
         pathCalculationTimer = pathCalculationRate;
     }
 
-    protected void LateUpdate() {
+    protected virtual void LateUpdate() {
         pathCalculationTimer -= Time.deltaTime;
+        Move(velocity);
     }
 
     protected void FollowPath(Path path) {
@@ -68,10 +71,15 @@ public class AIMovement : MonoBehaviour
 
         moveDirNormalized = (path.vectorPath[currentWaypoint] - transform.position).normalized;
         moveDir2DNormalized = new Vector2 (moveDirNormalized.x, moveDirNormalized.y);
-        Vector3 velocity = moveDir2DNormalized * moveSpeed * speedFactor;
+        velocity = moveDir2DNormalized * moveSpeed * speedFactor;
+    }
 
+    protected virtual void Move(Vector3 velocity) {
         if (!reachedEndOfPath) {
-            transform.position += velocity * Time.deltaTime;
+            rb.velocity = velocity * Time.fixedDeltaTime;
+        }
+        else {
+            rb.velocity = Vector3.zero;
         }
     }
 

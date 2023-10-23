@@ -15,10 +15,8 @@ MonoBehaviour:
   triggerAggregateDistance: 2.5
   roamPauseMaxTime: 8
   roamPauseMinTime: 2
-  moveSpeed: 2
-  fleeSpeed: 3
-  barkFleeSpeed: 6
-  aggregateSpeed: 4
-  roamSpeed: 1.5
+  moveSpeed: 100
+  aggregateSpeed: 150
+  roamSpeed: 50
   injuredSpeedFactor: 0.5
   sheepScore: 5

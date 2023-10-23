@@ -95,6 +95,9 @@ public class QuestGiver : MonoBehaviour
 
     public IEnumerator UnlockLinkedQuestGivers() {
 
+        // DeActivate player movement
+        Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(false);
+
         // Start by dezooming
         float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
         StartCoroutine(SmoothCinemachineZoom(cinemachineQuestUnlockDezoom));
@@ -127,6 +130,10 @@ public class QuestGiver : MonoBehaviour
         // Back camera to player
         ChangeCinemachineCode.Instance.ChangeCinemachineTarget(Player.Instance.transform);
         ChangeCinemachineCode.Instance.ChangeCinemachineOrthoSize(initialOrthoSize);
+
+        // ReActivate player movement
+        Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(true);
+
         yield return null;
     }
 

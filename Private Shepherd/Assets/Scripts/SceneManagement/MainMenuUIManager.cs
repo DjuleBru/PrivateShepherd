@@ -75,19 +75,58 @@ public class MainMenuUIManager : MonoBehaviour
 
     private void LoadPlayerProgression() {
         boneNumber = ES3.Load("playerBones", 0);
-        bronzeBoneNumber = ES3.Load("bronzeBones", 0);
-        silverBoneNumber = ES3.Load("silverBones", 0);
-        goldBoneNumber = ES3.Load("goldBones", 0);
-        platBoneNumber = ES3.Load("platBones", 0);
-        levelCompletedNumber = ES3.Load("levelCompletedNumber", 0);
+        bronzeBoneNumber = GetBoneNumber("bronzeBone");
+        silverBoneNumber = GetBoneNumber("silverBone");
+        goldBoneNumber = GetBoneNumber("goldBone");
+        platBoneNumber = GetBoneNumber("platBone"); ;
+        levelCompletedNumber = GetLevelCompletedNumber();
     }
 
     private void DisplayPlayerProgression() {
-        playerProgressionText.text = levelCompletedNumber.ToString() + "/10";
+        playerProgressionText.text = levelCompletedNumber.ToString() + "/" + GetLevelNumber();
         boneNumberText.text = boneNumber.ToString();
         bronzeBoneNumberText.text = bronzeBoneNumber.ToString();
         silverBoneNumberText.text = silverBoneNumber.ToString();
         goldBoneNumberText.text = goldBoneNumber.ToString();
         platBoneNumberText.text = platBoneNumber.ToString();
+    }
+
+    private int GetLevelNumber() {
+        int levelNumber = LevelSOList.Instance.GetlevelSOList().Count;
+        return levelNumber;
+    }
+
+    private int GetLevelCompletedNumber() {
+        int levelCompletedNumber = 0;
+
+        List<LevelSO> levelSOList = new List<LevelSO>();
+        levelSOList = LevelSOList.Instance.GetlevelSOList();
+
+        foreach (LevelSO levelSO in levelSOList) {
+            string levelID = levelSO.levelName + "_completed";
+            if (ES3.Load(levelID, false)) {
+                // bone type is unlocked
+                levelCompletedNumber++;
+            }
+        }
+
+        return levelCompletedNumber;
+    }
+
+    private int GetBoneNumber(string boneType) {
+        int boneNumber = 0;
+
+        List<LevelSO> levelSOList = new List<LevelSO>();
+        levelSOList = LevelSOList.Instance.GetlevelSOList();
+
+        foreach(LevelSO levelSO in levelSOList) {
+            string boneID = levelSO.levelName + "_" + boneType;
+            if(ES3.Load(boneID, false)) {
+                // bone type is unlocked
+                boneNumber++;
+            }
+        }
+
+        return boneNumber;
     }
 }

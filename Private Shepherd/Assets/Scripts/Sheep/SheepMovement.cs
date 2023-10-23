@@ -33,7 +33,6 @@ public class SheepMovement : AIMovement
     private float roamPauseMinTime;
     private float roamPauseTimer;
 
-    private float fleeSpeed;
     private float aggregateSpeed;
     private float roamSpeed;
     private float originalMoveSpeed;
@@ -65,11 +64,12 @@ public class SheepMovement : AIMovement
     }
 
     protected override void Start() {
-        seeker = GetComponent<Seeker>();
-        sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
 
+        seeker = GetComponent<Seeker>();
         //Initialise path
         CalculatePath(transform.position);
+
+        sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
     }
 
@@ -90,7 +90,6 @@ public class SheepMovement : AIMovement
         sheepInHerdFleeing = sheepHerd.GetSheepInHerdFleeing();
 
         FollowPath(path);
-
         switch (state) {
             case State.Flee:
                 moveSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();

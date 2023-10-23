@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 public class LevelManager : MonoBehaviour
 {
@@ -29,12 +30,16 @@ public class LevelManager : MonoBehaviour
     private int defaultHighScore = 0;
     private int highScore;
     private int playerBones;
-    private int highTrophies;
-    private int defaultHighTrophies;
+    private int highestBones;
+    private int defaultHighestBones;
 
     private int whiteSheepScore;
 
     private bool levelComplete;
+    private bool bronzeBone;
+    private bool silverBone;
+    private bool goldBone;
+    private bool platBone;
     public event EventHandler<OnScoreUpdateEventArgs> OnScoreUpdate;
     public event EventHandler<OnLevelSucceededEventArgs> OnLevelSucceeded;
     public event EventHandler OnLevelFailed;
@@ -89,8 +94,8 @@ public class LevelManager : MonoBehaviour
         levelTimer -= Time.deltaTime;
 
         if (levelTimer < 0 & !levelComplete) {
-            levelComplete = true;
             DisablePlayer();
+            levelComplete = true;
             OnLevelFailed?.Invoke(this, EventArgs.Empty);
         }
     }
@@ -104,7 +109,6 @@ public class LevelManager : MonoBehaviour
         });
 
         if (pennedSheepNumber == realTimeSheepNumber & !levelComplete) {
-            levelComplete = true;
             EndLevelSuccess();
         }
     }
@@ -132,29 +136,14 @@ public class LevelManager : MonoBehaviour
         levelRemainingTime = levelTimer;
 
         playerScore = CalculatePlayerScore(pennedSheepNumber, initialSheepNumber, levelRemainingTime);
-
-        if (playerScore >= platScoreTreshold) {
-            playerBones = 4;
-        }
-        if (playerScore >= goldScoreTreshold & playerScore < platScoreTreshold) {
-            playerBones = 3;
-        }
-        if (playerScore >= silverScoreTreshold & playerScore < goldScoreTreshold) {
-            playerBones = 2;
-        }
-        if (playerScore >= bronzeScoreTreshold & playerScore < silverScoreTreshold) {
-            playerBones = 1;
-        }
-        if (playerScore < bronzeScoreTreshold) {
-            playerBones = 0;
-        }
+        playerBones = CalculatePlayerBones(playerScore);
 
         if (playerScore > highScore) {
             // Calculate how many new bones are added
-            int newTrophies = playerBones - highTrophies;
+            int newBones = playerBones - highestBones;
 
             // Add bones to player
-            Player.Instance.GivePlayerBones(newTrophies);
+            Player.Instance.GivePlayerBones(newBones);
 
             // Save high Score & Trophies
             SavePlayerScores();
@@ -168,6 +157,35 @@ public class LevelManager : MonoBehaviour
             playerTrophies = playerBones
         });
 
+    }
+
+    private int CalculatePlayerBones(float playerScore) {
+        if (playerScore >= platScoreTreshold) {
+            playerBones = 4;
+            platBone = true;
+            goldBone = true;
+            silverBone = true;
+            bronzeBone = true;
+        }
+        if (playerScore >= goldScoreTreshold & playerScore < platScoreTreshold) {
+            playerBones = 3;
+            goldBone = true;
+            silverBone = true;
+            bronzeBone = true;
+        }
+        if (playerScore >= silverScoreTreshold & playerScore < goldScoreTreshold) {
+            playerBones = 2;
+            silverBone = true;
+            bronzeBone = true;
+        }
+        if (playerScore >= bronzeScoreTreshold & playerScore < silverScoreTreshold) {
+            playerBones = 1;
+            bronzeBone = true;
+        }
+        if (playerScore < bronzeScoreTreshold) {
+            playerBones = 0;
+        }
+        return playerBones;
     }
 
     private int CalculatePlayerScore(int pennedSheepNumber, int initialSheepNumber, float remainingTime) {
@@ -193,17 +211,39 @@ public class LevelManager : MonoBehaviour
 
     private void LoadPlayerScores() {
         highScore = ES3.Load((levelSO.levelName + "_highScore"), defaultHighScore);
-        highTrophies = ES3.Load((levelSO.levelName + "_highTrophies"), defaultHighTrophies);
+        highestBones = ES3.Load((levelSO.levelName + "_highestBones"), defaultHighestBones);
     }
 
     private void SavePlayerScores() {
         ES3.Save((levelSO.levelName + "_highScore"), playerScore);
-        ES3.Save((levelSO.levelName + "_highTrophies"), playerBones);
+        ES3.Save((levelSO.levelName + "_highestBones"), playerBones);
         ES3.Save((levelSO.levelName + "_completed"), true);
         ES3.Save((levelSO.levelName + "_pennedSheep"), pennedSheepNumber);
         ES3.Save((levelSO.levelName + "_bestTime"), levelRemainingTime);
+
+        SavePlayerBones();
     }
 
+    private void SavePlayerBones() {
+        // Check if player had a bronze reward 
+        if (!ES3.Load(levelSO.levelName + "_bronzeBone", false)) {
+            // if not save new reward
+            ES3.Save((levelSO.levelName + "_bronzeBone"), bronzeBone);
+        }
+        if (!ES3.Load(levelSO.levelName + "_silverBone", false)) {
+            // if not save new reward
+            ES3.Save((levelSO.levelName + "_silverBone"), silverBone);
+        }
+        if (!ES3.Load(levelSO.levelName + "_goldBone", false)) {
+            // if not save new reward
+            ES3.Save((levelSO.levelName + "_goldBone"), goldBone);
+        }
+        if (!ES3.Load(levelSO.levelName + "_platBone", false)) {
+            // if not save new reward
+            ES3.Save((levelSO.levelName + "_platBone"), platBone);
+        }
+
+    }
 
     private void DisablePlayer() {
         Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(false);

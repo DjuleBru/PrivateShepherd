@@ -1,5 +1,89 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &733264341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733264342}
+  - component: {fileID: 733264343}
+  m_Layer: 6
+  m_Name: Sprite Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &733264342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733264341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.03, y: 3.03, z: 3.03}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4046661788065379815}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!331 &733264343
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733264341}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875,
+    type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1544975356
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +96,7 @@ GameObject:
   - component: {fileID: 1544975360}
   - component: {fileID: 1544975359}
   - component: {fileID: 1544975358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrowlTimeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +196,7 @@ GameObject:
   - component: {fileID: 1975715389}
   - component: {fileID: 1975715388}
   - component: {fileID: 1975715387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrowlTimeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5654900241811913108}
   - component: {fileID: 4492823284749436189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrowlFeedBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1852497203127853978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RunVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414573223989182991}
   - component: {fileID: 8096843490656910318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BarkAOEVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +726,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 10
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: -537629932, guid: 6d4930cdbf575e043b080b3e163cab2d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -669,7 +753,7 @@ GameObject:
   - component: {fileID: 1822888343159591805}
   - component: {fileID: 3353521763941091231}
   - component: {fileID: 1256264655113467317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +830,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!95 &4046661787543505787
 Animator:
@@ -799,7 +883,7 @@ MonoBehaviour:
   barkMMFPlayer: {fileID: 1439949436517517918}
   barkAOE: {fileID: 8096843490656910318}
   barkWolfAOE: {fileID: 2472414916379305311}
-  levelWolfSO: {fileID: 0}
+  levelWolfSO: {fileID: 11400000, guid: 6cb409379b9948f4da332fc7ea171626, type: 2}
   initialBarkVisualAlpha: 0.5
 --- !u!114 &1256264655113467317
 MonoBehaviour:
@@ -814,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growlMMFPlayer: {fileID: 4492823284749436189}
-  levelWolfSO: {fileID: 0}
+  levelWolfSO: {fileID: 11400000, guid: 6cb409379b9948f4da332fc7ea171626, type: 2}
   growlAOE: {fileID: 5044440172657509248}
   growlWolfAOE: {fileID: 5546857458767385448}
   growlTimeUIImage: {fileID: 1975715387}
@@ -836,7 +920,8 @@ GameObject:
   - component: {fileID: 1627481217353169861}
   - component: {fileID: 1265921825893619867}
   - component: {fileID: 4316471942775922365}
-  m_Layer: 0
+  - component: {fileID: 8779848876279031129}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,6 +943,7 @@ Transform:
   - {fileID: 4046661787543505784}
   - {fileID: 101086437829768921}
   - {fileID: 5654900241811913108}
+  - {fileID: 733264342}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1006,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86804dee9ea0cb3429c3621bb9184ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 400
+  moveSpeed: 200
   animator: {fileID: 4046661787543505787}
 --- !u!114 &1432261358
 MonoBehaviour:
@@ -1032,8 +1118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleeTargetTriggerDistance: 5
-  fleeTargetStopDistance: 10
+  fleeTargetTriggerDistance: 3
+  fleeTargetStopDistance: 5
   fleeTargetSpeedMultiplier: 1.5
 --- !u!114 &1627481217353169861
 MonoBehaviour:
@@ -1089,6 +1175,18 @@ MonoBehaviour:
   runTiredTimeFraction: 0.5
   runExtremelyTiredTimeFraction: 0.85
   tiredRunSpeedMultiplier: 0.5
+--- !u!114 &8779848876279031129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880135587a8e5dd4c8ffe0e476aa6912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4046661788217268447}
   - component: {fileID: 4046661788217268446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1159,7 +1257,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2031828475
+  m_SortingLayerID: 1145709397
   m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -1625731704, guid: 9311b582499b8da459f96cb3c7660062, type: 3}
@@ -1183,7 +1281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260492651596206287}
   - component: {fileID: 5546857458767385448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrowlWolfAOEVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,7 +1342,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 10
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 1095781360, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
   m_Color: {r: 0.41509432, g: 0, b: 0, a: 0.39215687}
@@ -1266,7 +1364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8276478723072933567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrowlVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,7 +1398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6014216395936540670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BarkVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,7 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101086437829768921}
   - component: {fileID: 1439949436517517918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BarkFeedBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1697,7 +1795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503318677424382056}
   - component: {fileID: 2472414916379305311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BarkWolfAOEVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1856,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 10
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 1095781360, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
   m_Color: {r: 0.41568628, g: 0, b: 0, a: 0.39215687}
@@ -1781,7 +1879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4524143640285814539}
   - component: {fileID: 5044440172657509248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrowlAOEVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1940,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 10
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: -537629932, guid: 6d4930cdbf575e043b080b3e163cab2d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.3882353}
@@ -1926,6 +2024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DogExtremelyTiredPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951029098961588276, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632883ce67df2b1428a9c8adb40008b6, type: 3}
@@ -2013,6 +2116,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogTiredPS
       objectReference: {fileID: 0}
+    - target: {fileID: 6951029098961588276, guid: 632883ce67df2b1428a9c8adb40008b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632883ce67df2b1428a9c8adb40008b6, type: 3}
 --- !u!4 &565442526818665105 stripped
@@ -2094,6 +2202,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogGrowlPS
       objectReference: {fileID: 0}
+    - target: {fileID: 6951029098961588276, guid: 2c2b8fce42749f642863c70fb512e281,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2b8fce42749f642863c70fb512e281, type: 3}
 --- !u!4 &1264131657047476016 stripped
@@ -2174,6 +2287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BarkPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310618329095676296, guid: af417e13d1eb8c347a68334885e33719,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af417e13d1eb8c347a68334885e33719, type: 3}

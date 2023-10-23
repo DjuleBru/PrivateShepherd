@@ -14,11 +14,10 @@ public class Player : MonoBehaviour
     public event EventHandler OnBonesChanged;
 
     private void Awake() {
-        Instance = this; 
-    }
+        Instance = this;
 
-    private void Start() {
         bones = ES3.Load("playerBones", defaultBones);
+        Debug.Log(bones);
     }
 
     public int GetPlayerBones() {
