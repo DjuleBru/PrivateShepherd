@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
     private int playerScore;
     private int defaultHighScore = 0;
     private int highScore;
-    private int playerTrophies;
+    private int playerBones;
     private int highTrophies;
     private int defaultHighTrophies;
 
@@ -77,7 +77,7 @@ public class LevelManager : MonoBehaviour
         levelTimeLimit = levelSO.levelTimeLimit;
         levelTimer = levelTimeLimit;
 
-        playerTrophies = 0;
+        playerBones = 0;
         playerScore = 0;
     }
 
@@ -90,6 +90,7 @@ public class LevelManager : MonoBehaviour
 
         if (levelTimer < 0 & !levelComplete) {
             levelComplete = true;
+            DisablePlayer();
             OnLevelFailed?.Invoke(this, EventArgs.Empty);
         }
     }
@@ -126,30 +127,31 @@ public class LevelManager : MonoBehaviour
     }
 
     private void EndLevelSuccess() {
+        DisablePlayer();
         levelComplete = true;
         levelRemainingTime = levelTimer;
 
         playerScore = CalculatePlayerScore(pennedSheepNumber, initialSheepNumber, levelRemainingTime);
 
         if (playerScore >= platScoreTreshold) {
-            playerTrophies = 4;
+            playerBones = 4;
         }
         if (playerScore >= goldScoreTreshold & playerScore < platScoreTreshold) {
-            playerTrophies = 3;
+            playerBones = 3;
         }
         if (playerScore >= silverScoreTreshold & playerScore < goldScoreTreshold) {
-            playerTrophies = 2;
+            playerBones = 2;
         }
         if (playerScore >= bronzeScoreTreshold & playerScore < silverScoreTreshold) {
-            playerTrophies = 1;
+            playerBones = 1;
         }
         if (playerScore < bronzeScoreTreshold) {
-            playerTrophies = 0;
+            playerBones = 0;
         }
 
         if (playerScore > highScore) {
             // Calculate how many new bones are added
-            int newTrophies = playerTrophies - highTrophies;
+            int newTrophies = playerBones - highTrophies;
 
             // Add bones to player
             Player.Instance.GivePlayerBones(newTrophies);
@@ -163,7 +165,7 @@ public class LevelManager : MonoBehaviour
             pennedSheepNumber = pennedSheepNumber,
             levelRemainingTime = levelRemainingTime,
             playerScore = playerScore,
-            playerTrophies = playerTrophies
+            playerTrophies = playerBones
         });
 
     }
@@ -196,9 +198,23 @@ public class LevelManager : MonoBehaviour
 
     private void SavePlayerScores() {
         ES3.Save((levelSO.levelName + "_highScore"), playerScore);
-        ES3.Save((levelSO.levelName + "_highTrophies"), playerTrophies);
+        ES3.Save((levelSO.levelName + "_highTrophies"), playerBones);
         ES3.Save((levelSO.levelName + "_completed"), true);
         ES3.Save((levelSO.levelName + "_pennedSheep"), pennedSheepNumber);
         ES3.Save((levelSO.levelName + "_bestTime"), levelRemainingTime);
+    }
+
+
+    private void DisablePlayer() {
+        Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(false);
+        if (Player.Instance.gameObject.TryGetComponent<PlayerBark>(out PlayerBark playerBark)) {
+            playerBark.enabled = false;
+        }
+        if (Player.Instance.gameObject.TryGetComponent<PlayerGrowl>(out PlayerGrowl playerGrowl)) {
+            playerGrowl.enabled = false;
+        }
+        if (Player.Instance.gameObject.TryGetComponent<PlayerRun>(out PlayerRun playerRun)) {
+            playerRun.enabled = false;
+        }
     }
 }

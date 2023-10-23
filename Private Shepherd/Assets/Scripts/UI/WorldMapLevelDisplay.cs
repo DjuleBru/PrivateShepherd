@@ -12,6 +12,10 @@ public class WorldMapLevelDisplay : MonoBehaviour
     [SerializeField] private GameObject levelUnlockUI;
     [SerializeField] private QuestGiver questGiver;
 
+    [SerializeField] private Button playButton;
+
+    private bool playerIsInTriggerZone;
+
     #region LEVEL PARAMETERS
 
     private int levelSOCount = 0;
@@ -47,6 +51,36 @@ public class WorldMapLevelDisplay : MonoBehaviour
         DisplayLevelParameters();
 
         questGiver.OnLevelBoneFeePaid += QuestGiver_OnLevelBoneFeePaid;
+        GameInput.Instance.OnBarkPressed += GameInput_OnBarkPressed;
+        GameInput.Instance.OnBarkReleased += Instance_OnBarkReleased;
+        GameInput.Instance.OnExitPerformed += GameInput_OnExitPerformed;
+    }
+
+    private void Instance_OnBarkReleased(object sender, System.EventArgs e) {
+        if (playerIsInTriggerZone) {
+            DisplayLevelUI();
+            Player.Instance.GetComponent<PlayerMovement>().SetCanMove(false);
+        }
+    }
+
+    private void GameInput_OnExitPerformed(object sender, System.EventArgs e) {
+        if (playerIsInTriggerZone) {
+            levelDisplayUI.SetActive(false);
+        }
+        Player.Instance.GetComponent<PlayerMovement>().SetCanMove(true);
+    }
+
+    private void GameInput_OnBarkPressed(object sender, System.EventArgs e) {
+        
+    }
+
+    public void DisplayLevelUI() {
+        if (questGiver.GetQuestBoneFeePaid()) {
+            levelDisplayUI.SetActive(true);
+        }
+        else {
+            levelUnlockUI.SetActive(true);
+        }
     }
 
     private void QuestGiver_OnLevelBoneFeePaid(object sender, System.EventArgs e) {
@@ -55,16 +89,14 @@ public class WorldMapLevelDisplay : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.TryGetComponent<Player>(out Player player)) {
-            if (questGiver.GetQuestBoneFeePaid()) {
-                levelDisplayUI.SetActive(true);
-            } else {
-                levelUnlockUI.SetActive(true);
-            }
+            playerIsInTriggerZone = true;
+            
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.TryGetComponent<Player>(out Player player)) {
+            playerIsInTriggerZone = false;
             levelDisplayUI.SetActive(false);
             levelUnlockUI.SetActive(false);
         }

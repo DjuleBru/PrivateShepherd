@@ -10,6 +10,7 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private bool isFirstQuestGiver;
     QuestGiverGroup questGiverParent;
 
+    [SerializeField] WorldMapLevelDisplay mapLevelDisplay;
     [SerializeField] GameObject questGiverVisual;
     [SerializeField] GameObject questGiverUnlockedIcon;
     [SerializeField] Transform questUnlockCameraFollowTransform;
@@ -219,6 +220,10 @@ public class QuestGiver : MonoBehaviour
 
     public int GetQuestGiverUnlockedInThisGroupNumber() {
         return questGiverUnlockedInThisGroupNumber;
+    }
+
+    public void DisplayWorldMapLevelDisplay() {
+        mapLevelDisplay.DisplayLevelUI();
     }
 
 }

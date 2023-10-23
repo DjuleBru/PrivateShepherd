@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     Vector3 moveDir = new Vector3(0, 1, 0);
 
     bool isMoving;
+    bool canMove;
 
     float animatorX;
     float animatorY;
@@ -22,10 +23,16 @@ public class PlayerMovement : MonoBehaviour {
     private void Awake() {
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
+        canMove = true;
     }
 
     void Update() {
-        HandleMovementInput();
+        if (canMove) {
+            HandleMovementInput();
+        } else {
+            isMoving = false;
+            moveInput = Vector2.zero;
+        }
     }
 
     private void FixedUpdate() {
@@ -45,8 +52,12 @@ public class PlayerMovement : MonoBehaviour {
 
     private void HandleMovement() {
         SetLastMoveDir();
+
         SetAnimatorParameters();
-        Move();
+        if (canMove) {
+            Move();
+        }
+
     }
 
     private void SetLastMoveDir() {
@@ -94,6 +105,11 @@ public class PlayerMovement : MonoBehaviour {
 
     private Vector3 GetMoveDir() {
         return moveDir;
+    }
+
+    public void SetCanMove(bool canMove) {
+        this.canMove = canMove;
+        rb.velocity = Vector3.zero;
     }
 
     public void SetMoveSpeed(float moveSpeed) {
