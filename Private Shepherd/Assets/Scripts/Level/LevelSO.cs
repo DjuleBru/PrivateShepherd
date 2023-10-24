@@ -13,5 +13,8 @@ public class LevelSO : ScriptableObject
     public int goldScoreTreshold;
     public int platScoreTreshold;
 
+    public int whiteSheepScore;
+    public int timeScore;
+
     public int sheepNumber;
 }

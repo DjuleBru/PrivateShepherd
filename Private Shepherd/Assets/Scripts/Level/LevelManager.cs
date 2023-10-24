@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
     private float levelTimeLimit;
     private float levelTimer;
     private float levelRemainingTime;
+    private int timeScore;
 
     private int playerScore;
     private int defaultHighScore = 0;
@@ -66,7 +67,7 @@ public class LevelManager : MonoBehaviour
         initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
         initialSheepNumber = initialSheepsInLevel.Length;
         realTimeSheepNumber = initialSheepNumber;
-        whiteSheepScore = whiteSheepSO.sheepScore;
+        whiteSheepScore = levelSO.whiteSheepScore;
 
         foreach (Sheep sheep in initialSheepsInLevel) {
             sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
@@ -77,6 +78,7 @@ public class LevelManager : MonoBehaviour
         silverScoreTreshold = levelSO.silverScoreTreshold;
         goldScoreTreshold = levelSO.goldScoreTreshold;
         platScoreTreshold = levelSO.platScoreTreshold;
+        timeScore = levelSO.timeScore;
 
         // Initialise timers
         levelTimeLimit = levelSO.levelTimeLimit;
@@ -189,7 +191,7 @@ public class LevelManager : MonoBehaviour
     }
 
     private int CalculatePlayerScore(int pennedSheepNumber, int initialSheepNumber, float remainingTime) {
-        int playerScore = (int)Mathf.Floor(remainingTime) + whiteSheepScore * pennedSheepNumber;
+        int playerScore = (int)Mathf.Floor(remainingTime) * timeScore + whiteSheepScore * pennedSheepNumber;
         return playerScore;
     }
 

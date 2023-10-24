@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Farm - 1
   levelBoneUnlockCost: 1
-  levelTimeLimit: 200
-  bronzeScoreTreshold: 100
-  silverScoreTreshold: 120
-  goldScoreTreshold: 140
+  levelTimeLimit: 120
+  bronzeScoreTreshold: 80
+  silverScoreTreshold: 100
+  goldScoreTreshold: 130
   platScoreTreshold: 160
-  sheepNumber: 18
+  whiteSheepScore: 1
+  timeScore: 2
+  sheepNumber: 12

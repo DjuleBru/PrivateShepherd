@@ -128,6 +128,8 @@ MonoBehaviour:
   continueButton: {fileID: 4584753950440281965}
   clockIcon: {fileID: 4584753950846181312}
   levelRemainingTimeText: {fileID: 4584753950531733569}
+  timeScoreText: {fileID: 7872118050864967419}
+  whiteSheepScoreText: {fileID: 985069971405088397}
   sheepIcon: {fileID: 4584753949584249240}
   initialSheepNumberText: {fileID: 4584753950316718449}
   pennedSheepNumberText: {fileID: 4584753949489816380}
@@ -417,6 +419,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 954d827492bd750428382f7169a17414, type: 3}
+--- !u!114 &985069971405088397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3769417790017500662, guid: 954d827492bd750428382f7169a17414,
+    type: 3}
+  m_PrefabInstance: {fileID: 4171461805862212475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4584753949415732655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 451577140194354900, guid: 954d827492bd750428382f7169a17414,
@@ -621,6 +635,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4171461805862212475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7872118050864967419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6114590602068360576, guid: 954d827492bd750428382f7169a17414,
+    type: 3}
+  m_PrefabInstance: {fileID: 4171461805862212475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4584753950621624966
 PrefabInstance:
   m_ObjectHideFlags: 0

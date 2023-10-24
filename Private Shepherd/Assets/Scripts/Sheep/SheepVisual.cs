@@ -6,6 +6,7 @@ public class SheepVisual : MonoBehaviour
 {
     [SerializeField] SheepMovement sheepMovement;
     [SerializeField] GameObject sheepFleeIndicator;
+    [SerializeField] GameObject sheepFleeLeaderIndicator;
     [SerializeField] ParticleSystem sheepInjuredPS;
 
     private void Start() {
@@ -18,10 +19,19 @@ public class SheepVisual : MonoBehaviour
     }
 
     private void Update() {
-        if(sheepMovement.GetState() == SheepMovement.State.Flee | sheepMovement.GetState() == SheepMovement.State.FleeAggregate) {
-            sheepFleeIndicator.SetActive(true);
-        } else {
+        if (sheepMovement.GetState() == SheepMovement.State.Flee) {
             sheepFleeIndicator.SetActive(false);
+            sheepFleeLeaderIndicator.SetActive(true);
         }
+        else if (sheepMovement.GetState() == SheepMovement.State.FleeAggregate) {
+            sheepFleeLeaderIndicator.SetActive(false);
+            sheepFleeIndicator.SetActive(true);
+        }
+        else {
+            sheepFleeIndicator.SetActive(false);
+            sheepFleeLeaderIndicator.SetActive(false);
+        }
+
+
     }
 }

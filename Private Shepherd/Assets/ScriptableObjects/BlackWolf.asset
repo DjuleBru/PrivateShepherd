@@ -16,15 +16,14 @@ MonoBehaviour:
   roamPauseMinTime: 2
   agressiveFleeTime: 1
   roamToAgressiveTime: 5
-  agressiveTargetSheepRate: 2
-  maxSheepInHerdToAttack: 2
-  agressiveSpeed: 5
-  fleeSpeed: 6
-  roamSpeed: 3
-  attackSpeed: 10
+  maxSheepInHerdToAttack: 3
+  agressiveSpeed: 300
+  fleeSpeed: 400
+  roamSpeed: 200
+  attackSpeed: 500
   agressiveMinDistanceToSheep: 5
   agressiveMaxDistanceToSheep: 10
   wolfTriggerFleeDistanceMultiplier: 0.5
   closestFleeTargetTriggerFleeDistance: 2
-  closestFleeTargetStopDistance: 8
+  closestFleeTargetStopDistance: 10
   closestFleeTargetDistanceToEatSheep: 10

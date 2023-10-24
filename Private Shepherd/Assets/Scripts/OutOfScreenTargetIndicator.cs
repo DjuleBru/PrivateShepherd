@@ -62,7 +62,6 @@ public class OutOfScreenTargetIndicator : MonoBehaviour
             float distanceToPlayer = new Vector3(direction.x, direction.y,0).magnitude;
 
             Vector3 screenEdge = mainCamera.ViewportToWorldPoint(new Vector3(Mathf.Clamp(viewPortPosition.x, .1f, 0.9f), Mathf.Clamp(viewPortPosition.y, .1f, 0.9f), mainCamera.nearClipPlane));
-            Debug.Log(screenEdge);
             outOfScreenPointer.transform.position = new Vector3(screenEdge.x, screenEdge.y, 0f);
 
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

@@ -21,6 +21,8 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField] GameObject continueButton;
     [SerializeField] GameObject clockIcon;
     [SerializeField] TextMeshProUGUI levelRemainingTimeText;
+    [SerializeField] TextMeshProUGUI timeScoreText;
+    [SerializeField] TextMeshProUGUI whiteSheepScoreText;
     [SerializeField] GameObject sheepIcon;
     [SerializeField] TextMeshProUGUI initialSheepNumberText;
     [SerializeField] TextMeshProUGUI pennedSheepNumberText;
@@ -46,6 +48,7 @@ public class LevelUIManager : MonoBehaviour
 
     private int playerDynamicScore;
     private float levelRemainingDynamicTime;
+    private float timeScore;
 
     private int whiteSheepScore;
 
@@ -64,7 +67,11 @@ public class LevelUIManager : MonoBehaviour
         silverScoreTreshold = levelSO.silverScoreTreshold;
         goldScoreTreshold = levelSO.goldScoreTreshold;
         platScoreTreshold = levelSO.platScoreTreshold;
-        whiteSheepScore = whiteSheepSO.sheepScore;
+        whiteSheepScore = levelSO.whiteSheepScore;
+        timeScore = levelSO.timeScore;
+
+        timeScoreText.text = "X" + levelSO.timeScore.ToString();
+        whiteSheepScoreText.text = "X" + levelSO.whiteSheepScore.ToString();
 
         // Disable all level success gameObjects
         mainMenuButton.SetActive(false);
@@ -84,6 +91,8 @@ public class LevelUIManager : MonoBehaviour
         playerDynamicScoreText.gameObject.SetActive(false);
         levelRemainingTimeText.gameObject.SetActive(false);
         finalScoreText.gameObject.SetActive(false);
+        timeScoreText.gameObject.SetActive(false);
+        whiteSheepScoreText.gameObject.SetActive(false);
 
         levelFailedUI.SetActive(false);
         levelPlayUI.SetActive(true);
@@ -154,7 +163,8 @@ public class LevelUIManager : MonoBehaviour
 
         float timeToDisplayClock = 1f;
         yield return new WaitForSeconds(timeToDisplayClock);
-
+        
+        timeScoreText.gameObject.SetActive(true);
         clockIcon.SetActive(true);
         DisplayTimeLeft();
 
@@ -186,6 +196,7 @@ public class LevelUIManager : MonoBehaviour
 
     private IEnumerator DisplayFinalScore() {
         finalScoreText.gameObject.SetActive(true);
+
         playerDynamicScoreText.gameObject.SetActive(true);
         foreach (GameObject t in trophyContours) {
             t.SetActive(true);
@@ -200,17 +211,18 @@ public class LevelUIManager : MonoBehaviour
         int levelRemainingTimeInt = Mathf.FloorToInt(levelRemainingTime);
         float finalScoreTextAnimationTime = 2f;
         float refreshRate = .05f;
-        float scoreDisplayIncrement = calculateIncrementForTextAnimation(finalScoreTextAnimationTime, levelRemainingTime, refreshRate);
-        int scoreDisplayIncrementInt = (int)Mathf.Ceil(scoreDisplayIncrement);
+        float finalPlayerScoreWithTime = levelRemainingTime * timeScore;
+        float scoreDisplayIncrement = calculateIncrementForTextAnimation(finalScoreTextAnimationTime, finalPlayerScoreWithTime, refreshRate);
+        float timeDisplayIncrement = calculateIncrementForTextAnimation(finalScoreTextAnimationTime, levelRemainingTime, refreshRate);
 
         fillingProgressionBars = true;
-        StartCoroutine(DisplayFloatTextOverTime(levelRemainingTimeText, levelRemainingTime, 0f, scoreDisplayIncrement, refreshRate, false, " s"));
-        StartCoroutine(DisplayFloatTextOverTime(playerDynamicScoreText, 0, levelRemainingTime, scoreDisplayIncrement, refreshRate, true, ""));
+        StartCoroutine(DisplayFloatTextOverTime(levelRemainingTimeText, levelRemainingTime, 0f, timeDisplayIncrement, refreshRate, false, " s"));
+        StartCoroutine(DisplayFloatTextOverTime(playerDynamicScoreText, 0, finalPlayerScoreWithTime, scoreDisplayIncrement, refreshRate, true, ""));
 
-        while (float.Parse(playerDynamicScoreText.text) < Mathf.Floor(levelRemainingTime)) {
+        while (float.Parse(playerDynamicScoreText.text) < Mathf.Floor(finalPlayerScoreWithTime)) {
             yield return null;
         }
-        playerDynamicScoreText.text = Mathf.Ceil(levelRemainingTime).ToString();
+        playerDynamicScoreText.text = Mathf.Ceil(finalPlayerScoreWithTime).ToString();
         float timeToDisplaySheepScore = 1f;
         yield return new WaitForSeconds(timeToDisplaySheepScore);
 
@@ -236,6 +248,7 @@ public class LevelUIManager : MonoBehaviour
     private void DisplaySheepLeft(float animationTime) {
         initialSheepNumberText.gameObject.SetActive(true);
         pennedSheepNumberText.gameObject.SetActive(true);
+        whiteSheepScoreText.gameObject.SetActive(true);
         initialSheepNumberText.text = "/" + initialSheepNumber.ToString();
 
         float refreshRate = animationTime / pennedSheepNumber;

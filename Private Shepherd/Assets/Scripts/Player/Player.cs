@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
         Instance = this;
 
         bones = ES3.Load("playerBones", defaultBones);
-        Debug.Log(bones);
     }
 
     public int GetPlayerBones() {
