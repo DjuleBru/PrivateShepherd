@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2332378577877569346, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425214850807166123, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873034047215469521, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4100688584939994465, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: m_RootOrder
@@ -66,6 +81,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WhiteSheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611541353741913357, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_text
+      value: TheGreatPatrick
       objectReference: {fileID: 0}
     - target: {fileID: 6058607247327990226, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
