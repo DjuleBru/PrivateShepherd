@@ -91,12 +91,17 @@ PrefabInstance:
         type: 3}
       propertyPath: sheep
       value: 
-      objectReference: {fileID: 8100727088534029377}
+      objectReference: {fileID: 6176152167943660067}
+    - target: {fileID: 7267018658408402481, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: outOfScreenTargetIndicator
+      value: 
+      objectReference: {fileID: 7312654380401720768}
     - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: sheep
       value: 
-      objectReference: {fileID: 8100727088534029377}
+      objectReference: {fileID: 6176152167943660067}
     - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: sheepSO
@@ -137,31 +142,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6276905617284876724, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
---- !u!1 &686563448376725872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4100688584939994466, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
-    type: 3}
-  m_PrefabInstance: {fileID: 3562271830856952850}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8100727088534029377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686563448376725872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d72f39a2650cf834b9210bd15f9eff9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sheepMovement: {fileID: 6550491623979413840}
-  levelSheepObjectPool: {fileID: 0}
-  subSheepObjectPool: {fileID: 0}
-  outOfScreenTargetIndicator: {fileID: 0}
-  sheepCollider: {fileID: 7336930917628086072}
-  sheepHerdMinimumNumber: 4
-  fleeTargetArray: []
 --- !u!58 &2628754709287641266 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1518994150545050784, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
@@ -192,21 +172,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6550491623979413840 stripped
+--- !u!114 &6176152167943660067 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+  m_CorrespondingSourceObject: {fileID: 7267018658408402481, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
     type: 3}
   m_PrefabInstance: {fileID: 3562271830856952850}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686563448376725872}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3197f195f5ae00143904bc9ae737dddc, type: 3}
+  m_Script: {fileID: 11500000, guid: 20a37eb9dbf82f746a15bd547cb95d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &7336930917628086072 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6106239601642728234, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+--- !u!114 &7312654380401720768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6058607247327990226, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
     type: 3}
   m_PrefabInstance: {fileID: 3562271830856952850}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04167c36d1ea081499a850920fb5ba2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class LevelUIManager : MonoBehaviour
 {
     [SerializeField] private LevelSO levelSO;
-    [SerializeField] private SheepSO whiteSheepSO;
 
     [SerializeField] GameObject levelFailedUI;
     [SerializeField] GameObject levelPlayUI;
@@ -28,8 +27,21 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI redSheepScoreText;
     [SerializeField] TextMeshProUGUI greenSheepScoreText;
     [SerializeField] TextMeshProUGUI goldSheepScoreText;
-    [SerializeField] GameObject sheepIcon;
-    [SerializeField] TextMeshProUGUI initialSheepNumberText;
+
+    [SerializeField] GameObject whiteSheepIcon;
+    [SerializeField] GameObject redSheepIcon;
+    [SerializeField] GameObject greenSheepIcon;
+    [SerializeField] GameObject blueSheepIcon;
+    [SerializeField] GameObject blackSheepIcon;
+    [SerializeField] GameObject goldSheepIcon;
+
+    [SerializeField] TextMeshProUGUI whiteInitialSheepNumberText;
+    [SerializeField] TextMeshProUGUI blackInitialSheepNumberText;
+    [SerializeField] TextMeshProUGUI blueInitialSheepNumberText;
+    [SerializeField] TextMeshProUGUI redInitialSheepNumberText;
+    [SerializeField] TextMeshProUGUI greenInitialSheepNumberText;
+    [SerializeField] TextMeshProUGUI goldInitialSheepNumberText;
+
     [SerializeField] TextMeshProUGUI whitePennedSheepNumberText;
     [SerializeField] TextMeshProUGUI blackPennedSheepNumberText;
     [SerializeField] TextMeshProUGUI bluePennedSheepNumberText;
@@ -60,12 +72,29 @@ public class LevelUIManager : MonoBehaviour
     private float levelRemainingDynamicTime;
     private float timeScore;
 
+    #region SHEEP TYPES
     private int whiteSheepScore;
     private int blackSheepScore;
     private int goldSheepScore;
     private int blueSheepScore;
     private int redSheepScore;
     private int greenSheepScore;
+
+    private int whitePennedSheepNumber;
+    private int blackPennedSheepNumber;
+    private int goldPennedSheepNumber;
+    private int bluePennedSheepNumber;
+    private int redPennedSheepNumber;
+    private int greenPennedSheepNumber;
+
+    private int whiteInitialSheepNumber;
+    private int blackInitialSheepNumber;
+    private int goldInitialSheepNumber;
+    private int blueInitialSheepNumber;
+    private int redInitialSheepNumber;
+    private int greenInitialSheepNumber;
+
+    #endregion
 
     private int platScoreTreshold;
     private int silverScoreTreshold;
@@ -116,19 +145,29 @@ public class LevelUIManager : MonoBehaviour
         whiteSheepScoreText.text = "X" + whiteSheepScore.ToString();
 
         blackSheepScore = levelSO.blackSheepScore;
-        blackSheepScoreText.text = "X" + blackSheepScore.ToString();
+        if(blackSheepScoreText != null) {
+            blackSheepScoreText.text = "X" + blackSheepScore.ToString();
+        }
 
         redSheepScore = levelSO.redSheepScore;
-        redSheepScoreText.text = "X" + redSheepScore.ToString();
+        if (redSheepScoreText != null) {
+            redSheepScoreText.text = "X" + redSheepScore.ToString();
+        }
 
         blueSheepScore = levelSO.blueSheepScore;
-        blueSheepScoreText.text = "X" + blueSheepScore.ToString();
+        if (blueSheepScoreText != null) {
+            blueSheepScoreText.text = "X" + blueSheepScore.ToString();
+        }
 
         greenSheepScore = levelSO.greenSheepScore;
-        greenSheepScoreText.text = "X" + greenSheepScore.ToString();
+        if (greenSheepScoreText != null) {
+            greenSheepScoreText.text = "X" + greenSheepScore.ToString();
+        }
 
         goldSheepScore = levelSO.goldSheepScore;
-        goldSheepScoreText.text = "X" + goldSheepScore.ToString();
+        if (goldSheepScoreText != null) {
+            goldSheepScoreText.text = "X" + goldSheepScore.ToString();
+        }
     }
 
     private void DisableLevelSuccessGO() {
@@ -136,7 +175,6 @@ public class LevelUIManager : MonoBehaviour
         tryAgainButton.SetActive(false);
         continueButton.SetActive(false);
         clockIcon.SetActive(false);
-        sheepIcon.SetActive(false);
         bronzeTrophy.SetActive(false);
         silverTrophy.SetActive(false);
         goldTrophy.SetActive(false);
@@ -144,13 +182,38 @@ public class LevelUIManager : MonoBehaviour
         foreach (GameObject t in trophyContours) {
             t.SetActive(false);
         }
-        initialSheepNumberText.gameObject.SetActive(false);
+
+        whiteSheepIcon.SetActive(false);
+        blackSheepIcon.SetActive(false);
+        greenSheepIcon.SetActive(false);
+        blueSheepIcon.SetActive(false);
+        redSheepIcon.SetActive(false);
+        goldSheepIcon.SetActive(false);
+
+        whiteInitialSheepNumberText.gameObject.SetActive(false);
         whitePennedSheepNumberText.gameObject.SetActive(false);
+        blueInitialSheepNumberText.gameObject.SetActive(false);
+        bluePennedSheepNumberText.gameObject.SetActive(false);
+        redInitialSheepNumberText.gameObject.SetActive(false);
+        redPennedSheepNumberText.gameObject.SetActive(false);
+        greenInitialSheepNumberText.gameObject.SetActive(false);
+        greenPennedSheepNumberText.gameObject.SetActive(false);
+        blackInitialSheepNumberText.gameObject.SetActive(false);
+        blackPennedSheepNumberText.gameObject.SetActive(false);
+        goldInitialSheepNumberText.gameObject.SetActive(false);
+        goldPennedSheepNumberText.gameObject.SetActive(false);
+
         playerDynamicScoreText.gameObject.SetActive(false);
         levelRemainingTimeText.gameObject.SetActive(false);
         finalScoreText.gameObject.SetActive(false);
         timeScoreText.gameObject.SetActive(false);
+
         whiteSheepScoreText.gameObject.SetActive(false);
+        blueSheepScoreText.gameObject.SetActive(false);
+        redSheepScoreText.gameObject.SetActive(false);
+        greenSheepScoreText.gameObject.SetActive(false);
+        blackSheepScoreText.gameObject.SetActive(false);
+        goldSheepScoreText.gameObject.SetActive(false);
 
         levelFailedUI.SetActive(false);
         levelPlayUI.SetActive(true);
@@ -192,6 +255,20 @@ public class LevelUIManager : MonoBehaviour
         levelPlayUI.SetActive(false);
         levelSuccededUI.SetActive(true);
 
+        whitePennedSheepNumber = e.pennedWhiteSheepNumber;
+        redPennedSheepNumber = e.pennedRedSheepNumber;
+        bluePennedSheepNumber = e.pennedBlueSheepNumber;
+        goldPennedSheepNumber = e.pennedGoldSheepNumber;
+        blackPennedSheepNumber = e.pennedBlackSheepNumber;
+        greenPennedSheepNumber = e.pennedGreenSheepNumber;
+
+        whiteInitialSheepNumber = e.initialWhiteSheepNumber;
+        redInitialSheepNumber = e.initialRedSheepNumber;
+        blueInitialSheepNumber = e.initialBlueSheepNumber;
+        greenInitialSheepNumber = e.initialGreenSheepNumber;
+        blackInitialSheepNumber = e.initialBlackSheepNumber;
+        goldInitialSheepNumber = e.initialGoldSheepNumber;
+
         levelRemainingTime = e.levelRemainingTime;
         finalPlayerScore = e.playerScore;
         playerTrophies = e.playerTrophies;
@@ -213,12 +290,45 @@ public class LevelUIManager : MonoBehaviour
         float timeToDisplaySheep = 1f;
         yield return new WaitForSeconds(timeToDisplaySheep);
 
-        sheepIcon.SetActive(true);
-        float pennedSheepTextAnimationTime = 1f;
-        DisplaySheepLeft(pennedSheepTextAnimationTime);
+        float pennedSheepTextAnimationTime = .5f;
+        if (whiteInitialSheepNumber != 0) {
+            whiteSheepIcon.SetActive(true);
+            DisplaySheepLeft(pennedSheepTextAnimationTime, whiteInitialSheepNumber, whitePennedSheepNumber, whiteInitialSheepNumberText, whitePennedSheepNumberText, whiteSheepScoreText);
+            yield return new WaitForSeconds(pennedSheepTextAnimationTime);
+        }
+
+        if (blackInitialSheepNumber != 0) {
+            blackSheepIcon.SetActive(true);
+            DisplaySheepLeft(pennedSheepTextAnimationTime, blackInitialSheepNumber, blackPennedSheepNumber, blackInitialSheepNumberText, blackPennedSheepNumberText, blackSheepScoreText);
+            yield return new WaitForSeconds(pennedSheepTextAnimationTime);
+        }
+
+        if (blueInitialSheepNumber != 0) {
+            blueSheepIcon.SetActive(true);
+            DisplaySheepLeft(pennedSheepTextAnimationTime, blueInitialSheepNumber, bluePennedSheepNumber, blueInitialSheepNumberText, bluePennedSheepNumberText, blueSheepScoreText);
+            yield return new WaitForSeconds(pennedSheepTextAnimationTime);
+        }
+
+        if (greenInitialSheepNumber != 0) {
+            greenSheepIcon.SetActive(true);
+            DisplaySheepLeft(pennedSheepTextAnimationTime, greenInitialSheepNumber, greenPennedSheepNumber, greenInitialSheepNumberText, greenPennedSheepNumberText, greenSheepScoreText);
+            yield return new WaitForSeconds(pennedSheepTextAnimationTime);
+        }
+
+        if (redInitialSheepNumber != 0) {
+            redSheepIcon.SetActive(true);
+            DisplaySheepLeft(pennedSheepTextAnimationTime, redInitialSheepNumber, redPennedSheepNumber, redInitialSheepNumberText, redPennedSheepNumberText, redSheepScoreText);
+            yield return new WaitForSeconds(pennedSheepTextAnimationTime);
+        }
+
+        if (goldInitialSheepNumber != 0) {
+            goldSheepIcon.SetActive(true);
+            DisplaySheepLeft(pennedSheepTextAnimationTime, goldInitialSheepNumber, goldPennedSheepNumber, goldInitialSheepNumberText, goldPennedSheepNumberText, goldSheepScoreText);
+            yield return new WaitForSeconds(pennedSheepTextAnimationTime);
+        }
 
         float timeToDisplayFinalScore = .5f;
-        yield return new WaitForSeconds(pennedSheepTextAnimationTime + timeToDisplayFinalScore);
+        yield return new WaitForSeconds(timeToDisplayFinalScore);
         StartCoroutine(DisplayFinalScore());
 
         while (!scoreTransferred) {
@@ -276,27 +386,75 @@ public class LevelUIManager : MonoBehaviour
     }
 
     private IEnumerator TransferSheepToScore(float refreshRate) {
-        int sheepAdded = 0;
-        while (pennedSheepNumber > 0) {
-            pennedSheepNumber--;
-            sheepAdded++;
-            whitePennedSheepNumberText.text = pennedSheepNumber.ToString();
-            playerDynamicScoreText.text = (playerDynamicScore + whiteSheepScore).ToString();
-            yield return new WaitForSeconds(refreshRate);
+        float timeBetweenSheepTypes = .3f;
+
+        if (whiteInitialSheepNumber != 0) {
+            while (whitePennedSheepNumber > 0) {
+                whitePennedSheepNumber--;
+                whitePennedSheepNumberText.text = whitePennedSheepNumber.ToString();
+                playerDynamicScoreText.text = (playerDynamicScore + whiteSheepScore).ToString();
+                yield return new WaitForSeconds(refreshRate);
+            }
         }
+
+        if (blackInitialSheepNumber != 0) {
+            while (blackPennedSheepNumber > 0) {
+                blackPennedSheepNumber--;
+                blackPennedSheepNumberText.text = blackPennedSheepNumber.ToString();
+                playerDynamicScoreText.text = (playerDynamicScore + blackSheepScore).ToString();
+                yield return new WaitForSeconds(refreshRate);
+            }
+        }
+
+        if (blueInitialSheepNumber != 0) {
+            while (bluePennedSheepNumber > 0) {
+                bluePennedSheepNumber--;
+                bluePennedSheepNumberText.text = bluePennedSheepNumber.ToString();
+                playerDynamicScoreText.text = (playerDynamicScore + blueSheepScore).ToString();
+                yield return new WaitForSeconds(refreshRate);
+            }
+        }
+
+        if (greenInitialSheepNumber != 0) {
+            while (greenPennedSheepNumber > 0) {
+                greenPennedSheepNumber--;
+                greenPennedSheepNumberText.text = greenPennedSheepNumber.ToString();
+                playerDynamicScoreText.text = (playerDynamicScore + greenSheepScore).ToString();
+                yield return new WaitForSeconds(refreshRate);
+            }
+        }
+
+        if (redInitialSheepNumber != 0) {
+            while (redPennedSheepNumber > 0) {
+                redPennedSheepNumber--;
+                redPennedSheepNumberText.text = redPennedSheepNumber.ToString();
+                playerDynamicScoreText.text = (playerDynamicScore + redSheepScore).ToString();
+                yield return new WaitForSeconds(refreshRate);
+            }
+        }
+
+        if (goldInitialSheepNumber != 0) {
+            while (goldPennedSheepNumber > 0) {
+                goldPennedSheepNumber--;
+                goldPennedSheepNumberText.text = goldPennedSheepNumber.ToString();
+                playerDynamicScoreText.text = (playerDynamicScore + goldSheepScore).ToString();
+                yield return new WaitForSeconds(refreshRate);
+            }
+        }
+
         scoreTransferred = true;
     }
 
-    private void DisplaySheepLeft(float animationTime) {
+    private void DisplaySheepLeft(float animationTime, int initialSheepTypeNumber, int pennedSheepTypeNumber, TextMeshProUGUI initialSheepNumberText, TextMeshProUGUI pennedSheepNumberText, TextMeshProUGUI sheepScoreText) {
         initialSheepNumberText.gameObject.SetActive(true);
-        whitePennedSheepNumberText.gameObject.SetActive(true);
-        whiteSheepScoreText.gameObject.SetActive(true);
-        initialSheepNumberText.text = "/" + initialSheepNumber.ToString();
+        pennedSheepNumberText.gameObject.SetActive(true);
+        sheepScoreText.gameObject.SetActive(true);
+        initialSheepNumberText.text = "/" + initialSheepTypeNumber.ToString();
 
-        float refreshRate = animationTime / pennedSheepNumber;
+        float refreshRate = animationTime / pennedSheepTypeNumber;
         int displayIncrement = 1;
 
-        StartCoroutine(DisplayIntTextOverTime(whitePennedSheepNumberText, 0, initialSheepNumber, displayIncrement, refreshRate, true, ""));
+        StartCoroutine(DisplayIntTextOverTime(pennedSheepNumberText, 0, initialSheepTypeNumber, displayIncrement, refreshRate, true, ""));
     }
 
     private void DisplayTimeLeft() {

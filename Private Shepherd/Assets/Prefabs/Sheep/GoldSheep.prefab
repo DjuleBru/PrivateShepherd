@@ -79,5 +79,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8113785707663274265, guid: d6af2347a2a87224baa5d77da53054e1,
         type: 3}
+    - target: {fileID: 7267018658408402481, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 7020cac6c9ebafe4da1cf2f73b491b61,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}

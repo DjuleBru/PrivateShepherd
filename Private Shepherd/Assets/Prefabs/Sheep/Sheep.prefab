@@ -760,11 +760,11 @@ GameObject:
   - component: {fileID: 6106239601642728234}
   - component: {fileID: 4100688584939994468}
   - component: {fileID: 4100688584939994475}
-  - component: {fileID: 6276905617284876724}
   - component: {fileID: 4846186786135874560}
   - component: {fileID: 5689397843276955821}
   - component: {fileID: 7748370823872585026}
   - component: {fileID: 6058607247327990226}
+  - component: {fileID: 7267018658408402481}
   m_Layer: 7
   m_Name: Sheep
   m_TagString: Untagged
@@ -870,24 +870,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4100688585976792736}
   AIMovement: {fileID: 7748370823872585026}
---- !u!114 &6276905617284876724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100688584939994466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20a37eb9dbf82f746a15bd547cb95d51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sheepMovement: {fileID: 7748370823872585026}
-  levelSheepObjectPool: {fileID: 0}
-  subSheepObjectPool: {fileID: 0}
-  outOfScreenTargetIndicator: {fileID: 0}
-  sheepCollider: {fileID: 6106239601642728234}
-  sheepHerdMinimumNumber: 3
 --- !u!114 &4846186786135874560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,7 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4100688584939994464}
-  sheep: {fileID: 6276905617284876724}
+  sheep: {fileID: 7267018658408402481}
   sheepSO: {fileID: 0}
   sheepHerd: {fileID: 9099907884775240990}
 --- !u!114 &6058607247327990226
@@ -1038,10 +1020,30 @@ MonoBehaviour:
     type: 3}
   distanceScreenEdgex: 0
   distanceScreenEdgey: 0
-  sheep: {fileID: 6276905617284876724}
+  sheep: {fileID: 0}
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &7267018658408402481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4100688584939994466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a37eb9dbf82f746a15bd547cb95d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheepMovement: {fileID: 7748370823872585026}
+  levelSheepObjectPool: {fileID: 0}
+  subSheepObjectPool: {fileID: 0}
+  sheepType: 0
+  outOfScreenTargetIndicator: {fileID: 6058607247327990226}
+  fleeTargetArray: []
+  sheepCollider: {fileID: 6106239601642728234}
+  sheepHerdMinimumNumber: 3
 --- !u!1 &4100688585696642629
 GameObject:
   m_ObjectHideFlags: 0

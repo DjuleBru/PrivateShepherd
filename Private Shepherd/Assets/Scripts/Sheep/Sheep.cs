@@ -9,8 +9,16 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using Cinemachine;
 
-[RequireComponent(typeof(SetAIAnimatorParameters))]
+public enum SheepType {
+    whiteSheep,
+    blackSheep,
+    redSheep,
+    greenSheep,
+    blueSheep,
+    goldSheep,
+};
 
+[RequireComponent(typeof(SetAIAnimatorParameters))]
 public class Sheep : MonoBehaviour
 {
 
@@ -21,8 +29,11 @@ public class Sheep : MonoBehaviour
     [SerializeField] protected SheepMovement sheepMovement;
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
     [SerializeField] private SheepObjectPool subSheepObjectPool;
+    [SerializeField] private SheepType sheepType;
 
     [SerializeField] private OutOfScreenTargetIndicator outOfScreenTargetIndicator;
+
+    [SerializeField] private FleeTarget[] fleeTargetArray;
 
     [SerializeField] Collider2D sheepCollider;
 
@@ -42,6 +53,12 @@ public class Sheep : MonoBehaviour
         initialSheepParent = this.transform.parent;
 
         subSheepObjectPool.OnSheepDied += subSheepObjectPool_OnSheepDied;
+    }
+
+    private void Start() {
+        foreach (FleeTarget fleeTarget in fleeTargetArray) {
+            sheepMovement.AddFleeTarget(fleeTarget);
+        }
     }
 
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
@@ -163,6 +180,10 @@ public class Sheep : MonoBehaviour
 
     public bool GetHasBeenBit() {
         return hasBeenBit;
+    }
+
+    public SheepType GetSheepType() {
+        return sheepType;
     }
 
 }
