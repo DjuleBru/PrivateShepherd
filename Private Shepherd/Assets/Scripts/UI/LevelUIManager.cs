@@ -23,9 +23,19 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI levelRemainingTimeText;
     [SerializeField] TextMeshProUGUI timeScoreText;
     [SerializeField] TextMeshProUGUI whiteSheepScoreText;
+    [SerializeField] TextMeshProUGUI blackSheepScoreText;
+    [SerializeField] TextMeshProUGUI blueSheepScoreText;
+    [SerializeField] TextMeshProUGUI redSheepScoreText;
+    [SerializeField] TextMeshProUGUI greenSheepScoreText;
+    [SerializeField] TextMeshProUGUI goldSheepScoreText;
     [SerializeField] GameObject sheepIcon;
     [SerializeField] TextMeshProUGUI initialSheepNumberText;
-    [SerializeField] TextMeshProUGUI pennedSheepNumberText;
+    [SerializeField] TextMeshProUGUI whitePennedSheepNumberText;
+    [SerializeField] TextMeshProUGUI blackPennedSheepNumberText;
+    [SerializeField] TextMeshProUGUI bluePennedSheepNumberText;
+    [SerializeField] TextMeshProUGUI redPennedSheepNumberText;
+    [SerializeField] TextMeshProUGUI greenPennedSheepNumberText;
+    [SerializeField] TextMeshProUGUI goldPennedSheepNumberText;
     [SerializeField] TextMeshProUGUI playerDynamicScoreText;
     [SerializeField] TextMeshProUGUI finalScoreText;
     [SerializeField] GameObject bronzeTrophy;
@@ -51,6 +61,11 @@ public class LevelUIManager : MonoBehaviour
     private float timeScore;
 
     private int whiteSheepScore;
+    private int blackSheepScore;
+    private int goldSheepScore;
+    private int blueSheepScore;
+    private int redSheepScore;
+    private int greenSheepScore;
 
     private int platScoreTreshold;
     private int silverScoreTreshold;
@@ -63,46 +78,11 @@ public class LevelUIManager : MonoBehaviour
 
     private void Awake() {
         // Initialise score thresholds & sheep scores
-        bronzeScoreTreshold = levelSO.bronzeScoreTreshold;
-        silverScoreTreshold = levelSO.silverScoreTreshold;
-        goldScoreTreshold = levelSO.goldScoreTreshold;
-        platScoreTreshold = levelSO.platScoreTreshold;
-        whiteSheepScore = levelSO.whiteSheepScore;
-        timeScore = levelSO.timeScore;
-
-        timeScoreText.text = "X" + levelSO.timeScore.ToString();
-        whiteSheepScoreText.text = "X" + levelSO.whiteSheepScore.ToString();
+        InitialiseScoreTresholds();
+        InitialiseSheepScores();
 
         // Disable all level success gameObjects
-        mainMenuButton.SetActive(false);
-        tryAgainButton.SetActive(false);
-        continueButton.SetActive(false);
-        clockIcon.SetActive(false);
-        sheepIcon.SetActive(false);
-        bronzeTrophy.SetActive(false);
-        silverTrophy.SetActive(false);
-        goldTrophy.SetActive(false);
-        platTrophy.SetActive(false);
-        foreach(GameObject t in trophyContours) {
-            t.SetActive(false);
-        }
-        initialSheepNumberText.gameObject.SetActive(false);
-        pennedSheepNumberText.gameObject.SetActive(false);
-        playerDynamicScoreText.gameObject.SetActive(false);
-        levelRemainingTimeText.gameObject.SetActive(false);
-        finalScoreText.gameObject.SetActive(false);
-        timeScoreText.gameObject.SetActive(false);
-        whiteSheepScoreText.gameObject.SetActive(false);
-
-        levelFailedUI.SetActive(false);
-        levelPlayUI.SetActive(true);
-        levelSuccededUI.SetActive(false);
-
-        bronzeProgressionBar.fillAmount = 0;
-        silverProgressionBar.fillAmount = 0;
-        goldProgressionBar.fillAmount = 0;
-        platProgressionBar.fillAmount = 0;
-        ProgressionBarGameObject.SetActive(false);
+        DisableLevelSuccessGO();
 
     }
 
@@ -119,6 +99,68 @@ public class LevelUIManager : MonoBehaviour
             playerDynamicScore = (int)Mathf.Ceil(float.Parse(playerDynamicScoreText.text));
             FillProgressionBars();
         }
+    }
+
+    private void InitialiseScoreTresholds() {
+        bronzeScoreTreshold = levelSO.bronzeScoreTreshold;
+        silverScoreTreshold = levelSO.silverScoreTreshold;
+        goldScoreTreshold = levelSO.goldScoreTreshold;
+        platScoreTreshold = levelSO.platScoreTreshold;
+    }
+
+    private void InitialiseSheepScores() {
+        timeScore = levelSO.timeScore;
+        timeScoreText.text = "X" + levelSO.timeScore.ToString();
+
+        whiteSheepScore = levelSO.whiteSheepScore;
+        whiteSheepScoreText.text = "X" + whiteSheepScore.ToString();
+
+        blackSheepScore = levelSO.blackSheepScore;
+        blackSheepScoreText.text = "X" + blackSheepScore.ToString();
+
+        redSheepScore = levelSO.redSheepScore;
+        redSheepScoreText.text = "X" + redSheepScore.ToString();
+
+        blueSheepScore = levelSO.blueSheepScore;
+        blueSheepScoreText.text = "X" + blueSheepScore.ToString();
+
+        greenSheepScore = levelSO.greenSheepScore;
+        greenSheepScoreText.text = "X" + greenSheepScore.ToString();
+
+        goldSheepScore = levelSO.goldSheepScore;
+        goldSheepScoreText.text = "X" + goldSheepScore.ToString();
+    }
+
+    private void DisableLevelSuccessGO() {
+        mainMenuButton.SetActive(false);
+        tryAgainButton.SetActive(false);
+        continueButton.SetActive(false);
+        clockIcon.SetActive(false);
+        sheepIcon.SetActive(false);
+        bronzeTrophy.SetActive(false);
+        silverTrophy.SetActive(false);
+        goldTrophy.SetActive(false);
+        platTrophy.SetActive(false);
+        foreach (GameObject t in trophyContours) {
+            t.SetActive(false);
+        }
+        initialSheepNumberText.gameObject.SetActive(false);
+        whitePennedSheepNumberText.gameObject.SetActive(false);
+        playerDynamicScoreText.gameObject.SetActive(false);
+        levelRemainingTimeText.gameObject.SetActive(false);
+        finalScoreText.gameObject.SetActive(false);
+        timeScoreText.gameObject.SetActive(false);
+        whiteSheepScoreText.gameObject.SetActive(false);
+
+        levelFailedUI.SetActive(false);
+        levelPlayUI.SetActive(true);
+        levelSuccededUI.SetActive(false);
+
+        bronzeProgressionBar.fillAmount = 0;
+        silverProgressionBar.fillAmount = 0;
+        goldProgressionBar.fillAmount = 0;
+        platProgressionBar.fillAmount = 0;
+        ProgressionBarGameObject.SetActive(false);
     }
 
     private void FillProgressionBars() {
@@ -238,7 +280,7 @@ public class LevelUIManager : MonoBehaviour
         while (pennedSheepNumber > 0) {
             pennedSheepNumber--;
             sheepAdded++;
-            pennedSheepNumberText.text = pennedSheepNumber.ToString();
+            whitePennedSheepNumberText.text = pennedSheepNumber.ToString();
             playerDynamicScoreText.text = (playerDynamicScore + whiteSheepScore).ToString();
             yield return new WaitForSeconds(refreshRate);
         }
@@ -247,14 +289,14 @@ public class LevelUIManager : MonoBehaviour
 
     private void DisplaySheepLeft(float animationTime) {
         initialSheepNumberText.gameObject.SetActive(true);
-        pennedSheepNumberText.gameObject.SetActive(true);
+        whitePennedSheepNumberText.gameObject.SetActive(true);
         whiteSheepScoreText.gameObject.SetActive(true);
         initialSheepNumberText.text = "/" + initialSheepNumber.ToString();
 
         float refreshRate = animationTime / pennedSheepNumber;
         int displayIncrement = 1;
 
-        StartCoroutine(DisplayIntTextOverTime(pennedSheepNumberText, 0, initialSheepNumber, displayIncrement, refreshRate, true, ""));
+        StartCoroutine(DisplayIntTextOverTime(whitePennedSheepNumberText, 0, initialSheepNumber, displayIncrement, refreshRate, true, ""));
     }
 
     private void DisplayTimeLeft() {

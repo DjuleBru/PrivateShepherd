@@ -21,6 +21,12 @@ public class LevelManager : MonoBehaviour
     private int initialSheepNumber;
     private int realTimeSheepNumber;
     private int pennedSheepNumber = 0;
+    private int whitePennedSheepNumber;
+    private int goldPennedSheepNumber;
+    private int blackPennedSheepNumber;
+    private int bluePennedSheepNumber;
+    private int greenPennedSheepNumber;
+    private int redPennedSheepNumber;
 
     private float levelTimeLimit;
     private float levelTimer;
@@ -35,6 +41,11 @@ public class LevelManager : MonoBehaviour
     private int defaultHighestBones;
 
     private int whiteSheepScore;
+    private int blackSheepScore;
+    private int goldSheepScore;
+    private int blueSheepScore;
+    private int redSheepScore;
+    private int greenSheepScore;
 
     private bool levelComplete;
     private bool bronzeBone;
@@ -68,6 +79,11 @@ public class LevelManager : MonoBehaviour
         initialSheepNumber = initialSheepsInLevel.Length;
         realTimeSheepNumber = initialSheepNumber;
         whiteSheepScore = levelSO.whiteSheepScore;
+        blackSheepScore = levelSO.blackSheepScore;
+        blueSheepScore = levelSO.blueSheepScore;
+        redSheepScore = levelSO.redSheepScore;
+        goldSheepScore = levelSO.goldSheepScore;
+        greenSheepScore = levelSO.greenSheepScore;
 
         foreach (Sheep sheep in initialSheepsInLevel) {
             sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
@@ -103,6 +119,7 @@ public class LevelManager : MonoBehaviour
     }
 
     private void Sheep_OnSheepEnterScoreZone(object sender, Sheep.OnSheepEnterScoreZoneEventArgs e) {
+        SortSheepPennedByType(sender as Sheep);
         pennedSheepNumber++;
 
         OnScoreUpdate?.Invoke(this, new OnScoreUpdateEventArgs {
@@ -161,6 +178,15 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    private void SortSheepPennedByType(Sheep sheep) {
+        if(sheep is WhiteSheep) {
+            whitePennedSheepNumber++;
+        }
+        if(sheep is BlackSheep) {
+            blackPennedSheepNumber++;
+        }
+    }
+
     private int CalculatePlayerBones(float playerScore) {
         if (playerScore >= platScoreTreshold) {
             playerBones = 4;
@@ -191,7 +217,9 @@ public class LevelManager : MonoBehaviour
     }
 
     private int CalculatePlayerScore(int pennedSheepNumber, int initialSheepNumber, float remainingTime) {
-        int playerScore = (int)Mathf.Floor(remainingTime) * timeScore + whiteSheepScore * pennedSheepNumber;
+        int playerScore = (int)Mathf.Floor(remainingTime) * timeScore + 
+            whiteSheepScore * pennedSheepNumber +
+            blackSheepScore * pennedSheepNumber;
         return playerScore;
     }
 

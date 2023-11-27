@@ -230,7 +230,6 @@ public class SheepMovement : AIMovement
 
             if (fleeTargetDistance < closestFleeTargetDistance) {
                 // The flee target is the closest one
-
                 closestFleeTargetDistance = fleeTargetDistance;
                 closestFleeTarget = fleeTarget;
             }

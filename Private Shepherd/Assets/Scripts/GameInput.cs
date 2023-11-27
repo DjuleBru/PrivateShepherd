@@ -41,8 +41,4 @@ public class GameInput : MonoBehaviour
     private void OnDisable() {
         playerInputActions.Player.Disable();
     }
-
-    private void OnDestroy() {
-        playerInputActions.Player.Bark.performed -= Bark_performed;
-    }
 }
