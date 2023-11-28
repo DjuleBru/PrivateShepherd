@@ -1,0 +1,3205 @@
+fileFormatVersion: 2
+guid: 6952dbb1aa469964da332c46ca979086
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042a96c0e48f20d4f94c9855aed26611
+      internalID: 1406280831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3a04ba34ef86b489183d7084000cd0
+      internalID: 1475783090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec204366984237349bca26c24a1e4f2f
+      internalID: -1128038170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e8df86c63824445a0c5d8eb4296acf
+      internalID: -1538750478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714b9b5eea86e2246b93f69736259072
+      internalID: -976634392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70be90c50b96ef44b2b8feb92021a8b
+      internalID: 1945180250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 232
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3b9ec9fbb171843b6b386cbee9818e
+      internalID: -127052329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27aaaf5c2991dc41bc1b37f1709b613
+      internalID: -385254230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddbb656847b651438f5bb2b3c36746c
+      internalID: 664801082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf01ca21b189eac44b5bf3f7783892f1
+      internalID: 56284244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0715ab01863c00945acd1623412e8c44
+      internalID: -1483980499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b86b638a974f8f4285978fe9c3ae26b
+      internalID: 1656457178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_12
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e52ae4a0a0a2143a9eafb17b560e1b
+      internalID: 1523458344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 224
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772b30b04964e1b45ac8abf810e407ce
+      internalID: -1136841665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44da7735825f744b85c9b4e8be745c4
+      internalID: 1711216270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5ce57a1030c8c46ba105064070c293
+      internalID: -614152314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0b8943c128fce408ad6dafa9bf0be7
+      internalID: -1431230768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb2296921f229041bf37519f252ced6
+      internalID: -761387902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_18
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ddc18f6a8bff14f9391d01b3ae291a
+      internalID: -1518874303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_19
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0cf336b02c43b488aa7678d89a3e17
+      internalID: -149719156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_20
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1483c967aa54baf4683dd12b8f8c5f61
+      internalID: -1780858527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 208
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eab335d19e8db43b6fd5997170f8fe
+      internalID: -162514115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 208
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c802b62a777ccc40a08a3f558244c02
+      internalID: 1713215254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 208
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406df54a898c9a246bafb06f0e7375e6
+      internalID: 282438754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_24
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 208
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca388fe62e5f924daa962cd6c9a8fbe
+      internalID: 1979978535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_25
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 208
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43a6bfb964bc2f4a9103fa696fb375a
+      internalID: -97140595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_26
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 208
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc769ddfbd56f844abdd1069b204c61
+      internalID: -466867745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_27
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55487048439b8d4459606bfab76cbf6b
+      internalID: 9268319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_28
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 200
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ccffd480d5f174ca35d710292d23a9
+      internalID: -568071136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_29
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 200
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231488dc2cd3e1441a88798ab41dabe8
+      internalID: 85382846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_30
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a09afcc08c4d474d8bf284d2722131d
+      internalID: -654879429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_31
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaabde2ea16b79f41983c193e22a4a2f
+      internalID: 377835719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_32
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec0e118df703224fb59fb8839f091d2
+      internalID: -370983626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_33
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898afdf166d7807448ff579860279467
+      internalID: -1503028260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_34
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed196e27e493ce4e814abfebc180508
+      internalID: 211858370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_35
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1c43890f0917348bb2889e615289d8
+      internalID: 1102573936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_36
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 184
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6aa8a95357eecc4698b4a7df03ea9fc
+      internalID: -100760483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_37
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef44290cc1a7e04fb6e60caa9363ba8
+      internalID: -1273320039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_38
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56df4a8c2c890c468eec21435caa84d
+      internalID: -947999752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_39
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73efcf8633cc45d4e86edc753d5bbf3b
+      internalID: 394304077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6280530a7be8e4989724c6335699f9
+      internalID: -1124046201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_41
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0faee4d9e6c3ffd4f88cee51e0642a1b
+      internalID: -1919896005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_42
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb454b0b7af2a04baee77e095144275
+      internalID: 769707364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_43
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 176
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096ff560d1f429742b2cdd3a21ea5a4a
+      internalID: -1612598131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_44
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399ffe2a32f135f419d621286cb2fffd
+      internalID: -1380998633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_45
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4bbc19280553ec41bad55abe3e38347
+      internalID: 408292882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_46
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28144c68fda38e442a14e2dd1002e9e5
+      internalID: 613616326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_47
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f029b2c123a3c46a73327c6b87e1f1
+      internalID: -35940387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_48
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c8b9b59247e744d9c133dccd3119f1
+      internalID: 205494122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_49
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0de8549588f20f4386d30a3decb4d45
+      internalID: 558835861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_50
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 168
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7847f58317bcf3943bb1bced8412248d
+      internalID: 1937132949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_51
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 160
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4944355885cecca4f92e92e75cecd0f4
+      internalID: -1972803758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_52
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 160
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239c17543cf606644b094e433af130bc
+      internalID: 1521661358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_53
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 160
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcadb60cc83acde4fbf0cbceaad925db
+      internalID: 1329644588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_54
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 160
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6961c5acb4e4ce7479d22c04d263180d
+      internalID: 860696611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_55
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 160
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b631871b680ea384ebc4b0ba1056b04d
+      internalID: 775305966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_56
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 160
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc9e89a93698174da63e37af7e00df4
+      internalID: -633658248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_57
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 152
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b86bf1f46364a04690f5a330e348af0
+      internalID: -903644073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_58
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 152
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24ff3c9838c54842a46e22ec7ad4583
+      internalID: 1178622178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_59
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 152
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf32706e239fd2845a1e9eb9d65342a1
+      internalID: 958199434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_60
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900d443e4783ee64da711442b2b358b6
+      internalID: -502684405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_61
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2881e80c74ebfbc4ca016b5ee3d0b6e1
+      internalID: -892311377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_62
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a062d4f05a216e47a9b9f4c9954ee60
+      internalID: 733197189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_63
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfd24a83db53a2449ae54c20efe7af6
+      internalID: -982658414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_64
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8315a5bd8bfdb84e9d8d3d1b42b4b64
+      internalID: -1166193405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_65
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8b17e18a562a844a62e1ef33ea6d81
+      internalID: 1903449488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_66
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 136
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31f2fdd5b421374cbc5e3d8fe4dbde5
+      internalID: 678986260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_67
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317438845365ca14a897af299949012a
+      internalID: 466622217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_68
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abea731ed0f8634eb05583c45b41d33
+      internalID: -733539203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_69
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a251f4d8a6d234ea85f07efadf3359
+      internalID: 2008767852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_70
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a42c96342de7140828eec4e755ec57
+      internalID: -413690018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_71
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565359d887e952640a0dc776c626a2c3
+      internalID: -656161267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_72
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a8a4bb127368b40be34b8184c02625
+      internalID: -395765500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_73
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 128
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d421266f6ab9a6d44a7bd208ced43aa3
+      internalID: 1382038295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_74
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8b78b391e74894295347bc0efc428d
+      internalID: 218423314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_75
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8532b2599935c024f9db42be117bc379
+      internalID: 1942230747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_76
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0181bf82d245cab47b61526d374ddd67
+      internalID: -1031671000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_77
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffcb8d7503f0e242909fecdcb7c4101
+      internalID: 388269999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_78
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58df07c94893e7341999a83aeb3a1bd8
+      internalID: 1942568854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_79
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bdd3451706c72419c5e24630626357
+      internalID: 1258048317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_80
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 120
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a235679eafac242a8361e99b89db41
+      internalID: 78568026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_81
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 112
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62a5ad2af2697c44988d035a8901a88
+      internalID: -1117257058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_82
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 112
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e435344c63c3045aeebb679aea5d9c
+      internalID: 869088250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_83
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 112
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea5b0f25c6235742bd42daf35df5d7a
+      internalID: -2021225790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_84
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f377ed244a2754a49bdbae4172c5237f
+      internalID: 770696702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_85
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 112
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2376c5a2d862c14cb25845cd72dbfd7
+      internalID: 2075043649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_86
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 112
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8be6c51e98110d47a15ac48972d2c31
+      internalID: 334006347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_87
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 104
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4a8db3548692c47a44ed2a34d6f852
+      internalID: 153542754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_88
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 104
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf0aec120a9d8140a0ecf9c96210043
+      internalID: -1635076603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_89
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 104
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ab91ba85eb4c8448e6e579fb8f416a
+      internalID: 996722005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_90
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ed15699da80ba4ba86010fc72b1b2e
+      internalID: 646193558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_91
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a81efe7c730ee543ae6bb86643804ac
+      internalID: 1735045423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_92
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9302f4bdab17d47b14cc058d58bf3b
+      internalID: -1090094314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_93
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d335ba342dd72e34ebece59c2b8b95ee
+      internalID: 1498646672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_94
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b86661be79b8c408b51f2d20509568
+      internalID: -1248118681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_95
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42922163d57d9347a8c1b7262de0b9b
+      internalID: -1729087813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_96
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 88
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac42e1d625819c4ab9bccaa035b81bc
+      internalID: -1147593870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_97
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0fe8817da058c4ca4f63224921caf4
+      internalID: -272584619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_98
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a541eae649668546b4bf082fce5f700
+      internalID: -1495691171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_99
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc92bc8bfdf84040bb8a9c891f9dffe
+      internalID: -1502996312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_100
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006a9ef6a2d27e34e969477cf6e36955
+      internalID: 244366449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_101
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cdd7c36524c5e41abaf83fc5a57541
+      internalID: -1560860916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_102
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e66180d050b978489e3929627b0f378
+      internalID: 954043986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_103
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 80
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d9c4cb4c2dead48b8f336afe759869
+      internalID: 93811064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_104
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df246bc8d0eeef4d934f4aa21ac8d7c
+      internalID: 1737409507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_105
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c381a323cd173458b93748927b68f9
+      internalID: 2044474044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_106
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e104a50d359f8c54dbbf90643d97c46d
+      internalID: 1382802586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_107
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b4429d79ec21b47a33ea2a7155796c
+      internalID: 932238857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_108
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5ac89c778c160478bf1286b501d894
+      internalID: -1069702958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_109
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c61308e61a4bd4c9b91ee03ee6550d
+      internalID: -718563003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_110
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847ae19b7477fc940bdec4e6221a7653
+      internalID: -1203939034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_111
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd26009bb1831f14189988d1fd5ddb79
+      internalID: 1627780988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_112
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6e6c8c4d55b3c47836495ae5b4c9a2
+      internalID: 2005589774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_113
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b1aaa3972be6a4984f71f0fae94682
+      internalID: -302197877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_114
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e0b64d9487d3b4eb1961c81189c86a
+      internalID: 2065763789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_115
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d929d0b3957c16c43a78b764cc8321d1
+      internalID: -1298867016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_116
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad0bc9a6affc1743a7d729b0d3c0480
+      internalID: 1697879788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_117
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 56
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd53b8c739c9d9849b152d08e15d5520
+      internalID: 531663915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_118
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 56
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236ce784848cc4c4b9075dfe369c9433
+      internalID: -1271322484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_119
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 56
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468c2cb390fc5474db2206d82ed43cde
+      internalID: -51901277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_120
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06587be93097d8c48a11e7d559d2b231
+      internalID: -127960083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_121
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2984c416d2e654d90e87ace3fc2b31
+      internalID: -1594299426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_122
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88227d61fc05e43428e0d11873889e18
+      internalID: -1740553175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_123
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28eb92b04705267448c0827b978ca881
+      internalID: 988122080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_124
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3018770e002c5964a95b40e48337521e
+      internalID: 1463007477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_125
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067955450db03d94785dd2818cad7761
+      internalID: 640940771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_126
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 40
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ff723e9ec099c4ea38ae085f3ea392
+      internalID: -1580960364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_127
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0197166f183a16408d95a848599fefb
+      internalID: -62751120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_128
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd8f3ea2f4d2c1448674e7769210292
+      internalID: -781868354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_129
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f86ff20e2612a04896229196e1c83eb
+      internalID: 2131021565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_130
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a5440b58c013043a0083fbb6b65999
+      internalID: -1216909365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_131
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d91c5b4a4de4f546ba0f85769b9b8ef
+      internalID: 1784106606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_132
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceceb2a3364f66d4fac3d025178a2b1e
+      internalID: -1852924111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_133
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 16
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb5862940cfd1a4da15da0c4d335646
+      internalID: -857986793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_134
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 16
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277719070a2f0a74a89ad5fed4f55111
+      internalID: 1361929628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_135
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a422b664151fa4fb4edc544acd610c
+      internalID: -2082987123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_136
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e75f31b9391454bbc744a80d35b3f8
+      internalID: -473741471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_137
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14433dfbdfc2f5d48a21697e9bf4b23f
+      internalID: -114351911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiKeyboardMouse_138
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f2a31abfe29ba4daf4a3d6567e548c
+      internalID: -1831438584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Minifantasy_GuiKeyboardMouse_0: 1406280831
+      Minifantasy_GuiKeyboardMouse_1: 1475783090
+      Minifantasy_GuiKeyboardMouse_10: -1483980499
+      Minifantasy_GuiKeyboardMouse_100: 244366449
+      Minifantasy_GuiKeyboardMouse_101: -1560860916
+      Minifantasy_GuiKeyboardMouse_102: 954043986
+      Minifantasy_GuiKeyboardMouse_103: 93811064
+      Minifantasy_GuiKeyboardMouse_104: 1737409507
+      Minifantasy_GuiKeyboardMouse_105: 2044474044
+      Minifantasy_GuiKeyboardMouse_106: 1382802586
+      Minifantasy_GuiKeyboardMouse_107: 932238857
+      Minifantasy_GuiKeyboardMouse_108: -1069702958
+      Minifantasy_GuiKeyboardMouse_109: -718563003
+      Minifantasy_GuiKeyboardMouse_11: 1656457178
+      Minifantasy_GuiKeyboardMouse_110: -1203939034
+      Minifantasy_GuiKeyboardMouse_111: 1627780988
+      Minifantasy_GuiKeyboardMouse_112: 2005589774
+      Minifantasy_GuiKeyboardMouse_113: -302197877
+      Minifantasy_GuiKeyboardMouse_114: 2065763789
+      Minifantasy_GuiKeyboardMouse_115: -1298867016
+      Minifantasy_GuiKeyboardMouse_116: 1697879788
+      Minifantasy_GuiKeyboardMouse_117: 531663915
+      Minifantasy_GuiKeyboardMouse_118: -1271322484
+      Minifantasy_GuiKeyboardMouse_119: -51901277
+      Minifantasy_GuiKeyboardMouse_12: 1523458344
+      Minifantasy_GuiKeyboardMouse_120: -127960083
+      Minifantasy_GuiKeyboardMouse_121: -1594299426
+      Minifantasy_GuiKeyboardMouse_122: -1740553175
+      Minifantasy_GuiKeyboardMouse_123: 988122080
+      Minifantasy_GuiKeyboardMouse_124: 1463007477
+      Minifantasy_GuiKeyboardMouse_125: 640940771
+      Minifantasy_GuiKeyboardMouse_126: -1580960364
+      Minifantasy_GuiKeyboardMouse_127: -62751120
+      Minifantasy_GuiKeyboardMouse_128: -781868354
+      Minifantasy_GuiKeyboardMouse_129: 2131021565
+      Minifantasy_GuiKeyboardMouse_13: -1136841665
+      Minifantasy_GuiKeyboardMouse_130: -1216909365
+      Minifantasy_GuiKeyboardMouse_131: 1784106606
+      Minifantasy_GuiKeyboardMouse_132: -1852924111
+      Minifantasy_GuiKeyboardMouse_133: -857986793
+      Minifantasy_GuiKeyboardMouse_134: 1361929628
+      Minifantasy_GuiKeyboardMouse_135: -2082987123
+      Minifantasy_GuiKeyboardMouse_136: -473741471
+      Minifantasy_GuiKeyboardMouse_137: -114351911
+      Minifantasy_GuiKeyboardMouse_138: -1831438584
+      Minifantasy_GuiKeyboardMouse_14: 1711216270
+      Minifantasy_GuiKeyboardMouse_15: -614152314
+      Minifantasy_GuiKeyboardMouse_16: -1431230768
+      Minifantasy_GuiKeyboardMouse_17: -761387902
+      Minifantasy_GuiKeyboardMouse_18: -1518874303
+      Minifantasy_GuiKeyboardMouse_19: -149719156
+      Minifantasy_GuiKeyboardMouse_2: -1128038170
+      Minifantasy_GuiKeyboardMouse_20: -1780858527
+      Minifantasy_GuiKeyboardMouse_21: -162514115
+      Minifantasy_GuiKeyboardMouse_22: 1713215254
+      Minifantasy_GuiKeyboardMouse_23: 282438754
+      Minifantasy_GuiKeyboardMouse_24: 1979978535
+      Minifantasy_GuiKeyboardMouse_25: -97140595
+      Minifantasy_GuiKeyboardMouse_26: -466867745
+      Minifantasy_GuiKeyboardMouse_27: 9268319
+      Minifantasy_GuiKeyboardMouse_28: -568071136
+      Minifantasy_GuiKeyboardMouse_29: 85382846
+      Minifantasy_GuiKeyboardMouse_3: -1538750478
+      Minifantasy_GuiKeyboardMouse_30: -654879429
+      Minifantasy_GuiKeyboardMouse_31: 377835719
+      Minifantasy_GuiKeyboardMouse_32: -370983626
+      Minifantasy_GuiKeyboardMouse_33: -1503028260
+      Minifantasy_GuiKeyboardMouse_34: 211858370
+      Minifantasy_GuiKeyboardMouse_35: 1102573936
+      Minifantasy_GuiKeyboardMouse_36: -100760483
+      Minifantasy_GuiKeyboardMouse_37: -1273320039
+      Minifantasy_GuiKeyboardMouse_38: -947999752
+      Minifantasy_GuiKeyboardMouse_39: 394304077
+      Minifantasy_GuiKeyboardMouse_4: -976634392
+      Minifantasy_GuiKeyboardMouse_40: -1124046201
+      Minifantasy_GuiKeyboardMouse_41: -1919896005
+      Minifantasy_GuiKeyboardMouse_42: 769707364
+      Minifantasy_GuiKeyboardMouse_43: -1612598131
+      Minifantasy_GuiKeyboardMouse_44: -1380998633
+      Minifantasy_GuiKeyboardMouse_45: 408292882
+      Minifantasy_GuiKeyboardMouse_46: 613616326
+      Minifantasy_GuiKeyboardMouse_47: -35940387
+      Minifantasy_GuiKeyboardMouse_48: 205494122
+      Minifantasy_GuiKeyboardMouse_49: 558835861
+      Minifantasy_GuiKeyboardMouse_5: 1945180250
+      Minifantasy_GuiKeyboardMouse_50: 1937132949
+      Minifantasy_GuiKeyboardMouse_51: -1972803758
+      Minifantasy_GuiKeyboardMouse_52: 1521661358
+      Minifantasy_GuiKeyboardMouse_53: 1329644588
+      Minifantasy_GuiKeyboardMouse_54: 860696611
+      Minifantasy_GuiKeyboardMouse_55: 775305966
+      Minifantasy_GuiKeyboardMouse_56: -633658248
+      Minifantasy_GuiKeyboardMouse_57: -903644073
+      Minifantasy_GuiKeyboardMouse_58: 1178622178
+      Minifantasy_GuiKeyboardMouse_59: 958199434
+      Minifantasy_GuiKeyboardMouse_6: -127052329
+      Minifantasy_GuiKeyboardMouse_60: -502684405
+      Minifantasy_GuiKeyboardMouse_61: -892311377
+      Minifantasy_GuiKeyboardMouse_62: 733197189
+      Minifantasy_GuiKeyboardMouse_63: -982658414
+      Minifantasy_GuiKeyboardMouse_64: -1166193405
+      Minifantasy_GuiKeyboardMouse_65: 1903449488
+      Minifantasy_GuiKeyboardMouse_66: 678986260
+      Minifantasy_GuiKeyboardMouse_67: 466622217
+      Minifantasy_GuiKeyboardMouse_68: -733539203
+      Minifantasy_GuiKeyboardMouse_69: 2008767852
+      Minifantasy_GuiKeyboardMouse_7: -385254230
+      Minifantasy_GuiKeyboardMouse_70: -413690018
+      Minifantasy_GuiKeyboardMouse_71: -656161267
+      Minifantasy_GuiKeyboardMouse_72: -395765500
+      Minifantasy_GuiKeyboardMouse_73: 1382038295
+      Minifantasy_GuiKeyboardMouse_74: 218423314
+      Minifantasy_GuiKeyboardMouse_75: 1942230747
+      Minifantasy_GuiKeyboardMouse_76: -1031671000
+      Minifantasy_GuiKeyboardMouse_77: 388269999
+      Minifantasy_GuiKeyboardMouse_78: 1942568854
+      Minifantasy_GuiKeyboardMouse_79: 1258048317
+      Minifantasy_GuiKeyboardMouse_8: 664801082
+      Minifantasy_GuiKeyboardMouse_80: 78568026
+      Minifantasy_GuiKeyboardMouse_81: -1117257058
+      Minifantasy_GuiKeyboardMouse_82: 869088250
+      Minifantasy_GuiKeyboardMouse_83: -2021225790
+      Minifantasy_GuiKeyboardMouse_84: 770696702
+      Minifantasy_GuiKeyboardMouse_85: 2075043649
+      Minifantasy_GuiKeyboardMouse_86: 334006347
+      Minifantasy_GuiKeyboardMouse_87: 153542754
+      Minifantasy_GuiKeyboardMouse_88: -1635076603
+      Minifantasy_GuiKeyboardMouse_89: 996722005
+      Minifantasy_GuiKeyboardMouse_9: 56284244
+      Minifantasy_GuiKeyboardMouse_90: 646193558
+      Minifantasy_GuiKeyboardMouse_91: 1735045423
+      Minifantasy_GuiKeyboardMouse_92: -1090094314
+      Minifantasy_GuiKeyboardMouse_93: 1498646672
+      Minifantasy_GuiKeyboardMouse_94: -1248118681
+      Minifantasy_GuiKeyboardMouse_95: -1729087813
+      Minifantasy_GuiKeyboardMouse_96: -1147593870
+      Minifantasy_GuiKeyboardMouse_97: -272584619
+      Minifantasy_GuiKeyboardMouse_98: -1495691171
+      Minifantasy_GuiKeyboardMouse_99: -1502996312
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

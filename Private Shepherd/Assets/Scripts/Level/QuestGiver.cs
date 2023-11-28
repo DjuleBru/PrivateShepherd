@@ -100,7 +100,7 @@ public class QuestGiver : MonoBehaviour
 
         // Start by dezooming
         float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
-        StartCoroutine(SmoothCinemachineZoom(cinemachineQuestUnlockDezoom));
+        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(cinemachineQuestUnlockDezoom);
         yield return new WaitForSeconds(.5f);
 
         int questGiverIndex = 0;
@@ -160,7 +160,7 @@ public class QuestGiver : MonoBehaviour
         questUnlockCameraFollowTransform.position = destination;
 
         // Camera zoom
-        StartCoroutine(SmoothCinemachineZoom(cinemachineQuestUnlockZoom));
+        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(cinemachineQuestUnlockZoom);
         yield return new WaitForSeconds(.5f);
 
         if (questGiverParent.GetQuestGiversUnlockedList().Count == 0) {
@@ -176,7 +176,7 @@ public class QuestGiver : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         // Camera dezoom
-        StartCoroutine(SmoothCinemachineZoom(cinemachineQuestUnlockDezoom));
+        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(cinemachineQuestUnlockDezoom);
         yield return new WaitForSeconds(1f);
 
         questGiverUnlocked = true;
@@ -184,22 +184,6 @@ public class QuestGiver : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator SmoothCinemachineZoom(float targetOrthoSize) {
-
-        float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
-        float treshold = .1f;
-
-        float dynamicOrthoSize = initialOrthoSize;
-        float step = (targetOrthoSize - initialOrthoSize) / 20f;
-
-        while (Mathf.Abs(dynamicOrthoSize - targetOrthoSize) > treshold) {
-            dynamicOrthoSize += step;
-
-            ChangeCinemachineCode.Instance.ChangeCinemachineOrthoSize(dynamicOrthoSize);
-            yield return null;
-        }
-        yield return null;
-    }
 
     public bool GetQuestGiverUnlocked() {
         return questGiverUnlocked;

@@ -1,0 +1,3997 @@
+fileFormatVersion: 2
+guid: 0d4ac8a374365454c8696a1f1f8f78da
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_0
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 320
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659fde99f18ff1c47902f73c15483ebc
+      internalID: -1170610749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0de83c780a77c14c9683f0d0c401558
+      internalID: 2091441853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537a4e17ae259504ca1a061d962f4b33
+      internalID: -1350887298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 320
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7ed37c02cb01c4b9547d3d3e7d3224
+      internalID: 1447385224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_4
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 320
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3480b1e540f2c1c4785d4f57b1012752
+      internalID: 1265256347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_5
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 320
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cea93cf1b7f5f49b0a7f978b4f965a
+      internalID: 2043464221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971765021ff0a7e4e94b69c5a31839c3
+      internalID: -2066336216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb074bccc3fe644cbe8dafa6eff6dbe
+      internalID: -788303656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8125dc456f46d7940b9a84e9eededbf5
+      internalID: 1894163424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_9
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd69809cdcef2d43aa5f85a6a0704f5
+      internalID: -1334646629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 312
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55d59c0bc556794c897d2dfd08eaced
+      internalID: 963724547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_11
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bd47dd700af604a8ab71622f65f964
+      internalID: 1946867598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e03c1c90b4493498dbe65604e42e5f
+      internalID: -110204583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_13
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fa2a475e82dae43ba33f1de63f4a93
+      internalID: -190402321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_14
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a53dcce5fe5d5b4dba4406ea7677bc2
+      internalID: -2013724989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_15
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590ffb216d62a134db99554dba131e64
+      internalID: 1929376581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_16
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a85fad5c2b7394293c2d1c50f99fe1
+      internalID: 134570260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 288
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dffcf5d9a6d054db3618f51a2d2681
+      internalID: 911097669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 304
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809e18e9df957c244ada7c26bb531fa8
+      internalID: 677721866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 304
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42836ad2ad1202f44b08643bedfad05f
+      internalID: 114286020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23189ba885d76fa40910eec08f54e6c6
+      internalID: -1453595894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_21
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8435f00369ea51240b15a8b3d7a37326
+      internalID: -1049716765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_22
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc62dac79f10ea84199cdce3061b2135
+      internalID: 560514179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebab8aa287256e4bac0e632159114de
+      internalID: -1760448380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 286
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253b39bedaffb4a45b84b3fb61184464
+      internalID: 1297581568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 286
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dc57c5d87240643b2270d0d793d42d
+      internalID: -338314369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d33ae78af7c5464ba4be216114c585e
+      internalID: -1677071889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01342193f43219b4ca6a25add402cbf1
+      internalID: 721237502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_28
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 288
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caca38c540824e54abc3d339a7ddb22a
+      internalID: -1207272448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_29
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 288
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1805bb7b7e666b249a563e7add8aa403
+      internalID: 146099602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_30
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 288
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e2b64ab72a7734f8dd62e102514e4d
+      internalID: -747334642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e478dd5c272114e9e62d6da2d379e9
+      internalID: -283444420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_32
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56df7c553be70824984afd88d41d279e
+      internalID: -1953390902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_33
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dea5b115d33efe448463a3fb9ce5314
+      internalID: 1866761748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_34
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebe2e3703b914b4ea25bf38ae423ae2
+      internalID: -1648855468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_35
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 280
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d8984199c5ad048b50cc9eb4bc9907
+      internalID: 1553521173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_36
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 280
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf54fd2c79bff04eaa0253e9b0dcb3c
+      internalID: -370273515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_37
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 280
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5c21853e738014b9a77d37b36ab091
+      internalID: -1373933293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_38
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 280
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb700e804f6cab2448829c715041d6ae
+      internalID: 1343601942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_39
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 280
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba5fc28b70efb14b8e020b492fe19c6
+      internalID: 563602475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_40
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 266
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748db274852f9e548abc868f739b6372
+      internalID: -1728273484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_41
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 266
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5faec3f43a68fa499a3035a9d0978cc
+      internalID: -2133450397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_42
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 267
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969e4c021ec3e4d48bcd41540b44bce8
+      internalID: 190306012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_43
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 266
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146d28727cbcc8b4cbf68565dadb30ea
+      internalID: 2063692427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_44
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 266
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29b9876ed567a240ae9dffd76f856c0
+      internalID: -1602511102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_45
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 267
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0766257b3a6b6b745b29124551389d3e
+      internalID: -826813489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_46
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 256
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecf317a3ea02bd47bade46ae6e36020
+      internalID: -983351013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_47
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 272
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761e533c38e6b7847b0c37ebd17db72e
+      internalID: -530666690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_48
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 272
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036fe9ccfbc2d9d4ba8ace7132551859
+      internalID: 1115130027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_49
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 272
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ee6483500234a4eb60a017140cb59c
+      internalID: 1940797775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_50
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 272
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb6fbb815f0316418eea39d0c8d2ebe
+      internalID: -956594347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_51
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 272
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc59d762c871e764a8308108cda93e4a
+      internalID: 466006249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_52
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 272
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cec6c08df45c945b84394474d2bbe9
+      internalID: -1124905012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_53
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 248
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d717298041a11643b216d73e1fcbf6b
+      internalID: -1913224696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_54
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 248
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e078de5ad909cf541abc13b1ead7a4f3
+      internalID: 1165006616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_55
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87a9f13dd4212846a37675d6df6936c
+      internalID: 1193828554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_56
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77428b6073b19ed44936d2bdedd5c82c
+      internalID: -1596804122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_57
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e96938b6b54fb745b5856f03a057543
+      internalID: 680357386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_58
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dc1a3351cf830498b27f5349c8845d
+      internalID: -1410133417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_59
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 222
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f21bef21fb9ac24b9a9d9f4516937ea
+      internalID: 1208315875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_60
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 222
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f895584bfb1c4f8428fb4d8b353e3d87
+      internalID: 681014309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_61
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd3656c4e597774ba1009cc05fb9630
+      internalID: 1829917877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 202
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f242412322c5f4187f2b9d60f80ce4
+      internalID: 720359057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_63
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 202
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527942f642b467f4bb825631c7b55104
+      internalID: -189393650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_64
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 203
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8650c2f08dc79a4439b9ecc2df237149
+      internalID: -23189862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_65
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 202
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e83900351d9d0746ad022c8ceeb494f
+      internalID: 1574544775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_66
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 202
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c470c9ec383be4383fdd517210b70e
+      internalID: -10125183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_67
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 203
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b330a851068b5a45bf23c11ba108aab
+      internalID: -868141885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_68
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 200
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2eef91a1ff1b54baafb2ef285d60ae
+      internalID: 1436504083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_69
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 200
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898af68750528fa48af5e6ab414fd908
+      internalID: -940324247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_70
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 200
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80185cf0751fbdf4d844b07745c323dc
+      internalID: 1176262002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_71
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 200
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbe8edc716a4084a9cb8f7742460802
+      internalID: 28170328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_72
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 200
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1376bbb1a18cee46be9aa9ae4723102
+      internalID: 1143447518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_73
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 200
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b77cc48874b93c4da6445259a46631e
+      internalID: -1294301404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_74
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 200
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a9b1a34340ad049b1c2eb2b16ce724
+      internalID: 779370704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_75
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 184
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9163a85278a2d7a498bac60cf6b6286d
+      internalID: -303384232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_76
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 184
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d833609fead88f4c8afff2025bb2838
+      internalID: 1277464993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_77
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 192
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e1ca6c9e3cca1419e9fbce4ba5e800
+      internalID: 391160171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_78
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 192
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f567e1368352446af5902aea2afb67
+      internalID: -314356961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_79
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 192
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6498d424d2b194f963f0fc9e374aa7
+      internalID: -1043962651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_80
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 192
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf73c17f0106cc54c88399035bd56732
+      internalID: -1794275435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_81
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 192
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abfd1eaece38924ebda8cd6776690aa
+      internalID: -1266254830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_82
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 192
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30df159b2457b24da1496235e4a9d6b
+      internalID: -164961555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_83
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 192
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db630d1c6f8dab3448575ca4694dccce
+      internalID: 1472931053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_84
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 192
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8efd3fa0d6d9e46a85e6b2b68bfc78
+      internalID: 1054284556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_85
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68da5d2fad026b142ab834468800b3e9
+      internalID: -1497281050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_86
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e079b7368583a445bc59e1366ad2fd5
+      internalID: -1868790722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_87
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6679dd7c5a3b64e919a418db5a53cf
+      internalID: -514706577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_88
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 184
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea5d3b5395c3254b8f8006dc1f1b1d1
+      internalID: -1109668176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_89
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 184
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f19151aec33e47489db0c62e0e318a7
+      internalID: -473873139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_90
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 184
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4253155fdcf4cbe48bbddd6030907f71
+      internalID: 568654554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_91
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 184
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c6b7b1fa60c56498bbe2fb15451dee
+      internalID: 1426557513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_92
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 184
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299a5253c4d1c444689971fbbff20f85
+      internalID: -1811427917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_93
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 184
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cca24a508b02743b20fce533c96299
+      internalID: -183900627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 168
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95a70d932c3a1848add1deac83e07ff
+      internalID: 1713236131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_95
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 168
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dda33e32ecae841bdb7230e50bef1d
+      internalID: 584678133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_96
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 168
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db4904dca6fb864597d5d0688d1c4f2
+      internalID: -1885116864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_97
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 168
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901436ae25fb8cc408e82fdbd9a7bb08
+      internalID: -1361052382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_98
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 168
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65dc464f63a649f4d8366d844a3bedec
+      internalID: -584328155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_99
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 168
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0857ba59514867418cefafc41586306
+      internalID: -227519854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_100
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 160
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e96f0e5ab8206e4e8f5c5054eb820e7
+      internalID: -1996661511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_101
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 160
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e432e5ea9d1d844a66e14301d835f6
+      internalID: 1612855463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_102
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 160
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294f6f3d0afae20498313071eefeb73d
+      internalID: -2018943967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_103
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 160
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc4295587f149545aa074ef49083bc8
+      internalID: -1513189202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_104
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 160
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b3b5cab81f63544adf051832e528f4
+      internalID: -463577942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_105
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 160
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224cc696583b71d4bb5300ef198481df
+      internalID: 218543609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_106
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 160
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d2ab67e19079a4aa2cb3e72febcdcb
+      internalID: -611580370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_107
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 160
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352a277d16c68224a8ad1d29a6159a2c
+      internalID: -1560475602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_108
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 136
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a636e412931da15458b7544e1d3c778c
+      internalID: -391732989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_109
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 152
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb5e07e66b48b34bb9c3df86abc3441
+      internalID: 800459252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_110
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 152
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3575e212049f93b49b61f118c24fe0ec
+      internalID: -388336858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_111
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 152
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608ed0bd7cd4b15409dbc2fd9e3fe1de
+      internalID: 571658184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_112
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 152
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722a584bff9265a47b875eed05dd89ce
+      internalID: -443653385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_113
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 152
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a784255144481914ab3ee625d3ac3101
+      internalID: 1282302793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_114
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 152
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d31aa998b971244b8a0bd620dbfe284
+      internalID: -994434894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_115
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ee5ac6e93314f48b10ac80ae6f2e2b
+      internalID: -503439618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_116
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0456afdb3fa59854485c8e2ec7801dec
+      internalID: -368596213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_117
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0a131998d759a469a1528451538d05
+      internalID: 237473598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_118
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 80
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17aa1292a554d6740926ddfb0e2b5176
+      internalID: 1744321871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_119
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 80
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dce1893184a4c04197e486285d98aed
+      internalID: 304646526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_120
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 80
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd72f81e2b490a4f804dec6b2548246
+      internalID: 1392880193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_121
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 80
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf565bad07485741a67d650035c9522
+      internalID: 616562945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_122
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e10d762bf38a8b4bb8c4307ec4edb47
+      internalID: -877396111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_123
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fce13a3196dc946a269bea099bb245
+      internalID: 1476358684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_124
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ec72955964d804283e35303cb2459e
+      internalID: -1367860646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_125
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 72
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9755257b8916b408f00278188503ca
+      internalID: 1106061723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_126
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 72
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3b544f4efcff0428d2edeac3fc5611
+      internalID: 1184733246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_127
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 72
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c95605403378a4db7e3d28600c0012
+      internalID: -332832861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_128
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 72
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ca8af4678619540b46cc109c89716c
+      internalID: 1269714717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_129
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 74
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb45a2f2c9ad2a47aa2b98eb11db26e
+      internalID: -2119653044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_130
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f070e8e1b21c6449a2342f72f39ae08
+      internalID: -1031830725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_131
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 74
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e858dff935d0e7344b2113a95c94425d
+      internalID: 309710676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_132
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf9f2e73d773714986d0907660d43f4
+      internalID: 1779720807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_133
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1c0f4df778cbe4791302d3069ccde0
+      internalID: 1892354246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_134
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066b711e59e571545b71816340bfff7c
+      internalID: -1167276304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_135
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f2cc93f4a73c248892c3f2a034ba79
+      internalID: 1913782849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_136
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d51670d866ae13499ccb7d32bae64d2
+      internalID: 344018018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_137
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c931711ff58fce84f90199e8e8fd2998
+      internalID: -1572887834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_138
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 64
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bb2ecae478be94eb399dabd9982ae4
+      internalID: -199413323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_139
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 64
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57b4af67fcecdd4cb004ae9eeb02ef8
+      internalID: 292178186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_140
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 64
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587cb672175d17840abac02f4f523346
+      internalID: -513261980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_141
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8507c88dc7847414fa6e5cdd40984234
+      internalID: 558926171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_142
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 56
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c13d231021078447a891d9f1e81d2eb
+      internalID: 1374361190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_143
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb062e146053ff443a174122257fb2d0
+      internalID: 332711541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_144
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9458b0fbfd94d4695aa952a1678407
+      internalID: -1338185970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_145
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2cc6187bdc64b4e8c463c51088fe5f
+      internalID: 1807368208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_146
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba09acbb704170499e79ce3dedc3fb6
+      internalID: 1840818863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_147
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 56
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5820f4f82332d8a458ac3dfe257e258f
+      internalID: 1340634104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_148
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 48
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5e3913b2a4c2949932a578930dd758
+      internalID: -1867935922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_149
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 48
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8cd68df7cd91844b19ea1400df6581
+      internalID: 718542201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_150
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 48
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f0c8e46b5001c47bb4ced8571f09b6
+      internalID: -31425757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_151
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 48
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf71d9e3716c64d40a989cb5699cd2d9
+      internalID: -1141703650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_152
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67050463a41aacc49b067459ed6c428f
+      internalID: -625132633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_153
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ab59a0cf6115c408265b515b13553e
+      internalID: -948568221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_154
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90afa469e3bc8542a4f04ba4c621d88
+      internalID: -1841730493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_155
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50c4ad4959f27c47806e7fa448a3d2b
+      internalID: 1845824698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_156
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 48
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69fb1c112f957d47bfbf86641be041e
+      internalID: -2063306403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_157
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 40
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7c222e71fbb1044bce4d8d50c9379a
+      internalID: 1246824349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_158
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 40
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5e729ae163d534786becffb3aeff40
+      internalID: 1211780680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_159
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 40
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d7462024d33c449a84e3408675ed15
+      internalID: 1979801407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_160
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 40
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e204ed17e0b6d4d8cdb0ef31d362e4
+      internalID: 1686578145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_161
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 42
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dfd09552d08d64d9bcd611ab607e66
+      internalID: 1268283379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_162
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02576d8ab412c89459695605e797afaa
+      internalID: -276742708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_163
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 42
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c74399ad8eaea348953d5ab6db55c71
+      internalID: -1596216725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_164
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cf94ba5d7e4784bafa823c558d7f01
+      internalID: -1193215890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_165
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a446d5453c9d3f4496f51785a58a989
+      internalID: -234712704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_166
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8136b855122f594db0b3f1e5b59bcf5
+      internalID: 1046914987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_167
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c91abc481d4df844969198e3b1f01fc
+      internalID: -1014555470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_168
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 32
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865d3a6a53e221a40b66309aea23383a
+      internalID: -1110965381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_169
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 32
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8169450b917e6047b4d0d7d34aecec4
+      internalID: 898966484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_170
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 32
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9665d717c3b22f4585dfa1b7d5e7a06
+      internalID: 832415386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_171
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b512f1920c47184f9c412fbf11c8b3d
+      internalID: -1670149868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_172
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a4baace8d703b4eb14873ad22611ed
+      internalID: -725731961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_173
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e49352b49e18145b2395d76ab71ee6
+      internalID: -398543312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiControllers_174
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 8
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad90c11674b0d043810a9d742fad827
+      internalID: 2101403781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Minifantasy_GuiControllers_0: -1170610749
+      Minifantasy_GuiControllers_1: 2091441853
+      Minifantasy_GuiControllers_10: 963724547
+      Minifantasy_GuiControllers_100: -1996661511
+      Minifantasy_GuiControllers_101: 1612855463
+      Minifantasy_GuiControllers_102: -2018943967
+      Minifantasy_GuiControllers_103: -1513189202
+      Minifantasy_GuiControllers_104: -463577942
+      Minifantasy_GuiControllers_105: 218543609
+      Minifantasy_GuiControllers_106: -611580370
+      Minifantasy_GuiControllers_107: -1560475602
+      Minifantasy_GuiControllers_108: -391732989
+      Minifantasy_GuiControllers_109: 800459252
+      Minifantasy_GuiControllers_11: 1946867598
+      Minifantasy_GuiControllers_110: -388336858
+      Minifantasy_GuiControllers_111: 571658184
+      Minifantasy_GuiControllers_112: -443653385
+      Minifantasy_GuiControllers_113: 1282302793
+      Minifantasy_GuiControllers_114: -994434894
+      Minifantasy_GuiControllers_115: -503439618
+      Minifantasy_GuiControllers_116: -368596213
+      Minifantasy_GuiControllers_117: 237473598
+      Minifantasy_GuiControllers_118: 1744321871
+      Minifantasy_GuiControllers_119: 304646526
+      Minifantasy_GuiControllers_12: -110204583
+      Minifantasy_GuiControllers_120: 1392880193
+      Minifantasy_GuiControllers_121: 616562945
+      Minifantasy_GuiControllers_122: -877396111
+      Minifantasy_GuiControllers_123: 1476358684
+      Minifantasy_GuiControllers_124: -1367860646
+      Minifantasy_GuiControllers_125: 1106061723
+      Minifantasy_GuiControllers_126: 1184733246
+      Minifantasy_GuiControllers_127: -332832861
+      Minifantasy_GuiControllers_128: 1269714717
+      Minifantasy_GuiControllers_129: -2119653044
+      Minifantasy_GuiControllers_13: -190402321
+      Minifantasy_GuiControllers_130: -1031830725
+      Minifantasy_GuiControllers_131: 309710676
+      Minifantasy_GuiControllers_132: 1779720807
+      Minifantasy_GuiControllers_133: 1892354246
+      Minifantasy_GuiControllers_134: -1167276304
+      Minifantasy_GuiControllers_135: 1913782849
+      Minifantasy_GuiControllers_136: 344018018
+      Minifantasy_GuiControllers_137: -1572887834
+      Minifantasy_GuiControllers_138: -199413323
+      Minifantasy_GuiControllers_139: 292178186
+      Minifantasy_GuiControllers_14: -2013724989
+      Minifantasy_GuiControllers_140: -513261980
+      Minifantasy_GuiControllers_141: 558926171
+      Minifantasy_GuiControllers_142: 1374361190
+      Minifantasy_GuiControllers_143: 332711541
+      Minifantasy_GuiControllers_144: -1338185970
+      Minifantasy_GuiControllers_145: 1807368208
+      Minifantasy_GuiControllers_146: 1840818863
+      Minifantasy_GuiControllers_147: 1340634104
+      Minifantasy_GuiControllers_148: -1867935922
+      Minifantasy_GuiControllers_149: 718542201
+      Minifantasy_GuiControllers_15: 1929376581
+      Minifantasy_GuiControllers_150: -31425757
+      Minifantasy_GuiControllers_151: -1141703650
+      Minifantasy_GuiControllers_152: -625132633
+      Minifantasy_GuiControllers_153: -948568221
+      Minifantasy_GuiControllers_154: -1841730493
+      Minifantasy_GuiControllers_155: 1845824698
+      Minifantasy_GuiControllers_156: -2063306403
+      Minifantasy_GuiControllers_157: 1246824349
+      Minifantasy_GuiControllers_158: 1211780680
+      Minifantasy_GuiControllers_159: 1979801407
+      Minifantasy_GuiControllers_16: 134570260
+      Minifantasy_GuiControllers_160: 1686578145
+      Minifantasy_GuiControllers_161: 1268283379
+      Minifantasy_GuiControllers_162: -276742708
+      Minifantasy_GuiControllers_163: -1596216725
+      Minifantasy_GuiControllers_164: -1193215890
+      Minifantasy_GuiControllers_165: -234712704
+      Minifantasy_GuiControllers_166: 1046914987
+      Minifantasy_GuiControllers_167: -1014555470
+      Minifantasy_GuiControllers_168: -1110965381
+      Minifantasy_GuiControllers_169: 898966484
+      Minifantasy_GuiControllers_17: 911097669
+      Minifantasy_GuiControllers_170: 832415386
+      Minifantasy_GuiControllers_171: -1670149868
+      Minifantasy_GuiControllers_172: -725731961
+      Minifantasy_GuiControllers_173: -398543312
+      Minifantasy_GuiControllers_174: 2101403781
+      Minifantasy_GuiControllers_18: 677721866
+      Minifantasy_GuiControllers_19: 114286020
+      Minifantasy_GuiControllers_2: -1350887298
+      Minifantasy_GuiControllers_20: -1453595894
+      Minifantasy_GuiControllers_21: -1049716765
+      Minifantasy_GuiControllers_22: 560514179
+      Minifantasy_GuiControllers_23: -1760448380
+      Minifantasy_GuiControllers_24: 1297581568
+      Minifantasy_GuiControllers_25: -338314369
+      Minifantasy_GuiControllers_26: -1677071889
+      Minifantasy_GuiControllers_27: 721237502
+      Minifantasy_GuiControllers_28: -1207272448
+      Minifantasy_GuiControllers_29: 146099602
+      Minifantasy_GuiControllers_3: 1447385224
+      Minifantasy_GuiControllers_30: -747334642
+      Minifantasy_GuiControllers_31: -283444420
+      Minifantasy_GuiControllers_32: -1953390902
+      Minifantasy_GuiControllers_33: 1866761748
+      Minifantasy_GuiControllers_34: -1648855468
+      Minifantasy_GuiControllers_35: 1553521173
+      Minifantasy_GuiControllers_36: -370273515
+      Minifantasy_GuiControllers_37: -1373933293
+      Minifantasy_GuiControllers_38: 1343601942
+      Minifantasy_GuiControllers_39: 563602475
+      Minifantasy_GuiControllers_4: 1265256347
+      Minifantasy_GuiControllers_40: -1728273484
+      Minifantasy_GuiControllers_41: -2133450397
+      Minifantasy_GuiControllers_42: 190306012
+      Minifantasy_GuiControllers_43: 2063692427
+      Minifantasy_GuiControllers_44: -1602511102
+      Minifantasy_GuiControllers_45: -826813489
+      Minifantasy_GuiControllers_46: -983351013
+      Minifantasy_GuiControllers_47: -530666690
+      Minifantasy_GuiControllers_48: 1115130027
+      Minifantasy_GuiControllers_49: 1940797775
+      Minifantasy_GuiControllers_5: 2043464221
+      Minifantasy_GuiControllers_50: -956594347
+      Minifantasy_GuiControllers_51: 466006249
+      Minifantasy_GuiControllers_52: -1124905012
+      Minifantasy_GuiControllers_53: -1913224696
+      Minifantasy_GuiControllers_54: 1165006616
+      Minifantasy_GuiControllers_55: 1193828554
+      Minifantasy_GuiControllers_56: -1596804122
+      Minifantasy_GuiControllers_57: 680357386
+      Minifantasy_GuiControllers_58: -1410133417
+      Minifantasy_GuiControllers_59: 1208315875
+      Minifantasy_GuiControllers_6: -2066336216
+      Minifantasy_GuiControllers_60: 681014309
+      Minifantasy_GuiControllers_61: 1829917877
+      Minifantasy_GuiControllers_62: 720359057
+      Minifantasy_GuiControllers_63: -189393650
+      Minifantasy_GuiControllers_64: -23189862
+      Minifantasy_GuiControllers_65: 1574544775
+      Minifantasy_GuiControllers_66: -10125183
+      Minifantasy_GuiControllers_67: -868141885
+      Minifantasy_GuiControllers_68: 1436504083
+      Minifantasy_GuiControllers_69: -940324247
+      Minifantasy_GuiControllers_7: -788303656
+      Minifantasy_GuiControllers_70: 1176262002
+      Minifantasy_GuiControllers_71: 28170328
+      Minifantasy_GuiControllers_72: 1143447518
+      Minifantasy_GuiControllers_73: -1294301404
+      Minifantasy_GuiControllers_74: 779370704
+      Minifantasy_GuiControllers_75: -303384232
+      Minifantasy_GuiControllers_76: 1277464993
+      Minifantasy_GuiControllers_77: 391160171
+      Minifantasy_GuiControllers_78: -314356961
+      Minifantasy_GuiControllers_79: -1043962651
+      Minifantasy_GuiControllers_8: 1894163424
+      Minifantasy_GuiControllers_80: -1794275435
+      Minifantasy_GuiControllers_81: -1266254830
+      Minifantasy_GuiControllers_82: -164961555
+      Minifantasy_GuiControllers_83: 1472931053
+      Minifantasy_GuiControllers_84: 1054284556
+      Minifantasy_GuiControllers_85: -1497281050
+      Minifantasy_GuiControllers_86: -1868790722
+      Minifantasy_GuiControllers_87: -514706577
+      Minifantasy_GuiControllers_88: -1109668176
+      Minifantasy_GuiControllers_89: -473873139
+      Minifantasy_GuiControllers_9: -1334646629
+      Minifantasy_GuiControllers_90: 568654554
+      Minifantasy_GuiControllers_91: 1426557513
+      Minifantasy_GuiControllers_92: -1811427917
+      Minifantasy_GuiControllers_93: -183900627
+      Minifantasy_GuiControllers_94: 1713236131
+      Minifantasy_GuiControllers_95: 584678133
+      Minifantasy_GuiControllers_96: -1885116864
+      Minifantasy_GuiControllers_97: -1361052382
+      Minifantasy_GuiControllers_98: -584328155
+      Minifantasy_GuiControllers_99: -227519854
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -22,7 +22,8 @@ public class PlayerBark : MonoBehaviour
     private float playerFleeTargetTriggerDistance;
     private float playerFleeTargetStopDistance;
 
-    private bool growled;
+    private bool barkUnlocked = true;
+    private bool barkActive;
 
     private void Awake() {
         Instance = this;
@@ -42,8 +43,10 @@ public class PlayerBark : MonoBehaviour
     }
 
     private void GameInput_OnBarkPerformed(object sender, EventArgs e) {
-        if (barkCoolDownTimer < 0) {
-            Bark();
+        if(barkUnlocked & barkActive) {
+            if (barkCoolDownTimer < 0) {
+                Bark();
+            }
         }
     }
 
@@ -51,7 +54,6 @@ public class PlayerBark : MonoBehaviour
         barkCoolDownTimer = barkCoolDownTime;
         OnPlayerBark?.Invoke(this, EventArgs.Empty);
         StartCoroutine(ModifyPlayerFleeTargetParametersForLimitedTime(barkEffetDuration, barkFleeTargetTriggerDistance, barkFleeTargetStopDistance, barkFleeTargetSpeedMultiplier));
-        growled = false;
     }
 
     private void ResetFleeTargetStopDistance() {
@@ -86,5 +88,13 @@ public class PlayerBark : MonoBehaviour
 
     public float GetBarkCoolDownTimerNormalized() {
         return (1- (barkCoolDownTimer/ barkCoolDownTime));
+    }
+
+    public void SetBarkUnlocked(bool unlocked) {
+        barkUnlocked = unlocked;
+    }
+
+    public void SetBarkActive(bool active) {
+        barkActive = active;
     }
 }

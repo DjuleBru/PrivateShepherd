@@ -1,4 +1,5 @@
 using Pathfinding;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,7 @@ public class AIMovement : MonoBehaviour
     protected int theGScoreToStopAt = 6000;
 
     protected float nextWaypointDistance = 1.5f;
-    protected float roamPointRadius = 4f;
+    [SerializeField] protected float roamPointRadius = 4f;
 
     protected int currentWaypoint = 0;
     protected bool reachedEndOfPath;
@@ -34,12 +35,19 @@ public class AIMovement : MonoBehaviour
     protected Vector2 moveDir2DNormalized;
     protected float moveSpeed;
 
+    protected bool cutSceneInProgress;
+
     protected virtual void Start() {
         seeker = GetComponent<Seeker>();
         //Initialise path
         CalculatePath(transform.position);
 
-        pathCalculationTimer = pathCalculationRate;
+        pathCalculationTimer = 0;
+
+        if (LevelManager.Instance != null) {
+            LevelManager.Instance.OnCutSceneEnter += LevelManager_OnCutSceneEnter;
+            LevelManager.Instance.OnCutSceneExit += LevelManager_OnCutSceneExit;
+        }
     }
 
     protected virtual void LateUpdate() {
@@ -133,5 +141,11 @@ public class AIMovement : MonoBehaviour
         return reachedEndOfPath;
     }
 
-    
+    private void LevelManager_OnCutSceneExit(object sender, EventArgs e) {
+        cutSceneInProgress = false;
+    }
+
+    private void LevelManager_OnCutSceneEnter(object sender, EventArgs e) {
+        cutSceneInProgress = true;
+    }
 }

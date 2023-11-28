@@ -49,4 +49,16 @@ public class SheepObjectPool : MonoBehaviour
         sheepsAliveAndUnpennedInObjectPool.Remove(sheep);
         OnSheepPenned?.Invoke(this, EventArgs.Empty);
     }
+
+    public void DeactivateSheepTargetIndicators() {
+        foreach(Sheep sheep in sheepsAliveInObjectPool) {
+            sheep.gameObject.GetComponent<OutOfScreenSheepIndicator>().DeActivateIndicator();
+        }
+    }
+
+    public void ActivateSheepTargetIndicators() {
+        foreach (Sheep sheep in sheepsAliveInObjectPool) {
+            sheep.gameObject.GetComponent<OutOfScreenSheepIndicator>().ActivateIndicator();
+        }
+    }
 }

@@ -28,6 +28,9 @@ public class PlayerRun : MonoBehaviour
     private bool tired;
     private bool extremelyTired;
 
+    private bool runUnlocked = true;
+    private bool runActive;
+
     private void Awake() {
         Instance = this;
     }
@@ -81,8 +84,10 @@ public class PlayerRun : MonoBehaviour
     }
 
     private void GameInput_OnRunPerformed(object sender, System.EventArgs e) {
-        if (!tired & !extremelyTired)
-            Run();
+        if (runActive & runUnlocked) {
+            if (!tired & !extremelyTired)
+                Run();
+        }
     }
 
     private void Run() {
@@ -108,6 +113,14 @@ public class PlayerRun : MonoBehaviour
 
     public float GetRunProgression() {
         return (runTimer / runMaxTime);
+    }
+
+    public void SetRunUnlocked(bool unlocked) {
+        runUnlocked = unlocked;
+    }
+
+    public void SetRunActive(bool active) {
+        runActive = active;
     }
 
 }

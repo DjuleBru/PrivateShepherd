@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class SetAIAnimatorParameters : MonoBehaviour {
     [SerializeField] private AIMovement AIMovement;
 
     Vector2 moveDir;
+
+    private bool cutSceneInProgress;
+
 
     private void FixedUpdate() {
 
@@ -21,4 +25,7 @@ public class SetAIAnimatorParameters : MonoBehaviour {
             animator.SetFloat("lastMoveY", moveDir.y);
         }
     }
+
+
+
 }

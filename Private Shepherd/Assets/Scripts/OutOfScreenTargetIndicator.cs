@@ -21,12 +21,11 @@ public class OutOfScreenTargetIndicator : MonoBehaviour
 
     protected void Awake() {
         mainCamera = Camera.main;
+        outOfScreenPointer = Instantiate(outOfScreenGameObject, transform.position, transform.rotation);
     }
 
     protected void Start() {
-        outOfScreenPointer = Instantiate(outOfScreenGameObject, transform.position, transform.rotation);
         outOfScreenPointer.SetActive(false);
-        pointerExternalActivator = true;
     }
 
 
@@ -126,10 +125,12 @@ public class OutOfScreenTargetIndicator : MonoBehaviour
 
     public void DeActivateIndicator() {
         pointerExternalActivator = false;
+        outOfScreenPointer.SetActive(false);
     }
 
     public void ActivateIndicator() {
         pointerExternalActivator = true;
+        outOfScreenPointer.SetActive(true);
     }
 
     public bool GetInternalPointerIsActive() {

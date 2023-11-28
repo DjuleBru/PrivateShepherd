@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
+    private List<LevelCutScene> cutScenes = new List<LevelCutScene>();
+
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
     [SerializeField] private SheepObjectPool whiteSheepObjectPool;
     [SerializeField] private SheepObjectPool blackSheepObjectPool;
@@ -18,6 +20,8 @@ public class LevelManager : MonoBehaviour
 
     private Sheep[] initialSheepsInLevel;
     [SerializeField] private LevelSO levelSO;
+
+    private bool cutsceneInProgress;
 
     private int platScoreTreshold;
     private int silverScoreTreshold;
@@ -66,9 +70,12 @@ public class LevelManager : MonoBehaviour
     private bool silverBone;
     private bool goldBone;
     private bool platBone;
+
     public event EventHandler<OnScoreUpdateEventArgs> OnScoreUpdate;
     public event EventHandler<OnLevelSucceededEventArgs> OnLevelSucceeded;
     public event EventHandler OnLevelFailed;
+    public event EventHandler OnCutSceneEnter;
+    public event EventHandler OnCutSceneExit;
 
     public class OnScoreUpdateEventArgs : EventArgs {
         public int realTimeSheepNumber;
@@ -118,6 +125,14 @@ public class LevelManager : MonoBehaviour
 
         playerBones = 0;
         playerScore = 0;
+
+        // Initialize cutScenes
+        LevelCutScene[] cutScenesArray = GetComponents<LevelCutScene>();
+        foreach (LevelCutScene scene in cutScenesArray) {
+            cutScenes.Add(scene);
+            scene.OnCutSceneEnter += Scene_OnCutSceneEnter;
+            scene.OnCutSceneExit += Scene_OnCutSceneExit;
+        }
     }
 
     private void Start() {
@@ -125,6 +140,11 @@ public class LevelManager : MonoBehaviour
     }
 
     private void Update() {
+
+        if(cutsceneInProgress) {
+            return;
+        }
+
         levelTimer -= Time.deltaTime;
 
         if (levelTimer < 0 & !levelComplete) {
@@ -374,5 +394,13 @@ public class LevelManager : MonoBehaviour
         if (Player.Instance.gameObject.TryGetComponent<PlayerRun>(out PlayerRun playerRun)) {
             playerRun.enabled = false;
         }
+    }
+
+    private void Scene_OnCutSceneExit(object sender, EventArgs e) {
+        OnCutSceneExit?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void Scene_OnCutSceneEnter(object sender, EventArgs e) {
+        OnCutSceneEnter?.Invoke(this, EventArgs.Empty);
     }
 }

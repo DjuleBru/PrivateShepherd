@@ -30,6 +30,9 @@ public class PlayerGrowl : MonoBehaviour
     private float growlTimer;
     private bool growling;
 
+    private bool growlUnlocked = true;
+    private bool growlActive;
+
     private void Awake() {
         Instance = this;
         growlTimer = growlTime;
@@ -63,8 +66,10 @@ public class PlayerGrowl : MonoBehaviour
     }
 
     private void GameInput_OnGrowlPerformed(object sender, EventArgs e) {
-        if (growlCoolDownTimer < 0) {
-            StartGrowl();
+        if(growlActive & growlUnlocked) {
+            if (growlCoolDownTimer < 0) {
+                StartGrowl();
+            }
         }
     }
 
@@ -111,6 +116,14 @@ public class PlayerGrowl : MonoBehaviour
 
     public bool GetGrowling() {
         return growling;
+    }
+
+    public void SetGrowlUnlocked(bool unlocked) {
+        growlUnlocked = unlocked;
+    }
+
+    public void SetGrowlActive(bool active) {
+        growlActive = active;
     }
 
 }

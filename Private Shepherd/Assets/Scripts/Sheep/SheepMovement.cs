@@ -81,6 +81,10 @@ public class SheepMovement : AIMovement
             return;
         }
 
+        if(cutSceneInProgress) {
+            state = State.Roam;
+        }
+
         closestFleeTarget = FindClosestFleeTarget();
         UpdateClosestFleeTargetParameters();
 
@@ -342,6 +346,5 @@ public class SheepMovement : AIMovement
         }
         this.injured = injured;
     }
-
 
 }
