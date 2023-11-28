@@ -18,8 +18,6 @@ public class LevelCutScene : MonoBehaviour
 
     protected bool cutSceneInProgress;
 
-
-
     private float skipTimer;
     private float skipTime = 1f;
     private bool skipping;
@@ -29,7 +27,7 @@ public class LevelCutScene : MonoBehaviour
         GameInput.Instance.OnBarkReleased += GameInput_OnBarkReleased;
     }
 
-    protected void Update() {
+    protected virtual void Update() {
         if (skipping) {
             skipTimer += Time.deltaTime;
             if (skipTimer > skipTime) {

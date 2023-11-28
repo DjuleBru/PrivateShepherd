@@ -116,6 +116,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 607cd1e69013c6547a22dfcc500ced5a,
         type: 2}
+    - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepLayerMaskInt
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6276905617284876724, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}

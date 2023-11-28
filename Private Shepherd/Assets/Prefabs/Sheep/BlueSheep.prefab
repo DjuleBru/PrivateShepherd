@@ -7,6 +7,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2332378577877569346, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425214850807166123, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873034047215469521, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073810037093431552, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753453798650029805, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.253
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753453798650029805, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774937370977695342, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774937370977695342, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4100688584939994465, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: m_RootOrder
@@ -67,22 +107,84 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSheep
       objectReference: {fileID: 0}
+    - target: {fileID: 4100688584939994466, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100688585696642629, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4100688585976792736, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: f73366cbaeff97741b69e01cda5047a6,
         type: 2}
+    - target: {fileID: 4100688585976792738, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4100688585976792743, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8113785707663274265, guid: f081bd2de25acf74c9e68f09730ecd0b,
         type: 3}
+    - target: {fileID: 4788996654697443916, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058607247327990226, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: outOfScreenGameObject
+      value: 
+      objectReference: {fileID: 5390159028652996270, guid: eaf911a38fee8a2459d210d95a7f2f04,
+        type: 3}
+    - target: {fileID: 6058607247327990226, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504176684959114829, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6508793558901825876, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158730473006957391, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7267018658408402481, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: sheepType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d7840ed416cc4f40ab9381b083b0ee4,
+        type: 2}
+    - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepLayerMaskInt
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepLayerMask.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}

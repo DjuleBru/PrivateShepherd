@@ -9,6 +9,7 @@ public class SheepHerd : MonoBehaviour
 
     [SerializeField] float herdRadius = 5f;
     [SerializeField] LayerMask sheepLayerMask;
+    [SerializeField] private int sheepLayerMaskInt;
     [SerializeField] CircleCollider2D herdCollider;
     [SerializeField] TextMeshPro herdNumberText;
 
@@ -26,13 +27,13 @@ public class SheepHerd : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep)) {
+        if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep) & collider.gameObject.layer == sheepLayerMaskInt) {
             herd.Add((Sheep)sheep);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collider) {
-        if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep)) {
+        if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep) & collider.gameObject.layer == sheepLayerMaskInt) {
             herd.Remove((Sheep)sheep);
         }
     }

@@ -10,11 +10,12 @@ public class LevelIntroCutScene : LevelCutScene {
     [SerializeField] Transform cameraFollowTransform;
     [SerializeField] Transform[] cameraPositions;
     private int cameraPositionInt;
-    [SerializeField] LevelIntroNPC NPC;
 
     [SerializeField] float NPCZoom;
-    [SerializeField] float CameraIntroDezoom;
+    [SerializeField] float initialZoom;
     private bool NPCIsTalking;
+    private bool cameraLocked;
+    private Transform cameraPosition;
 
     float initialOrthoSize;
 
@@ -30,8 +31,15 @@ public class LevelIntroCutScene : LevelCutScene {
         initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
     }
 
+    protected override void Update() {
+        base.Update();
+        if (cameraLocked) {
+            cameraFollowTransform.position = cameraPosition.position;
+        }
+    }
+
     private IEnumerator IntroCutScene() {
-        NPC.SetInputActive(false);
+        LevelIntroNPC.Instance.SetInputActive(false);
         yield return new WaitForSeconds(.5f);
 
         // Initialize camera transform and dezoom
@@ -41,7 +49,7 @@ public class LevelIntroCutScene : LevelCutScene {
         ChangeCinemachineCode.Instance.SetCameraPriority(20);
 
         // Smooth camera movement towards NPC
-        Vector3 destination = NPC.transform.position;
+        Vector3 destination = LevelIntroNPC.Instance.transform.position;
         float treshold = .2f;
         float cameraSpeed = .2f;
         Vector3 directionNormalized = (destination - cameraFollowTransform.position).normalized;
@@ -53,12 +61,12 @@ public class LevelIntroCutScene : LevelCutScene {
         cameraFollowTransform.position = destination;
 
         // Camera zoom
-        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(NPCZoom);
+        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(initialZoom);
         yield return new WaitForSeconds(1f);
 
         // NPC Starts talking
         NPCIsTalking = true;
-        NPC.StartTalking();
+        LevelIntroNPC.Instance.StartTalking();
         while (NPCIsTalking) yield return null;
 
         // Back camera to player
@@ -70,20 +78,26 @@ public class LevelIntroCutScene : LevelCutScene {
         yield return null;
     }
 
-    public void MoveCameraToNextPosition(float cameraSpeed) {
-        NPC.SetInputActive(false);
+    public void MoveCameraToNextPosition(float cameraSpeed, float cameraZoom) {
+        LevelIntroNPC.Instance.SetInputActive(false);
         Transform targetPosition = cameraPositions[cameraPositionInt];
-        StartCoroutine(MoveCameraToPositionCoroutine(targetPosition, cameraSpeed));
+        StartCoroutine(MoveCameraToPositionCoroutine(targetPosition, cameraSpeed, cameraZoom));
         cameraPositionInt++;
     }
 
-    private IEnumerator MoveCameraToPositionCoroutine(Transform targetPosition, float cameraSpeed) {
+    public void LockCameraToNextPosition(float cameraSpeed, float cameraZoom) {
+        LevelIntroNPC.Instance.SetInputActive(false);
+        Transform targetPosition = cameraPositions[cameraPositionInt];
+        StartCoroutine(LockCameraToPositionCoroutine(targetPosition, cameraSpeed, cameraZoom));
+        cameraPositionInt++;
+    }
+
+    private IEnumerator MoveCameraToPositionCoroutine(Transform targetPosition, float cameraSpeed, float cameraZoom) {
         float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
 
-        // Initialize camera transform and dezoom
+        // Initialize camera transform and zoom
         ChangeCinemachineCode.Instance.ChangeCinemachineTarget(cameraFollowTransform);
-        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(CameraIntroDezoom);
-        yield return new WaitForSeconds(.5f);
+        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(cameraZoom);
 
         // Smooth camera movement towards target
         Vector3 destination = targetPosition.position;
@@ -96,12 +110,37 @@ public class LevelIntroCutScene : LevelCutScene {
         }
         cameraFollowTransform.position = destination;
 
-        NPC.SetInputActive(true);
+        LevelIntroNPC.Instance.SetInputActive(true);
     }
+    private IEnumerator LockCameraToPositionCoroutine(Transform targetPosition, float cameraSpeed, float cameraZoom) {
+        float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
+
+        // Initialize camera transform and zoom
+        ChangeCinemachineCode.Instance.ChangeCinemachineTarget(cameraFollowTransform);
+        ChangeCinemachineCode.Instance.SmoothCinemachineZoom(cameraZoom);
+
+        // Smooth camera movement towards target
+        Vector3 destination = targetPosition.position;
+        float treshold = .2f;
+        Vector3 directionNormalized = (destination - cameraFollowTransform.position).normalized;
+
+        while ((cameraFollowTransform.position - destination).magnitude > treshold) {
+            destination = targetPosition.position;
+            directionNormalized = (destination - cameraFollowTransform.position).normalized;
+            cameraFollowTransform.position += directionNormalized * cameraSpeed;
+            yield return null;
+        }
+        cameraFollowTransform.position = destination;
+        cameraLocked = true;
+        cameraPosition = targetPosition;
+
+        LevelIntroNPC.Instance.SetInputActive(true);
+    }
+
 
     public void SetCameraToNPC() { 
         // Initialize camera transform and dezoom
-        cameraFollowTransform.transform.position = NPC.transform.position;
+        cameraFollowTransform.transform.position = LevelIntroNPC.Instance.transform.position;
         ChangeCinemachineCode.Instance.ChangeCinemachineOrthoSize(NPCZoom);
     }
 
@@ -111,6 +150,14 @@ public class LevelIntroCutScene : LevelCutScene {
 
     public override void SkipCutScene() {
         base.SkipCutScene();
-        NPC.StopTalking();
+        LevelIntroNPC.Instance.StopTalking();
+    }
+
+    public bool GetCameraLocked() {
+        return cameraLocked;
+    }
+
+    public void SetCameraLocked(bool locked) {
+        cameraLocked = locked;
     }
 }

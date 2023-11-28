@@ -15,17 +15,16 @@ public class GameInput : MonoBehaviour
     public event EventHandler OnRunPerformed;
     public event EventHandler OnRunReleased;
     public event EventHandler OnExitPerformed;
+    public event EventHandler OnPausePerformed;
 
     public event EventHandler OnInputTypeController;
     public event EventHandler OnInputTypeKeyBoard;
     public static GameInput Instance { get; private set; }
     private PlayerInputActions playerInputActions;
 
-    private PlayerInput playerInput;
 
     private void Awake() {
         Instance = this;
-        playerInput = GetComponent<PlayerInput>();
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
 
@@ -35,34 +34,16 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Bark.canceled += Bark_canceled;
         playerInputActions.Player.Growl.canceled += Growl_canceled;
         playerInputActions.Player.Run.canceled += Run_canceled;
-
-        playerInput.onControlsChanged += PlayerInput_onControlsChanged;
-        playerInput.onActionTriggered += PlayerInput_onActionTriggered;
+        playerInputActions.Player.Pause.performed += Pause_performed;
+        playerInputActions.Player.Exit.performed += Exit_performed;
     }
 
-    private void PlayerInput_onActionTriggered(InputAction.CallbackContext obj) {
-        Debug.Log(obj);
+    private void Exit_performed(InputAction.CallbackContext obj) {
+        OnExitPerformed?.Invoke(this, EventArgs.Empty);
     }
 
-    private void PlayerInput_onControlsChanged(PlayerInput obj) {
-        Debug.Log("Change detected");
-        if (playerInput.currentControlScheme == "GamePad")
-            Debug.Log("Gamepad");
-        else if (playerInput.currentControlScheme == "KeyBoard")
-            Debug.Log("Keyboard");
-    }
-
-    private void Update() {
-        //Debug.Log(playerInput.currentControlScheme);
-    }
-
-    public void OnDeviceChanged(PlayerInput playerInput) {
-        Debug.Log("Change detected");
-        if (playerInput.currentControlScheme == "GamePad")
-            Debug.Log("Gamepad");
-        else if (playerInput.currentControlScheme == "KeyBoard")
-            Debug.Log("Keyboard");
-
+    private void Pause_performed(InputAction.CallbackContext obj) {
+        OnPausePerformed?.Invoke(this, EventArgs.Empty);
     }
 
     private void Run_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {

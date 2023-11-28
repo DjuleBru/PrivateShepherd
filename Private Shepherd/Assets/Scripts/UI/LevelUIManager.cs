@@ -12,6 +12,8 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField] GameObject levelFailedUI;
     [SerializeField] GameObject levelPlayUI;
     [SerializeField] GameObject levelSuccededUI;
+    [SerializeField] GameObject pauseMenuUI;
+    private bool gamePaused;
 
     [SerializeField] LevelManager levelManager;
 
@@ -112,12 +114,19 @@ public class LevelUIManager : MonoBehaviour
 
         // Disable all level success gameObjects
         DisableLevelSuccessGO();
+        pauseMenuUI.SetActive(false);
 
     }
 
     private void Start() {
         levelManager.OnLevelSucceeded += LevelManager_OnLevelSucceeded;
         levelManager.OnLevelFailed += LevelManager_OnLevelFailed;
+
+        GameInput.Instance.OnPausePerformed += GameInput_OnPausePerformed;
+    }
+
+    private void GameInput_OnPausePerformed(object sender, EventArgs e) {
+        PauseOrUnPause();
     }
 
     private void Update() {
@@ -517,5 +526,15 @@ public class LevelUIManager : MonoBehaviour
         return displayIncrement;
     }
 
-
+    public void PauseOrUnPause() {
+        if(gamePaused) {
+            Time.timeScale = 1.0f;
+            pauseMenuUI.SetActive(false);
+            gamePaused = false;
+        } else {
+            Time.timeScale = 0f;
+            pauseMenuUI.SetActive(true);
+            gamePaused = true;
+        }
+    }
 }

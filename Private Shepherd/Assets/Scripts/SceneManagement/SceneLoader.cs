@@ -19,22 +19,27 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadScene(string sceneName) {
+        Time.timeScale = 1f;
         StartCoroutine(LoadSceneByStringCoroutine(sceneName));
     }
 
     public void LoadCurrentScene() {
+        Time.timeScale = 1f;
         StartCoroutine(LoadSceneByIndexCoroutine(SceneManager.GetActiveScene().buildIndex));
     }
 
     public void LoadMainMenu() {
+        Time.timeScale = 1f;
         StartCoroutine(LoadSceneByStringCoroutine("MainMenu"));
     }
 
     public void LoadWorldMap() {
+        Time.timeScale = 1f;
         StartCoroutine(LoadSceneByStringCoroutine("WorldMap"));
     }
 
     public IEnumerator LoadSceneByStringCoroutine(string sceneName) {
+        Time.timeScale = 1f;
 
         yield return new WaitForSeconds(loadSceneDelay);
 
@@ -48,6 +53,7 @@ public class SceneLoader : MonoBehaviour
     }
 
     public IEnumerator LoadSceneByIndexCoroutine(int sceneIndex) {
+        Time.timeScale = 1f;
 
         yield return new WaitForSeconds(loadSceneDelay);
 
@@ -61,6 +67,7 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void QuitGame() {
+        Time.timeScale = 1f;
         Application.Quit();
     }
 }
