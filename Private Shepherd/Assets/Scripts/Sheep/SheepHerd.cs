@@ -57,19 +57,6 @@ public class SheepHerd : MonoBehaviour
     public Sheep GetSheepInHerdFleeing() {
         Sheep sheepParent = GetComponentInParent<Sheep>();
 
-        if(sheepParent.GetSheepType() == SheepType.goat) {
-            // This sheep is a goat
-            return null;
-        }
-
-        // Check if there is a goat in the herd
-        foreach (Sheep sheep in herd) {
-            if (sheep.GetComponent<Sheep>().GetSheepType() == SheepType.goat) {
-                // There is a goat in the herd
-                return sheep;
-            }
-        }
-
         foreach (Sheep sheep in herd) {
             if (sheep.GetComponent<SheepMovement>().GetState() == SheepMovement.State.Flee) {
                 return sheep;

@@ -14,14 +14,21 @@ public class SheepMovement : AIMovement
     [SerializeField] private float ramDistance;
     [SerializeField] private float hitDistance;
     [SerializeField] private float ramCooldown;
+    [SerializeField] private float ramForce;
     private bool ramming;
+    private bool ramWarning;
     private float ramTimer;
+    public event EventHandler OnGoatRamWarning;
+    public event EventHandler OnGoatRam;
+    public event EventHandler OnGoatRamEnd;
 
     private Transform closestSheepTransform;
     private Transform targetScoreAggregatePoint; 
 
     public event EventHandler OnSheepFlee;
     public event EventHandler OnSheepInjured;
+
+    private bool canMove;
 
     #region FLEE TARGET PARAMETERS
     private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
@@ -81,11 +88,12 @@ public class SheepMovement : AIMovement
 
         sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
+        canMove = true;
     }
 
     private void Update() {
 
-        if (path == null) {
+        if (path == null | !canMove) {
             return;
         }
 
@@ -102,11 +110,7 @@ public class SheepMovement : AIMovement
         }
 
         UpdateClosestFleeTargetParameters();
-
-        if(Vector3.Distance(Player.Instance.transform.position, transform.position) < ramDistance & ramTimer < 0) {
-            ramming = true;
-            state = State.Ram;
-        }
+        CheckRamConditions();
 
         closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
         if (closestSheepTransform == null) {
@@ -243,10 +247,16 @@ public class SheepMovement : AIMovement
 
                 break;
             case State.Ram:
-                if(Vector3.Distance(Player.Instance.transform.position, transform.position) < hitDistance) {
+                if(Vector3.Distance(Player.Instance.transform.position, transform.position) > hitDistance) {
+                    moveSpeed = aggregateSpeed * 2;
                     CalculatePath(Player.Instance.transform.position);
                 } else {
+                    Vector3 forceDirection = (transform.position - Player.Instance.transform.position).normalized;
+                    Vector3 force = new Vector3(forceDirection.x, forceDirection.y, 0) * ramForce;
+                    OnGoatRamEnd?.Invoke(this, EventArgs.Empty);
+                    Player.Instance.GetComponent<PlayerMovement>().Rammed(force);
                     ramming = false;
+                    ramTimer = ramCooldown;
                     state = State.Roam;
                 }
                 break;
@@ -354,6 +364,25 @@ public class SheepMovement : AIMovement
         targetScoreAggregatePoint = scoreZoneAggregatePointArray[UnityEngine.Random.Range(0, scoreZoneAggregatePointArray.Length)];
     }
 
+    private void CheckRamConditions() {
+        if(sheep.GetSheepType() == SheepType.goat) {
+            ramTimer -= Time.deltaTime;
+            if (Vector3.Distance(Player.Instance.transform.position, transform.position) < ramDistance & ramTimer < 0 & !ramWarning) {
+                ramWarning = true;
+                OnGoatRamWarning?.Invoke(this, EventArgs.Empty);
+
+                Invoke("Ram",1f);
+            }
+        }
+    }
+
+    private void Ram() {
+        OnGoatRam?.Invoke(this, EventArgs.Empty);
+        ramming = true;
+        state = State.Ram;
+        ramWarning = false;
+    }
+
     public void AddFleeTarget(FleeTarget fleeTarget) {
         fleeTargetList.Add(fleeTarget);
     }
@@ -375,6 +404,13 @@ public class SheepMovement : AIMovement
 
     public void SetState(State state) {
         this.state = state;
+    }
+
+
+
+    public void SetCanMove(bool canMove) {
+        this.canMove = canMove;
+        velocity = Vector3.zero;
     }
 
     public void SetInjured(bool injured) {

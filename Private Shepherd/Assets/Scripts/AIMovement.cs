@@ -22,6 +22,7 @@ public class AIMovement : MonoBehaviour
     protected int theGScoreToStopAt = 6000;
 
     protected float nextWaypointDistance = 1.5f;
+    [SerializeField] float nextWaypointDistancePersonalized;
     [SerializeField] protected float roamPointRadius = 4f;
 
     protected int currentWaypoint = 0;
@@ -38,6 +39,7 @@ public class AIMovement : MonoBehaviour
     protected bool cutSceneInProgress;
 
     protected virtual void Start() {
+
         seeker = GetComponent<Seeker>();
         //Initialise path
         CalculatePath(transform.position);
@@ -51,6 +53,10 @@ public class AIMovement : MonoBehaviour
     }
 
     protected virtual void LateUpdate() {
+
+        if (nextWaypointDistancePersonalized != 0) {
+            nextWaypointDistance = nextWaypointDistancePersonalized;
+        }
         pathCalculationTimer -= Time.deltaTime;
         Move(velocity);
     }

@@ -112,6 +112,21 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = Vector3.zero;
     }
 
+    public void Rammed(Vector2 force) {
+        canMove = false;
+        rb.velocity = Vector3.zero;
+        Debug.Log(force);
+        rb.AddForce(force);
+
+        StartCoroutine(RammedCoroutine());
+    }
+
+    private IEnumerator RammedCoroutine() {
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+        yield return null;
+    }
+
     public void SetMoveSpeed(float moveSpeed) {
         this.moveSpeed = moveSpeed;
     }
