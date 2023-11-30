@@ -726,7 +726,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 12
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_Sprite: {fileID: -537629932, guid: 6d4930cdbf575e043b080b3e163cab2d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -753,6 +753,7 @@ GameObject:
   - component: {fileID: 1822888343159591805}
   - component: {fileID: 3353521763941091231}
   - component: {fileID: 1256264655113467317}
+  - component: {fileID: 818489430121879742}
   m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
@@ -819,7 +820,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -470368592, guid: 5ebdbd3fc3c1e3c47aec3df1b29b6546, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -902,6 +903,18 @@ MonoBehaviour:
   growlAOE: {fileID: 5044440172657509248}
   growlWolfAOE: {fileID: 5546857458767385448}
   growlTimeUIImage: {fileID: 1975715387}
+--- !u!114 &818489430121879742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661787543505785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee7c18511183e54ca69af05ec681b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4046661788065379812
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +934,7 @@ GameObject:
   - component: {fileID: 1265921825893619867}
   - component: {fileID: 4316471942775922365}
   - component: {fileID: 8779848876279031129}
+  - component: {fileID: 1185748216859205177}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -981,8 +995,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.115301855, y: -0.051246125}
-  m_Size: {x: 1.4355873, y: 0.8975148}
+  m_Offset: {x: 0.029785631, y: -0.051246118}
+  m_Size: {x: 0.9225035, y: 0.89751875}
   m_Direction: 1
 --- !u!82 &359076444
 AudioSource:
@@ -1187,6 +1201,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880135587a8e5dd4c8ffe0e476aa6912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1185748216859205177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046661788065379812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77294f7bd817b024ca4e00a5df15efbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFleeTarget: {fileID: 7840373000721660730}
+  sneakSlowMultiplier: 0.5
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1286,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1145709397
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -1625731704, guid: 9311b582499b8da459f96cb3c7660062, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1342,7 +1370,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 12
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_Sprite: {fileID: 1095781360, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
   m_Color: {r: 0.41509432, g: 0, b: 0, a: 0.39215687}
@@ -1856,7 +1884,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 12
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_Sprite: {fileID: 1095781360, guid: 566b1695ad03f154f8f72177f0d26ab1, type: 3}
   m_Color: {r: 0.41568628, g: 0, b: 0, a: 0.39215687}
@@ -1940,7 +1968,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 12
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_Sprite: {fileID: -537629932, guid: 6d4930cdbf575e043b080b3e163cab2d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.3882353}

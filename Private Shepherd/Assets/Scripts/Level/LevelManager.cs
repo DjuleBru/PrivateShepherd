@@ -141,6 +141,10 @@ public class LevelManager : MonoBehaviour
 
     private void Update() {
 
+        if(Input.GetKeyDown(KeyCode.T)) {
+            EndLevelSuccess();
+        }
+
         if(cutsceneInProgress) {
             return;
         }

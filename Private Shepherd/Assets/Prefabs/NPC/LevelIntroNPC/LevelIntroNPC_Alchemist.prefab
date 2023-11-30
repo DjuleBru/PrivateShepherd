@@ -79,5 +79,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 79d1edd7b970506469e386c1a5600515,
         type: 2}
+    - target: {fileID: 7996471572910130422, guid: 1210aa71e51136d4583b03ea3f4d6b22,
+        type: 3}
+      propertyPath: cameraSpeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996471572910130422, guid: 1210aa71e51136d4583b03ea3f4d6b22,
+        type: 3}
+      propertyPath: cameraSpeeds.Array.data[0]
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1210aa71e51136d4583b03ea3f4d6b22, type: 3}

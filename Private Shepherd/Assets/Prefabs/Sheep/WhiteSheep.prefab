@@ -60,7 +60,7 @@ PrefabInstance:
     - target: {fileID: 3774937370977695342, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4100688584939994465, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
@@ -199,6 +199,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8293569823048159755, guid: 4dfe3d1648bafa1458700051e827af56,
         type: 3}
+    - target: {fileID: 8287045277229722701, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287045277229722701, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -927333379
+      objectReference: {fileID: 0}
     - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: herdRadius
@@ -209,6 +219,11 @@ PrefabInstance:
       propertyPath: herdCollider
       value: 
       objectReference: {fileID: 2628754709287641266}
+    - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: isUniqueHerd
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: herdNumberText

@@ -178,6 +178,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
+      propertyPath: isUniqueHerd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099907884775240990, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
       propertyPath: sheepLayerMaskInt
       value: 8
       objectReference: {fileID: 0}

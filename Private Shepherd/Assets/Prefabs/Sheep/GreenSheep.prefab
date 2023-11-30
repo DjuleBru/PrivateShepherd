@@ -73,6 +73,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: 9dd87371e7498934482bb84f73db133a,
         type: 2}
+    - target: {fileID: 4100688585976792743, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8113785707663274265, guid: d0ad9b957fdb8df4fabea71705711df4,
+        type: 3}
     - target: {fileID: 6058607247327990226, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
         type: 3}
       propertyPath: outOfScreenGameObject
@@ -84,5 +90,11 @@ PrefabInstance:
       propertyPath: sheepType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7748370823872585026, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83,
+        type: 3}
+      propertyPath: sheepSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 798634ab73d76444f8e275bfe7f5417d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbcb8df3dbf3ef54d8b4e9c0741acb83, type: 3}

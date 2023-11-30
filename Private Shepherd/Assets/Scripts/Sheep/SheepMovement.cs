@@ -11,6 +11,12 @@ public class SheepMovement : AIMovement
     [SerializeField] private SheepSO sheepSO;
     [SerializeField] private SheepHerd sheepHerd;
 
+    [SerializeField] private float ramDistance;
+    [SerializeField] private float hitDistance;
+    [SerializeField] private float ramCooldown;
+    private bool ramming;
+    private float ramTimer;
+
     private Transform closestSheepTransform;
     private Transform targetScoreAggregatePoint; 
 
@@ -26,6 +32,7 @@ public class SheepMovement : AIMovement
     float closestFleeTargetStopDistanceModifier;
 
     private Sheep sheepInHerdFleeing;
+    private bool wolfDied;
     #endregion
 
     #region SHEEP PARAMETERS
@@ -53,6 +60,7 @@ public class SheepMovement : AIMovement
         Roam,
         ExtremeAggregate,
         InScoreZone,
+        Ram,
     }
 
     private State state;
@@ -85,8 +93,20 @@ public class SheepMovement : AIMovement
             state = State.Roam;
         }
 
-        closestFleeTarget = FindClosestFleeTarget();
+        if(!wolfDied) {
+            closestFleeTarget = FindClosestFleeTarget();
+        }
+
+        if(closestFleeTarget == null) {
+            return;
+        }
+
         UpdateClosestFleeTargetParameters();
+
+        if(Vector3.Distance(Player.Instance.transform.position, transform.position) < ramDistance & ramTimer < 0) {
+            ramming = true;
+            state = State.Ram;
+        }
 
         closestSheepTransform = sheep.GetClosestSheepWithEnoughSheepSurrounding();
         if (closestSheepTransform == null) {
@@ -222,6 +242,14 @@ public class SheepMovement : AIMovement
                 }
 
                 break;
+            case State.Ram:
+                if(Vector3.Distance(Player.Instance.transform.position, transform.position) < hitDistance) {
+                    CalculatePath(Player.Instance.transform.position);
+                } else {
+                    ramming = false;
+                    state = State.Roam;
+                }
+                break;
         }
     }
 
@@ -304,6 +332,9 @@ public class SheepMovement : AIMovement
     }
 
     private void UpdateClosestFleeTargetParameters() {
+        if(closestFleeTarget == null) {
+            return;
+        }
         closestFleeTargetDistance = Vector3.Distance(closestFleeTarget.transform.position, transform.position);
         closestFleeTargetTriggerFleeDistance = closestFleeTarget.GetFleeTargetTriggerDistance();
         closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance() + closestFleeTargetStopDistanceModifier;
@@ -325,6 +356,13 @@ public class SheepMovement : AIMovement
 
     public void AddFleeTarget(FleeTarget fleeTarget) {
         fleeTargetList.Add(fleeTarget);
+    }
+
+    public void RemoveFleeTarget(FleeTarget fleeTarget) {
+        wolfDied = true;
+        fleeTargetList.Remove(fleeTarget);
+        closestFleeTarget = FindClosestFleeTarget();
+        wolfDied = false;
     }
 
     public void UnSubscribeFromEvents() {

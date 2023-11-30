@@ -70,7 +70,7 @@ public class PlayerRun : MonoBehaviour
             if (!running) {
                 PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed * tiredRunSpeedMultiplier);
             }
-        } else if (runTimer <= 0) {
+        } else if (runTimer <= 0 & extremelyTired) {
             extremelyTired = false;
             PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed);
         }

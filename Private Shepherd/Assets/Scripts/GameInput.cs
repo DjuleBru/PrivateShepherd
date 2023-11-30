@@ -16,6 +16,8 @@ public class GameInput : MonoBehaviour
     public event EventHandler OnRunReleased;
     public event EventHandler OnExitPerformed;
     public event EventHandler OnPausePerformed;
+    public event EventHandler OnSneakPerformed;
+    public event EventHandler OnSneakReleased;
 
     public event EventHandler OnInputTypeController;
     public event EventHandler OnInputTypeKeyBoard;
@@ -36,6 +38,16 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Run.canceled += Run_canceled;
         playerInputActions.Player.Pause.performed += Pause_performed;
         playerInputActions.Player.Exit.performed += Exit_performed;
+        playerInputActions.Player.Sneak.performed += Sneak_performed;
+        playerInputActions.Player.Sneak.canceled += Sneak_canceled;
+    }
+
+    private void Sneak_canceled(InputAction.CallbackContext obj) {
+        OnSneakReleased?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void Sneak_performed(InputAction.CallbackContext obj) {
+        OnSneakPerformed?.Invoke(this, EventArgs.Empty);
     }
 
     private void Exit_performed(InputAction.CallbackContext obj) {

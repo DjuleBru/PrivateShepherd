@@ -12,12 +12,21 @@ public class WolfAI : AIMovement {
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
     [SerializeField] private Transform sheepHoldPoint;
 
+    [SerializeField] private float wolfPoisonedTime;
+
     public event EventHandler OnSheepBite;
     public event EventHandler OnSheepEaten;
     public event EventHandler OnWolfFlee;
     public event EventHandler OnWolfAgressive;
+    public event EventHandler OnWolfPoisoned;
+    public event EventHandler<OnWolfDiedEventArgs> OnWolfDied;
+
+    public class OnWolfDiedEventArgs : EventArgs {
+        public FleeTarget fleeTarget;
+    }
 
     private bool inverseDirection;
+    private bool dyingAnimation;
 
     private State state;
     public enum State {
@@ -33,6 +42,7 @@ public class WolfAI : AIMovement {
     [Header("TARGET SHEEP PARAMETERS")]
     [SerializeField] LayerMask sheepLayerMask;
     private List<Sheep> targetableSheepsinLevel;
+    private List<Sheep> redSheepsInLevel;
     private Sheep[] initialSheepsInLevel;
     private Sheep closestSheep;
 
@@ -122,8 +132,12 @@ public class WolfAI : AIMovement {
         initialSheepsInLevel = levelSheepObjectPool.GetSheepArray();
 
         targetableSheepsinLevel = new List<Sheep>();
+        redSheepsInLevel = new List<Sheep>();
         foreach (Sheep sheep in initialSheepsInLevel) {
             targetableSheepsinLevel.Add(sheep);
+            if(sheep.GetSheepType() == SheepType.redSheep) {
+                redSheepsInLevel.Add(sheep);
+            }
         }
 
         //Initialise path
@@ -136,7 +150,7 @@ public class WolfAI : AIMovement {
 
     private void Update() {
 
-        if (path == null) {
+        if (path == null | dyingAnimation) {
             return;
         }
 
@@ -324,6 +338,9 @@ public class WolfAI : AIMovement {
 
         yield return new WaitForSeconds(attackAnimationHalfDuration);
 
+        if (sheep.GetSheepType() == SheepType.greenSheep) {
+            StartCoroutine(Die());
+        }
         sheep.EatSheep();
         isCarryingSheep = false;
     }
@@ -339,11 +356,27 @@ public class WolfAI : AIMovement {
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
 
+        if(redSheepsInLevel.Count > 0) {
+            foreach(Sheep potentialRedSheep in  redSheepsInLevel) {
+
+                // Distance to sheep
+                Vector3 directionToSheep = potentialRedSheep.transform.position - currentPosition;
+                float dSqrToSheep = directionToSheep.sqrMagnitude;
+
+                if (dSqrToSheep < closestDistanceSqr & dSqrToSheep != 0) {
+                    closestDistanceSqr = dSqrToSheep;
+                    closestAttackTargetSheep = potentialRedSheep;
+                }
+            }
+            return closestAttackTargetSheep;
+        }
+
         foreach (Sheep potentialSheep in targetableSheepsinLevel) {
 
             // Distance to sheep
             Vector3 directionToSheep = potentialSheep.transform.position - currentPosition;
             float dSqrToSheep = directionToSheep.sqrMagnitude;
+
 
             // Sheep surroundings
             int sheepNumberWithinTargetSheepRadius = potentialSheep.GetComponentInChildren<SheepHerd>().GetHerdNumber();
@@ -421,12 +454,42 @@ public class WolfAI : AIMovement {
 
     private void LevelSheepObjectPool_OnSheepDied(object sender, EventArgs e) {
          targetableSheepsinLevel = levelSheepObjectPool.GetSheepsInUnPennedObjectPoolList();
-         PickAgressiveTargetSheep();
+        redSheepsInLevel = new List<Sheep>();
+        foreach (Sheep sheep in targetableSheepsinLevel) {
+            if (sheep.GetSheepType() == SheepType.redSheep) {
+                redSheepsInLevel.Add(sheep);
+            }
+        }
+        PickAgressiveTargetSheep();
     }
 
     private void LevelSheepObjectPool_OnSheepPenned(object sender, EventArgs e) {
         targetableSheepsinLevel = levelSheepObjectPool.GetSheepsInUnPennedObjectPoolList();
+        redSheepsInLevel = new List<Sheep>();
+        foreach (Sheep sheep in targetableSheepsinLevel) {
+            if (sheep.GetSheepType() == SheepType.redSheep) {
+                redSheepsInLevel.Add(sheep);
+            }
+        }
         PickAgressiveTargetSheep();
+    }
+
+    private IEnumerator Die() {
+        OnWolfPoisoned?.Invoke(this, EventArgs.Empty);
+
+        float dieAnimationTime = 1f;
+        yield return new WaitForSeconds(wolfPoisonedTime);
+
+
+        reachedEndOfPath = true;
+        path = null;
+        dyingAnimation = true;
+        OnWolfDied?.Invoke(this, new OnWolfDiedEventArgs {
+            fleeTarget = GetComponent<FleeTarget>()
+        });
+
+        yield return new WaitForSeconds(dieAnimationTime);
+        Destroy(gameObject);
     }
 
     public State GetState() {

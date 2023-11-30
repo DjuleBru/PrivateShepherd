@@ -11,6 +11,8 @@ public class PlayerGrowlVisual : MonoBehaviour
     [SerializeField] private MMF_Player growlMMFPlayer;
     [SerializeField] private WolfSO levelWolfSO;
 
+    private Animator animator;
+
     [SerializeField] private SpriteRenderer growlAOE;
     [SerializeField] private SpriteRenderer growlWolfAOE;
     [SerializeField] private Image growlTimeUIImage;
@@ -34,6 +36,8 @@ public class PlayerGrowlVisual : MonoBehaviour
 
         growlAOE.enabled = false;
         growlWolfAOE.enabled = false;
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -49,11 +53,13 @@ public class PlayerGrowlVisual : MonoBehaviour
         growlAOE.enabled = false;
         growlWolfAOE.enabled = false;
         growlMMFPlayer.StopFeedbacks();
+        animator.SetBool("isGrowling", false);
     }
 
     private void Player_OnPlayerGrowl(object sender, EventArgs e) {
         growlAOE.enabled = true;
         growlWolfAOE.enabled = true;
         growlMMFPlayer.PlayFeedbacks();
+        animator.SetBool("isGrowling", true);
     }
 }

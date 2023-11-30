@@ -56,6 +56,7 @@ public class PlayerGrowl : MonoBehaviour
 
         if (growlTimer < 0 & growling) {
             EndGrowl();
+            growling = false;
         }
     }
 

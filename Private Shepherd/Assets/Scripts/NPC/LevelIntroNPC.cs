@@ -14,9 +14,11 @@ public class LevelIntroNPC : MonoBehaviour
     [SerializeField] private TextMeshProUGUI phraseText;
 
     private int phraseCount;
+    private float defaultCameraSpeed = .35f;
 
     [SerializeField] TypewriterByCharacter typeWriter;
     [SerializeField] float[] cameraZooms;
+    [SerializeField] float[] cameraSpeeds;
     int i;
 
     private bool inputActiveForIntro;
@@ -49,10 +51,10 @@ public class LevelIntroNPC : MonoBehaviour
     }
 
     public void StopTalking() {
+        inputActiveForIntro = false;
         phraseText.gameObject.SetActive(false);
 
         LevelIntroCutScene.Instance.SetNPCIsTalking(false);
-        inputActiveForIntro = false;
     }
 
     public void NextPhrase() {
@@ -66,14 +68,22 @@ public class LevelIntroNPC : MonoBehaviour
         }
         if(phrases[phraseCount] == "camera") {
             float zoom = cameraZooms[i];
+            float cameraSpeed = defaultCameraSpeed;
+            if (cameraSpeeds[i] != 0) {
+                cameraSpeed = cameraSpeeds[i];
+            }
             i++;
-            LevelIntroCutScene.Instance.MoveCameraToNextPosition(.35f, zoom);
+            LevelIntroCutScene.Instance.MoveCameraToNextPosition(cameraSpeed, zoom);
             return;
         }
         if (phrases[phraseCount] == "cameraLock") {
             float zoom = cameraZooms[i];
+            float cameraSpeed = defaultCameraSpeed;
+            if (cameraSpeeds[i] != 0) {
+                cameraSpeed = cameraSpeeds[i];
+            }
             i++;
-            LevelIntroCutScene.Instance.LockCameraToNextPosition(.35f, zoom);
+            LevelIntroCutScene.Instance.LockCameraToNextPosition(cameraSpeed, zoom);
             return;
         }
         if (phrases[phraseCount] == "resetCamera") {

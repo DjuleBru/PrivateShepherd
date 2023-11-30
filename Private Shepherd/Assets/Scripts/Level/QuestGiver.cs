@@ -60,18 +60,6 @@ public class QuestGiver : MonoBehaviour
             ES3.Save(levelSO.levelName + "_linkedQuestUnlocked", linkedQuestGiversUnlocked);
         }
     }
-
-    public void completeQuestTest() {
-        questCompleted = true;
-    }
-
-    public void TestFunction() {
-        if (questCompleted & !linkedQuestGiversUnlocked) {
-            StartCoroutine(UnlockLinkedQuestGivers());
-            linkedQuestGiversUnlocked = true;
-            ES3.Save(levelSO.levelName + "_linkedQuestUnlocked", linkedQuestGiversUnlocked);
-        }
-    }
          
     private void LoadLevelParameters() {
         questCompleted = ES3.Load(levelSO.levelName + "_completed", false);

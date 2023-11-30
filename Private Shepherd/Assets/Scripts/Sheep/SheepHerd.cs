@@ -13,6 +13,8 @@ public class SheepHerd : MonoBehaviour
     [SerializeField] CircleCollider2D herdCollider;
     [SerializeField] TextMeshPro herdNumberText;
 
+    [SerializeField] bool isUniqueHerd;
+
 
     private int herdNumber;
 
@@ -27,18 +29,47 @@ public class SheepHerd : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep) & collider.gameObject.layer == sheepLayerMaskInt) {
-            herd.Add((Sheep)sheep);
+        if(isUniqueHerd) {
+            if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep) & collider.gameObject.layer == sheepLayerMaskInt) {
+                herd.Add((Sheep)sheep);
+            }
+        }
+        else
+        {
+            if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep)) {
+                herd.Add((Sheep)sheep);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collider) {
-        if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep) & collider.gameObject.layer == sheepLayerMaskInt) {
-            herd.Remove((Sheep)sheep);
+        if(isUniqueHerd) {
+            if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep) & collider.gameObject.layer == sheepLayerMaskInt) {
+                herd.Remove((Sheep)sheep);
+            }
+        } else {
+            if (collider.gameObject.TryGetComponent<Sheep>(out Sheep sheep)) {
+                herd.Remove((Sheep)sheep);
+            }
         }
     }
 
     public Sheep GetSheepInHerdFleeing() {
+        Sheep sheepParent = GetComponentInParent<Sheep>();
+
+        if(sheepParent.GetSheepType() == SheepType.goat) {
+            // This sheep is a goat
+            return null;
+        }
+
+        // Check if there is a goat in the herd
+        foreach (Sheep sheep in herd) {
+            if (sheep.GetComponent<Sheep>().GetSheepType() == SheepType.goat) {
+                // There is a goat in the herd
+                return sheep;
+            }
+        }
+
         foreach (Sheep sheep in herd) {
             if (sheep.GetComponent<SheepMovement>().GetState() == SheepMovement.State.Flee) {
                 return sheep;

@@ -16,6 +16,7 @@ public enum SheepType {
     greenSheep,
     blueSheep,
     goldSheep,
+    goat,
 };
 
 [RequireComponent(typeof(SetAIAnimatorParameters))]
@@ -58,7 +59,15 @@ public class Sheep : MonoBehaviour
     private void Start() {
         foreach (FleeTarget fleeTarget in fleeTargetArray) {
             sheepMovement.AddFleeTarget(fleeTarget);
+
+            if(fleeTarget.TryGetComponent<WolfAI>(out WolfAI wolfAI)) {
+                wolfAI.OnWolfDied += WolfAI_OnWolfDied;
+            }
         }
+    }
+
+    private void WolfAI_OnWolfDied(object sender, WolfAI.OnWolfDiedEventArgs e) {
+        sheepMovement.RemoveFleeTarget(e.fleeTarget);
     }
 
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
@@ -161,7 +170,15 @@ public class Sheep : MonoBehaviour
     public void EatSheep() {
         RemoveDeadSheepFromObjectPool();
         sheepMovement.UnSubscribeFromEvents();
-        outOfScreenTargetIndicator.DestroyIndicator();
+
+        foreach (FleeTarget fleeTarget in fleeTargetArray) {
+            sheepMovement.AddFleeTarget(fleeTarget);
+
+            if (fleeTarget.TryGetComponent<WolfAI>(out WolfAI wolfAI)) {
+                wolfAI.OnWolfDied -= WolfAI_OnWolfDied;
+            }
+        }
+
         Destroy(gameObject);
     }
     public void RemoveDeadSheepFromObjectPool() {

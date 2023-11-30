@@ -8,6 +8,7 @@ public class WolfFeedbacks : MonoBehaviour
     [SerializeField] WolfAI wolfAI;
     [SerializeField] GameObject wolfBitePS;
     [SerializeField] GameObject wolfEatPS;
+    [SerializeField] ParticleSystem wolfPoisonedPS;
     [SerializeField] Animator wolfAnimator;
 
     [SerializeField] MMF_Player wolfBiteFeedBacks;
@@ -20,6 +21,16 @@ public class WolfFeedbacks : MonoBehaviour
         wolfAI.OnSheepBite += WolfAI_OnSheepBite;
         wolfAI.OnSheepEaten += WolfAI_OnSheepEaten;
         wolfAI.OnWolfFlee += WolfAI_OnWolfFlee;
+        wolfAI.OnWolfDied += WolfAI_OnWolfDied;
+        wolfAI.OnWolfPoisoned += WolfAI_OnWolfPoisoned;
+    }
+
+    private void WolfAI_OnWolfPoisoned(object sender, System.EventArgs e) {
+        wolfPoisonedPS.Play();
+    }
+
+    private void WolfAI_OnWolfDied(object sender, WolfAI.OnWolfDiedEventArgs e) {
+        wolfAnimator.SetTrigger("Die");
     }
 
     private void WolfAI_OnWolfFlee(object sender, System.EventArgs e) {
