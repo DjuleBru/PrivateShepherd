@@ -145,6 +145,8 @@ public class WolfAI : AIMovement {
         roamPauseTimer = UnityEngine.Random.Range(roamPauseMinTime, roamPauseMaxTime);
         randomDirSelectorTimer = randomDirSelectorTime;
         nextWaypointDistance = 0.5f;
+
+        fleeTargetList.Add(PlayerGrowl.Instance.GetGrowlFleeTarget());
     }
 
 
@@ -334,6 +336,7 @@ public class WolfAI : AIMovement {
     }
 
     private IEnumerator EatSheep(Sheep sheep) {
+        Debug.Log("sheep eaten");
         OnSheepEaten?.Invoke(this, EventArgs.Empty);
 
         yield return new WaitForSeconds(attackAnimationHalfDuration);
@@ -428,15 +431,19 @@ public class WolfAI : AIMovement {
     private FleeTarget FindClosestFleeTarget() {
 
         float fleeTargetDistance;
+        FleeTarget closestFleeTarget = fleeTargetList[0];
 
         foreach (FleeTarget fleeTarget in fleeTargetList) {
             fleeTargetDistance = Vector3.Distance(fleeTarget.transform.position, transform.position);
 
-            if (fleeTargetDistance < closestFleeTargetDistance) {
+            if (fleeTargetDistance <= closestFleeTargetDistance) {
                 // The flee target is the closest one
 
-                closestFleeTargetDistance = fleeTargetDistance;
-                closestFleeTarget = fleeTarget;
+                if(fleeTarget.GetFleeTargetTriggerDistance() > closestFleeTarget.GetFleeTargetTriggerDistance()) {
+                    closestFleeTargetDistance = fleeTargetDistance;
+                    closestFleeTarget = fleeTarget;
+                }
+
             }
         }
 
@@ -488,6 +495,9 @@ public class WolfAI : AIMovement {
             fleeTarget = GetComponent<FleeTarget>()
         });
 
+        levelSheepObjectPool.OnSheepDied -= LevelSheepObjectPool_OnSheepDied;
+        levelSheepObjectPool.OnSheepPenned -= LevelSheepObjectPool_OnSheepPenned;
+
         yield return new WaitForSeconds(dieAnimationTime);
         Destroy(gameObject);
     }
@@ -495,4 +505,9 @@ public class WolfAI : AIMovement {
     public State GetState() {
         return state;
     }
+
+    public void SetState(State state) {
+        this.state = state;
+    }
+
 }

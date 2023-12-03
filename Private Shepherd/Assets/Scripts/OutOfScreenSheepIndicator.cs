@@ -106,4 +106,5 @@ public class OutOfScreenSheepIndicator : OutOfScreenTargetIndicator
         return isOutOfScreenNumber;
     }
 
+
 }

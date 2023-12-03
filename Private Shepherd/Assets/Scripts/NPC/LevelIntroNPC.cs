@@ -23,6 +23,7 @@ public class LevelIntroNPC : MonoBehaviour
 
     private bool inputActiveForIntro;
     private bool textShowed;
+    private bool introFinished;
 
     private void Awake() {
         Instance = this;
@@ -52,9 +53,11 @@ public class LevelIntroNPC : MonoBehaviour
 
     public void StopTalking() {
         inputActiveForIntro = false;
-        phraseText.gameObject.SetActive(false);
-
-        LevelIntroCutScene.Instance.SetNPCIsTalking(false);
+        if(phraseText != null) {
+            phraseText.gameObject.SetActive(false);
+            LevelIntroCutScene.Instance.SetNPCIsTalking(false);
+        }
+        introFinished = true;
     }
 
     public void NextPhrase() {
@@ -107,5 +110,9 @@ public class LevelIntroNPC : MonoBehaviour
 
     public bool GetTextShowed() {
         return textShowed;
+    }
+
+    public bool GetIntroFinished() {
+        return introFinished;
     }
  }

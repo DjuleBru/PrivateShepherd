@@ -21,7 +21,11 @@ public class PlayerBarkVisual : MonoBehaviour
     private float barkTriggerDistance;
     private float barkWolfTriggerDistance;
 
+    private bool barkUnlocked;
+
     private void Start() {
+        barkUnlocked = PlayerBark.Instance.GetBarkUnlocked();
+
         PlayerBark.Instance.OnPlayerBark += PlayerBark_OnPlayerBark;
         barkTriggerDistance = PlayerBark.Instance.GetBarkTriggerDistance();
 
@@ -36,6 +40,10 @@ public class PlayerBarkVisual : MonoBehaviour
     }
 
     private void PlayerBark_OnPlayerBark(object sender, EventArgs e) {
+        if (!barkUnlocked) {
+            return;
+        }
+
         barkAOE.enabled = true;
         barkWolfAOE.enabled = true;
         barkMMFPlayer.PlayFeedbacks();

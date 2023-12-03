@@ -15,6 +15,9 @@ public class WorldMapManager : MonoBehaviour
     void Start()
     {
         Player.Instance.SetPlayerPosition(ES3.Load("playerWorldMapPosition", playerInitialPosition.position));
+        Player.Instance.GetComponent<PlayerBark>().SetBarkActive(true);
+        Player.Instance.GetComponent<PlayerGrowl>().SetGrowlActive(true);
+        Player.Instance.GetComponent<PlayerRun>().SetRunActive(true);
     }
 
     public void SavePlayerPosition() {

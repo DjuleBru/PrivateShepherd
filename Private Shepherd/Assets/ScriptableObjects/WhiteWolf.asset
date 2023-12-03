@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d842f94635e9af84b87277efd790a87f, type: 3}
+  m_Name: WhiteWolf
+  m_EditorClassIdentifier: 
+  roamPauseMaxTime: 8
+  roamPauseMinTime: 2
+  agressiveFleeTime: 1
+  roamToAgressiveTime: 5
+  maxSheepInHerdToAttack: 3
+  agressiveSpeed: 300
+  fleeSpeed: 400
+  roamSpeed: 200
+  attackSpeed: 500
+  agressiveMinDistanceToSheep: 3
+  agressiveMaxDistanceToSheep: 3
+  wolfTriggerFleeDistanceMultiplier: 0.5
+  closestFleeTargetTriggerFleeDistance: 2
+  closestFleeTargetStopDistance: 10
+  closestFleeTargetDistanceToEatSheep: 10

@@ -13,7 +13,6 @@ public class PlayerGrowlVisual : MonoBehaviour
 
     private Animator animator;
 
-    [SerializeField] private SpriteRenderer growlAOE;
     [SerializeField] private SpriteRenderer growlWolfAOE;
     [SerializeField] private Image growlTimeUIImage;
 
@@ -22,7 +21,12 @@ public class PlayerGrowlVisual : MonoBehaviour
     private float growlTriggerDistance;
     private float growlWolfTriggerDistance;
 
+    private bool growlUnlocked;
+
     private void Start() {
+
+        growlUnlocked = PlayerGrowl.Instance.GetGrowlUnlocked();
+        
         PlayerGrowl.Instance.OnPlayerGrowl += Player_OnPlayerGrowl;
         PlayerGrowl.Instance.OnPlayerGrowlReleased += PlayerGrowl_OnPlayerGrowlReleased;
         growlTriggerDistance = PlayerGrowl.Instance.GetGrowlTriggerDistance();
@@ -30,17 +34,20 @@ public class PlayerGrowlVisual : MonoBehaviour
         float growlAOEScaleMultiplier = growlTriggerDistance / barkCircleRadius;
         float growlWolfAOEScaleMultiplier = levelWolfSO.wolfTriggerFleeDistanceMultiplier * growlTriggerDistance / barkCircleRadius;
 
-        growlAOE.transform.localScale = Vector3.one * growlAOEScaleMultiplier;
         growlWolfAOE.transform.localScale = Vector3.one * growlWolfAOEScaleMultiplier;
         growlTimeUIImage.transform.localScale = Vector3.one * growlWolfAOEScaleMultiplier;
 
-        growlAOE.enabled = false;
         growlWolfAOE.enabled = false;
+        growlTimeUIImage.enabled = false;
 
         animator = GetComponent<Animator>();
     }
 
     private void Update() {
+        if (!growlUnlocked) {
+            return;
+        }
+
         if (PlayerGrowl.Instance.GetGrowling()) {
             growlTimeUIImage.fillAmount = PlayerGrowl.Instance.GetGrowlTimerNormalized();
         }
@@ -50,15 +57,23 @@ public class PlayerGrowlVisual : MonoBehaviour
     }
 
     private void PlayerGrowl_OnPlayerGrowlReleased(object sender, EventArgs e) {
-        growlAOE.enabled = false;
+        if (!growlUnlocked) {
+            return;
+        }
+
         growlWolfAOE.enabled = false;
+        growlTimeUIImage.enabled = false;
         growlMMFPlayer.StopFeedbacks();
         animator.SetBool("isGrowling", false);
     }
 
     private void Player_OnPlayerGrowl(object sender, EventArgs e) {
-        growlAOE.enabled = true;
+        if (!growlUnlocked) {
+            return;
+        }
+
         growlWolfAOE.enabled = true;
+        growlTimeUIImage.enabled = true;
         growlMMFPlayer.PlayFeedbacks();
         animator.SetBool("isGrowling", true);
     }

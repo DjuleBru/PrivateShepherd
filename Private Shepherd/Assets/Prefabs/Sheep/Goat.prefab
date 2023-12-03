@@ -1002,15 +1002,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4100688584939994464}
-  nextWaypointDistancePersonalized: 0.5
+  nextWaypointDistancePersonalized: 0.2
   roamPointRadius: 4
   sheep: {fileID: 7267018658408402481}
   sheepSO: {fileID: 11400000, guid: 7d66f3d3f4991f94c8da8668e51aaf4b, type: 2}
   sheepHerd: {fileID: 9099907884775240990}
   ramDistance: 4
-  hitDistance: 1.2
+  hitDistance: 1.5
   ramCooldown: 10
-  ramForce: 20
+  ramForce: 80
 --- !u!114 &6058607247327990226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04167c36d1ea081499a850920fb5ba2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outOfScreenGameObject: {fileID: 8293569823048159755, guid: 4dfe3d1648bafa1458700051e827af56,
+  outOfScreenGameObject: {fileID: 5390159028652996270, guid: 8485ee7bfb733ce448dd323ae9a45a65,
     type: 3}
   distanceScreenEdgex: 0
   distanceScreenEdgey: 0

@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.94
       objectReference: {fileID: 0}
+    - target: {fileID: 3357059825090780641, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4618234880274760101, guid: 590604973ceb928449103ffa0852c800,
         type: 3}
       propertyPath: m_Sprite
@@ -98,10 +103,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tentacle
       objectReference: {fileID: 0}
+    - target: {fileID: 6260587556110252888, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c38120dd0df47344fa8d9f72d8149b3c, type: 2}
     - target: {fileID: 7153476942104567868, guid: 590604973ceb928449103ffa0852c800,
         type: 3}
       propertyPath: AIMovement
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787249018235368111, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787249018235368111, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787249018235368111, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787249018235368111, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.083
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787249018235368111, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.183
       objectReference: {fileID: 0}
     - target: {fileID: 9201663347077605661, guid: 590604973ceb928449103ffa0852c800,
         type: 3}

@@ -22,7 +22,7 @@ public class PlayerBark : MonoBehaviour
     private float playerFleeTargetTriggerDistance;
     private float playerFleeTargetStopDistance;
 
-    private bool barkUnlocked = true;
+    private bool barkUnlocked;
     private bool barkActive;
 
     private void Awake() {
@@ -31,6 +31,8 @@ public class PlayerBark : MonoBehaviour
     }
 
     private void Start() {
+        barkUnlocked = ES3.Load("barkUnlocked", false);
+
         playerFleeTargetSpeedMultiplier = playerFleeTarget.GetFleeTargetSpeedMultiplier();
         playerFleeTargetTriggerDistance = playerFleeTarget.GetFleeTargetTriggerDistance();
         playerFleeTargetStopDistance = playerFleeTarget.GetFleeTargetStopDistance();
@@ -91,10 +93,15 @@ public class PlayerBark : MonoBehaviour
     }
 
     public void SetBarkUnlocked(bool unlocked) {
+        Debug.Log("Bark set to unlocked");
         barkUnlocked = unlocked;
     }
 
     public void SetBarkActive(bool active) {
         barkActive = active;
+    }
+
+    public bool GetBarkUnlocked() {
+        return barkUnlocked;
     }
 }

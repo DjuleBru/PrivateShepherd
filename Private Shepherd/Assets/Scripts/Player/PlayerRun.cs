@@ -28,7 +28,7 @@ public class PlayerRun : MonoBehaviour
     private bool tired;
     private bool extremelyTired;
 
-    private bool runUnlocked = true;
+    private bool runUnlocked;
     private bool runActive;
 
     private void Awake() {
@@ -36,6 +36,10 @@ public class PlayerRun : MonoBehaviour
     }
 
     private void Start() {
+
+
+        runUnlocked = ES3.Load("runUnlocked", false);
+
         GameInput.Instance.OnRunPerformed += GameInput_OnRunPerformed;
         GameInput.Instance.OnRunReleased += GameInput_OnRunReleased;
 
@@ -46,6 +50,10 @@ public class PlayerRun : MonoBehaviour
         runTimer = 0;
     }
     private void Update() {
+
+        if (!runUnlocked) {
+            return;
+        }
 
         if (running) {
             runTimer += Time.deltaTime;
@@ -84,6 +92,7 @@ public class PlayerRun : MonoBehaviour
     }
 
     private void GameInput_OnRunPerformed(object sender, System.EventArgs e) {
+
         if (runActive & runUnlocked) {
             if (!tired & !extremelyTired)
                 Run();
@@ -113,6 +122,10 @@ public class PlayerRun : MonoBehaviour
 
     public float GetRunProgression() {
         return (runTimer / runMaxTime);
+    }
+
+    public bool GetRunUnlocked() {
+        return runUnlocked;
     }
 
     public void SetRunUnlocked(bool unlocked) {

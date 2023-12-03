@@ -10,7 +10,7 @@ public class PlayerGrowl : MonoBehaviour
 
     public event EventHandler OnPlayerGrowl;
     public event EventHandler OnPlayerGrowlReleased;
-    [SerializeField] private FleeTarget playerFleeTarget;
+    [SerializeField] private FleeTarget growlFleeTarget;
 
     [SerializeField] private float growlTime;
     [SerializeField] private float growlCoolDownTime;
@@ -30,7 +30,7 @@ public class PlayerGrowl : MonoBehaviour
     private float growlTimer;
     private bool growling;
 
-    private bool growlUnlocked = true;
+    private bool growlUnlocked;
     private bool growlActive;
 
     private void Awake() {
@@ -40,9 +40,12 @@ public class PlayerGrowl : MonoBehaviour
     }
 
     private void Start() {
-        playerFleeTargetSpeedMultiplier = playerFleeTarget.GetFleeTargetSpeedMultiplier();
-        playerFleeTargetTriggerDistance = playerFleeTarget.GetFleeTargetTriggerDistance();
-        playerFleeTargetStopDistance = playerFleeTarget.GetFleeTargetStopDistance();
+
+        growlUnlocked = ES3.Load("growlUnlocked", false);
+
+        playerFleeTargetSpeedMultiplier = growlFleeTarget.GetFleeTargetSpeedMultiplier();
+        playerFleeTargetTriggerDistance = growlFleeTarget.GetFleeTargetTriggerDistance();
+        playerFleeTargetStopDistance = growlFleeTarget.GetFleeTargetStopDistance();
 
         GameInput.Instance.OnGrowlPerformed += GameInput_OnGrowlPerformed;
         GameInput.Instance.OnGrowlReleased += GameInput_OnGrowlReleased;
@@ -92,15 +95,15 @@ public class PlayerGrowl : MonoBehaviour
     }
 
     private void ModifyFleeTargetParameters(float fleeTargetTriggerDistance, float fleeTargetStopDistance, float fleeTargetSpeedMultiplier) {
-        playerFleeTarget.SetFleeTargetTriggerDistance(fleeTargetTriggerDistance);
-        playerFleeTarget.SetFleeTargetStopDistance(fleeTargetStopDistance);
-        playerFleeTarget.SetFleeTargetSpeedMultiplier(fleeTargetSpeedMultiplier);
+        growlFleeTarget.SetFleeTargetTriggerDistance(fleeTargetTriggerDistance);
+        growlFleeTarget.SetFleeTargetStopDistance(fleeTargetStopDistance);
+        growlFleeTarget.SetFleeTargetSpeedMultiplier(fleeTargetSpeedMultiplier);
     }
 
     private void ResetFleeTargetParameters() {
-        playerFleeTarget.SetFleeTargetTriggerDistance(playerFleeTargetTriggerDistance);
-        playerFleeTarget.SetFleeTargetStopDistance(playerFleeTargetStopDistance);
-        playerFleeTarget.SetFleeTargetSpeedMultiplier(playerFleeTargetSpeedMultiplier);
+        growlFleeTarget.SetFleeTargetTriggerDistance(playerFleeTargetTriggerDistance);
+        growlFleeTarget.SetFleeTargetStopDistance(playerFleeTargetStopDistance);
+        growlFleeTarget.SetFleeTargetSpeedMultiplier(playerFleeTargetSpeedMultiplier);
     }
 
     public float GetGrowlTriggerDistance() {
@@ -123,8 +126,14 @@ public class PlayerGrowl : MonoBehaviour
         growlUnlocked = unlocked;
     }
 
+    public bool GetGrowlUnlocked() { return growlUnlocked; }
+
     public void SetGrowlActive(bool active) {
         growlActive = active;
+    }
+
+    public FleeTarget GetGrowlFleeTarget() {
+        return growlFleeTarget;
     }
 
 }

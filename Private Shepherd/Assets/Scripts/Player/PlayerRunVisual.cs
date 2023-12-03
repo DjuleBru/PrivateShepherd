@@ -17,8 +17,17 @@ public class PlayerRunVisual : MonoBehaviour
     private Color tiredColor = new Color(215f / 255f, 156f / 255f, 0f / 255f, 255f / 255f);
     private Color extremeColor = new Color(142f / 255f, 62f / 255f, 05f / 255f, 255f / 255f);
 
+    private bool runUnlocked;
+
+    private void Start() {
+        runUnlocked = PlayerRun.Instance.GetRunUnlocked();
+    }
 
     private void Update() {
+
+        if(!runUnlocked) {
+            return;
+        }
 
         runProgressionBar.fillAmount = 1 - PlayerRun.Instance.GetRunProgression();
 

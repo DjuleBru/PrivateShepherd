@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 151823768, guid: 590604973ceb928449103ffa0852c800, type: 3}
+      propertyPath: wolfSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b6c3e81866c00a4b905a1a627672259,
+        type: 2}
+    - target: {fileID: 2426882547728088804, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: wolfAI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019309773532719661, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: wolfAI
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4618234880274760101, guid: 590604973ceb928449103ffa0852c800,
         type: 3}
       propertyPath: m_Sprite
@@ -79,5 +94,100 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteWolf
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7153476942104567868, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: AIMovement
+      value: 
+      objectReference: {fileID: 4349654489391628027}
+    - target: {fileID: 9201663347077605661, guid: 590604973ceb928449103ffa0852c800,
+        type: 3}
+      propertyPath: wolfAI
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 151823768, guid: 590604973ceb928449103ffa0852c800, type: 3}
+    - {fileID: 2426882547728088804, guid: 590604973ceb928449103ffa0852c800, type: 3}
+    - {fileID: 9201663347077605661, guid: 590604973ceb928449103ffa0852c800, type: 3}
+    - {fileID: 4019309773532719661, guid: 590604973ceb928449103ffa0852c800, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 590604973ceb928449103ffa0852c800, type: 3}
+--- !u!1 &1174055336724164763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3115474944494753624, guid: 590604973ceb928449103ffa0852c800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4285024339891660739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1576782073134348834 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3357059825090780641, guid: 590604973ceb928449103ffa0852c800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4285024339891660739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2573796036013374518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1783569714279586805, guid: 590604973ceb928449103ffa0852c800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4285024339891660739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8890161501575161443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4618234880274760096, guid: 590604973ceb928449103ffa0852c800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4285024339891660739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &864054089902855368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890161501575161443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329553ebeb01a694a8e700f0c3ca5905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wolfAI: {fileID: 4349654489391628027}
+  wolfFleeIndicator: {fileID: 1174055336724164763}
+--- !u!1 &8890161502713091662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4618234881417425293, guid: 590604973ceb928449103ffa0852c800,
+    type: 3}
+  m_PrefabInstance: {fileID: 4285024339891660739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &249103624297413199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890161502713091662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029c7289b8576b40ad97c4a467c790c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleeTargetArray: []
+  wolfAI: {fileID: 4349654489391628027}
+--- !u!114 &4349654489391628027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890161502713091662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c617d0e33d20a4994c480a4f7c4d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1576782073134348834}
+  nextWaypointDistancePersonalized: 0
+  roamPointRadius: 4
+  wolfSO: {fileID: 11400000, guid: 1b6c3e81866c00a4b905a1a627672259, type: 2}
+  levelSheepObjectPool: {fileID: 0}
+  sheepHoldPoint: {fileID: 2573796036013374518}
+  wolfPoisonedTime: 0
+  sheepLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  randomDirSelectorTime: 5

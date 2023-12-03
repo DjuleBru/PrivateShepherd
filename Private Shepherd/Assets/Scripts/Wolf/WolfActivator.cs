@@ -5,7 +5,10 @@ using UnityEngine;
 public class WolfActivator : MonoBehaviour
 {
     [SerializeField] private Wolf wolf;
+    [SerializeField] private WhiteWolf whiteWolf;
     [SerializeField] private List<Transform> spawnPoints;
+
+    [SerializeField] private bool isWhiteWolf;
 
     private float activationTimer;
     [SerializeField] private float activationTime;
@@ -27,7 +30,12 @@ public class WolfActivator : MonoBehaviour
         if(activationTimer < 0 & !activated) {
             int i = Random.Range(0, spawnPoints.Count);
             Transform spawnPoint = spawnPoints[i];
-            wolf.transform.position = spawnPoint.position;
+
+            if(isWhiteWolf) {
+                whiteWolf.transform.position = spawnPoint.position;
+            } else {
+                wolf.transform.position = spawnPoint.position;
+            }
             activated = true;
         }
     }

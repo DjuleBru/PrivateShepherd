@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,15 @@ public class BarkUI : MonoBehaviour
     private Color readyColor;
     private Color loadingColor;
 
+    private bool barkUnlocked;
+
     private void Start() {
+
+        barkUnlocked = PlayerGrowl.Instance.GetGrowlUnlocked();
+        if(!barkUnlocked) {
+            gameObject.SetActive(false);
+        }
+
         loadingColor = new Color(190 / 255f, 150 / 255f, 0f / 255f, 255f / 255f);
         readyColor = new Color(96 / 255f, 138 / 255f, 0 / 255f, 255f / 255f);
 

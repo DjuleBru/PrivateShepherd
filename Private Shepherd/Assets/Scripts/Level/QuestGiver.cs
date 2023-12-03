@@ -16,6 +16,7 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] Transform questUnlockCameraFollowTransform;
     [SerializeField] LevelSO levelSO;
 
+    public event EventHandler OnQuestGiversCinematicOver;
     public event EventHandler OnLevelBoneFeePaid;
 
     private bool questGiverUnlocked;
@@ -122,6 +123,8 @@ public class QuestGiver : MonoBehaviour
         // ReActivate player movement
         Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(true);
 
+        Debug.Log("Cinemativ over sent");
+        OnQuestGiversCinematicOver?.Invoke(this, EventArgs.Empty);
         yield return null;
     }
 

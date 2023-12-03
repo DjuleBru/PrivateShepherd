@@ -11,12 +11,6 @@ public class LevelManager : MonoBehaviour
     private List<LevelCutScene> cutScenes = new List<LevelCutScene>();
 
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
-    [SerializeField] private SheepObjectPool whiteSheepObjectPool;
-    [SerializeField] private SheepObjectPool blackSheepObjectPool;
-    [SerializeField] private SheepObjectPool blueSheepObjectPool;
-    [SerializeField] private SheepObjectPool redSheepObjectPool;
-    [SerializeField] private SheepObjectPool greenSheepObjectPool;
-    [SerializeField] private SheepObjectPool goldSheepObjectPool;
 
     private Sheep[] initialSheepsInLevel;
     [SerializeField] private LevelSO levelSO;
@@ -38,6 +32,7 @@ public class LevelManager : MonoBehaviour
     private int initialGreenSheepNumber;
     private int initialBlueSheepNumber;
     private int initialGoldSheepNumber;
+    private int initialGoatSheepNumber;
 
     private int whitePennedSheepNumber;
     private int goldPennedSheepNumber;
@@ -45,6 +40,7 @@ public class LevelManager : MonoBehaviour
     private int bluePennedSheepNumber;
     private int greenPennedSheepNumber;
     private int redPennedSheepNumber;
+    private int goatPennedSheepNumber;
 
     private float levelTimeLimit;
     private float levelTimer;
@@ -64,6 +60,15 @@ public class LevelManager : MonoBehaviour
     private int blueSheepScore;
     private int redSheepScore;
     private int greenSheepScore;
+    private int goatSheepScore;
+
+    [SerializeField] private SheepSO whiteSheepSO;
+    [SerializeField] private SheepSO blackSheepSO;
+    [SerializeField] private SheepSO goldSheepSO;
+    [SerializeField] private SheepSO blueSheepSO;
+    [SerializeField] private SheepSO redSheepSO;
+    [SerializeField] private SheepSO greenSheepSO;
+    [SerializeField] private SheepSO goatSheepSO;
 
     private bool levelComplete;
     private bool bronzeBone;
@@ -90,6 +95,7 @@ public class LevelManager : MonoBehaviour
         public int initialGreenSheepNumber;
         public int initialBlueSheepNumber;
         public int initialGoldSheepNumber;
+        public int initialGoatSheepNumber;
 
         public int pennedSheepNumber;
         public int pennedWhiteSheepNumber;
@@ -98,6 +104,7 @@ public class LevelManager : MonoBehaviour
         public int pennedGreenSheepNumber;
         public int pennedBlueSheepNumber;
         public int pennedGoldSheepNumber;
+        public int pennedGoatSheepNumber;
 
         public float levelRemainingTime;
         public int playerScore;
@@ -163,39 +170,47 @@ public class LevelManager : MonoBehaviour
         initialSheepNumber = initialSheepsInLevel.Length;
         realTimeSheepNumber = initialSheepNumber;
 
-        if (whiteSheepObjectPool != null) {
-            initialWhiteSheepNumber = whiteSheepObjectPool.GetSheepArray().Length;
-        }
+        initialWhiteSheepNumber = 0;
+        initialBlackSheepNumber = 0;
+        initialBlueSheepNumber = 0;
+        initialGreenSheepNumber = 0;
+        initialRedSheepNumber = 0;
+        initialGoldSheepNumber = 0;
+        initialGoatSheepNumber = 0;
 
-        if (blackSheepObjectPool != null) {
-            initialBlackSheepNumber = blackSheepObjectPool.GetSheepArray().Length;
-        }
-        
-        if(blueSheepObjectPool != null) {
-            initialBlueSheepNumber = blueSheepObjectPool.GetSheepArray().Length;
-        }
-
-        if(greenSheepObjectPool != null) {
-            initialGreenSheepNumber = greenSheepObjectPool.GetSheepArray().Length;
-        }
-
-        if(redSheepObjectPool != null) {
-            initialRedSheepNumber = redSheepObjectPool.GetSheepArray().Length;
-        }
-
-        if(goldSheepObjectPool != null) {
-            initialGoldSheepNumber = goldSheepObjectPool.GetSheepArray().Length;
-        }
-
-        whiteSheepScore = levelSO.whiteSheepScore;
-        blackSheepScore = levelSO.blackSheepScore;
-        blueSheepScore = levelSO.blueSheepScore;
-        redSheepScore = levelSO.redSheepScore;
-        goldSheepScore = levelSO.goldSheepScore;
-        greenSheepScore = levelSO.greenSheepScore;
+        whiteSheepScore = whiteSheepSO.sheepScore;
+        blackSheepScore = blackSheepSO.sheepScore;
+        blueSheepScore = blueSheepSO.sheepScore;
+        redSheepScore = redSheepSO.sheepScore;
+        goldSheepScore = goldSheepSO.sheepScore;
+        greenSheepScore = greenSheepSO.sheepScore;
+        goatSheepScore = goatSheepSO.sheepScore;
 
         foreach (Sheep sheep in initialSheepsInLevel) {
             sheep.OnSheepEnterScoreZone += Sheep_OnSheepEnterScoreZone;
+
+            if (sheep.GetSheepType() == SheepType.whiteSheep) {
+                initialWhiteSheepNumber++;
+            }
+            if (sheep.GetSheepType() == SheepType.blackSheep) {
+                initialBlackSheepNumber++;
+            }
+            if (sheep.GetSheepType() == SheepType.redSheep) {
+                initialRedSheepNumber++;
+            }
+            if (sheep.GetSheepType() == SheepType.blueSheep) {
+                initialBlueSheepNumber++;
+            }
+            if (sheep.GetSheepType() == SheepType.greenSheep) {
+                initialGreenSheepNumber++;
+            }
+            if (sheep.GetSheepType() == SheepType.goldSheep) {
+                initialGoldSheepNumber++;
+            }
+
+            if (sheep.GetSheepType() == SheepType.goat) {
+                initialGoatSheepNumber++;
+            }
         }
 
     }
@@ -258,6 +273,7 @@ public class LevelManager : MonoBehaviour
             initialGreenSheepNumber = initialGreenSheepNumber,
             initialRedSheepNumber = initialRedSheepNumber,
             initialWhiteSheepNumber = initialWhiteSheepNumber,
+            initialGoatSheepNumber = initialGoatSheepNumber,
 
             pennedSheepNumber = pennedSheepNumber,
             pennedBlackSheepNumber = blackPennedSheepNumber,
@@ -266,11 +282,12 @@ public class LevelManager : MonoBehaviour
             pennedGreenSheepNumber = greenPennedSheepNumber,
             pennedRedSheepNumber = redPennedSheepNumber,
             pennedWhiteSheepNumber = whitePennedSheepNumber,
+            pennedGoatSheepNumber = goatPennedSheepNumber,
 
             levelRemainingTime = levelRemainingTime,
             playerScore = playerScore,
             playerTrophies = playerBones
-        }); ;
+        }); ; ;
 
     }
 
@@ -292,6 +309,9 @@ public class LevelManager : MonoBehaviour
         }
         if (sheep.GetSheepType() == SheepType.goldSheep) {
             goldPennedSheepNumber++;
+        }
+        if (sheep.GetSheepType() == SheepType.goat) {
+            goatPennedSheepNumber++;
         }
     }
 
@@ -330,7 +350,8 @@ public class LevelManager : MonoBehaviour
             blackSheepScore * blackPennedSheepNumber +
             redSheepScore * redPennedSheepNumber +
             blueSheepScore * bluePennedSheepNumber +
-            greenSheepScore * greenPennedSheepNumber +
+            greenSheepScore * greenPennedSheepNumber+
+            goatSheepScore * goatPennedSheepNumber +
             goldSheepScore * goldPennedSheepNumber;
         return playerScore;
     }
@@ -406,5 +427,9 @@ public class LevelManager : MonoBehaviour
 
     private void Scene_OnCutSceneEnter(object sender, EventArgs e) {
         OnCutSceneEnter?.Invoke(this, EventArgs.Empty);
+    }
+
+    public LevelSO GetLevelSO() {
+        return levelSO;
     }
 }

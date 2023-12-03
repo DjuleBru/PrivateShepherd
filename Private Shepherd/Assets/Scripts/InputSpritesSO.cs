@@ -10,4 +10,6 @@ public class InputSpritesSO : ScriptableObject
     public Sprite runControl;
     public Sprite growlControl;
     public Sprite exitSprite;
+    public Sprite sneakControl;
+
 }

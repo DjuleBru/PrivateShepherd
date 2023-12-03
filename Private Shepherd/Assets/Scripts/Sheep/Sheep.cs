@@ -67,7 +67,7 @@ public class Sheep : MonoBehaviour
     }
 
     private void WolfAI_OnWolfDied(object sender, WolfAI.OnWolfDiedEventArgs e) {
-        sheepMovement.RemoveFleeTarget(e.fleeTarget);
+        sheepMovement.RemoveWolfFleeTarget(e.fleeTarget);
     }
 
     public Transform GetClosestSheepWithEnoughSheepSurrounding() {
@@ -154,7 +154,6 @@ public class Sheep : MonoBehaviour
         hasBeenBit = true;
         sheepMovement.SetCanMove(false);
         sheepMovement.SetInjured(true);
-        sheepMovement.enabled = false;
         sheepCollider.enabled = false;
     }
 
@@ -170,15 +169,15 @@ public class Sheep : MonoBehaviour
     }
 
     public void EatSheep() {
-        Debug.Log("sheep eaten");
         RemoveDeadSheepFromObjectPool();
         sheepMovement.UnSubscribeFromEvents();
 
         foreach (FleeTarget fleeTarget in fleeTargetArray) {
             sheepMovement.AddFleeTarget(fleeTarget);
-
-            if (fleeTarget.TryGetComponent<WolfAI>(out WolfAI wolfAI)) {
-                wolfAI.OnWolfDied -= WolfAI_OnWolfDied;
+            if(fleeTarget != null) {
+                if (fleeTarget.TryGetComponent<WolfAI>(out WolfAI wolfAI)) {
+                    wolfAI.OnWolfDied -= WolfAI_OnWolfDied;
+                }
             }
         }
 

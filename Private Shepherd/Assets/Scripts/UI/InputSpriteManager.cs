@@ -16,12 +16,14 @@ public class InputSpriteManager : MonoBehaviour
     private Sprite runControl;
     private Sprite growlControl;
     private Sprite exitSprite;
+    private Sprite sneakSprite;
 
     private Vector3 moveSpriteScale;
     private Vector3 runSpriteScale;
     private Vector3 exitSpriteScale;
     private Vector3 growlSpriteScale;
     private Vector3 barkSpriteScale;
+    private Vector3 sneakSpriteScale;
 
     private PlayerInput playerInput;
 
@@ -41,12 +43,14 @@ public class InputSpriteManager : MonoBehaviour
         runControl = gamePadSprites.runControl;
         growlControl = gamePadSprites.growlControl;
         exitSprite = gamePadSprites.exitSprite;
+        sneakSprite = gamePadSprites.sneakControl;
 
         moveSpriteScale = Vector3.one;
         runSpriteScale = Vector3.one;
         exitSpriteScale = Vector3.one;
         growlSpriteScale = Vector3.one;
         barkSpriteScale = Vector3.one;
+        sneakSpriteScale = Vector3.one;
     }
 
     private void PlayerInput_onActionTriggered(InputAction.CallbackContext obj) {
@@ -56,12 +60,14 @@ public class InputSpriteManager : MonoBehaviour
             runControl = gamePadSprites.runControl;
             growlControl = gamePadSprites.growlControl;
             exitSprite = gamePadSprites.exitSprite;
+            sneakSprite = gamePadSprites.sneakControl;
 
             moveSpriteScale = Vector3.one;
             runSpriteScale = Vector3.one;
             exitSpriteScale = Vector3.one;
             growlSpriteScale = Vector3.one;
             barkSpriteScale = Vector3.one;
+            sneakSpriteScale = Vector3.one;
         }
 
         else if (playerInput.currentControlScheme == "KeyBoard") {
@@ -70,12 +76,14 @@ public class InputSpriteManager : MonoBehaviour
             runControl = (keyBoardSprites.runControl);
             growlControl = (keyBoardSprites.growlControl);
             exitSprite = (keyBoardSprites.exitSprite);
+            sneakSprite = keyBoardSprites.sneakControl;
 
             moveSpriteScale = Vector3.one;
             runSpriteScale = Vector3.one;
             exitSpriteScale = Vector3.one;
             growlSpriteScale = Vector3.one;
             barkSpriteScale = new Vector3(1f, .5f, 1f);
+            sneakSpriteScale = new Vector3(1f, .5f, 1f);
         }
     }
 
@@ -98,6 +106,9 @@ public class InputSpriteManager : MonoBehaviour
     public Sprite GetExitSprite() {
         return exitSprite;
     }
+    public Sprite GetSneakSprite() {
+        return sneakSprite;
+    }
 
     public Vector3 GetMoveSpriteScale() {
         return moveSpriteScale;
@@ -117,6 +128,10 @@ public class InputSpriteManager : MonoBehaviour
 
     public Vector3 GetGrowlSpriteScale() {
         return growlSpriteScale;
+    }
+
+    public Vector3 GetSneakSpriteScale() {
+        return sneakSpriteScale;
     }
 
     private void PlayerInput_onControlsChanged(PlayerInput obj) {

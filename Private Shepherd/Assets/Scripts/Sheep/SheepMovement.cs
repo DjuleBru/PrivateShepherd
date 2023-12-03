@@ -123,7 +123,7 @@ public class SheepMovement : AIMovement
         switch (state) {
             case State.Flee:
                 float fleeSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
-                moveSpeed = fleeSpeed * 1.3f;
+                moveSpeed = fleeSpeed * 1.2f;
                 rb.mass = rbMass * 4f;
 
                 if (closestFleeTargetDistance > closestFleeTargetStopDistance) {
@@ -386,8 +386,12 @@ public class SheepMovement : AIMovement
     public void AddFleeTarget(FleeTarget fleeTarget) {
         fleeTargetList.Add(fleeTarget);
     }
-
     public void RemoveFleeTarget(FleeTarget fleeTarget) {
+        fleeTargetList.Remove(fleeTarget);
+        closestFleeTarget = FindClosestFleeTarget();
+    }
+
+    public void RemoveWolfFleeTarget(FleeTarget fleeTarget) {
         wolfDied = true;
         fleeTargetList.Remove(fleeTarget);
         closestFleeTarget = FindClosestFleeTarget();
@@ -409,8 +413,9 @@ public class SheepMovement : AIMovement
 
 
     public void SetCanMove(bool canMove) {
-        this.canMove = canMove;
         velocity = Vector3.zero;
+        
+        this.canMove = canMove;
     }
 
     public void SetInjured(bool injured) {

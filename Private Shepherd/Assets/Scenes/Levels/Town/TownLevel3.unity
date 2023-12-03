@@ -4621,6 +4621,11 @@ PrefabInstance:
       propertyPath: fleeTargetArray.Array.data[0]
       value: 
       objectReference: {fileID: 814679449}
+    - target: {fileID: 7748370823872585026, guid: d87e5ddabac391a4e8e79fd2b2ca59d1,
+        type: 3}
+      propertyPath: hitDistance
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d87e5ddabac391a4e8e79fd2b2ca59d1, type: 3}
 --- !u!4 &454511953 stripped
@@ -33837,6 +33842,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: -1e-45
       objectReference: {fileID: 0}
+    - target: {fileID: 5039609682064844466, guid: 05e9e62d4d7221e4a904c258242ab2a3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8746929779511113568, guid: 05e9e62d4d7221e4a904c258242ab2a3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -33853,6 +33863,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 155a1ad34576402408bb027a1c298729,
         type: 2}
+    - target: {fileID: 8746929780698379805, guid: 05e9e62d4d7221e4a904c258242ab2a3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -27.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806506711853032742, guid: 05e9e62d4d7221e4a904c258242ab2a3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05e9e62d4d7221e4a904c258242ab2a3, type: 3}
 --- !u!1001 &4879147710083244455

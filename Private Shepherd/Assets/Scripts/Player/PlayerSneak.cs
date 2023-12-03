@@ -16,7 +16,7 @@ public class PlayerSneak : MonoBehaviour
 
     [SerializeField] private float sneakSlowMultiplier;
 
-    private bool sneakUnlocked = true;
+    private bool sneakUnlocked;
     private bool sneakActive;
     private bool sneaking;
 
@@ -26,6 +26,9 @@ public class PlayerSneak : MonoBehaviour
     }
 
     private void Start() {
+
+        sneakUnlocked = ES3.Load("sneakUnlocked", false);
+
         GameInput.Instance.OnSneakPerformed += GameInput_OnSneakPerformed;
         GameInput.Instance.OnSneakReleased += GameInput_OnSneakReleased;
 
@@ -44,6 +47,9 @@ public class PlayerSneak : MonoBehaviour
     }
 
     private void GameInput_OnSneakPerformed(object sender, EventArgs e) {
+        if(!sneakUnlocked) {
+            return;
+        }
         sneaking = true;
         PlayerMovement.Instance.SetMoveSpeed(PlayerMovement.Instance.GetMoveSpeed() * sneakSlowMultiplier);
         playerFleeTarget.SetFleeTargetTriggerDistance(0);
@@ -51,4 +57,13 @@ public class PlayerSneak : MonoBehaviour
 
         OnPlayerSneakStarted?.Invoke(this, EventArgs.Empty);
     }
+
+    public bool GetSneakUnlocked() {
+        return sneakUnlocked;
+    }
+
+    public void SetSneakUnlocked(bool unlocked) {
+        sneakUnlocked = unlocked;
+    }
+
 }
