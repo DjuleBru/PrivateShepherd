@@ -11,8 +11,10 @@ public class MainMenuUIManager : MonoBehaviour
 
     [SerializeField] Image backGroundImage;
     [SerializeField] GameObject mainMenuPanel;
+    [SerializeField] GameObject resetProgressionPanel;
     [SerializeField] GameObject progressionPanel;
     [SerializeField] GameObject settingsPanel;
+    [SerializeField] GameObject resetProgressionButton;
 
     [SerializeField] TextMeshProUGUI playerProgressionText;
     [SerializeField] TextMeshProUGUI boneNumberText;
@@ -29,6 +31,10 @@ public class MainMenuUIManager : MonoBehaviour
     float levelCompletedNumber;
 
     private void Start() {
+
+        resetProgressionPanel.SetActive(false);
+        resetProgressionButton.SetActive(false);
+
         AssignImageParametersByAspectRatio();
         LoadPlayerProgression();
 
@@ -37,6 +43,7 @@ public class MainMenuUIManager : MonoBehaviour
             progressionPanel.SetActive(false);
         }
         else {
+            resetProgressionButton.SetActive(true);
             startGameButton.GetComponentInChildren<TextMeshProUGUI>().text = "Continue";
         }
 
@@ -128,5 +135,25 @@ public class MainMenuUIManager : MonoBehaviour
         }
 
         return boneNumber;
+    }
+
+    public void OpenResetProgressionPanel() {
+        resetProgressionPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
+    }
+
+    public void CloseResetProgressionPanel() {
+        resetProgressionPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+    }
+
+    public void ResetProgression() {
+        ES3.DeleteFile();
+        startGameButton.GetComponentInChildren<TextMeshProUGUI>().text = "New Game";
+        progressionPanel.SetActive(false);
+        resetProgressionButton.SetActive(false);
+
+        resetProgressionPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 }

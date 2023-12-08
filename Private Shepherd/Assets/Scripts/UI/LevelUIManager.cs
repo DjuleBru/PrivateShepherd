@@ -14,6 +14,7 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField] GameObject levelSuccededUI;
     [SerializeField] GameObject pauseMenuUI;
     private bool gamePaused;
+    [SerializeField] private bool tutorial;
 
     [SerializeField] LevelManager levelManager;
 
@@ -157,10 +158,10 @@ public class LevelUIManager : MonoBehaviour
     }
 
     private void InitialiseScoreTresholds() {
-        bronzeScoreTreshold = levelSO.bronzeScoreTreshold;
-        silverScoreTreshold = levelSO.silverScoreTreshold;
-        goldScoreTreshold = levelSO.goldScoreTreshold;
-        platScoreTreshold = levelSO.platScoreTreshold;
+        bronzeScoreTreshold = LevelManager.Instance.GetBronzeScoreTreshold();
+        silverScoreTreshold = LevelManager.Instance.GetSilverScoreTreshold();
+        goldScoreTreshold = LevelManager.Instance.GetGoldScoreTreshold();
+        platScoreTreshold = LevelManager.Instance.GetPlatScoreTreshold();
     }
 
     private void InitialiseSheepScores() {
@@ -311,6 +312,10 @@ public class LevelUIManager : MonoBehaviour
         playerTrophies = e.playerTrophies;
         initialSheepNumber = e.initialSheepNumber;
         pennedSheepNumber= e.pennedSheepNumber;
+
+        if(tutorial) {
+            return;
+        }
 
         StartCoroutine(DisplayPlayerScore());
     }

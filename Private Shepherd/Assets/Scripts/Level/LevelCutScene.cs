@@ -21,6 +21,7 @@ public class LevelCutScene : MonoBehaviour
     private float skipTimer;
     private float skipTime = 1f;
     private bool skipping;
+    [SerializeField] private bool tutorial;
 
     protected virtual void Start() {
         GameInput.Instance.OnBarkPerformed += GameInput_OnBarkPerformed;
@@ -28,7 +29,7 @@ public class LevelCutScene : MonoBehaviour
     }
 
     protected virtual void Update() {
-        if (skipping) {
+        if (skipping & !tutorial) {
             skipTimer += Time.deltaTime;
             if (skipTimer > skipTime) {
                 SkipCutScene();
@@ -81,6 +82,10 @@ public class LevelCutScene : MonoBehaviour
 
     public float GetSkipAmountNormalized() {
         return skipTimer / skipTime;
+    }
+
+    public bool GetCutSceneInProgress() {
+        return cutSceneInProgress;
     }
 
 }

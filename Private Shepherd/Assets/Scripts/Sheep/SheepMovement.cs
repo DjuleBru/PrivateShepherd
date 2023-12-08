@@ -188,7 +188,7 @@ public class SheepMovement : AIMovement
                 fleeLeader = false;
                 moveSpeed = roamSpeed;
                 rb.mass = rbMass;
-                roamPauseTimer -= Time.deltaTime;
+                roamPauseTimer -= Time.deltaTime * timeScale;
 
                 CheckFleeConditions();
 
@@ -225,7 +225,7 @@ public class SheepMovement : AIMovement
 
             case State.InScoreZone:
                 rb.mass = rbMass;
-                roamPauseTimer -= Time.deltaTime;
+                roamPauseTimer -= Time.deltaTime * timeScale;
 
                 float pennedDistanceTreshold = 1f;
                 if (Vector3.Distance(targetScoreAggregatePoint.position, transform.position) < pennedDistanceTreshold) {
@@ -366,7 +366,7 @@ public class SheepMovement : AIMovement
 
     private void CheckRamConditions() {
         if(sheep.GetSheepType() == SheepType.goat) {
-            ramTimer -= Time.deltaTime;
+            ramTimer -= Time.deltaTime * timeScale;
             if (Vector3.Distance(Player.Instance.transform.position, transform.position) < ramDistance & ramTimer < 0 & !ramWarning) {
                 ramWarning = true;
                 OnGoatRamWarning?.Invoke(this, EventArgs.Empty);
@@ -425,5 +425,6 @@ public class SheepMovement : AIMovement
         }
         this.injured = injured;
     }
+
 
 }

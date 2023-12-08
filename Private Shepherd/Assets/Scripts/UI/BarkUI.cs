@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class BarkUI : MonoBehaviour
 {
     [SerializeField] Image barkCoolDownImage;
+    [SerializeField] GameObject abilitiesPanelUI;
 
     private Color readyColor;
     private Color loadingColor;
@@ -15,9 +16,11 @@ public class BarkUI : MonoBehaviour
 
     private void Start() {
 
-        barkUnlocked = PlayerGrowl.Instance.GetGrowlUnlocked();
+        barkUnlocked = PlayerBark.Instance.GetBarkUnlocked();
         if(!barkUnlocked) {
             gameObject.SetActive(false);
+        } else {
+            abilitiesPanelUI.SetActive(true);
         }
 
         loadingColor = new Color(190 / 255f, 150 / 255f, 0f / 255f, 255f / 255f);

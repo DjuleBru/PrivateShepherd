@@ -19,24 +19,46 @@ public class PlayerUnlockAbilities : MonoBehaviour
     public event EventHandler OnRunUnlocked;
     public event EventHandler OnSneakUnlocked;
 
+    private bool barkUnlocked;
+    private bool growlUnlocked;
+    private bool runUnlocked;
+    private bool sneakUnlocked;
 
     private void Awake() {
         Instance = this;
     }
 
     private void Start() {
-        if(ES3.Load(barkLevelUnlock.levelName + "_completed", false)) {
-            StartCoroutine(UnlockBark());
-        };
-        if (ES3.Load(growlLevelUnlock.levelName + "_completed", false)) {
-            StartCoroutine(UnlockRun());
-        };
-        if (ES3.Load(runLevelUnlock.levelName + "_completed", false)) {
-            StartCoroutine(UnlockSneak());
-        };
-        if (ES3.Load(sneakLevelUnlock.levelName + "_completed", false)) {
-            StartCoroutine(UnlockGrowl());
-        };
+
+        barkUnlocked = ES3.Load("barkUnlocked", false);
+        growlUnlocked = ES3.Load("growlUnlocked", false);
+        sneakUnlocked = ES3.Load("sneakUnlocked", false);
+        runUnlocked = ES3.Load("runUnlocked", false);
+
+        if(!barkUnlocked) {
+            if (ES3.Load(barkLevelUnlock.levelName + "_completed", false)) {
+                StartCoroutine(UnlockBark());
+            };
+        }
+
+        if(growlUnlocked) {
+            if (ES3.Load(growlLevelUnlock.levelName + "_completed", false)) {
+                StartCoroutine(UnlockRun());
+            };
+        }
+
+        if(!sneakUnlocked) {
+            if (ES3.Load(sneakLevelUnlock.levelName + "_completed", false)) {
+                StartCoroutine(UnlockSneak());
+            };
+        }
+
+        if(!runUnlocked) {
+            if (ES3.Load(runLevelUnlock.levelName + "_completed", false)) {
+                StartCoroutine(UnlockGrowl());
+            };
+        }
+
     }
 
     private IEnumerator UnlockBark() {

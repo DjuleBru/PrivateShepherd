@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TownLevel1
   m_EditorClassIdentifier: 
   levelName: Town - 1
-  levelBoneUnlockCost: 1
+  levelBoneUnlockCost: 0
   levelTimeLimit: 120
   bronzeScoreTreshold: 100
   silverScoreTreshold: 140
@@ -21,3 +21,10 @@ MonoBehaviour:
   platScoreTreshold: 200
   timeScore: 10
   sheepNumber: 9
+  whiteSheepNumber: 9
+  blackSheepNumber: 0
+  blueSheepNumber: 0
+  greenSheepNumber: 0
+  redSheepNumber: 0
+  goldSheepNumber: 0
+  goatSheepNumber: 0

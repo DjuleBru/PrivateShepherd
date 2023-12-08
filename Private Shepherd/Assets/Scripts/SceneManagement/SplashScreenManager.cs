@@ -22,9 +22,11 @@ public class SplashScreenManager : MonoBehaviour
 
     [SerializeField] private MMFeedbacks screenshake;
 
+    private float splashScreenTimer = 5f;
     private int caseNumber;
     private string logoTextWithOptions = "{fade d=1}<b>Un<color=#2F2A26>{/fade}{fade d=3}paws </color></b>{/fade}{fade d=1}Games{/fade}";
 
+    bool splashScreenOver;
     bool hasScreenShaked = false;
     bool hasPlayedImpact = false;
 
@@ -38,6 +40,12 @@ public class SplashScreenManager : MonoBehaviour
     }
 
     private void Update() {
+        splashScreenTimer -= Time.deltaTime;
+        if (splashScreenTimer < 0 & !splashScreenOver) {
+            splashScreenOver = true;
+            PostSplashScreenSceneLoader.Instance.LoadNextScene(0f);
+        }
+
         if (Input.anyKeyDown && SplashScreen.isFinished) {
             PostSplashScreenSceneLoader.Instance.LoadNextScene(0f);
         }
@@ -68,6 +76,8 @@ public class SplashScreenManager : MonoBehaviour
         yield return new WaitForSeconds(timeToStartTiltLogo);
             logoAnimator.SetTrigger("Tilt");
     }
+
+
 
     public void ChangeTextSpeed() {
         caseNumber++;

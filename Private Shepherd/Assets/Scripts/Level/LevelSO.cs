@@ -16,4 +16,14 @@ public class LevelSO : ScriptableObject
     public int timeScore;
 
     public int sheepNumber;
+    public int whiteSheepNumber;
+    public int blackSheepNumber;
+    public int blueSheepNumber;
+    public int greenSheepNumber;
+    public int redSheepNumber;
+    public int goldSheepNumber;
+    public int goatSheepNumber;
+
+    public AudioClip levelMusic;
+    public AudioClip dangerMusic;
 }

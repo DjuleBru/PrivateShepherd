@@ -11,8 +11,9 @@ public class SetAIAnimatorParameters : MonoBehaviour {
 
     private bool cutSceneInProgress;
 
-
     private void FixedUpdate() {
+
+
 
         if (AIMovement.GetReachedEndOfPath()) {
             animator.SetBool("isMoving", false);
@@ -26,6 +27,8 @@ public class SetAIAnimatorParameters : MonoBehaviour {
         }
     }
 
-
+    public void SetAnimatorTimeScale(float timeScale) {
+        animator.speed = timeScale;
+    }
 
 }

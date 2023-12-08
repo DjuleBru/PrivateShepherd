@@ -16,7 +16,7 @@ public class PostSplashScreenSceneLoader : MonoBehaviour
 
     private void Start() {
         Instance = this;
-        StartCoroutine(PreLoadScene("SampleScene"));
+        StartCoroutine(PreLoadScene("MainMenu"));
     }
 
     private IEnumerator PreLoadScene(string levelString) {

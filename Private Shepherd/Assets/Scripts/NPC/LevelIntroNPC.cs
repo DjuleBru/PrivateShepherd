@@ -14,16 +14,19 @@ public class LevelIntroNPC : MonoBehaviour
     [SerializeField] private TextMeshProUGUI phraseText;
 
     private int phraseCount;
-    private float defaultCameraSpeed = .35f;
+    private float defaultCameraSpeed = 8f;
 
     [SerializeField] TypewriterByCharacter typeWriter;
     [SerializeField] float[] cameraZooms;
     [SerializeField] float[] cameraSpeeds;
     int i;
+    int cameraInt;
 
     private bool inputActiveForIntro;
     private bool textShowed;
     private bool introFinished;
+
+    public event EventHandler OnTutorialPaused;
 
     private void Awake() {
         Instance = this;
@@ -45,7 +48,6 @@ public class LevelIntroNPC : MonoBehaviour
 
     public void StartTalking() {
         phraseText.gameObject.SetActive(true);
-        phraseCount = 0;
         typeWriter.ShowText(phrases[phraseCount]);
 
         inputActiveForIntro = true;
@@ -60,6 +62,14 @@ public class LevelIntroNPC : MonoBehaviour
         introFinished = true;
     }
 
+    public void PauseTalking() {
+        inputActiveForIntro = false;
+        if (phraseText != null) {
+            phraseText.gameObject.SetActive(false);
+            LevelIntroCutScene.Instance.SetNPCIsTalking(false);
+        }
+    }
+
     public void NextPhrase() {
         phraseCount++;
         if(LevelIntroCutScene.Instance.GetCameraLocked()) {
@@ -70,12 +80,13 @@ public class LevelIntroNPC : MonoBehaviour
             return;
         }
         if(phrases[phraseCount] == "camera") {
-            float zoom = cameraZooms[i];
+            float zoom = cameraZooms[cameraInt];
             float cameraSpeed = defaultCameraSpeed;
-            if (cameraSpeeds[i] != 0) {
+            if (cameraSpeeds[cameraInt] != 0) {
                 cameraSpeed = cameraSpeeds[i];
             }
             i++;
+            cameraInt++;
             LevelIntroCutScene.Instance.MoveCameraToNextPosition(cameraSpeed, zoom);
             return;
         }
@@ -87,6 +98,13 @@ public class LevelIntroNPC : MonoBehaviour
             }
             i++;
             LevelIntroCutScene.Instance.LockCameraToNextPosition(cameraSpeed, zoom);
+            return;
+        }
+        if (phrases[phraseCount] == "pauseTutorial") {
+            i++;
+            PauseTalking();
+            OnTutorialPaused?.Invoke(this, EventArgs.Empty);
+            TutorialManager.Instance.PlaySheep();
             return;
         }
         if (phrases[phraseCount] == "resetCamera") {

@@ -202,6 +202,7 @@ public class WolfAI : AIMovement {
 
                 if (roamToAgressiveTimer < 0) {
                     state = State.Agressive;
+                    roamToAgressiveTimer = roamToAgressiveTime;
                     return;
                 }
 

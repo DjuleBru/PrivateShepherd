@@ -13,13 +13,12 @@ public class QuestGiverGroup : MonoBehaviour
     private void Awake() {
         questGiversInGroup = GetComponentsInChildren<QuestGiver>();
 
-        FillQuestGiversUnlockedList();
-        DisableAllQuestGivers();
     }
 
-    void Start()
-    {
-        if(totalQuestGiversInGroup >= 1) {
+    void Start() {
+        FillQuestGiversUnlockedList();
+        DisableAllQuestGivers();
+        if (totalQuestGiversInGroup >= 1) {
             activeQuestGiver = totalQuestGiversInGroup - 1;
             unLockedQuestGiversInGroup[activeQuestGiver].gameObject.SetActive(true);
         }

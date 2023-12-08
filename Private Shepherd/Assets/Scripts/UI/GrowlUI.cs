@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GrowlUI : MonoBehaviour
 {
     [SerializeField] Image growlCoolDownImage;
+    [SerializeField] GameObject abilitiesPanelUI;
 
     private Color readyColor;
     private Color loadingColor;
@@ -16,6 +17,8 @@ public class GrowlUI : MonoBehaviour
         growlUnlocked = PlayerGrowl.Instance.GetGrowlUnlocked();
         if(!growlUnlocked) {
             gameObject.SetActive(false);
+        } else {
+            abilitiesPanelUI.SetActive(true);
         }
 
         loadingColor = new Color(190/255f, 150 / 255f, 0f / 255f, 255f / 255f);

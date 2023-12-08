@@ -1020,7 +1020,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0.95
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1179,8 +1179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe11498bbd523d342a9623b3f97e46d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleeTargetTriggerDistance: 3
-  fleeTargetStopDistance: 5
+  fleeTargetTriggerDistance: 2.5
+  fleeTargetStopDistance: 7
   fleeTargetSpeedMultiplier: 1.5
 --- !u!114 &1627481217353169861
 MonoBehaviour:
@@ -1232,10 +1232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeedMultiplier: 1.5
-  runMaxTime: 4
+  runMaxTime: 6
   runTiredTimeFraction: 0.5
   runExtremelyTiredTimeFraction: 0.85
-  tiredRunSpeedMultiplier: 0.5
+  tiredRunSpeedMultiplier: 0.7
 --- !u!114 &8779848876279031129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFleeTarget: {fileID: 7840373000721660730}
-  sneakSlowMultiplier: 0.5
+  sneakSlowMultiplier: 0.7
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0

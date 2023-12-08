@@ -8,7 +8,7 @@ public class LevelIntroCutScene : LevelCutScene {
     public static LevelIntroCutScene Instance { get; private set; }
 
     [SerializeField] Transform cameraFollowTransform;
-    [SerializeField] Transform[] cameraPositions;
+    [SerializeField] List<Transform> cameraPositions;
     private int cameraPositionInt;
 
     [SerializeField] float NPCZoom;
@@ -18,6 +18,7 @@ public class LevelIntroCutScene : LevelCutScene {
     private Transform cameraPosition;
 
     float initialOrthoSize;
+    float defaultTreshold = .5f;
 
     protected void Awake() {
         Instance = this;
@@ -50,12 +51,12 @@ public class LevelIntroCutScene : LevelCutScene {
 
         // Smooth camera movement towards NPC
         Vector3 destination = LevelIntroNPC.Instance.transform.position;
-        float treshold = .2f;
-        float cameraSpeed = .2f;
+        float treshold = defaultTreshold;
+        float cameraSpeed = 10f;
         Vector3 directionNormalized = (destination - cameraFollowTransform.position).normalized;
 
         while ((cameraFollowTransform.position - destination).magnitude > treshold) {
-            cameraFollowTransform.position += directionNormalized * cameraSpeed;
+            cameraFollowTransform.position += directionNormalized * cameraSpeed * Time.deltaTime;
             yield return null;
         }
         cameraFollowTransform.position = destination;
@@ -101,11 +102,11 @@ public class LevelIntroCutScene : LevelCutScene {
 
         // Smooth camera movement towards target
         Vector3 destination = targetPosition.position;
-        float treshold = .2f;
+        float treshold = defaultTreshold;
         Vector3 directionNormalized = (destination - cameraFollowTransform.position).normalized;
 
         while ((cameraFollowTransform.position - destination).magnitude > treshold) {
-            cameraFollowTransform.position += directionNormalized * cameraSpeed;
+            cameraFollowTransform.position += directionNormalized * cameraSpeed * Time.deltaTime;
             yield return null;
         }
         cameraFollowTransform.position = destination;
@@ -121,13 +122,13 @@ public class LevelIntroCutScene : LevelCutScene {
 
         // Smooth camera movement towards target
         Vector3 destination = targetPosition.position;
-        float treshold = .2f;
+        float treshold = defaultTreshold;
         Vector3 directionNormalized = (destination - cameraFollowTransform.position).normalized;
 
         while ((cameraFollowTransform.position - destination).magnitude > treshold) {
             destination = targetPosition.position;
             directionNormalized = (destination - cameraFollowTransform.position).normalized;
-            cameraFollowTransform.position += directionNormalized * cameraSpeed;
+            cameraFollowTransform.position += directionNormalized * cameraSpeed * Time.deltaTime;
             yield return null;
         }
         cameraFollowTransform.position = destination;
@@ -138,14 +139,23 @@ public class LevelIntroCutScene : LevelCutScene {
     }
 
 
-    public void SetCameraToNPC() { 
+    public void SetCameraToNPC() {
         // Initialize camera transform and dezoom
+        ChangeCinemachineCode.Instance.SetCameraPriority(20);
         cameraFollowTransform.transform.position = LevelIntroNPC.Instance.transform.position;
         ChangeCinemachineCode.Instance.ChangeCinemachineOrthoSize(NPCZoom);
+        ChangeCinemachineCode.Instance.ChangeCinemachineTarget(LevelIntroNPC.Instance.transform);
     }
 
     public void SetNPCIsTalking(bool isTalking) {
         NPCIsTalking = isTalking;
+        if(isTalking == false) {
+            // Back camera to player
+            ChangeCinemachineCode.Instance.ChangeCinemachineTarget(Player.Instance.transform);
+            ChangeCinemachineCode.Instance.ChangeCinemachineOrthoSize(initialOrthoSize);
+            ExitCutScene();
+            ChangeCinemachineCode.Instance.SetCameraPriority(0);
+        }
     }
 
     public override void SkipCutScene() {
@@ -159,5 +169,9 @@ public class LevelIntroCutScene : LevelCutScene {
 
     public void SetCameraLocked(bool locked) {
         cameraLocked = locked;
+    }
+
+    public void AddCameraPosition(Transform cameraPosition) {
+        cameraPositions.Add(cameraPosition);
     }
 }

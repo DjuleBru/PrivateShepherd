@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Swamp - 1
   levelBoneUnlockCost: 1
-  levelTimeLimit: 120
+  levelTimeLimit: 300
   bronzeScoreTreshold: 100
   silverScoreTreshold: 140
   goldScoreTreshold: 180
   platScoreTreshold: 200
   timeScore: 10
   sheepNumber: 9
+  whiteSheepNumber: 9
+  blackSheepNumber: 0
+  blueSheepNumber: 0
+  greenSheepNumber: 0
+  redSheepNumber: 0
+  goldSheepNumber: 0
+  goatSheepNumber: 0

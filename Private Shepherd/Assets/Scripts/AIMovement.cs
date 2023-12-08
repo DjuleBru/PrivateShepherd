@@ -37,6 +37,7 @@ public class AIMovement : MonoBehaviour
     protected float moveSpeed;
 
     protected bool cutSceneInProgress;
+    protected float timeScale = 1f;
 
     protected virtual void Start() {
 
@@ -57,7 +58,7 @@ public class AIMovement : MonoBehaviour
         if (nextWaypointDistancePersonalized != 0) {
             nextWaypointDistance = nextWaypointDistancePersonalized;
         }
-        pathCalculationTimer -= Time.deltaTime;
+        pathCalculationTimer -= Time.deltaTime * timeScale;
         Move(velocity);
     }
 
@@ -90,7 +91,7 @@ public class AIMovement : MonoBehaviour
 
     protected virtual void Move(Vector3 velocity) {
         if (!reachedEndOfPath) {
-            rb.velocity = velocity * Time.fixedDeltaTime;
+            rb.velocity = velocity * Time.fixedDeltaTime * timeScale;
         }
         else {
             rb.velocity = Vector3.zero;
@@ -153,5 +154,9 @@ public class AIMovement : MonoBehaviour
 
     private void LevelManager_OnCutSceneEnter(object sender, EventArgs e) {
         cutSceneInProgress = true;
+    }
+
+    public void SetMovementTimeScale(float timeScale) {
+        this.timeScale = timeScale;
     }
 }

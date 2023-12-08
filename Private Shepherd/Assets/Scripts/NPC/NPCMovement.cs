@@ -8,6 +8,8 @@ public class NPCMovement : AIMovement
     private float roamTimer;
     [SerializeField] private float roamRate;
 
+    [SerializeField] private bool isIntroNPC;
+
     private void Awake() {
         roamTimer = roamRate;
 
@@ -19,6 +21,13 @@ public class NPCMovement : AIMovement
 
         if (path == null | cutSceneInProgress) {
             reachedEndOfPath = true;
+            return;
+        }
+
+        if(isIntroNPC) {
+            moveSpeed = roamSpeed * 3;
+            CalculatePath(Player.Instance.transform.position);
+            FollowPath(path);
             return;
         }
 

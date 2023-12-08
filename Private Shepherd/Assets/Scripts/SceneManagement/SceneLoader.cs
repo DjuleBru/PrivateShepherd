@@ -35,7 +35,12 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadWorldMap() {
         Time.timeScale = 1f;
-        StartCoroutine(LoadSceneByStringCoroutine("WorldMap"));
+        Debug.Log(ES3.Load("Tutorial_completed", false));
+        if (!ES3.Load("Tutorial_completed", false)) {
+            StartCoroutine(LoadSceneByStringCoroutine("Tutorial"));
+        } else {
+            StartCoroutine(LoadSceneByStringCoroutine("WorldMap"));
+        }
     }
 
     public IEnumerator LoadSceneByStringCoroutine(string sceneName) {

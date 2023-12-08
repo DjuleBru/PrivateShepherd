@@ -70,6 +70,8 @@ public class WhiteWolfAI : AIMovement {
     private float roamPauseMinTime;
     private float roamPauseTimer;
     private float agressiveFleeTimer;
+    private float agressiveTimer;
+    private float agressiveTime = 8f;
     private float roamToAgressiveTimer;
 
     private float agressiveFleeTime;
@@ -97,6 +99,8 @@ public class WhiteWolfAI : AIMovement {
     #endregion
 
     private void Awake() {
+        pathCalculationRate = 2f;
+
         state = State.Roam;
 
         roamPauseMaxTime = wolfSO.roamPauseMaxTime;
@@ -118,6 +122,8 @@ public class WhiteWolfAI : AIMovement {
         closestFleeTargetStopDistance = wolfSO.closestFleeTargetStopDistance;
         closestFleeTargetDistanceToEatSheep = wolfSO.closestFleeTargetDistanceToEatSheep;
         wolfTriggerFleeDistanceMultiplier = wolfSO.wolfTriggerFleeDistanceMultiplier;
+
+        agressiveTimer = agressiveTime;
     }
 
     protected override void Start() {
@@ -198,6 +204,7 @@ public class WhiteWolfAI : AIMovement {
 
                 if (roamToAgressiveTimer < 0) {
                     state = State.Agressive;
+                    roamToAgressiveTimer = roamToAgressiveTime;
                     return;
                 }
 
@@ -210,8 +217,17 @@ public class WhiteWolfAI : AIMovement {
                 break;
 
             case State.Agressive:
+
+                agressiveTimer -= Time.deltaTime;
+
                 moveSpeed = agressiveSpeed;
                 randomDirSelectorTimer -= Time.deltaTime;
+
+                if(agressiveTimer < 0) {
+                    state = State.Roam;
+                    agressiveTimer = agressiveTime;
+                    return;
+                }
 
                 if (randomDirSelectorTimer >= 0) {
                     PickAgressiveTargetSheep();
@@ -219,12 +235,9 @@ public class WhiteWolfAI : AIMovement {
 
                 FindClosestSheep();
 
-                if (distanceToClosestSheep > agressiveMaxDistanceToSheep) {
-                    // Wolf is too far from sheep
-                    CalculatePath(closestSheep.transform.position);
-                    return;
-                }
-
+                // Wolf is too far from sheep
+                Vector3 dirToSheep = (closestSheep.transform.position - transform.position).normalized;
+                CalculatePath(closestSheep.transform.position + dirToSheep * 15);
                 break;
 
             case State.AgressiveFlee:

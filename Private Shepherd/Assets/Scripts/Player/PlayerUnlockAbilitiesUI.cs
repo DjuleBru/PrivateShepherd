@@ -106,7 +106,7 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
     }
 
     private IEnumerator UnlockGrowl() {
-
+        Debug.Log("Growl Unlocked");
         DeActivatePlayer();
         unlockPanelUI.SetActive(true);
         player.clip = growlClip;
@@ -122,6 +122,7 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
         yield return null;
     }
     private IEnumerator UnlockSneak() {
+        Debug.Log("Sneak Unlocked");
 
         DeActivatePlayer();
         unlockPanelUI.SetActive(true);
@@ -130,7 +131,7 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
         title.text = "Sneak";
         description1.text = "Hold          to sneak";
         description2.text = "• Sheep don't flee while sneaking";
-        description3.text = "";
+        description3.text = "• Sneaking slows you down";
         description4.text = "";
 
         buttonIcon.sprite = InputSpriteManager.Instance.GetSneakSprite();
@@ -138,12 +139,13 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
         yield return null;
     }
     private IEnumerator UnlockBark() {
+        Debug.Log("BNark Unlocked");
         DeActivatePlayer();
         unlockPanelUI.SetActive(true);
         player.clip = barkClip;
 
         title.text = "Bark";
-        description1.text = "Predd          to bark";
+        description1.text = "Press          to bark";
         description2.text = "• Makes wolves flee";
         description2.text = "• Makes sheep flee";
         description4.text = "• Makes Sheep move faster";
@@ -153,6 +155,7 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
         yield return null;
     }
     private IEnumerator UnlockRun() {
+        Debug.Log("Run Unlocked");
         DeActivatePlayer();
         unlockPanelUI.SetActive(true);
         player.clip = runClip;

@@ -10,12 +10,11 @@ public class LevelManager : MonoBehaviour
 
     private List<LevelCutScene> cutScenes = new List<LevelCutScene>();
 
+    [SerializeField] private bool tutorial;
     [SerializeField] private SheepObjectPool levelSheepObjectPool;
 
     private Sheep[] initialSheepsInLevel;
     [SerializeField] private LevelSO levelSO;
-
-    private bool cutsceneInProgress;
 
     private int platScoreTreshold;
     private int silverScoreTreshold;
@@ -47,6 +46,8 @@ public class LevelManager : MonoBehaviour
     private float levelRemainingTime;
     private int timeScore;
 
+    private float maxSheepScore;
+    private float maxTimeScore;
     private int playerScore;
     private int defaultHighScore = 0;
     private int highScore;
@@ -118,20 +119,15 @@ public class LevelManager : MonoBehaviour
 
         // Initialise sheeps
         InitializeSheep();
-        
-        // Initialise score thresholds
-        bronzeScoreTreshold = levelSO.bronzeScoreTreshold;   
-        silverScoreTreshold = levelSO.silverScoreTreshold;
-        goldScoreTreshold = levelSO.goldScoreTreshold;
-        platScoreTreshold = levelSO.platScoreTreshold;
-        timeScore = levelSO.timeScore;
 
         // Initialise timers
         levelTimeLimit = levelSO.levelTimeLimit;
         levelTimer = levelTimeLimit;
+        timeScore = levelSO.timeScore;
 
-        playerBones = 0;
-        playerScore = 0;
+
+        // Initialise score thresholds
+        InitializeScoreTresholds();
 
         // Initialize cutScenes
         LevelCutScene[] cutScenesArray = GetComponents<LevelCutScene>();
@@ -152,10 +148,9 @@ public class LevelManager : MonoBehaviour
             EndLevelSuccess();
         }
 
-        if(cutsceneInProgress) {
+        if(LevelIntroCutScene.Instance.GetCutSceneInProgress()) {
             return;
         }
-
         levelTimer -= Time.deltaTime;
 
         if (levelTimer < 0 & !levelComplete) {
@@ -215,6 +210,69 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    private void InitializeScoreTresholds() {
+
+        if (timeScore < 5) {
+            // Sheep based level
+            maxSheepScore = initialWhiteSheepNumber * whiteSheepScore +
+                initialBlackSheepNumber * blackSheepScore +
+                initialRedSheepNumber * redSheepScore +
+                initialGreenSheepNumber * greenSheepScore +
+                initialBlueSheepNumber * blueSheepScore +
+                initialGoldSheepNumber * goldSheepScore +
+                initialGoatSheepNumber * goatSheepScore;
+
+            platScoreTreshold = ((int)((2 * maxSheepScore / 3 + levelTimeLimit) / 10)) * 10;
+            goldScoreTreshold = ((int)((9 * platScoreTreshold / 10) / 10)) * 10;
+            silverScoreTreshold = ((int)((4 * platScoreTreshold / 5) / 10)) * 10;
+            bronzeScoreTreshold = ((int)((7 * platScoreTreshold / 10) / 10)) * 10;
+
+        }
+        else if(timeScore> 5) {
+            // Time based level
+
+            maxSheepScore = initialWhiteSheepNumber * whiteSheepScore +
+                initialBlackSheepNumber * blackSheepScore +
+                initialRedSheepNumber * redSheepScore +
+                initialGreenSheepNumber * greenSheepScore +
+                initialBlueSheepNumber * blueSheepScore +
+                initialGoldSheepNumber * goldSheepScore +
+                initialGoatSheepNumber * goatSheepScore;
+
+            maxTimeScore = levelTimeLimit * timeScore;
+
+            platScoreTreshold = ((int)((maxSheepScore + 2 * maxTimeScore / 3) / 10)) * 10;
+            goldScoreTreshold = ((int)((9 * platScoreTreshold / 10) / 10)) * 10;
+            silverScoreTreshold = ((int)((4 * platScoreTreshold / 5) / 10)) * 10;
+            bronzeScoreTreshold = ((int)((7 * platScoreTreshold / 10) / 10)) * 10;
+
+        }
+        else if (timeScore == 5) {
+            // Time based level
+
+            maxSheepScore = initialWhiteSheepNumber * whiteSheepScore +
+                initialBlackSheepNumber * blackSheepScore +
+                initialRedSheepNumber * redSheepScore +
+                initialGreenSheepNumber * greenSheepScore +
+                initialBlueSheepNumber * blueSheepScore +
+                initialGoldSheepNumber * goldSheepScore +
+                initialGoatSheepNumber * goatSheepScore;
+
+            maxTimeScore = levelTimeLimit * timeScore;
+
+            platScoreTreshold = ((int)((maxSheepScore / 2 + maxTimeScore / 2) / 10)) * 10;
+            goldScoreTreshold = ((int)((9 * platScoreTreshold / 10) / 10)) * 10;
+            silverScoreTreshold = ((int)((4 * platScoreTreshold / 5) / 10)) * 10;
+            bronzeScoreTreshold = ((int)((7 * platScoreTreshold / 10) / 10)) * 10;
+
+        }
+
+
+        playerBones = 0;
+        playerScore = 0;
+
+    }
+
     private void Sheep_OnSheepEnterScoreZone(object sender, Sheep.OnSheepEnterScoreZoneEventArgs e) {
         SortSheepPennedByType(sender as Sheep);
         pennedSheepNumber++;
@@ -251,18 +309,20 @@ public class LevelManager : MonoBehaviour
         levelComplete = true;
         levelRemainingTime = levelTimer;
 
-        playerScore = CalculatePlayerScore(levelRemainingTime);
-        playerBones = CalculatePlayerBones(playerScore);
+        if(!tutorial) {
+            playerScore = CalculatePlayerScore(levelRemainingTime);
+            playerBones = CalculatePlayerBones(playerScore);
 
-        if (playerScore > highScore) {
-            // Calculate how many new bones are added
-            int newBones = playerBones - highestBones;
+            if (playerScore > highScore) {
+                // Calculate how many new bones are added
+                int newBones = playerBones - highestBones;
 
-            // Add bones to player
-            Player.Instance.GivePlayerBones(newBones);
+                // Add bones to player
+                Player.Instance.GivePlayerBones(newBones);
 
-            // Save high Score & Trophies
-            SavePlayerScores();
+                // Save high Score & Trophies
+                SavePlayerScores();
+            }
         }
 
         OnLevelSucceeded?.Invoke(this, new OnLevelSucceededEventArgs {
@@ -287,7 +347,8 @@ public class LevelManager : MonoBehaviour
             levelRemainingTime = levelRemainingTime,
             playerScore = playerScore,
             playerTrophies = playerBones
-        }); ; ;
+
+        });
 
     }
 
@@ -431,5 +492,21 @@ public class LevelManager : MonoBehaviour
 
     public LevelSO GetLevelSO() {
         return levelSO;
+    }
+
+    public int GetBronzeScoreTreshold() {
+        return bronzeScoreTreshold;
+    }
+
+    public int GetSilverScoreTreshold() {
+        return silverScoreTreshold;
+    }
+
+    public int GetGoldScoreTreshold() {
+        return goldScoreTreshold;
+    }
+
+    public int GetPlatScoreTreshold() {
+        return platScoreTreshold;
     }
 }

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class QuestGiver : MonoBehaviour
@@ -84,8 +83,13 @@ public class QuestGiver : MonoBehaviour
 
     public IEnumerator UnlockLinkedQuestGivers() {
 
-        // DeActivate player movement
+        Debug.Log(this + " Cinematic start");
+
+        // DeActivate player movement & abilities
         Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(false);
+        PlayerBark.Instance.SetBarkActive(false);
+        PlayerGrowl.Instance.SetGrowlActive(false);
+        GetComponent<WorldMapLevelDisplay>().SetCinematicPlaying(true);
 
         // Start by dezooming
         float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
@@ -122,6 +126,9 @@ public class QuestGiver : MonoBehaviour
 
         // ReActivate player movement
         Player.Instance.gameObject.GetComponent<PlayerMovement>().SetCanMove(true);
+        PlayerBark.Instance.SetBarkActive(true);
+        PlayerGrowl.Instance.SetGrowlActive(true);
+        GetComponent<WorldMapLevelDisplay>().SetCinematicPlaying(false);
 
         Debug.Log("Cinemativ over sent");
         OnQuestGiversCinematicOver?.Invoke(this, EventArgs.Empty);
@@ -141,11 +148,11 @@ public class QuestGiver : MonoBehaviour
         // Smooth camera movement towards quest giver
         Vector3 destination = this.transform.position;
         float treshold = .2f;
-        float cameraSpeed = .2f;
+        float cameraSpeed = 10f;
         Vector3 directionNormalized = (destination - questUnlockerOrigin.position).normalized;
 
         while ((questUnlockCameraFollowTransform.position - destination).magnitude > treshold) {
-            questUnlockCameraFollowTransform.position += directionNormalized * cameraSpeed;
+            questUnlockCameraFollowTransform.position += directionNormalized * cameraSpeed * Time.deltaTime;
             yield return null;
         }
         questUnlockCameraFollowTransform.position = destination;

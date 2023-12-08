@@ -33,7 +33,9 @@ public class BlackSheep : MonoBehaviour
 
     private void AddFleeTargetToOtherSheep() {
         foreach (Sheep s in targetableSheepsinLevel) {
-            s.GetComponent<SheepMovement>().AddFleeTarget(GetComponent<FleeTarget>());
+            if(s.GetSheepType() != SheepType.blackSheep) {
+                s.GetComponent<SheepMovement>().AddFleeTarget(GetComponent<FleeTarget>());
+            }
         }
     }
 
