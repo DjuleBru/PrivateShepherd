@@ -78,7 +78,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 12
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6514707561405829255
@@ -374,7 +374,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1068414019
-  m_SortingLayer: 12
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6309093558143387211
@@ -1001,9 +1001,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4100688584939994464}
+  nextWaypointDistancePersonalized: 0
+  roamPointRadius: 4
   sheep: {fileID: 7267018658408402481}
   sheepSO: {fileID: 0}
   sheepHerd: {fileID: 9099907884775240990}
+  ramDistance: 0
+  hitDistance: 0
+  ramCooldown: 0
+  ramForce: 0
 --- !u!114 &6058607247327990226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1121,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -257505448, guid: 4db20a0192013af42b047152d9f21b79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1207,7 +1213,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747232469
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1792865613, guid: 62407c6efc567f442bab918649d0d1fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1322,8 +1328,10 @@ MonoBehaviour:
   sheepLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  sheepLayerMaskInt: 0
   herdCollider: {fileID: 1518994150545050784}
   herdNumberText: {fileID: 7051790442930105235}
+  isUniqueHerd: 0
 --- !u!1 &6504176684959114829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1646,7 @@ MonoBehaviour:
     - rid: 208445491746963458
       type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
-        Active: 1
+        Active: 0
         UniqueID: 1892530687
         Label: AudioSource
         ChannelMode: 0

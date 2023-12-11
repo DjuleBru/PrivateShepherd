@@ -13,10 +13,21 @@ public class Player : MonoBehaviour
 
     public event EventHandler OnBonesChanged;
 
+    [SerializeField] private bool androidPort;
+
     private void Awake() {
         Instance = this;
 
         bones = ES3.Load("playerBones", defaultBones);
+    }
+
+    private void Start() {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
+    private void Update() {
+        Debug.Log(1.0f / Time.deltaTime);
     }
 
     public int GetPlayerBones() {
@@ -37,6 +48,10 @@ public class Player : MonoBehaviour
 
     public void SetPlayerPosition(Vector3 position) {
         transform.position = position;
+    }
+
+    public bool GetAndroidPort() {
+        return androidPort;
     }
 
 }

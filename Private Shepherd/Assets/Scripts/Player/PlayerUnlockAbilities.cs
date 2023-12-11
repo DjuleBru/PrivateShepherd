@@ -41,9 +41,9 @@ public class PlayerUnlockAbilities : MonoBehaviour
             };
         }
 
-        if(growlUnlocked) {
+        if(!growlUnlocked) {
             if (ES3.Load(growlLevelUnlock.levelName + "_completed", false)) {
-                StartCoroutine(UnlockRun());
+                StartCoroutine(UnlockGrowl());
             };
         }
 
@@ -55,7 +55,7 @@ public class PlayerUnlockAbilities : MonoBehaviour
 
         if(!runUnlocked) {
             if (ES3.Load(runLevelUnlock.levelName + "_completed", false)) {
-                StartCoroutine(UnlockGrowl());
+                StartCoroutine(UnlockRun());
             };
         }
 

@@ -9,12 +9,23 @@ public class SheepVisual : MonoBehaviour
     [SerializeField] GameObject sheepFleeLeaderIndicator;
     [SerializeField] ParticleSystem sheepInjuredPS;
 
+    private bool blood;
+
     private void Start() {
+        blood = ES3.Load("blood", true);
+        SettingsManager.Instance.OnBloodToggled += SettingsManager_OnBloodToggled;
+
         sheepFleeIndicator.SetActive(false);
         sheepMovement.OnSheepInjured += SheepMovement_OnSheepInjured;
     }
+    private void SettingsManager_OnBloodToggled(object sender, System.EventArgs e) {
+        blood = blood = ES3.Load("blood", true);
+    }
 
     private void SheepMovement_OnSheepInjured(object sender, System.EventArgs e) {
+        if(!blood) {
+            return;
+        }
         sheepInjuredPS.Play();
     }
 

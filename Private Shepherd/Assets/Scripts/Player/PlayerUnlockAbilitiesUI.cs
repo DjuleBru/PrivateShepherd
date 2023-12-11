@@ -45,6 +45,11 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
     }
 
     private void Update() {
+
+        //if(Input.GetKeyDown(KeyCode.T)) {
+        //    sneakUnlocked = true;
+        //}
+
         if(barkUnlocked) {
             if(!QuestGiverCinematicOver) {
                 return;
@@ -112,7 +117,7 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
         player.clip = growlClip;
 
         title.text = "Growl";
-        description1.text = "Hold          to growl";
+        description1.text = "Hold               to growl";
         description2.text = "• Makes wolves Flee";
         description3.text = "• Doesn't affect sheep";
         description4.text = "• Has a limited duration";
@@ -161,7 +166,7 @@ public class PlayerUnlockAbilitiesUI : MonoBehaviour
         player.clip = runClip;
 
         title.text = "Run";
-        description1.text = "Hold          to run";
+        description1.text = "Hold             to run";
         description2.text = "• Increases movement speed";
         description3.text = "• Get tired if you run too long";
         description4.text = "";

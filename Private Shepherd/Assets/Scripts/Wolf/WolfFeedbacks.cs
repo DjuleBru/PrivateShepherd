@@ -17,12 +17,21 @@ public class WolfFeedbacks : MonoBehaviour
 
     private float attackAnimationHalfDuration = .2f;
 
+    private bool blood;
+
     private void Start() {
+        blood = ES3.Load("blood", true);
+        SettingsManager.Instance.OnBloodToggled += SettingsManager_OnBloodToggled;
+
         wolfAI.OnSheepBite += WolfAI_OnSheepBite;
         wolfAI.OnSheepEaten += WolfAI_OnSheepEaten;
         wolfAI.OnWolfFlee += WolfAI_OnWolfFlee;
         wolfAI.OnWolfDied += WolfAI_OnWolfDied;
         wolfAI.OnWolfPoisoned += WolfAI_OnWolfPoisoned;
+    }
+
+    private void SettingsManager_OnBloodToggled(object sender, System.EventArgs e) {
+        blood = blood = ES3.Load("blood", true);
     }
 
     private void WolfAI_OnWolfPoisoned(object sender, System.EventArgs e) {
@@ -50,10 +59,16 @@ public class WolfFeedbacks : MonoBehaviour
     }
 
     private void InstantiateBitePS() {
+        if(!blood) {
+            return;
+        }
         Instantiate(wolfBitePS, transform.position, Quaternion.identity);
     }
 
     private void InstantiateEatPS() {
+        if (!blood) {
+            return;
+        }
         Instantiate(wolfEatPS, transform.position, Quaternion.identity);
     }
 }

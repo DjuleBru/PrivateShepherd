@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 3976179909993298662}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7bef3f2e39a74b84ea8754b46160e471, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,3 +122,4 @@ MonoBehaviour:
   fleeTargetTriggerDistance: 8
   fleeTargetStopDistance: 12
   fleeTargetSpeedMultiplier: 1.5
+  fleeTargetPriority: 0

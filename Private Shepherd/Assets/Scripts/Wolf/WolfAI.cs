@@ -19,6 +19,11 @@ public class WolfAI : AIMovement {
     public event EventHandler OnWolfFlee;
     public event EventHandler OnWolfAgressive;
     public event EventHandler OnWolfPoisoned;
+
+    public static event EventHandler OnAnySheepBite;
+    public static event EventHandler OnAnySheepEaten;
+    public static event EventHandler OnAnyWolfFlee;
+
     public event EventHandler<OnWolfDiedEventArgs> OnWolfDied;
 
     public class OnWolfDiedEventArgs : EventArgs {
@@ -170,6 +175,7 @@ public class WolfAI : AIMovement {
             // Target is within flee trigger radius
             state = State.Flee;
             OnWolfFlee?.Invoke(this, EventArgs.Empty);
+            OnAnyWolfFlee?.Invoke(this, EventArgs.Empty);
         }
 
         closestAttackTargetSheep = PickClosestAttackTargetSheep();
@@ -325,6 +331,7 @@ public class WolfAI : AIMovement {
     private IEnumerator BiteSheep(Sheep sheep) {
         hasBitSheep = true;
         OnSheepBite?.Invoke(this, EventArgs.Empty);
+        OnAnySheepBite?.Invoke(this, EventArgs.Empty);
 
         childTargetSheep = sheep;
         childTargetSheep.BiteSheep();
@@ -339,6 +346,7 @@ public class WolfAI : AIMovement {
     private IEnumerator EatSheep(Sheep sheep) {
         Debug.Log("sheep eaten");
         OnSheepEaten?.Invoke(this, EventArgs.Empty);
+        OnAnySheepEaten?.Invoke(this, EventArgs.Empty);
 
         yield return new WaitForSeconds(attackAnimationHalfDuration);
 

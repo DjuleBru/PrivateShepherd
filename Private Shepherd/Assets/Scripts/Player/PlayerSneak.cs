@@ -20,6 +20,7 @@ public class PlayerSneak : MonoBehaviour
     private bool sneakActive;
     private bool sneaking;
 
+    [SerializeField] bool forceUnlock;
 
     private void Awake() {
         Instance = this;
@@ -28,6 +29,10 @@ public class PlayerSneak : MonoBehaviour
     private void Start() {
 
         sneakUnlocked = ES3.Load("sneakUnlocked", false);
+
+        if(forceUnlock) {
+            sneakUnlocked = true;
+        }
 
         GameInput.Instance.OnSneakPerformed += GameInput_OnSneakPerformed;
         GameInput.Instance.OnSneakReleased += GameInput_OnSneakReleased;
@@ -56,6 +61,27 @@ public class PlayerSneak : MonoBehaviour
         playerFleeTarget.SetFleeTargetStopDistance(0);
 
         OnPlayerSneakStarted?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void SneakTouchPerformed() {
+        if (!sneakUnlocked) {
+            return;
+        }
+        sneaking = true;
+        PlayerMovement.Instance.SetMoveSpeed(PlayerMovement.Instance.GetMoveSpeed() * sneakSlowMultiplier);
+        playerFleeTarget.SetFleeTargetTriggerDistance(0);
+        playerFleeTarget.SetFleeTargetStopDistance(0);
+
+        OnPlayerSneakStarted?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void SneakTouchReleased() {
+        sneaking = false;
+        PlayerMovement.Instance.SetMoveSpeed(initialPlayerMoveSpeed);
+        playerFleeTarget.SetFleeTargetTriggerDistance(initialPlayerFleeTargetSpeedMultiplier);
+        playerFleeTarget.SetFleeTargetStopDistance(initialPlayerFleeTargetStopDistance);
+
+        OnPlayerSneakReleased?.Invoke(this, EventArgs.Empty);
     }
 
     public bool GetSneakUnlocked() {

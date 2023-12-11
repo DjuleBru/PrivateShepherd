@@ -14,6 +14,10 @@ public class PlayerRun : MonoBehaviour
 
     [SerializeField] float tiredRunSpeedMultiplier;
 
+    [SerializeField] AudioSource tiredAudioSource;
+
+    public event EventHandler OnPlayerRun;
+    public event EventHandler OnPlayerRunStop;
     public event EventHandler onPlayerTired;
     public event EventHandler onPlayerRecovered;
 
@@ -31,6 +35,10 @@ public class PlayerRun : MonoBehaviour
     private bool runUnlocked;
     private bool runActive;
 
+    [SerializeField] bool forceUnlock;
+
+
+
     private void Awake() {
         Instance = this;
     }
@@ -39,6 +47,10 @@ public class PlayerRun : MonoBehaviour
 
 
         runUnlocked = ES3.Load("runUnlocked", false);
+
+        if(forceUnlock) {
+            runUnlocked = true;
+        }
 
         GameInput.Instance.OnRunPerformed += GameInput_OnRunPerformed;
         GameInput.Instance.OnRunReleased += GameInput_OnRunReleased;
@@ -67,10 +79,15 @@ public class PlayerRun : MonoBehaviour
             StopRunning();
         }
 
-        if (runTimer > runTiredTime) {
+        if (runTimer > runTiredTime & !tired) {
             tired = true;
-        } else {
+            Debug.Log(tired);
+            onPlayerTired?.Invoke(this, EventArgs.Empty);
+        } else if (runTimer < runTiredTime & tired) {
             tired = false;
+            if (!extremelyTired) { 
+                onPlayerRecovered?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         if (runTimer >= runExtremelyTiredTime) {
@@ -80,6 +97,7 @@ public class PlayerRun : MonoBehaviour
             }
         } else if (runTimer <= 0 & extremelyTired) {
             extremelyTired = false;
+            onPlayerRecovered?.Invoke(this, EventArgs.Empty);
             PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed);
         }
 
@@ -88,6 +106,7 @@ public class PlayerRun : MonoBehaviour
     private void GameInput_OnRunReleased(object sender, System.EventArgs e) {
         if (running) {
             StopRunning();
+            OnPlayerRunStop?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -99,7 +118,24 @@ public class PlayerRun : MonoBehaviour
         }
     }
 
+    public void RunTouchPerformed() {
+        if (runActive & runUnlocked) {
+            if (!tired & !extremelyTired)
+                Run();
+        }
+    }
+
+    public void RunTouchReleased() {
+        if (running) {
+            StopRunning();
+            OnPlayerRunStop?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
     private void Run() {
+        if(!running) {
+            OnPlayerRun?.Invoke(this, EventArgs.Empty);
+        }
         running = true;
 
         PlayerMovement.Instance.SetMoveSpeed(playerMoveSpeed * runSpeedMultiplier);
@@ -134,6 +170,10 @@ public class PlayerRun : MonoBehaviour
 
     public void SetRunActive(bool active) {
         runActive = active;
+    }
+
+    public AudioSource GetAudioSource() {
+        return tiredAudioSource;
     }
 
 }

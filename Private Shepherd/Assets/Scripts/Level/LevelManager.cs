@@ -145,6 +145,7 @@ public class LevelManager : MonoBehaviour
     private void Update() {
 
         if(Input.GetKeyDown(KeyCode.T)) {
+            Debug.Log("T");
             EndLevelSuccess();
         }
 
@@ -319,12 +320,11 @@ public class LevelManager : MonoBehaviour
 
                 // Add bones to player
                 Player.Instance.GivePlayerBones(newBones);
-
-                // Save high Score & Trophies
-                SavePlayerScores();
             }
         }
 
+        // Save high Score & Trophies
+        SavePlayerScores();
         OnLevelSucceeded?.Invoke(this, new OnLevelSucceededEventArgs {
             initialSheepNumber = initialSheepNumber,
             initialBlackSheepNumber = initialBlackSheepNumber,

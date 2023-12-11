@@ -8,6 +8,7 @@ public class FleeTarget : MonoBehaviour
     [SerializeField] private float fleeTargetTriggerDistance;
     [SerializeField] private float fleeTargetStopDistance;
     [SerializeField] private float fleeTargetSpeedMultiplier;
+    [SerializeField] private int fleeTargetPriority;
 
     public float GetFleeTargetTriggerDistance() {
         return fleeTargetTriggerDistance;
@@ -32,5 +33,8 @@ public class FleeTarget : MonoBehaviour
         this.fleeTargetSpeedMultiplier = fleeTargetSpeedMultiplier;
     }
 
+    public int GetFleeTargetPriority() {
+        return fleeTargetPriority;
+    }
 
 }

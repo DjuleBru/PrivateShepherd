@@ -18,18 +18,22 @@ public class SheepMovement : AIMovement
     private bool ramming;
     private bool ramWarning;
     private float ramTimer;
+
     public event EventHandler OnGoatRamWarning;
     public event EventHandler OnGoatRam;
     public event EventHandler OnGoatRamEnd;
+    public static event EventHandler OnAnyGoatRamWarning;
+    public static event EventHandler OnAnyGoatRam;
 
     private Transform closestSheepTransform;
     private Transform targetScoreAggregatePoint; 
 
     public event EventHandler OnSheepFlee;
     public event EventHandler OnSheepInjured;
+    public static event EventHandler OnAnySheepFlee;
+    public static event EventHandler OnAnySheepFleeAggregate;
 
     private bool canMove;
-
     #region FLEE TARGET PARAMETERS
     private List<FleeTarget> fleeTargetList = new List<FleeTarget>();
     private FleeTarget closestFleeTarget;
@@ -76,7 +80,7 @@ public class SheepMovement : AIMovement
         RetreiveSheepParameters();
         nextWaypointDistance = 1.5f;
 
-        state = State.Roam ;
+        state = State.Roam;
     }
 
     protected override void Start() {
@@ -97,15 +101,15 @@ public class SheepMovement : AIMovement
             return;
         }
 
-        if(cutSceneInProgress) {
+        if (cutSceneInProgress) {
             state = State.Roam;
         }
 
-        if(!wolfDied) {
+        if (!wolfDied) {
             closestFleeTarget = FindClosestFleeTarget();
         }
 
-        if(closestFleeTarget == null) {
+        if (closestFleeTarget == null) {
             return;
         }
 
@@ -131,7 +135,8 @@ public class SheepMovement : AIMovement
                     state = State.Aggregate;
                     return;
 
-                } else {
+                }
+                else {
                     // Target is within flee radius
                     // Check if there is another sheep fleeing in herd
                     if (sheepInHerdFleeing == null) {
@@ -145,7 +150,7 @@ public class SheepMovement : AIMovement
                     CalculateFleePath(closestFleeTarget.transform.position);
                 }
 
-            break;
+                break;
             case State.FleeAggregate:
                 moveSpeed = originalMoveSpeed * closestFleeTarget.GetFleeTargetSpeedMultiplier();
                 rb.mass = rbMass;
@@ -159,7 +164,8 @@ public class SheepMovement : AIMovement
                 // Follow closest sheep fleeing
                 if (sheepInHerdFleeing != null) {
                     FollowClosestSheepFleeing();
-                } else {
+                }
+                else {
                     // Closest target is in flee stop radius
                     state = State.Flee;
                 }
@@ -183,7 +189,7 @@ public class SheepMovement : AIMovement
                 CheckRoamConditions();
                 CalculatePath(closestSheepTransform.position);
 
-            break;
+                break;
             case State.Roam:
                 fleeLeader = false;
                 moveSpeed = roamSpeed;
@@ -198,7 +204,7 @@ public class SheepMovement : AIMovement
                         state = State.Aggregate;
                     }
                 }
-                
+
                 if (roamPauseTimer <= 0) {
                     Vector3 roamDestination = PickRandomPoint(transform.position);
                     CalculatePath(roamDestination);
@@ -233,10 +239,11 @@ public class SheepMovement : AIMovement
                     penned = true;
                 }
 
-                if(!penned) {
+                if (!penned) {
                     moveSpeed = aggregateSpeed;
                     CalculatePath(targetScoreAggregatePoint.position);
-                } else {
+                }
+                else {
                     if (roamPauseTimer <= 0) {
                         moveSpeed = roamSpeed;
                         Vector3 roamDestination = PickRandomPoint(targetScoreAggregatePoint.position);
@@ -247,10 +254,11 @@ public class SheepMovement : AIMovement
 
                 break;
             case State.Ram:
-                if(Vector3.Distance(Player.Instance.transform.position, transform.position) > hitDistance) {
+                if (Vector3.Distance(Player.Instance.transform.position, transform.position) > hitDistance) {
                     moveSpeed = aggregateSpeed * 2;
                     CalculatePath(Player.Instance.transform.position);
-                } else {
+                }
+                else {
                     Vector3 forceDirection = (transform.position - Player.Instance.transform.position).normalized;
                     Vector3 force = new Vector3(forceDirection.x, forceDirection.y, 0) * ramForce;
                     OnGoatRamEnd?.Invoke(this, EventArgs.Empty);
@@ -307,9 +315,11 @@ public class SheepMovement : AIMovement
                 fleeLeader = true;
                 state = State.Flee;
                 OnSheepFlee?.Invoke(this, EventArgs.Empty);
+                OnAnySheepFlee?.Invoke(this, EventArgs.Empty);
             }
             else {
                 state = State.FleeAggregate;
+                OnAnySheepFleeAggregate?.Invoke(this, EventArgs.Empty);
                 return;
             }
             return;
@@ -319,6 +329,7 @@ public class SheepMovement : AIMovement
             if (sheepInHerdFleeing != null) {
                 // There is another sheep fleeing within flee trigger radius
                 state = State.FleeAggregate;
+                OnAnySheepFleeAggregate?.Invoke(this, EventArgs.Empty);
                 return;
             }
         }
@@ -342,14 +353,14 @@ public class SheepMovement : AIMovement
     }
 
     private void UpdateClosestFleeTargetParameters() {
-        if(closestFleeTarget == null) {
+        if (closestFleeTarget == null) {
             return;
         }
         closestFleeTargetDistance = Vector3.Distance(closestFleeTarget.transform.position, transform.position);
         closestFleeTargetTriggerFleeDistance = closestFleeTarget.GetFleeTargetTriggerDistance();
         closestFleeTargetStopDistance = closestFleeTarget.GetFleeTargetStopDistance() + closestFleeTargetStopDistanceModifier;
 
-        if(closestFleeTargetStopDistance <= closestFleeTargetTriggerFleeDistance) {
+        if (closestFleeTargetStopDistance <= closestFleeTargetTriggerFleeDistance) {
             // There was a problem with the randomizer
             closestFleeTargetStopDistance = closestFleeTargetTriggerFleeDistance;
         }
@@ -365,13 +376,13 @@ public class SheepMovement : AIMovement
     }
 
     private void CheckRamConditions() {
-        if(sheep.GetSheepType() == SheepType.goat) {
+        if (sheep.GetSheepType() == SheepType.goat) {
             ramTimer -= Time.deltaTime * timeScale;
             if (Vector3.Distance(Player.Instance.transform.position, transform.position) < ramDistance & ramTimer < 0 & !ramWarning) {
                 ramWarning = true;
                 OnGoatRamWarning?.Invoke(this, EventArgs.Empty);
 
-                Invoke("Ram",1f);
+                Invoke("Ram", 1f);
             }
         }
     }
@@ -402,8 +413,8 @@ public class SheepMovement : AIMovement
         sheep.OnSheepEnterScoreZone -= Sheep_OnSheepEnterScoreZone;
     }
 
-    public State GetState() { 
-        return state; 
+    public State GetState() {
+        return state;
     }
 
     public void SetState(State state) {
@@ -414,7 +425,7 @@ public class SheepMovement : AIMovement
 
     public void SetCanMove(bool canMove) {
         velocity = Vector3.zero;
-        
+
         this.canMove = canMove;
     }
 

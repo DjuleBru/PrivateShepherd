@@ -15,7 +15,7 @@ public class GrowlUI : MonoBehaviour
     private void Start() {
 
         growlUnlocked = PlayerGrowl.Instance.GetGrowlUnlocked();
-        if(!growlUnlocked) {
+        if (!growlUnlocked) {
             gameObject.SetActive(false);
         } else {
             abilitiesPanelUI.SetActive(true);

@@ -91,12 +91,22 @@ public class WorldMapLevelDisplay : MonoBehaviour
 
     private bool cinematicPlaying;
 
+    [SerializeField] private GameObject touchButtonToOpen;
+    private bool androidPort;
+    private bool displayOpen;
+
     private void Awake() {
         levelDisplayUI.SetActive(false);
         levelUnlockUI.SetActive(false);
     }
 
     private void Start() {
+
+        androidPort = Player.Instance.GetAndroidPort();
+        if (!androidPort) {
+            touchButtonToOpen.SetActive(false);
+        }
+
         levelSO = questGiver.GetLevelSO();
 
         questGiver.OnLevelBoneFeePaid += QuestGiver_OnLevelBoneFeePaid;
@@ -165,6 +175,23 @@ public class WorldMapLevelDisplay : MonoBehaviour
             bronzeScoreTreshold = ((int)((7 * platScoreTreshold / 10) / 10)) * 10;
         }
 
+    }
+
+    public void OpenCloseQuestGiverUI() {
+        if(!displayOpen) {
+            if (!cinematicPlaying) {
+                DisplayLevelUI();
+                Player.Instance.GetComponent<PlayerMovement>().SetCanMove(false);
+                displayOpen = true;
+            }
+        } else {
+            if (!cinematicPlaying) {
+                levelDisplayUI.SetActive(false);
+                levelUnlockUI.SetActive(false);
+                Player.Instance.GetComponent<PlayerMovement>().SetCanMove(true);
+                displayOpen = false;
+            }
+        }
     }
 
     private void Instance_OnBarkReleased(object sender, System.EventArgs e) {

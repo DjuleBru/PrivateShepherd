@@ -17,7 +17,7 @@ public class BarkUI : MonoBehaviour
     private void Start() {
 
         barkUnlocked = PlayerBark.Instance.GetBarkUnlocked();
-        if(!barkUnlocked) {
+        if (!barkUnlocked) {
             gameObject.SetActive(false);
         } else {
             abilitiesPanelUI.SetActive(true);

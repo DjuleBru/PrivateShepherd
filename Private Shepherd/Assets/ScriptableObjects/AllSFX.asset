@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b1acee36246ee48add60eedf142152, type: 3}
+  m_Name: AllSFX
+  m_EditorClassIdentifier: 
+  sheepBaa:
+  - {fileID: 8300000, guid: ab5c1c14d47a09d42b759343a4b5fee2, type: 3}
+  - {fileID: 8300000, guid: dd39fe1837c0ed340a53fd28bb601436, type: 3}
+  - {fileID: 8300000, guid: bf1b13f7b9ef7094abc746217b1f195a, type: 3}
+  - {fileID: 8300000, guid: dbe93f0ebd914cd4ca7b3286032da8b2, type: 3}
+  - {fileID: 8300000, guid: 33f1cfb8340fac44dbf995cde13d9c5b, type: 3}
+  - {fileID: 8300000, guid: 1ccf0f61706acbe4cac5121a097bade3, type: 3}
+  - {fileID: 8300000, guid: d68f40017852410438071799bc29798e, type: 3}
+  - {fileID: 8300000, guid: a3a8945738cc7694a883eaef9d47d0ac, type: 3}
+  - {fileID: 8300000, guid: a0e89f96205d55748a49aec851ca63b9, type: 3}
+  sheepBaaAggregate:
+  - {fileID: 8300000, guid: 264358e8b6da22e41ab5d53d5b0cf0f7, type: 3}
+  - {fileID: 8300000, guid: 9f2ab0734ce896a4f80fdeb6105e408b, type: 3}
+  - {fileID: 8300000, guid: 9013a7b4c00e16049b6a7b169ee34b3c, type: 3}
+  - {fileID: 8300000, guid: 2f7375e99f73aff43b0a3ea49816051a, type: 3}
+  sheepEnterScoreZone:
+  - {fileID: 8300000, guid: 23e48db7f7f593541b95640283423720, type: 3}
+  sheepDie: []
+  goatRam:
+  - {fileID: 8300000, guid: c2525c07818f68249991413951bf87a3, type: 3}
+  goatRamWarning:
+  - {fileID: 8300000, guid: d2e9049b84c5f0747b908995ab622eab, type: 3}
+  wolfBites:
+  - {fileID: 8300000, guid: a886c98df1501f94d82f14f0aaab823d, type: 3}
+  wolfEats:
+  - {fileID: 8300000, guid: e453b0f9f03d2164fac09ddc2c1fd894, type: 3}
+  - {fileID: 8300000, guid: 2a440f9f490699345af12052eef3f2b0, type: 3}
+  wolfFlee:
+  - {fileID: 8300000, guid: 42a0ee0796728144180fe3a6cff06f2b, type: 3}
+  - {fileID: 8300000, guid: 2c93e2f2178420d48af672afad3f6c30, type: 3}
+  - {fileID: 8300000, guid: ccd6f02ab27b1e444a0d3f2145b9c553, type: 3}
+  - {fileID: 8300000, guid: 931550278ec1a104e822750dea501e08, type: 3}
+  tentacleEmerge:
+  - {fileID: 8300000, guid: 03c9605d3d6920a4b9480c27404c0c73, type: 3}
+  - {fileID: 8300000, guid: cf35704a32f39ff489e87dbc7ad8a1be, type: 3}
+  tentacleHits:
+  - {fileID: 8300000, guid: 38c7a31cd3cb5344baeea953db122bb4, type: 3}
+  - {fileID: 8300000, guid: 038b5fcc286f67c40859e63a2cfd5e16, type: 3}
+  - {fileID: 8300000, guid: b9a86ecadcc43794181eb183dd9be54b, type: 3}
+  tentacleEats:
+  - {fileID: 8300000, guid: 30dd54fff4cdc8e49841cb6971ed4dff, type: 3}
+  - {fileID: 8300000, guid: b28438c7023a7ee4090ff83feb1ad3ef, type: 3}
+  UIButtonHover:
+  - {fileID: 8300000, guid: ac1e5c988bcbe244882e653452e14224, type: 3}
+  UIButtonClick:
+  - {fileID: 8300000, guid: 62879958cc93feb49b953faa476b9376, type: 3}
+  NPCLetterShow: []
+  playerGrowl:
+  - {fileID: 8300000, guid: 7eb9d92dae1feb94faf608b65f481131, type: 3}
+  playerBark:
+  - {fileID: 8300000, guid: ea6abd0bf52c01e4a9559e4a0d46b7b7, type: 3}
+  - {fileID: 8300000, guid: 880ea879d857b514488eb980184e8b0d, type: 3}
+  playerSneak: {fileID: 8300000, guid: eaaf5caa5ef29e240867380d91d9a189, type: 3}
+  playerRun: {fileID: 8300000, guid: 933dcfa35da0b5648bfe3135641e2487, type: 3}
+  playerMove: {fileID: 8300000, guid: d3758ec1a69b36f4d8a4be3809cef02a, type: 3}
+  playerTired: {fileID: 8300000, guid: dc65ceb73238dd445aaa5ac87038d607, type: 3}

@@ -11,6 +11,7 @@ public class SplashScreenManager : MonoBehaviour
     [SerializeField] private TypewriterByCharacter logoText;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Animator logoAnimator;
+    [SerializeField] private GameObject logo;
 
     [SerializeField] private float timeToStartShowLogo;
     [SerializeField] private float timeToStartShowText;
@@ -33,6 +34,8 @@ public class SplashScreenManager : MonoBehaviour
     private void Start() {
         caseNumber = 0;
         text.text = logoTextWithOptions;
+
+        logo.SetActive(false);
 
         StartCoroutine(ShowLogo(timeToStartShowLogo));
         StartCoroutine(ShowText(timeToStartShowText));
@@ -63,6 +66,7 @@ public class SplashScreenManager : MonoBehaviour
 
     private IEnumerator ShowLogo(float time) {
         yield return new WaitForSeconds(time);
+        logo.SetActive(true);   
         logoAnimator.SetTrigger("Appear");
     }
 

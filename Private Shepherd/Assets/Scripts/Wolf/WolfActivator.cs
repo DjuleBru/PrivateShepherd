@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class WolfActivator : MonoBehaviour
     private bool cutSceneInProgress;
     private bool activated;
 
+    public event EventHandler OnWolfActivated;
+
     private void Start() {
         activationTimer = activationTime;
         LevelManager.Instance.OnCutSceneEnter += LevelManager_OnCutSceneEnter;
@@ -28,7 +31,7 @@ public class WolfActivator : MonoBehaviour
 
         activationTimer -= Time.deltaTime;
         if(activationTimer < 0 & !activated) {
-            int i = Random.Range(0, spawnPoints.Count);
+            int i = UnityEngine.Random.Range(0, spawnPoints.Count);
             Transform spawnPoint = spawnPoints[i];
 
             if(isWhiteWolf) {
@@ -37,6 +40,7 @@ public class WolfActivator : MonoBehaviour
                 wolf.transform.position = spawnPoint.position;
             }
             activated = true;
+            OnWolfActivated?.Invoke(this, EventArgs.Empty);
         }
     }
     private void LevelManager_OnCutSceneExit(object sender, System.EventArgs e) {

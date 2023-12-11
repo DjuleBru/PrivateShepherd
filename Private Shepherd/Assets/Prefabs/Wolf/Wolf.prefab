@@ -327,7 +327,7 @@ MonoBehaviour:
     - rid: 208445657768001536
       type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
-        Active: 1
+        Active: 0
         UniqueID: 2108368542
         Label: Bite
         ChannelMode: 0
@@ -871,7 +871,7 @@ MonoBehaviour:
   smoothType: 0
   subdivisions: 2
   iterations: 2
-  strength: 0.5
+  strength: 0
   uniformLength: 1
   maxSegmentLength: 2
   bezierTangentLength: 0.4
@@ -944,6 +944,7 @@ MonoBehaviour:
   fleeTargetTriggerDistance: 10
   fleeTargetStopDistance: 15
   fleeTargetSpeedMultiplier: 2.5
+  fleeTargetPriority: 4
 --- !u!1 &5411438828940977333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1108,7 @@ MonoBehaviour:
     - rid: 208445657768001537
       type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
-        Active: 1
+        Active: 0
         UniqueID: -463372661
         Label: AudioSource
         ChannelMode: 0
@@ -1316,7 +1317,7 @@ MonoBehaviour:
     - rid: 208445657768001536
       type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
-        Active: 1
+        Active: 0
         UniqueID: 2108368542
         Label: Bite
         ChannelMode: 0

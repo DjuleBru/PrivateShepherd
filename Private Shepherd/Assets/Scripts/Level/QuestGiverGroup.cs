@@ -25,7 +25,8 @@ public class QuestGiverGroup : MonoBehaviour
     }
 
     public void NextQuestGiver() {
-        if(activeQuestGiver < totalQuestGiversInGroup - 1) {
+        FillQuestGiversUnlockedList();
+        if (activeQuestGiver < totalQuestGiversInGroup - 1) {
             unLockedQuestGiversInGroup[activeQuestGiver +1].gameObject.SetActive(true);
             unLockedQuestGiversInGroup[activeQuestGiver + 1].DisplayWorldMapLevelDisplay();
             unLockedQuestGiversInGroup[activeQuestGiver].gameObject.SetActive(false);
@@ -35,6 +36,7 @@ public class QuestGiverGroup : MonoBehaviour
     }
 
     public void PreviousQuestGiver() {
+        FillQuestGiversUnlockedList();
         if (activeQuestGiver > 0) {
             unLockedQuestGiversInGroup[activeQuestGiver - 1].gameObject.SetActive(true);
             unLockedQuestGiversInGroup[activeQuestGiver - 1].DisplayWorldMapLevelDisplay();

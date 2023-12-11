@@ -33,6 +33,7 @@ public class LevelIntroNPC : MonoBehaviour
         phraseText.gameObject.SetActive(false);
     }
 
+
     private void Update() {
         if (!inputActiveForIntro) {
             return;
@@ -64,6 +65,7 @@ public class LevelIntroNPC : MonoBehaviour
 
     public void PauseTalking() {
         inputActiveForIntro = false;
+
         if (phraseText != null) {
             phraseText.gameObject.SetActive(false);
             LevelIntroCutScene.Instance.SetNPCIsTalking(false);

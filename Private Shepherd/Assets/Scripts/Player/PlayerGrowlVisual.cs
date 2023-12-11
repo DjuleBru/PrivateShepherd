@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class PlayerGrowlVisual : MonoBehaviour
 {
 
+    public static PlayerGrowlVisual Instance;
+
     [SerializeField] private MMF_Player growlMMFPlayer;
     [SerializeField] private WolfSO levelWolfSO;
 
@@ -22,6 +24,10 @@ public class PlayerGrowlVisual : MonoBehaviour
     private float growlWolfTriggerDistance;
 
     private bool growlUnlocked;
+
+    private void Awake() {
+        Instance = this;
+    }
 
     private void Start() {
 

@@ -7,12 +7,17 @@ using TMPro;
 public class TutorialUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI anyKeyText;
+    [SerializeField] GameObject touchSkipButton;
     private bool inputActiveForIntro;
     private bool textShowed;
 
     private void Awake() {
         anyKeyText.gameObject.SetActive(false);
+    }
 
+    private void Start() {
+        LevelIntroNPC.Instance.OnTutorialPaused += IntroNPC_OnTutorialPaused;
+        LevelIntroCutScene.Instance.OnCutSceneExit += LevelCutScene_OnCutSceneExit;
     }
 
     private void Update() {
@@ -37,4 +42,11 @@ public class TutorialUI : MonoBehaviour
 
     }
 
+
+    private void IntroNPC_OnTutorialPaused(object sender, System.EventArgs e) {
+            touchSkipButton.SetActive(false);
+    }
+    private void LevelCutScene_OnCutSceneExit(object sender, System.EventArgs e) {
+            touchSkipButton.SetActive(false);
+    }
 }

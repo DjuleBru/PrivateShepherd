@@ -43,6 +43,12 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void SkipTutorial() {
+        Time.timeScale = 1f;
+        StartCoroutine(LoadSceneByStringCoroutine("WorldMap"));
+        ES3.Save("Tutorial_completed", true);
+    }
+
     public IEnumerator LoadSceneByStringCoroutine(string sceneName) {
         Time.timeScale = 1f;
 

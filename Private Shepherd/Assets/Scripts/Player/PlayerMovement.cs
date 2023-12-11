@@ -99,11 +99,11 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = moveDirNormalized * moveSpeed * Time.fixedDeltaTime;
     }
 
-    private bool GetIsMoving() {
+    public bool GetIsMoving() {
         return isMoving;
     }
 
-    private Vector3 GetMoveDir() {
+    public Vector3 GetMoveDir() {
         return moveDir;
     }
 
@@ -115,7 +115,6 @@ public class PlayerMovement : MonoBehaviour {
     public void Rammed(Vector2 force) {
         canMove = false;
         rb.velocity = Vector3.zero;
-        Debug.Log(force);
         rb.AddForce(force);
 
         StartCoroutine(RammedCoroutine());

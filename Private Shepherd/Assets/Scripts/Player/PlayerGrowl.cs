@@ -12,6 +12,8 @@ public class PlayerGrowl : MonoBehaviour
     public event EventHandler OnPlayerGrowlReleased;
     [SerializeField] private FleeTarget growlFleeTarget;
 
+    [SerializeField] private AudioSource growlAudioSource;
+
     [SerializeField] private float growlTime;
     [SerializeField] private float growlCoolDownTime;
 
@@ -33,6 +35,8 @@ public class PlayerGrowl : MonoBehaviour
     private bool growlUnlocked;
     private bool growlActive;
 
+    [SerializeField] bool forceUnlock;
+
     private void Awake() {
         Instance = this;
         growlTimer = growlTime;
@@ -42,6 +46,9 @@ public class PlayerGrowl : MonoBehaviour
     private void Start() {
 
         growlUnlocked = ES3.Load("growlUnlocked", false);
+        if(forceUnlock) {
+            growlUnlocked = true;
+        }
 
         playerFleeTargetSpeedMultiplier = growlFleeTarget.GetFleeTargetSpeedMultiplier();
         playerFleeTargetTriggerDistance = growlFleeTarget.GetFleeTargetTriggerDistance();
@@ -74,6 +81,20 @@ public class PlayerGrowl : MonoBehaviour
             if (growlCoolDownTimer < 0) {
                 StartGrowl();
             }
+        }
+    }
+
+    public void GrowlTouchPerformed() {
+        if (growlActive & growlUnlocked) {
+            if (growlCoolDownTimer < 0) {
+                StartGrowl();
+            }
+        }
+    }
+
+    public void GrowlTouchReleased() {
+        if (growling) {
+            EndGrowl();
         }
     }
 
@@ -134,6 +155,10 @@ public class PlayerGrowl : MonoBehaviour
 
     public FleeTarget GetGrowlFleeTarget() {
         return growlFleeTarget;
+    }
+
+    public AudioSource GetGrowlAudioSource() {
+        return growlAudioSource;
     }
 
 }

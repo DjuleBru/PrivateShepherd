@@ -182,7 +182,6 @@ public class QuestGiver : MonoBehaviour
         yield return null;
     }
 
-
     public bool GetQuestGiverUnlocked() {
         return questGiverUnlocked;
     }

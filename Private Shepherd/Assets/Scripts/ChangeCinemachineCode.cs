@@ -36,17 +36,16 @@ public class ChangeCinemachineCode : MonoBehaviour
 
     public IEnumerator SmoothCinemachineZoomCoroutine(float targetOrthoSize) {
         float initialOrthoSize = ChangeCinemachineCode.Instance.GetCinemachineOrthoSize();
-        float treshold = .2f;
+        float treshold = .3f;
+        float cameraZoomVelocity = 5f * Time.deltaTime;
+        float smoothTime = .1f;
 
-        float dynamicOrthoSize = initialOrthoSize;
-        float step = (targetOrthoSize - initialOrthoSize);
+        float dynamicOrthoSize = initialOrthoSize - cinemachineVirtualCamera.m_Lens.OrthographicSize;
 
         while (Mathf.Abs(dynamicOrthoSize - targetOrthoSize) > treshold) {
-            dynamicOrthoSize += step * Time.deltaTime;
-
-            ChangeCinemachineCode.Instance.ChangeCinemachineOrthoSize(dynamicOrthoSize);
+            dynamicOrthoSize = cinemachineVirtualCamera.m_Lens.OrthographicSize;
+            ChangeCinemachineOrthoSize(Mathf.SmoothDamp(cinemachineVirtualCamera.m_Lens.OrthographicSize, targetOrthoSize, ref cameraZoomVelocity, smoothTime));
             yield return null;
         }
-        yield return null;
     }
 }

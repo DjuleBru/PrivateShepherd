@@ -271,6 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5654900241811913108}
   - component: {fileID: 4492823284749436189}
+  - component: {fileID: 3087218555773219738}
   m_Layer: 6
   m_Name: GrowlFeedBack
   m_TagString: Untagged
@@ -383,7 +384,6 @@ MonoBehaviour:
   DebugActive: 0
   FeedbacksList:
   - rid: 208445491746963456
-  - rid: 208445491746963457
   - rid: 208445647789752320
   KeepPlayModeChanges: 0
   PerformanceMode: 0
@@ -468,83 +468,6 @@ MonoBehaviour:
           AmplitudeX: 0
           AmplitudeY: 0
           AmplitudeZ: 0
-    - rid: 208445491746963457
-      type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
-      data:
-        Active: 1
-        UniqueID: -2018168812
-        Label: AudioSource
-        ChannelMode: 0
-        Channel: 0
-        MMChannelDefinition: {fileID: 0}
-        Chance: 100
-        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
-        Timing:
-          TimescaleMode: 0
-          ExcludeFromHoldingPauses: 0
-          ContributeToTotalDuration: 1
-          InitialDelay: 0
-          CooldownDuration: 0
-          InterruptsOnStop: 1
-          NumberOfRepeats: 0
-          RepeatForever: 0
-          DelayBetweenRepeats: 1
-          MMFeedbacksDirectionCondition: 0
-          PlayDirection: 0
-          ConstantIntensity: 0
-          UseIntensityInterval: 0
-          IntensityIntervalMin: 0
-          IntensityIntervalMax: 0
-          Sequence: {fileID: 0}
-          TrackID: 0
-          Quantized: 0
-          TargetBPM: 120
-        AutomatedTargetAcquisition:
-          Mode: 0
-          ChildIndex: 0
-        RandomizeOutput: 0
-        RandomMultiplier: {x: 0.8, y: 1}
-        RandomizeDuration: 0
-        RandomDurationMultiplier: {x: 0.5, y: 2}
-        UseRange: 0
-        RangeDistance: 5
-        UseRangeFalloff: 0
-        RangeFalloff:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        RemapRangeFalloff: {x: 0, y: 1}
-        Owner: {fileID: 4492823284749436189}
-        DebugActive: 0
-        TargetAudioSource: {fileID: 359076444}
-        Mode: 0
-        RandomSfx:
-        - {fileID: 8300000, guid: 7eb9d92dae1feb94faf608b65f481131, type: 3}
-        MinVolume: 0.3
-        MaxVolume: 0.5
-        MinPitch: 0.8
-        MaxPitch: 1.2
-        SfxAudioMixerGroup: {fileID: 0}
     - rid: 208445647789752320
       type: {class: MMF_Particles, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
       data:
@@ -622,6 +545,102 @@ MonoBehaviour:
         DeclaredDuration: 0
         ForceSimulationSpeed: 0
         ForcedSimulationSpeed: {x: 0.1, y: 1}
+--- !u!82 &3087218555773219738
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420042340818976066}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &879811037149103125
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +688,7 @@ MonoBehaviour:
   fleeTargetTriggerDistance: 0
   fleeTargetStopDistance: 0
   fleeTargetSpeedMultiplier: 0
+  fleeTargetPriority: 0
 --- !u!1 &2549579839710153805
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1852497203127853978}
+  - component: {fileID: 5546608959908935435}
   m_Layer: 6
   m_Name: RunVisual
   m_TagString: Untagged
@@ -702,6 +723,102 @@ Transform:
   m_Father: {fileID: 4046661787543505784}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &5546608959908935435
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549579839710153805}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3481176052775031631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,10 +1173,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1167,6 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24cedd3ce6e01e2469fb9f6741db1216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  androidPort: 1
 --- !u!114 &7840373000721660730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1300,7 @@ MonoBehaviour:
   fleeTargetTriggerDistance: 2.5
   fleeTargetStopDistance: 7
   fleeTargetSpeedMultiplier: 1.5
+  fleeTargetPriority: 5
 --- !u!114 &1627481217353169861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,8 +1317,9 @@ MonoBehaviour:
   barkCoolDownTime: 4
   barkEffetDuration: 2
   barkFleeTargetSpeedMultiplier: 2.5
-  barkFleeTargetStopDistance: 15
-  barkFleeTargetTriggerDistance: 10
+  barkFleeTargetStopDistance: 10
+  barkFleeTargetTriggerDistance: 6
+  forceUnlock: 0
 --- !u!114 &1265921825893619867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,12 +1333,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growlFleeTarget: {fileID: 1139229079931575042}
+  growlAudioSource: {fileID: 3087218555773219738}
   growlTime: 2.7
   growlCoolDownTime: 6
   growlFleeTargetSpeedMultiplier: 1.5
-  growlFleeTargetTriggerDistance: 12
-  growlFleeTargetStopDistance: 12
+  growlFleeTargetTriggerDistance: 8
+  growlFleeTargetStopDistance: 8
   growlPlayerMoveSpeedMultiplier: 0.6
+  forceUnlock: 0
 --- !u!114 &4316471942775922365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1358,8 @@ MonoBehaviour:
   runTiredTimeFraction: 0.5
   runExtremelyTiredTimeFraction: 0.85
   tiredRunSpeedMultiplier: 0.7
+  tiredAudioSource: {fileID: 5546608959908935435}
+  forceUnlock: 0
 --- !u!114 &8779848876279031129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,6 +1386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFleeTarget: {fileID: 7840373000721660730}
   sneakSlowMultiplier: 0.7
+  forceUnlock: 0
 --- !u!1 &4046661788217268444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,7 +1745,6 @@ MonoBehaviour:
   FeedbacksList:
   - rid: 208445476685479936
   - rid: 208445491746963456
-  - rid: 208445491746963457
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   StopFeedbacksOnDisable: 0
@@ -1781,84 +1905,6 @@ MonoBehaviour:
           AmplitudeX: 0
           AmplitudeY: 0
           AmplitudeZ: 0
-    - rid: 208445491746963457
-      type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Feedbacks}
-      data:
-        Active: 1
-        UniqueID: -2018168812
-        Label: AudioSource
-        ChannelMode: 0
-        Channel: 0
-        MMChannelDefinition: {fileID: 0}
-        Chance: 100
-        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
-        Timing:
-          TimescaleMode: 0
-          ExcludeFromHoldingPauses: 0
-          ContributeToTotalDuration: 1
-          InitialDelay: 0
-          CooldownDuration: 0
-          InterruptsOnStop: 1
-          NumberOfRepeats: 0
-          RepeatForever: 0
-          DelayBetweenRepeats: 1
-          MMFeedbacksDirectionCondition: 0
-          PlayDirection: 0
-          ConstantIntensity: 0
-          UseIntensityInterval: 0
-          IntensityIntervalMin: 0
-          IntensityIntervalMax: 0
-          Sequence: {fileID: 0}
-          TrackID: 0
-          Quantized: 0
-          TargetBPM: 120
-        AutomatedTargetAcquisition:
-          Mode: 0
-          ChildIndex: 0
-        RandomizeOutput: 0
-        RandomMultiplier: {x: 0.8, y: 1}
-        RandomizeDuration: 0
-        RandomDurationMultiplier: {x: 0.5, y: 2}
-        UseRange: 0
-        RangeDistance: 5
-        UseRangeFalloff: 0
-        RangeFalloff:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 1
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        RemapRangeFalloff: {x: 0, y: 1}
-        Owner: {fileID: 1439949436517517918}
-        DebugActive: 0
-        TargetAudioSource: {fileID: 359076444}
-        Mode: 0
-        RandomSfx:
-        - {fileID: 8300000, guid: ea6abd0bf52c01e4a9559e4a0d46b7b7, type: 3}
-        - {fileID: 8300000, guid: 880ea879d857b514488eb980184e8b0d, type: 3}
-        MinVolume: 0.8
-        MaxVolume: 1.2
-        MinPitch: 0.8
-        MaxPitch: 1.2
-        SfxAudioMixerGroup: {fileID: 0}
 --- !u!1 &6371259456349319904
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,8 @@ public class PlayerBark : MonoBehaviour
     private bool barkUnlocked;
     private bool barkActive;
 
+    [SerializeField] bool forceUnlock;
+
     private void Awake() {
         Instance = this;
         barkCoolDownTimer = 0;
@@ -32,6 +34,10 @@ public class PlayerBark : MonoBehaviour
 
     private void Start() {
         barkUnlocked = ES3.Load("barkUnlocked", false);
+
+        if(forceUnlock) {
+            barkUnlocked = true;
+        }
 
         playerFleeTargetSpeedMultiplier = playerFleeTarget.GetFleeTargetSpeedMultiplier();
         playerFleeTargetTriggerDistance = playerFleeTarget.GetFleeTargetTriggerDistance();
@@ -42,6 +48,14 @@ public class PlayerBark : MonoBehaviour
 
     private void Update() {
         barkCoolDownTimer -= Time.deltaTime;
+    }
+
+    public void BarkTouch() {
+        if (barkUnlocked & barkActive) {
+            if (barkCoolDownTimer < 0) {
+                Bark();
+            }
+        }
     }
 
     private void GameInput_OnBarkPerformed(object sender, EventArgs e) {
@@ -103,5 +117,17 @@ public class PlayerBark : MonoBehaviour
 
     public bool GetBarkUnlocked() {
         return barkUnlocked;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.GetComponent<QuestGiver>() != null) {
+            barkActive = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.GetComponent<QuestGiver>() != null) {
+            barkActive = true;
+        }
     }
 }

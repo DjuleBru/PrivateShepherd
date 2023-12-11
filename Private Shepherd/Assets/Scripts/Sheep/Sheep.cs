@@ -39,6 +39,7 @@ public class Sheep : MonoBehaviour
     [SerializeField] Collider2D sheepCollider;
 
     public event EventHandler<OnSheepEnterScoreZoneEventArgs> OnSheepEnterScoreZone;
+    public static event EventHandler OnAnySheepEnterScoreZone;
     private bool hasEnteredScoreZone;
     private bool hasBeenBit;
 
@@ -136,6 +137,7 @@ public class Sheep : MonoBehaviour
             OnSheepEnterScoreZone?.Invoke(this, new OnSheepEnterScoreZoneEventArgs {
                 scoreZoneAggregatePointArray = aggregatePointArray
             });
+            OnAnySheepEnterScoreZone?.Invoke(this, EventArgs.Empty);
         }
 
         hasEnteredScoreZone = true;

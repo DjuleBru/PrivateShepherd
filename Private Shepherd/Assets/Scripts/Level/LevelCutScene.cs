@@ -37,16 +37,17 @@ public class LevelCutScene : MonoBehaviour
         }
     }
     public virtual void ExitCutScene() {
-        OnCutSceneExit?.Invoke(this, EventArgs.Empty);
-        PlayerMovement.Instance.SetCanMove(true);
-        PlayerBark.Instance.SetBarkActive(true);
-        PlayerGrowl.Instance.SetGrowlActive(true);
-        PlayerRun.Instance.SetRunActive(true);
+        if(cutSceneInProgress) {
+            OnCutSceneExit?.Invoke(this, EventArgs.Empty);
+            PlayerMovement.Instance.SetCanMove(true);
+            PlayerBark.Instance.SetBarkActive(true);
+            PlayerGrowl.Instance.SetGrowlActive(true);
+            PlayerRun.Instance.SetRunActive(true);
 
-        // Activate all UI Elements
-        levelSheepObjectPool.ActivateSheepTargetIndicators();
-        levelPlayUI.SetActive(true);
-
+            // Activate all UI Elements
+            levelSheepObjectPool.ActivateSheepTargetIndicators();
+            levelPlayUI.SetActive(true);
+        }
         cutSceneInProgress = false;
     }
 
@@ -64,6 +65,14 @@ public class LevelCutScene : MonoBehaviour
         cutSceneInProgress = true;
     }
 
+    public void SkipPerformedTouch() {
+        skipping = true;
+    }
+
+    public void SkipReleasedTouch() {
+        skipTimer = 0;
+        skipping = false;
+    }
 
     private void GameInput_OnBarkPerformed(object sender, EventArgs e) {
         skipping = true;

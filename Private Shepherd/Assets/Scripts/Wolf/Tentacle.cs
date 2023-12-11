@@ -19,6 +19,10 @@ public class Tentacle : MonoBehaviour
     public event EventHandler OnSheepEaten;
     public event EventHandler OnTentacleEmerge;
 
+    public static event EventHandler OnAnySheepBite;
+    public static event EventHandler OnAnySheepEaten;
+    public static event EventHandler OnAnyTentacleEmerge;
+
     #region TARGET SHEEP PARAMETERS
     [Header("TARGET SHEEP PARAMETERS")]
     [SerializeField] LayerMask sheepLayerMask;
@@ -57,6 +61,8 @@ public class Tentacle : MonoBehaviour
 
         levelSheepObjectPool.OnSheepDied += LevelSheepObjectPool_OnSheepDied;
         levelSheepObjectPool.OnSheepPenned += LevelSheepObjectPool_OnSheepPenned;
+
+        MusicManager.Instance.AddTentacleToList(this);
     }
 
     void Update()
@@ -73,6 +79,7 @@ public class Tentacle : MonoBehaviour
             case State.Immerged:
                 if (Vector3.Distance(closestSheep.transform.position, transform.position) < emergeDistance) {
                     OnTentacleEmerge?.Invoke(this, EventArgs.Empty);
+                    OnAnyTentacleEmerge?.Invoke(this, EventArgs.Empty);
                     state = State.Emerged;
                 }
                 break;
@@ -107,6 +114,7 @@ public class Tentacle : MonoBehaviour
     private IEnumerator BiteSheep(Sheep sheep) {
         hasBitSheep = true;
         OnSheepBite?.Invoke(this, EventArgs.Empty);
+        OnAnySheepBite?.Invoke(this, EventArgs.Empty); ;
 
         childTargetSheep = sheep;
         childTargetSheep.BiteSheep();
@@ -121,6 +129,7 @@ public class Tentacle : MonoBehaviour
     private IEnumerator EatSheep(Sheep sheep) {
         Debug.Log("sheep eaten");
         OnSheepEaten?.Invoke(this, EventArgs.Empty);
+        OnAnySheepEaten?.Invoke(this, EventArgs.Empty);
 
         yield return new WaitForSeconds(attackAnimationHalfDuration);
 

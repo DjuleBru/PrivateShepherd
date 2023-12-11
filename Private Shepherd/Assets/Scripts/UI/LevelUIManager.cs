@@ -13,6 +13,7 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField] GameObject levelPlayUI;
     [SerializeField] GameObject levelSuccededUI;
     [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] GameObject pauseMenuButton;
     private bool gamePaused;
     [SerializeField] private bool tutorial;
 
@@ -78,6 +79,7 @@ public class LevelUIManager : MonoBehaviour
     private int playerDynamicScore;
     private float levelRemainingDynamicTime;
     private float timeScore;
+    private bool androidPort;
 
     #region SHEEP TYPES
     [SerializeField] private SheepSO whiteSheepSO;
@@ -141,6 +143,11 @@ public class LevelUIManager : MonoBehaviour
         InitialiseScoreTresholds();
         InitialiseSheepScores();
 
+        androidPort = Player.Instance.GetAndroidPort();
+        if(!androidPort) {
+            pauseMenuButton.SetActive(false);
+        }
+
     }
 
     private void GameInput_OnPausePerformed(object sender, EventArgs e) {
@@ -165,6 +172,9 @@ public class LevelUIManager : MonoBehaviour
     }
 
     private void InitialiseSheepScores() {
+        if(tutorial) {
+            return;
+        }
         timeScore = levelSO.timeScore;
         timeScoreText.text = "X" + levelSO.timeScore.ToString();
 
@@ -203,6 +213,9 @@ public class LevelUIManager : MonoBehaviour
     }
 
     private void DisableLevelSuccessGO() {
+        if(tutorial) {
+            return;
+        }
         mainMenuButton.SetActive(false);
         tryAgainButton.SetActive(false);
         continueButton.SetActive(false);

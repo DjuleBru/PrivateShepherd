@@ -9,12 +9,15 @@ public class MainMenuUIManager : MonoBehaviour
 {
     [SerializeField] Button startGameButton;
 
+    [SerializeField] GameObject freshSaveMessagePanel;
+
     [SerializeField] Image backGroundImage;
     [SerializeField] GameObject mainMenuPanel;
     [SerializeField] GameObject resetProgressionPanel;
     [SerializeField] GameObject progressionPanel;
     [SerializeField] GameObject settingsPanel;
     [SerializeField] GameObject resetProgressionButton;
+    [SerializeField] GameObject gameTitle;
 
     [SerializeField] TextMeshProUGUI playerProgressionText;
     [SerializeField] TextMeshProUGUI boneNumberText;
@@ -30,10 +33,14 @@ public class MainMenuUIManager : MonoBehaviour
     float platBoneNumber;
     float levelCompletedNumber;
 
+    bool settingsOpen;
+    bool freshSave;
+
     private void Start() {
 
         resetProgressionPanel.SetActive(false);
         resetProgressionButton.SetActive(false);
+        settingsPanel.SetActive(false);
 
         AssignImageParametersByAspectRatio();
         LoadPlayerProgression();
@@ -48,6 +55,23 @@ public class MainMenuUIManager : MonoBehaviour
         }
 
         DisplayPlayerProgression();
+        mainMenuPanel.SetActive(false);
+        gameTitle.SetActive(false);
+
+        freshSave = ES3.Load("freshSave", true);
+        if(freshSave) {
+            StartCoroutine(OpenYoutubePanel());
+            ES3.Save("freshSave", false);
+        } else {
+            freshSaveMessagePanel.SetActive(false);
+            StartCoroutine(OpenMenu());
+        }
+
+    }
+
+    public void CloseYTPanel() {
+        freshSaveMessagePanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 
     private void StartGameButtonScript_OnButtonSelected(object sender, System.EventArgs e) {
@@ -59,24 +83,22 @@ public class MainMenuUIManager : MonoBehaviour
     private void AssignImageParametersByAspectRatio() {
         if (Camera.main.aspect >= 1.7) {
             backGroundImage.transform.position = Vector3.zero;
-            backGroundImage.transform.localScale = Vector3.one * 2f;
+            backGroundImage.transform.localScale = Vector3.one * 2.15f;
             backGroundImage.GetComponent<Animator>().SetBool("PC", true);
 
             mainMenuPanel.transform.localPosition = new Vector3(-500f, -100f, 0);
             mainMenuPanel.transform.localScale = Vector3.one;
-            Debug.Log("16:9");
         }
         else if (Camera.main.aspect >= 1.5) {
             Debug.Log("3:2");
         }
         else {
             backGroundImage.transform.position = Vector3.zero;
-            backGroundImage.transform.localScale = Vector3.one * 2f;
+            backGroundImage.transform.localScale = Vector3.one * 2.15f;
             backGroundImage.GetComponent<Animator>().SetBool("Phone", true);
 
             mainMenuPanel.transform.localPosition = new Vector3(0, -150, 0);
             mainMenuPanel.transform.localScale = Vector3.one * 1.25f;
-            Debug.Log("9:16");
         }
     }
 
@@ -155,5 +177,29 @@ public class MainMenuUIManager : MonoBehaviour
 
         resetProgressionPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+    }
+
+    public void OpenCloseSettings() {
+        if(!settingsOpen) {
+            settingsPanel.SetActive(true);
+            settingsOpen = true;
+        } else {
+            settingsPanel.SetActive(false);
+            settingsOpen = false;
+        }
+    }
+
+    private IEnumerator OpenMenu() {
+        yield return new WaitForSeconds(1.5f);
+        gameTitle.SetActive(true);
+        yield return new WaitForSeconds(.5f);
+        mainMenuPanel.SetActive(true);
+    }
+
+    private IEnumerator OpenYoutubePanel() {
+        yield return new WaitForSeconds(1.5f);
+        gameTitle.SetActive(true);
+        yield return new WaitForSeconds(.5f);
+        freshSaveMessagePanel.SetActive(true);
     }
 }

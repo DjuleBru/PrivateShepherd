@@ -8,7 +8,6 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject firstSelected;
 
     private void OnEnable() {
-        Debug.Log("UI Enabled");
         StartCoroutine(SetButtonActive());
     }
 
